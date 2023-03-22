@@ -1,30 +1,23 @@
 import React from "react";
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+// import NavDropdown from "react-bootstrap/NavDropdown";
+import logo from "../assets/logo.png";
 
 const NavBar = () => {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="light" expand="lg" fixed="top">
       <Container>
-        <Navbar.Brand href="#home">Tick-It</Navbar.Brand>
+        <Navbar.Brand>
+          <img src={logo} alt="logo" height="45" />
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Profile</Nav.Link>
-            <NavDropdown title="Other" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Packs</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Task
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Create</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Sign out
-              </NavDropdown.Item>
-            </NavDropdown>
+            <Nav.Link>Home</Nav.Link>
+            <Nav.Link>Sign in</Nav.Link>
+            <Nav.Link>Sign up</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
