@@ -1,28 +1,57 @@
 import React, { useState } from "react";
 
-import { Form, Button, Row, Col, Container } from "react-bootstrap";
+import { Alert, Form, Button, Row, Col, Container } from "react-bootstrap";
 
 import styles from "../../styles/TaskCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 
+import { useHistory } from "react-router";
+import { axiosReq } from "../../api/axiosDefaults";
+
 function TaskCreateForm() {
+  const [errors, setErrors] = useState({});
 
   const [taskData, setTaskData] = useState({
     title: "",
     task_body: "",
     priority: "LOW",
     assigned_to: "",
-    due_date: "",
+    // due_date: "",
     pack: "",
   });
   const { title, task_body, priority, assigned_to, due_date, pack } = taskData;
+
+//   const fileInput = useRef(null);
+  const history = useHistory();
 
   const handleChange = (event) => {
     setTaskData({
       ...taskData,
       [event.target.name]: event.target.value,
     });
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData();
+
+    formData.append("title", title);
+    formData.append("task_body", task_body);
+    formData.append("priority", priority);
+    formData.append("assigned_to", assigned_to);
+    formData.append("due_date", due_date);
+    formData.append("pack", pack);
+
+    try {
+      const { data } = await axiosReq.post("/tasks/", formData);
+      history.push(`/tasks/${data.id}`);
+    } catch (err) {
+      console.log(err);
+      if (err.response?.status !== 401) {
+        setErrors(err.response?.data);
+      }
+    }
   };
 
   const textFields = (
@@ -37,8 +66,13 @@ function TaskCreateForm() {
           onChange={handleChange}
           aria-label="title"
         ></Form.Control>
-
       </Form.Group>
+
+      {errors?.title?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
 
       <Form.Group>
         <Form.Label>Details</Form.Label>
@@ -53,6 +87,12 @@ function TaskCreateForm() {
         ></Form.Control>
       </Form.Group>
 
+      {errors?.task_body?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
+
       <Form.Group>
         <Form.Label>Due date</Form.Label>
 
@@ -63,8 +103,13 @@ function TaskCreateForm() {
           onChange={handleChange}
           aria-label="due_date"
         ></Form.Control>
-
       </Form.Group>
+
+      {errors?.due_date?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
 
       <Form.Group>
         <Form.Label>Assign to Pack</Form.Label>
@@ -76,9 +121,13 @@ function TaskCreateForm() {
           onChange={handleChange}
           aria-label="pack"
         ></Form.Control>
-
       </Form.Group>
-      
+
+      {errors?.pack?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
 
       <Form.Group>
         <Form.Label>Priority</Form.Label>
@@ -92,11 +141,17 @@ function TaskCreateForm() {
           aria-label="priority"
         >
           <option>Select task priority</option>
-          <option value="High">High</option>
-          <option value="Medium">Medium</option>
-          <option value="Low">Low</option>
+          <option value="HIGH">High</option>
+          <option value="MEDIUM">Medium</option>
+          <option value="LOW">Low</option>
         </Form.Control>
       </Form.Group>
+
+      {errors?.priority?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
 
       <Form.Group>
         <Form.Label>Assigned to</Form.Label>
@@ -108,23 +163,28 @@ function TaskCreateForm() {
           onChange={handleChange}
           aria-label="assigned_to"
         ></Form.Control>
-
       </Form.Group>
+
+      {errors?.assigned_to?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
 
       <Button
         className={`${btnStyles.Button} ${btnStyles.Dark}`}
-        onClick={() => {}}
+        onClick={() => history.goBack()}
       >
-        cancel
+        Cancel
       </Button>
       <Button className={`${btnStyles.Button} ${btnStyles.Dark}`} type="submit">
-        create
+        Create
       </Button>
     </div>
   );
 
   return (
-    <Form>
+    <Form onSubmit={handleSubmit}>
       <Row>
         <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
           <Container
