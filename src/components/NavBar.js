@@ -23,11 +23,11 @@ const NavBar = () => {
     }
   };
 
-  const addPostIcon = (
+  const addTaskIcon = (
     <NavLink
       className={styles.NavLink}
       activeClassName={styles.Active}
-      to="/posts/create"
+      to="/tasks/create"
     >
       <i className="far fa-plus-square"></i>Add task
     </NavLink>
@@ -37,21 +37,21 @@ const NavBar = () => {
       <NavLink
         className={styles.NavLink}
         activeClassName={styles.Active}
-        to="/feed"
+        to="/tasks"
       >
         <i className="fas fa-list"></i>Task list
       </NavLink>
       <NavLink
         className={styles.NavLink}
         activeClassName={styles.Active}
-        to="/liked"
+        to="/watched"
       >
         <i className="fas fa-eye"></i>Watched
       </NavLink>
       <NavLink
         className={styles.NavLink}
         activeClassName={styles.Active}
-        to="/liked"
+        to="/packs"
       >
         <i className="fas fa-boxes-packing"></i>Packs
       </NavLink>
