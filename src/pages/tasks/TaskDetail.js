@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 
-import { Col, Row, Container } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 
 import { useParams } from "react-router";
 
-import appStyles from "../../App.module.css";
+// import appStyles from "../../App.module.css";
 
 import { axiosReq } from "../../api/axiosDefaults";
 import Task from "./Task";
