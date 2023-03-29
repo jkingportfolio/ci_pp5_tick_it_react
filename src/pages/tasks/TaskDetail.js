@@ -7,6 +7,7 @@ import { useParams } from "react-router";
 import appStyles from "../../App.module.css";
 
 import { axiosReq } from "../../api/axiosDefaults";
+import Task from "./Task";
 
 function TaskDetail() {
   const { id } = useParams();
@@ -31,8 +32,7 @@ function TaskDetail() {
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
-        <p>Task Detail</p>
-        <Container className={appStyles.Content}>Body of Task</Container>
+      <Task {...task.results[0]} setTasks={setTask} taskDetail />
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
         Side bar to display other information
