@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, } from "react";
+// import React, { useEffect } from "react";
 
 import { Alert, Form, Button, Row, Col, Container } from "react-bootstrap";
 
@@ -17,7 +18,7 @@ function TaskCreateForm() {
     task_body: "",
     priority: "LOW",
     assigned_to: "",
-    // due_date: "",
+    due_date: "",
     pack: "",
   });
   const { title, task_body, priority, assigned_to, due_date, pack } = taskData;
@@ -53,6 +54,18 @@ function TaskCreateForm() {
       }
     }
   };
+
+
+  // useEffect(() => {
+  //   async function getUserNames() {
+  //     const actualData = await fetch(
+  //     `https://tick-it-pp5.herokuapp.com/profiles/`
+  //     ).then(response => response.json());
+  
+  //     console.log(actualData) 
+  //   }
+  //   getUserNames()
+  // }, [])
 
   const textFields = (
     <div className="text-center">
