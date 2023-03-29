@@ -4,9 +4,11 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Card, Container, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
+import { axiosRes } from "../../api/axiosDefaults";
 
 const Task = (props) => {
   const {
+    id,
     owner,
     title,
     profile_id,
@@ -15,10 +17,44 @@ const Task = (props) => {
     task_body,
     watches_id,
     taskDetail,
+    setTasks,
   } = props;
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
+
+  const handleWatch = async () => {
+    try {
+      const { data } = await axiosRes.post("/watches/", { task: id });
+      setTasks((prevtasks) => ({
+        ...prevtasks,
+        results: prevtasks.results.map((task) => {
+          return task.id === id
+            ? { ...task, watches_id: data.id }
+            : task;
+        }),
+      }));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleUnwatch = async () => {
+    try {
+      await axiosRes.delete(`/watches/${watches_id}/`);
+      setTasks((prevTasks) => ({
+        ...prevTasks,
+        results: prevTasks.results.map((task) => {
+          return task.id === id
+            ? { ...task, likes_count: task.likes_count - 1, watches_id: null }
+            : task;
+        }),
+      }));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
 
   return (
     <Card className={styles.Task}>
@@ -50,13 +86,13 @@ const Task = (props) => {
               <i className="far fa-xmark" />
             </OverlayTrigger>
           ) : watches_id ? (
-            <span onClick={() => {}}>
-              <i className={`fas fa-plus ${styles.Heart}`} />
+            <span onClick={handleUnwatch}>
+              <i className={`fas fa-plus`} />
               watching
             </span>
           ) : currentUser ? (
-            <span onClick={() => {}}>
-              <i className={`far fa-heart ${styles.HeartOutline}`} />
+            <span onClick={handleWatch}>
+              <i className={`far fa-heart`} />
               click to watch
             </span>
           ) : (
