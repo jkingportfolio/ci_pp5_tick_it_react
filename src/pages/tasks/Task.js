@@ -15,7 +15,7 @@ const Task = (props) => {
     profile_image,
     updated_on,
     task_body,
-    watches_id,
+    watching_id,
     taskDetail,
     setTasks,
   } = props;
@@ -30,7 +30,7 @@ const Task = (props) => {
         ...prevtasks,
         results: prevtasks.results.map((task) => {
           return task.id === id
-            ? { ...task, watches_id: data.id }
+            ? { ...task, watching_id: data.id }
             : task;
         }),
       }));
@@ -41,12 +41,12 @@ const Task = (props) => {
 
   const handleUnwatch = async () => {
     try {
-      await axiosRes.delete(`/watches/${watches_id}/`);
+      await axiosRes.delete(`/watches/${watching_id}/`);
       setTasks((prevTasks) => ({
         ...prevTasks,
         results: prevTasks.results.map((task) => {
           return task.id === id
-            ? { ...task, likes_count: task.likes_count - 1, watches_id: null }
+            ? { ...task, watching_id: null }
             : task;
         }),
       }));
@@ -85,15 +85,15 @@ const Task = (props) => {
             >
               <i className="far fa-xmark" />
             </OverlayTrigger>
-          ) : watches_id ? (
+          ) : watching_id ? (
             <span onClick={handleUnwatch}>
-              <i className={`fas fa-plus`} />
-              watching
+              <i className={`fas fa-eye-slash`} />
+              Un watch
             </span>
           ) : currentUser ? (
             <span onClick={handleWatch}>
-              <i className={`far fa-heart`} />
-              click to watch
+              <i className={`far fa-eye`} />
+              Watch
             </span>
           ) : (
             <OverlayTrigger
