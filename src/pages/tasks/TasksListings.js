@@ -7,12 +7,8 @@ import styles from "../../styles/TasksListings.module.css";
 
 import Task from "./Task";
 
-
 import { useLocation } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
-
-
-
 
 
 function TasksListings({ message, filter = "" }) {
