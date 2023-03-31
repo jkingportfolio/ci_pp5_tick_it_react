@@ -20,7 +20,9 @@ function App() {
       <NavBar />
       <Container className={styles.Main}>
         <Switch>
-          <Route exact path="/tasks/list" render={() => <TasksListings message="A list of all tasks will be here."/>} />
+          <Route exact path="/tasks/" render={() => <TasksListings message="A list of all tasks will be here."
+          filter={`watches__owner__profile=${profile_id}&ordering=-watches__created_on&`} />} />
+          <Route exact path="/tasks/watched" render={() => <TasksListings message="A list of all watched tasks will be here."/>} />
           <Route exact path="/signin" render={() => <LogInForm />} />
           <Route exact path="/signup" render={() => <SignUpForm />} />
           <Route exact path="/tasks/create" render={() => <TaskCreateForm />} />
