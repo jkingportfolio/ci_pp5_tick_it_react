@@ -3,12 +3,15 @@ import React, { useState, useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 
 import appStyles from "../../App.module.css";
-import styles from "../../styles/TasksListings.module.css";
+// import styles from "../../styles/TasksListings.module.css";
 
 import Task from "./Task";
+import Asset from "../../components/Asset";
 
 import { useLocation } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
+
+import NoResults from "../../assets/no-results.png";
 
 
 function TasksListings({ message, filter = "" }) {
@@ -43,17 +46,13 @@ function TasksListings({ message, filter = "" }) {
                 ))
               ) : (
                 <Container className={appStyles.Content}>
-                  <p>
-                    No results logic placeholder
-                  </p>
+                  <Asset src={NoResults} message={message} />
                 </Container>
               )}
             </>
           ) : (
             <Container className={appStyles.Content}>
-              <p>
-                Spinner place holder
-              </p>
+              <Asset spinner />
             </Container>
           )}
         </Col>
