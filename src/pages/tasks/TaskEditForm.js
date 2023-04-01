@@ -1,30 +1,46 @@
-import React, { useState, } from "react";
-// import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
-import { Alert, Form, Button, Row, Col, Container } from "react-bootstrap";
+import { Form, Button, Row, Col, Container, Alert } from "react-bootstrap";
 
 import styles from "../../styles/TaskCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 
-import { useHistory } from "react-router";
+import { useHistory, useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 
-function TaskCreateForm() {
+function TaskEditForm() {
   const [errors, setErrors] = useState({});
 
   const [taskData, setTaskData] = useState({
     title: "",
     task_body: "",
-    priority: "LOW",
+    priority: "",
     assigned_to: "",
     due_date: "",
     pack: "",
   });
   const { title, task_body, priority, assigned_to, due_date, pack } = taskData;
 
-//   const fileInput = useRef(null);
   const history = useHistory();
+  const { id } = useParams();
+
+  useEffect(() => {
+    const handleMount = async () => {
+      try {
+        const { data } = await axiosReq.get(`/tasks/${id}/`);
+        const { title, task_body, priority, is_owner } = data;
+
+        is_owner
+          ? setTaskData({ title, task_body, priority })
+          : history.push("/");
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    handleMount();
+  }, [history, id]);
 
   const handleChange = (event) => {
     setTaskData({
@@ -45,8 +61,8 @@ function TaskCreateForm() {
     formData.append("pack", pack);
 
     try {
-      const { data } = await axiosReq.post("/tasks/", formData);
-      history.push(`/tasks/${data.id}`);
+      await axiosReq.put(`/tasks/${id}/`, formData);
+      history.push(`/tasks/${id}`);
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
@@ -55,32 +71,17 @@ function TaskCreateForm() {
     }
   };
 
-
-  // useEffect(() => {
-  //   async function getUserNames() {
-  //     const actualData = await fetch(
-  //     `https://tick-it-pp5.herokuapp.com/profiles/`
-  //     ).then(response => response.json());
-  
-  //     console.log(actualData) 
-  //   }
-  //   getUserNames()
-  // }, [])
-
   const textFields = (
     <div className="text-center">
       <Form.Group>
         <Form.Label>Title</Form.Label>
-
         <Form.Control
+          type="text"
           name="title"
-          className={appStyles.Input}
           value={title}
           onChange={handleChange}
-          aria-label="title"
-        ></Form.Control>
+        />
       </Form.Group>
-
       {errors?.title?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
@@ -88,25 +89,37 @@ function TaskCreateForm() {
       ))}
 
       <Form.Group>
-        <Form.Label>Details</Form.Label>
-
+        <Form.Label>Task Body</Form.Label>
         <Form.Control
           as="textarea"
+          rows={6}
           name="task_body"
-          className={appStyles.Input}
           value={task_body}
           onChange={handleChange}
-          aria-label="task_body"
-        ></Form.Control>
+        />
       </Form.Group>
-
-      {errors?.task_body?.map((message, idx) => (
+      {errors?.content?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
         </Alert>
       ))}
 
       <Form.Group>
+        <Form.Label>Title</Form.Label>
+        <Form.Control
+          type="text"
+          name="title"
+          value={title}
+          onChange={handleChange}
+        />
+      </Form.Group>
+      {errors?.title?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
+
+<Form.Group>
         <Form.Label>Due date</Form.Label>
 
         <Form.Control
@@ -185,13 +198,13 @@ function TaskCreateForm() {
       ))}
 
       <Button
-        className={`${btnStyles.Button} ${btnStyles.Dark}`}
+        className={`${btnStyles.Button} ${btnStyles.Blue}`}
         onClick={() => history.goBack()}
       >
-        Cancel
+        cancel
       </Button>
-      <Button className={`${btnStyles.Button} ${btnStyles.Dark}`} type="submit">
-        Submit
+      <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
+        save
       </Button>
     </div>
   );
@@ -204,13 +217,21 @@ function TaskCreateForm() {
             className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
           >
             <Form.Group className="text-center">
-              <Form.Label
-                className="d-flex justify-content-center"
-                htmlFor="image-upload"
-              >
-                File Upload
-              </Form.Label>
+              <div>
+                <Form.Label
+                  className={`${btnStyles.Button} ${btnStyles.Blue} btn`}
+                  htmlFor="image-upload"
+                >
+                  Change the image
+                </Form.Label>
+              </div>
             </Form.Group>
+            {errors?.image?.map((message, idx) => (
+              <Alert variant="warning" key={idx}>
+                {message}
+              </Alert>
+            ))}
+
             <div className="d-md-none">{textFields}</div>
           </Container>
         </Col>
@@ -222,4 +243,4 @@ function TaskCreateForm() {
   );
 }
 
-export default TaskCreateForm;
+export default TaskEditForm;

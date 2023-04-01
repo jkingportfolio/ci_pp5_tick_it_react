@@ -1,6 +1,7 @@
 .App {
     font-family: 'Sono', sans-serif;
-    background-color: aqua;
+    color: #EDEFFE;
+    background-color: #373B61;
     min-height: 100vh;
 }
 
@@ -9,7 +10,7 @@
 }
 
 a {
-    color: #555555;
+    color: #EDEFFE;
     transition: color ease-in-out 0.3s;
   }
   
