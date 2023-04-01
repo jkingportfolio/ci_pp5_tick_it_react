@@ -19,6 +19,7 @@ const Task = (props) => {
     watching_id,
     taskDetail,
     setTasks,
+    comments_count,
   } = props;
 
   const currentUser = useCurrentUser();
@@ -85,6 +86,9 @@ const Task = (props) => {
           </div>
           <div>
             <span>{task_body}</span>
+            <span>
+              This post has : {comments_count} comments!
+            </span>
           </div>
         </Container>
       </Card.Body>
