@@ -2,9 +2,10 @@ import React from "react";
 import styles from "../../styles/Task.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Card, Container, OverlayTrigger, Tooltip } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
+import DropDown from "../../components/DropDown";
 
 const Task = (props) => {
   const {
@@ -22,6 +23,20 @@ const Task = (props) => {
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
+  const history = useHistory();
+
+  const handleEdit = () => {
+    history.push(`/tasks/${id}/edit`);
+  };
+
+  const handleDelete = async () => {
+    try {
+      await axiosRes.delete(`/tasks/${id}/`);
+      history.goBack();
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   const handleWatch = async () => {
     try {
@@ -29,9 +44,7 @@ const Task = (props) => {
       setTasks((prevtasks) => ({
         ...prevtasks,
         results: prevtasks.results.map((task) => {
-          return task.id === id
-            ? { ...task, watching_id: data.id }
-            : task;
+          return task.id === id ? { ...task, watching_id: data.id } : task;
         }),
       }));
     } catch (err) {
@@ -45,16 +58,13 @@ const Task = (props) => {
       setTasks((prevTasks) => ({
         ...prevTasks,
         results: prevTasks.results.map((task) => {
-          return task.id === id
-            ? { ...task, watching_id: null }
-            : task;
+          return task.id === id ? { ...task, watching_id: null } : task;
         }),
       }));
     } catch (err) {
       console.log(err);
     }
   };
-
 
   return (
     <Card className={styles.Task}>
@@ -67,7 +77,10 @@ const Task = (props) => {
           </Link>
           <div className="d-flex align-items-center">
             <span>{updated_on}</span>
-            {is_owner && taskDetail}
+            {is_owner && taskDetail && <DropDown
+                handleEdit={handleEdit}
+                handleDelete={handleDelete}
+              />}
           </div>
           <div>
             <span>{task_body}</span>
