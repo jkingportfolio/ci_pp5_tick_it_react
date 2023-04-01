@@ -32,7 +32,12 @@ function TasksListings({ message, filter = "" }) {
     };
 
     setHasLoaded(false);
-    fetchTasks();
+    const timer = setTimeout(() => {
+      fetchTasks();
+    }, 1000);
+    return () => {
+      clearTimeout(timer);
+    };
   }, [filter, query, pathname]);
 
   return (
