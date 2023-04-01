@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { axiosReq } from "../../api/axiosDefaults";
 import Task from "./Task";
+import Comment from "../comments/Comment";
 import CommentForm from "../comments/CommentForm";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Col, Row, Container } from "react-bootstrap";
@@ -18,11 +19,12 @@ function TaskDetail() {
   useEffect(() => {
     const handleMount = async () => {
       try {
-        const [{ data: task }] = await Promise.all([
+        const [{ data: task }, { data: comments }] = await Promise.all([
           axiosReq.get(`/tasks/${id}`),
+          axiosReq.get(`/comments/?task=${id}`),
         ]);
         setTask({ results: [task] });
-        console.log(task);
+        setComments(comments);
       } catch (err) {
         console.log(err);
       }
@@ -34,20 +36,29 @@ function TaskDetail() {
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
-        <Task {...task.results[0]} setTasks={setTask} taskDetail />
+        <Task {...task.results[0]} setTask={setTask} taskDetail />
       </Col>
       <Container className={appStyles.Content}>
         {currentUser ? (
           <CommentForm
             profile_id={currentUser.profile_id}
             profileImage={profile_image}
-            ptask={id}
+            task={id}
             setTask={setTask}
             setComments={setComments}
           />
         ) : comments.results.length ? (
           "Comments"
         ) : null}
+        {comments.results.length ? (
+          comments.results.map((comment) => (
+            <Comment key={comment.id} {...comment} />
+          ))
+        ) : currentUser ? (
+          <span>No comments yet, be the first to comment!</span>
+        ) : (
+          <span>No comments... yet</span>
+        )}
       </Container>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
         Side bar to display other information

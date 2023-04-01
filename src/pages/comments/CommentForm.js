@@ -9,33 +9,33 @@ import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 
 function CommentForm(props) {
-  const { post, setPost, setComments, profileImage, profile_id } = props;
-  const [content, setContent] = useState("");
+  const { task, setTask, setComments, profileImage, profile_id } = props;
+  const [comment_body, setCommentBody] = useState("");
 
   const handleChange = (event) => {
-    setContent(event.target.value);
+    setCommentBody(event.target.value);
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
       const { data } = await axiosRes.post("/comments/", {
-        content,
-        post,
+        comment_body,
+        task,
       });
       setComments((prevComments) => ({
         ...prevComments,
         results: [data, ...prevComments.results],
       }));
-      setPost((prevPost) => ({
+      setTask((prevTask) => ({
         results: [
           {
-            ...prevPost.results[0],
-            comments_count: prevPost.results[0].comments_count + 1,
+            ...prevTask.results[0],
+            comments_count: prevTask.results[0].comments_count + 1,
           },
         ],
       }));
-      setContent("");
+      setCommentBody("");
     } catch (err) {
       console.log(err);
     }
@@ -52,7 +52,7 @@ function CommentForm(props) {
             className={styles.Form}
             placeholder="my comment..."
             as="textarea"
-            value={content}
+            value={comment_body}
             onChange={handleChange}
             rows={2}
           />
@@ -60,7 +60,7 @@ function CommentForm(props) {
       </Form.Group>
       <button
         className={`${styles.Button} btn d-block ml-auto`}
-        disabled={!content.trim()}
+        disabled={!comment_body.trim()}
         type="submit"
       >
         Post
