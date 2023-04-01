@@ -67,6 +67,7 @@ const Task = (props) => {
   };
 
   return (
+    <Link to={`/tasks/${id}`}>
     <Card className={styles.Task}>
       <Card.Body>
         {title}
@@ -119,6 +120,7 @@ const Task = (props) => {
         </div>
       </Card.Body>
     </Card>
+    </Link>
   );
 };
 
