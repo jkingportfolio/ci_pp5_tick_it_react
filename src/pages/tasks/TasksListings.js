@@ -14,6 +14,8 @@ import { axiosReq } from "../../api/axiosDefaults";
 
 import NoResults from "../../assets/no-results.png";
 
+import FreeProfiles from "../profiles/FreeProfiles";
+
 function TasksListings({ message, filter = "" }) {
   const [tasks, setTasks] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
@@ -43,6 +45,7 @@ function TasksListings({ message, filter = "" }) {
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
+      <FreeProfiles mobile />
       <Form
           className={styles.SearchBar}
           onSubmit={(event) => event.preventDefault()}
@@ -74,7 +77,7 @@ function TasksListings({ message, filter = "" }) {
         )}
       </Col>
       <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
-        <p>Popular profiles for desktop</p>
+        <FreeProfiles />
       </Col>
     </Row>
   );

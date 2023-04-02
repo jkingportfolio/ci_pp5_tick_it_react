@@ -35,9 +35,9 @@ function TaskDetail() {
 
   return (
     <Row className="h-100">
+      
       <Col className="py-2 p-0 p-lg-2" lg={8}>
-        <Task {...task.results[0]} setTask={setTask} taskDetail />
-      </Col>
+        <Task {...task.results[0]} setTask={setTask} taskDetail />      
       <Container className={appStyles.Content}>
         {currentUser ? (
           <CommentForm
@@ -65,8 +65,8 @@ function TaskDetail() {
           <span>No comments... yet</span>
         )}
       </Container>
-      <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
-        Side bar to display other information
+      </Col>
+      <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
       </Col>
     </Row>
   );

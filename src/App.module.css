@@ -1,6 +1,6 @@
 .App {
     font-family: 'Sono', sans-serif;
-    color: #EDEFFE;
+    color: #1f1f1f;
     background-color: #373B61;
     min-height: 100vh;
 }
@@ -14,31 +14,31 @@ a {
     transition: color ease-in-out 0.3s;
   }
   
-  a:hover {
-    text-decoration: none;
-  }
-  
-  a:hover i {
-    color: #2142b2;
-    transition: color ease-in-out 0.3s;
-  }
-  
-  i {
-    color: #cfced3;
-    font-size: 1.6rem;
-    padding: 7px;
-    vertical-align: middle;
-  }
-  
-  i:hover {
-    cursor: pointer;
-    transition: color ease-in-out 0.3s;
-    color: #2142b2;
-  }
+a:hover {
+  text-decoration: none;
+}
 
-  Content {
-    background-color: #ffffff;
-    padding: 10px;
-    border-radius: 2px;
-    border: 1px solid #dadadf;
-  }
+a:hover i {
+  color: #2142b2;
+  transition: color ease-in-out 0.3s;
+}
+
+i {
+  color: #cfced3;
+  font-size: 1.6rem;
+  padding: 7px;
+  vertical-align: middle;
+}
+
+i:hover {
+  cursor: pointer;
+  transition: color ease-in-out 0.3s;
+  color: #2142b2;
+}
+
+.Content {
+  background-color: #EDEFFE;
+  padding: 10px;
+  border-radius: 2px;
+  border: 1px solid #dadadf;
+}
