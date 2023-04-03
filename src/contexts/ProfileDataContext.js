@@ -10,6 +10,7 @@ export const useSetProfileData = () => useContext(SetProfileDataContext);
 
 export const ProfileDataProvider = ({ children }) => {
   const [profileData, setProfileData] = useState({
+    pageProfile: { results: [] },
     freeProfiles: { results: [] },
   });
 

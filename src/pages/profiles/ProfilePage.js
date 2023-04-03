@@ -6,48 +6,79 @@ import Container from "react-bootstrap/Container";
 
 import Asset from "../../components/Asset";
 
-// import styles from "../../styles/ProfilePage.module.css";
+import styles from "../../styles/ProfilePage.module.css";
 import appStyles from "../../App.module.css";
-
+import btnStyles from "../../styles/Button.module.css";
 
 import FreeProfiles from "./FreeProfiles";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import { useParams } from "react-router";
+import { axiosReq } from "../../api/axiosDefaults";
+import {
+  useProfileData,
+  useSetProfileData,
+} from "../../contexts/ProfileDataContext";
+import { Button, Image } from "react-bootstrap";
 
 function ProfilePage() {
   const [hasLoaded, setHasLoaded] = useState(false);
   const currentUser = useCurrentUser();
+  const { id } = useParams();
+  const setProfileData = useSetProfileData();
+  const { pageProfile } = useProfileData();
+  const [profile] = pageProfile.results;
+  const is_owner = currentUser?.username === profile?.owner;
 
   useEffect(() => {
-      setHasLoaded(true);
-  }, [])
+    const fetchData = async () => {
+      try {
+        const [{ data: pageProfile }] = await Promise.all([
+          axiosReq.get(`/profiles/${id}/`),
+        ]);
+        setProfileData((prevState) => ({
+          ...prevState,
+          pageProfile: { results: [pageProfile] },
+        }));
+        setHasLoaded(true);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchData();
+  }, [id, setProfileData]);
 
   const mainProfile = (
     <>
       <Row noGutters className="px-3 text-center">
         <Col lg={3} className="text-lg-left">
-          <p>Avatar</p>
+          <Image
+            className={styles.ProfileImage}
+            roundedCircle
+            src={profile?.image}
+          />
         </Col>
         <Col lg={6}>
-          <h3 className="m-2">Profile username</h3>
-          <p>Profile stats</p>
+          <h3 className="m-2">{profile?.owner}</h3>
+          <Row className="justify-content-center no-gutters">
+            <Col xs={3} className="my-2">
+              <div>{profile?.tasks_count}</div>
+              <div>tasks</div>
+            </Col>
+            <Col xs={3} className="my-2">
+              <div>{profile?.assigned_count}</div>
+              <div>Assigned tasks</div>
+            </Col>
+          </Row>
         </Col>
-        <Col className="p-3">Profile content</Col>
+        {profile?.content && <Col className="p-3">{profile.content}</Col>}
       </Row>
     </>
   );
 
-  const mainProfileTasks = (
+  const mainProfilePosts = (
     <>
       <hr />
-      <p className="text-center">Profile owner's Tasks</p>
-      <hr />
-    </>
-  );
-
-  const mainProfileAssigned = (
-    <>
-      <hr />
-      <p className="text-center">Profile owner's assigned Tasks</p>
+      <p className="text-center">Profile owner's posts</p>
       <hr />
     </>
   );
@@ -60,8 +91,7 @@ function ProfilePage() {
           {hasLoaded ? (
             <>
               {mainProfile}
-              {mainProfileTasks}
-              {mainProfileAssigned}
+              {mainProfilePosts}
             </>
           ) : (
             <Asset spinner />
