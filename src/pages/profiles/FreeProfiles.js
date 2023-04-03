@@ -1,35 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Container } from "react-bootstrap";
-import { axiosReq } from "../../api/axiosDefaults";
 import appStyles from "../../App.module.css";
 import Asset from "../../components/Asset";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import { useProfileData } from "../../contexts/ProfileDataContext";
 import Profile from "./Profile";
 
 const FreeProfiles = ({ mobile }) => {
-  const [profileData, setProfileData] = useState({
-    freeProfiles: { results: [] },
-  });
-  const { freeProfiles } = profileData;
-  const currentUser = useCurrentUser();
-
-  useEffect(() => {
-    const handleMount = async () => {
-      try {
-        const { data } = await axiosReq.get(
-          "/profiles/?ordering=tasks_count"
-        );
-        setProfileData((prevState) => ({
-          ...prevState,
-          freeProfiles: data,
-        }));
-      } catch (err) {
-        console.log(err);
-      }
-    };
-
-    handleMount();
-  }, [currentUser]);
+  const { freeProfiles } = useProfileData();
 
   return (
     <Container
@@ -39,7 +16,7 @@ const FreeProfiles = ({ mobile }) => {
     >
       {freeProfiles.results.length ? (
         <>
-          <p>Light on task profiles.</p>
+          <p>Most likely free profiles.</p>
           {mobile ? (
             <div className="d-flex justify-content-around">
               {freeProfiles.results.slice(0, 4).map((profile) => (
