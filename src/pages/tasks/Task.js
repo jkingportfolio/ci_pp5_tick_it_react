@@ -5,7 +5,7 @@ import { Card, Container, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
-import DropDown from "../../components/DropDown";
+import { DropDown } from "../../components/DropDown";
 
 const Task = (props) => {
   const {

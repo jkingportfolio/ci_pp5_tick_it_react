@@ -45,7 +45,11 @@ function App() {
           <Route exact path="/tasks/:id" render={() => <TaskDetail />} />
           <Route exact path="/tasks/:id/edit" render={() => <TaskEditForm />} />
           <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
-          <Route exact path="/profiles/:id/edit" render={() => <EditProfileForm />} />
+          <Route
+            exact
+            path="/profiles/:id/edit"
+            render={() => <EditProfileForm />}
+          />
           <Route render={() => <p>Page not found!</p>} />
         </Switch>
       </Container>

@@ -47,7 +47,7 @@ function ProfilePage() {
   const mainProfile = (
     <>
       {profile?.is_owner && <EditProfileDropdown id={profile?.id} />}
-      <Row noGutters className="px-3 text-center">
+      <Row className="px-3 text-center">
         <Col lg={3} className="text-lg-left">
           <Image
             className={styles.ProfileImage}
@@ -73,10 +73,10 @@ function ProfilePage() {
     </>
   );
 
-  const mainProfilePosts = (
+  const mainProfileTasks = (
     <>
       <hr />
-      <p className="text-center">Profile owner's posts</p>
+      <p className="text-center">Profile owner's tasks</p>
       <hr />
     </>
   );
@@ -89,7 +89,7 @@ function ProfilePage() {
           {hasLoaded ? (
             <>
               {mainProfile}
-              {mainProfilePosts}
+              {mainProfileTasks}
             </>
           ) : (
             <Asset spinner />

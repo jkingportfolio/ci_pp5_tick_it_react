@@ -86,9 +86,26 @@ const EditProfileForm = () => {
   const textFields = (
     <>
       <Form.Group>
-        <Form.Label>Bio</Form.Label>
+        <Form.Label>Name</Form.Label>
         <Form.Control
-          as="textarea"
+          as="input"
+          value={name}
+          onChange={handleChange}
+          name="name"
+          rows={7}
+        />
+      </Form.Group>
+
+      {errors?.name?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
+
+      <Form.Group>
+        <Form.Label>Job Role</Form.Label>
+        <Form.Control
+          as="input"
           value={job_role}
           onChange={handleChange}
           name="job_role"
