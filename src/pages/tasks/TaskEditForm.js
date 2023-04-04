@@ -8,9 +8,18 @@ import btnStyles from "../../styles/Button.module.css";
 
 import { useHistory, useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
+import axios from "axios";
 
 function TaskEditForm() {
   const [errors, setErrors] = useState({});
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("/profile-list/")
+      .then((response) => setUsers(response.data))
+      .catch((error) => console.log(error));
+  }, []);
 
   const [taskData, setTaskData] = useState({
     title: "",
@@ -19,8 +28,10 @@ function TaskEditForm() {
     assigned_to: "",
     due_date: "",
     pack: "",
+    completed: false,
   });
-  const { title, task_body, priority, assigned_to, due_date, pack } = taskData;
+  const { title, task_body, priority, assigned_to, due_date, pack, completed } =
+    taskData;
 
   const history = useHistory();
   const { id } = useParams();
@@ -29,10 +40,11 @@ function TaskEditForm() {
     const handleMount = async () => {
       try {
         const { data } = await axiosReq.get(`/tasks/${id}/`);
-        const { title, task_body, priority, assigned_to, is_owner } = data;
+        const { title, task_body, priority, assigned_to, completed, is_owner } =
+          data;
 
         is_owner
-          ? setTaskData({ title, task_body, priority, assigned_to })
+          ? setTaskData({ title, task_body, priority, assigned_to, completed })
           : history.push("/");
       } catch (err) {
         console.log(err);
@@ -59,6 +71,7 @@ function TaskEditForm() {
     formData.append("assigned_to", assigned_to);
     formData.append("due_date", due_date);
     formData.append("pack", pack);
+    formData.append("completed", completed);
 
     try {
       await axiosReq.put(`/tasks/${id}/`, formData);
@@ -168,19 +181,37 @@ function TaskEditForm() {
         <Form.Label>Assigned to</Form.Label>
 
         <Form.Control
+          as="select"
           name="assigned_to"
           className={appStyles.Input}
           value={assigned_to}
           onChange={handleChange}
           aria-label="assigned_to"
-        ></Form.Control>
+        >
+          {users.map((user) => (
+            <option key={user.id} value={user.id}>
+              {user.username}
+            </option>
+          ))}
+          ;
+        </Form.Control>
       </Form.Group>
 
-      {errors?.assigned_to?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
+      <Form.Group>
+        <Form>
+          {["checkbox"].map((type) => (
+            <div key={`inline-${type}`} className="mb-3">
+              <Form.Check
+                inline
+                label="Completed"
+                value={completed}
+                type={type}
+                id={`inline-${type}-1`}
+              />
+            </div>
+          ))}
+        </Form>
+      </Form.Group>
 
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}
