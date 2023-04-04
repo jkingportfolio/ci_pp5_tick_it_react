@@ -14,7 +14,7 @@ import axios from "axios";
 function TaskCreateForm() {
   const [errors, setErrors] = useState({});
   const [users, setUsers] = useState([]);
-  const [packs, setPacks] = useState([]);
+  // const [packs, setPacks] = useState([]);
 
   useEffect(() => {
     axios
@@ -23,12 +23,12 @@ function TaskCreateForm() {
       .catch((error) => console.log(error));
   }, []);
 
-  useEffect(() => {
-    axios
-      .get("/packs/")
-      .then((response) => setUsers(response.data))
-      .catch((error) => console.log(error));
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get("/packs/")
+  //     .then((response) => setUsers(response.data))
+  //     .catch((error) => console.log(error));
+  // }, []);
 
   const [taskData, setTaskData] = useState({
     title: "",
@@ -59,7 +59,7 @@ function TaskCreateForm() {
     formData.append("priority", priority);
     formData.append("assigned_to", assigned_to);
     formData.append("due_date", due_date);
-    formData.append("pack", pack);
+    // formData.append("pack", pack);
 
     try {
       const { data } = await axiosReq.post("/tasks/", formData);
@@ -138,12 +138,12 @@ function TaskCreateForm() {
           onChange={handleChange}
           aria-label="pack"
         >
-          {packs.map((pack) => (
+          {/* {packs.map((pack) => (
             <option key={pack.id} value={pack.id}>
               {pack.id}
             </option>
           ))}
-          ;
+          ; */}
         </Form.Control>
       </Form.Group>
 

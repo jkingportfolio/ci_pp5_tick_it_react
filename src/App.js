@@ -26,9 +26,7 @@ function App() {
             exact
             path="/tasks"
             render={() => (
-              <TasksListings
-                message="A list of all tasks will be here."
-              />
+              <TasksListings message="A list of all tasks will be here." />
             )}
           />
           <Route
@@ -47,6 +45,7 @@ function App() {
           <Route exact path="/tasks/:id" render={() => <TaskDetail />} />
           <Route exact path="/tasks/:id/edit" render={() => <TaskEditForm />} />
           <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
+          <Route exact path="/profiles/:id/edit" render={() => <EditProfileForm />} />
           <Route render={() => <p>Page not found!</p>} />
         </Switch>
       </Container>
