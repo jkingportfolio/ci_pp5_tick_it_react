@@ -11,6 +11,7 @@ import TaskDetail from "./pages/tasks/TaskDetail";
 import TasksListings from "./pages/tasks/TasksListings";
 import TaskEditForm from "./pages/tasks/TaskEditForm";
 import ProfilePage from "./pages/profiles/ProfilePage";
+import EditProfileForm from "./pages/profiles/EditProfileForm";
 
 function App() {
   const currentUser = useCurrentUser();

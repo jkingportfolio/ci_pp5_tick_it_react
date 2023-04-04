@@ -8,18 +8,26 @@ import btnStyles from "../../styles/Button.module.css";
 
 import { useHistory } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
-import axios from 'axios';
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import axios from "axios";
+// import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 function TaskCreateForm() {
   const [errors, setErrors] = useState({});
   const [users, setUsers] = useState([]);
+  const [packs, setPacks] = useState([]);
 
   useEffect(() => {
-    axios.get('/profile-list/')
-      .then(response => 
-        setUsers(response.data))
-      .catch(error => console.log(error));
+    axios
+      .get("/profile-list/")
+      .then((response) => setUsers(response.data))
+      .catch((error) => console.log(error));
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get("/packs/")
+      .then((response) => setUsers(response.data))
+      .catch((error) => console.log(error));
   }, []);
 
   const [taskData, setTaskData] = useState({
@@ -32,7 +40,7 @@ function TaskCreateForm() {
   });
   const { title, task_body, priority, assigned_to, due_date, pack } = taskData;
 
-//   const fileInput = useRef(null);
+  //   const fileInput = useRef(null);
   const history = useHistory();
 
   const handleChange = (event) => {
@@ -63,8 +71,6 @@ function TaskCreateForm() {
       }
     }
   };
-
-  
 
   const textFields = (
     <div className="text-center">
@@ -131,7 +137,14 @@ function TaskCreateForm() {
           value={pack}
           onChange={handleChange}
           aria-label="pack"
-        ></Form.Control>
+        >
+          {packs.map((pack) => (
+            <option key={pack.id} value={pack.id}>
+              {pack.id}
+            </option>
+          ))}
+          ;
+        </Form.Control>
       </Form.Group>
 
       {errors?.pack?.map((message, idx) => (
@@ -176,13 +189,13 @@ function TaskCreateForm() {
           aria-label="assigned_to"
         >
           {users.map((user) => (
-          <option key={user.id} value ={user.id}>
-            {user.username}
-          </option>
-          ))};
+            <option key={user.id} value={user.id}>
+              {user.username}
+            </option>
+          ))}
+          ;
         </Form.Control>
       </Form.Group>
-
 
       {errors?.assigned_to?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
@@ -200,7 +213,6 @@ function TaskCreateForm() {
         Submit
       </Button>
     </div>
-    
   );
 
   return (
