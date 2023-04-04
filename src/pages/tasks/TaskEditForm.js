@@ -29,10 +29,10 @@ function TaskEditForm() {
     const handleMount = async () => {
       try {
         const { data } = await axiosReq.get(`/tasks/${id}/`);
-        const { title, task_body, priority, is_owner } = data;
+        const { title, task_body, priority, assigned_to, is_owner } = data;
 
         is_owner
-          ? setTaskData({ title, task_body, priority })
+          ? setTaskData({ title, task_body, priority, assigned_to })
           : history.push("/");
       } catch (err) {
         console.log(err);
@@ -105,21 +105,6 @@ function TaskEditForm() {
       ))}
 
       <Form.Group>
-        <Form.Label>Title</Form.Label>
-        <Form.Control
-          type="text"
-          name="title"
-          value={title}
-          onChange={handleChange}
-        />
-      </Form.Group>
-      {errors?.title?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
-
-<Form.Group>
         <Form.Label>Due date</Form.Label>
 
         <Form.Control
