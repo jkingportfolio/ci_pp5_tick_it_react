@@ -40,34 +40,6 @@ const Pack = (props) => {
     }
   };
 
-//   const handleWatch = async () => {
-//     try {
-//       const { data } = await axiosRes.post("/watches/", { pack: id });
-//       setTasks((prevtasks) => ({
-//         ...prevtasks,
-//         results: prevtasks.results.map((pack) => {
-//           return pack.id === id ? { ...pack, watching_id: data.id } : pack;
-//         }),
-//       }));
-//     } catch (err) {
-//       console.log(err);
-//     }
-//   };
-
-//   const handleUnwatch = async () => {
-//     try {
-//       await axiosRes.delete(`/watches/${watching_id}/`);
-//       setTasks((prevTasks) => ({
-//         ...prevTasks,
-//         results: prevTasks.results.map((pack) => {
-//           return pack.id === id ? { ...pack, watching_id: null } : pack;
-//         }),
-//       }));
-//     } catch (err) {
-//       console.log(err);
-//     }
-//   };
-
   return (
     <Link to={`/packs/${id}`}>
     <Card className={styles.Pack}>
@@ -85,45 +57,11 @@ const Pack = (props) => {
                 handleDelete={handleDelete}
               />}
           </div>
-          <div>
-            <span>{pack_description}</span>
-            {/* <span>
-              This post has : {comments_count} comments!
-            </span> */}
-          </div>
         </Container>
       </Card.Body>
-      {/* <Card.Body>
-        {title && <Card.Title className="text-center">{title}</Card.Title>}
+      <Card.Body>
         {pack_description && <Card.Text>{pack_description}</Card.Text>}
-        <div className={styles.Pack}>
-          {is_owner ? (
-            <OverlayTrigger
-              placement="top"
-              overlay={<Tooltip>You already own this Pack!</Tooltip>}
-            >
-              <i className="far fa-xmark" />
-            </OverlayTrigger>
-          ) : watching_id ? (
-            <span onClick={handleUnwatch}>
-              <i className={`fas fa-eye-slash`} />
-              Un watch
-            </span>
-          ) : currentUser ? (
-            <span onClick={handleWatch}>
-              <i className={`far fa-eye`} />
-              Watch
-            </span>
-          ) : (
-            <OverlayTrigger
-              placement="top"
-              overlay={<Tooltip>Log in to watch this Task!</Tooltip>}
-            >
-              <i className="far fa-heart" />
-            </OverlayTrigger>
-          )}
-        </div>
-      </Card.Body> */}
+      </Card.Body>
     </Card>
     </Link>
   );

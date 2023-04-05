@@ -13,8 +13,9 @@ import TaskEditForm from "./pages/tasks/TaskEditForm";
 import ProfilePage from "./pages/profiles/ProfilePage";
 import EditProfileForm from "./pages/profiles/EditProfileForm";
 import PackCreateForm from "./pages/packs/PackCreateForm";
-import PackListings from "./pages/packs/PackListings";
 import PackDetail from "./pages/packs/PackDetail";
+import PackListings from "./pages/packs/PackListings";
+
 
 function App() {
   const currentUser = useCurrentUser();
