@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Col, Row, Container } from "react-bootstrap";
+import { Col, Row, Container, Tabs, Tab } from "react-bootstrap";
 import Asset from "../../components/Asset";
 import styles from "../../styles/ProfilePage.module.css";
 import appStyles from "../../App.module.css";
@@ -80,7 +80,7 @@ function ProfilePage() {
   const mainProfileTasks = (
     <>
       <hr />
-      <p className="text-center">{profile?.owner}'s tasks</p>      
+      <p className="text-center">{profile?.owner}'s tasks</p>
       <hr />
       {profileTasks.results.length ? (
         <InfiniteScroll
@@ -102,24 +102,30 @@ function ProfilePage() {
   );
 
   return (
-    <Row>
-      <Col className="py-2 p-0 p-lg-2" lg={8}>
-        <FreeProfiles mobile />
-        <Container className={appStyles.Content}>
-          {hasLoaded ? (
-            <>
-              {mainProfile}
+    <div>
+      <Row>
+        <Col className="py-2 p-0 p-lg-2" lg={8}>
+          <FreeProfiles mobile />
+          <Container className={appStyles.Content}>
+            {hasLoaded ? <>{mainProfile}</> : <Asset spinner />}
+          </Container>
+          <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
+            <Tab eventKey="task" title="Tasks">
               {mainProfileTasks}
-            </>
-          ) : (
-            <Asset spinner />
-          )}
-        </Container>
-      </Col>
-      <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
-        <FreeProfiles />
-      </Col>
-    </Row>
+            </Tab>
+            <Tab eventKey="pack" title="Packs">
+              List of profile owners packs
+            </Tab>
+            <Tab eventKey="assigned" title="Assigned">
+              List of tasks profile owner has been assigned
+            </Tab>
+          </Tabs>
+        </Col>
+        <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
+          <FreeProfiles />
+        </Col>
+      </Row>
+    </div>
   );
 }
 
