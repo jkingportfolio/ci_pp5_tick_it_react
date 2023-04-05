@@ -1,14 +1,8 @@
 import React, { useEffect, useState } from "react";
-
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-import Container from "react-bootstrap/Container";
-
+import { Col, Row, Container } from "react-bootstrap";
 import Asset from "../../components/Asset";
-
 import styles from "../../styles/ProfilePage.module.css";
 import appStyles from "../../App.module.css";
-
 import FreeProfiles from "./FreeProfiles";
 import { useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
@@ -18,6 +12,11 @@ import {
 } from "../../contexts/ProfileDataContext";
 import { Image } from "react-bootstrap";
 import { EditProfileDropdown } from "../../components/DropDown";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import Task from "../tasks/Task";
+import { fetchMoreData } from "../../utils/utils";
+import NoResults from "../../assets/no-results.png";
+import InfiniteScroll from "react-infinite-scroll-component";
 
 function ProfilePage() {
   const [hasLoaded, setHasLoaded] = useState(false);
@@ -25,17 +24,22 @@ function ProfilePage() {
   const setProfileData = useSetProfileData();
   const { pageProfile } = useProfileData();
   const [profile] = pageProfile.results;
+  const [profileTasks, setProfileTasks] = useState({ results: [] });
+  const currentUser = useCurrentUser();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [{ data: pageProfile }] = await Promise.all([
-          axiosReq.get(`/profiles/${id}/`),
-        ]);
+        const [{ data: pageProfile }, { data: profileTasks }] =
+          await Promise.all([
+            axiosReq.get(`/profiles/${id}/`),
+            axiosReq.get(`/tasks/?owner__profile=${id}`),
+          ]);
         setProfileData((prevState) => ({
           ...prevState,
           pageProfile: { results: [pageProfile] },
         }));
+        setProfileTasks(profileTasks);
         setHasLoaded(true);
       } catch (err) {
         console.log(err);
@@ -76,9 +80,24 @@ function ProfilePage() {
   const mainProfileTasks = (
     <>
       <hr />
-      <p className="text-center">Profile owner's tasks</p>
-      
+      <p className="text-center">{profile?.owner}'s tasks</p>      
       <hr />
+      {profileTasks.results.length ? (
+        <InfiniteScroll
+          children={profileTasks.results.map((task) => (
+            <Task key={task.id} {...task} setTasks={setProfileTasks} />
+          ))}
+          dataLength={profileTasks.results.length}
+          loader={<Asset spinner />}
+          hasMore={!!profileTasks.next}
+          next={() => fetchMoreData(profileTasks, setProfileTasks)}
+        />
+      ) : (
+        <Asset
+          src={NoResults}
+          message={`No results found, ${profile?.owner} hasn't posted yet.`}
+        />
+      )}
     </>
   );
 
