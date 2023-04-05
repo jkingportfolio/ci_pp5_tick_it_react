@@ -55,7 +55,7 @@ const NavBar = () => {
       <NavLink
         className={styles.NavLink}
         activeClassName={styles.Active}
-        to="/packs"
+        to="/packs/"
       >
         <i className="fas fa-boxes-packing"></i>Packs
       </NavLink>

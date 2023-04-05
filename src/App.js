@@ -12,6 +12,7 @@ import TasksListings from "./pages/tasks/TasksListings";
 import TaskEditForm from "./pages/tasks/TaskEditForm";
 import ProfilePage from "./pages/profiles/ProfilePage";
 import EditProfileForm from "./pages/profiles/EditProfileForm";
+import PackCreateForm from "./pages/packs/PackCreateForm";
 
 function App() {
   const currentUser = useCurrentUser();
@@ -50,6 +51,7 @@ function App() {
             path="/profiles/:id/edit"
             render={() => <EditProfileForm />}
           />
+          <Route exact path="/packs/create" render={() => <PackCreateForm />} />
           <Route render={() => <p>Page not found!</p>} />
         </Switch>
       </Container>

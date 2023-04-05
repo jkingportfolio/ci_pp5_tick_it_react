@@ -77,6 +77,7 @@ function ProfilePage() {
     <>
       <hr />
       <p className="text-center">Profile owner's tasks</p>
+      
       <hr />
     </>
   );
