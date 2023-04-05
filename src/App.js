@@ -13,6 +13,7 @@ import TaskEditForm from "./pages/tasks/TaskEditForm";
 import ProfilePage from "./pages/profiles/ProfilePage";
 import EditProfileForm from "./pages/profiles/EditProfileForm";
 import PackCreateForm from "./pages/packs/PackCreateForm";
+import PackListings from "./pages/packs/PackListings";
 
 function App() {
   const currentUser = useCurrentUser();
@@ -28,6 +29,13 @@ function App() {
             path="/tasks"
             render={() => (
               <TasksListings message="A list of all tasks will be here." />
+            )}
+          />
+          <Route
+            exact
+            path="/packs"
+            render={() => (
+              <PackListings message="A list of all packs will be here." />
             )}
           />
           <Route
