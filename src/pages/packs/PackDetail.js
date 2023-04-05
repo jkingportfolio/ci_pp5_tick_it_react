@@ -33,8 +33,7 @@ function PackDetail() {
   }, [id]);
 
   return (
-    <Row className="h-100">
-      
+    <Row className="h-100">      
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <Pack {...pack.results[0]} setPack={setPack} packDetail />      
       </Col>

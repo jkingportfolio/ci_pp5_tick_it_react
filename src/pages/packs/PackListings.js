@@ -23,7 +23,7 @@ function PackListings({ message, filter = "" }) {
   const [query, setQuery] = useState("");
 
   useEffect(() => {
-    const fetchTasks = async () => {
+    const fetchPacks = async () => {
       try {
         const { data } = await axiosReq.get(`/packs/?${filter}search=${query}`);
         setPacks(data);
@@ -35,7 +35,7 @@ function PackListings({ message, filter = "" }) {
 
     setHasLoaded(false);
     const timer = setTimeout(() => {
-      fetchTasks();
+      fetchPacks();
     }, 1000);
     return () => {
       clearTimeout(timer);
