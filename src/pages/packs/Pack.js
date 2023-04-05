@@ -21,7 +21,6 @@ const Pack = (props) => {
     tasks,
     packDetail,
     setPacks,
-    comments_count,
   } = props;
 
   const currentUser = useCurrentUser();
@@ -88,9 +87,9 @@ const Pack = (props) => {
           </div>
           <div>
             <span>{pack_description}</span>
-            <span>
+            {/* <span>
               This post has : {comments_count} comments!
-            </span>
+            </span> */}
           </div>
         </Container>
       </Card.Body>

@@ -14,6 +14,7 @@ import ProfilePage from "./pages/profiles/ProfilePage";
 import EditProfileForm from "./pages/profiles/EditProfileForm";
 import PackCreateForm from "./pages/packs/PackCreateForm";
 import PackListings from "./pages/packs/PackListings";
+import PackDetail from "./pages/packs/PackDetail";
 
 function App() {
   const currentUser = useCurrentUser();
@@ -60,6 +61,7 @@ function App() {
             render={() => <EditProfileForm />}
           />
           <Route exact path="/packs/create" render={() => <PackCreateForm />} />
+          <Route exact path="/packs/:id" render={() => <PackDetail />} />
           <Route render={() => <p>Page not found!</p>} />
         </Switch>
       </Container>
