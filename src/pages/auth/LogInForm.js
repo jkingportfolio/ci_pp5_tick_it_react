@@ -45,7 +45,7 @@ function SignInForm() {
     <Row className={styles.Row}>
       <Col className="col-sm-6 mx-auto" md={6}>
         <Container className={`${appStyles.Content} p-4 `}>
-          <h1 className={styles.Header}>Sign in!</h1>
+          <h1 className={styles.Header}>Log in!</h1>
           <p>Please enter your credentials below.</p>
           <Form onSubmit={handleSubmit}>
             <Form.Group controlId="username">
@@ -82,7 +82,7 @@ function SignInForm() {
               </Alert>
             ))}
             <Button className={appStyles.button} type="submit">
-              Sign in
+              Log in
             </Button>
             {errors.non_field_errors?.map((message, idx) => (
               <Alert key={idx} variant="warning" className="mt-3">

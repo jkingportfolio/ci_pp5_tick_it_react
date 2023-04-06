@@ -60,7 +60,7 @@ const NavBar = () => {
         <i className="fas fa-boxes-packing"></i>Packs
       </NavLink>
       <NavLink className={styles.NavLink} to="/" onClick={handleSignOut}>
-        <i className="fas fa-sign-out-alt"></i>Sign out
+        <i className="fas fa-sign-out-alt"></i>Log out
       </NavLink>
       <NavLink
         className={styles.NavLink}
@@ -77,7 +77,7 @@ const NavBar = () => {
         activeClassName={styles.Active}
         to="/signin"
       >
-        <i className="fas fa-sign-in-alt"></i>Sign in
+        <i className="fas fa-sign-in-alt"></i>Log in
       </NavLink>
       <NavLink
         to="/signup"
