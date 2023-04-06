@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../../styles/Task.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { Card, Container, OverlayTrigger, Tooltip } from "react-bootstrap";
+import { Card, Container, OverlayTrigger, Row, Tooltip } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
@@ -14,7 +14,7 @@ const Task = (props) => {
     title,
     profile_id,
     profile_image,
-    updated_on,
+    created_on,
     task_body,
     watching_id,
     taskDetail,
@@ -68,29 +68,32 @@ const Task = (props) => {
   };
 
   return (
-    <Link to={`/tasks/${id}`}>
     <Card className={styles.Task}>
-      <Card.Body>
-        {title}
-        <Container className="align-items-center justify-content-between">
-          <Link to={`/profiles/${profile_id}`}>
-            <Avatar src={profile_image} height={55} />
-            {owner}
-          </Link>
-          <div className="d-flex align-items-center">
-            <span>{updated_on}</span>
-            {is_owner && taskDetail && <DropDown
-                handleEdit={handleEdit}
-                handleDelete={handleDelete}
-              />}
-          </div>
-          <div>
-            <span>{task_body}</span>
-            <span>
-              This post has : {comments_count} comments!
-            </span>
-          </div>
-        </Container>
+      <Card.Body className={styles.cardbody}>
+        <div class="position-absolute top-0 end-0">
+          {is_owner && taskDetail && (
+            <DropDown handleEdit={handleEdit} handleDelete={handleDelete} />
+          )}
+        </div>
+        <Link to={`/tasks/${id}`}>
+          <Row>
+            <Container className={styles.title}>Task: {title}</Container>
+          </Row>
+          <Container className="align-items-center justify-content-between">
+            <Link to={`/profiles/${profile_id}`}>
+              <div className={styles.posted}>
+                Posted by: {owner} <Avatar src={profile_image} height={55} />
+              </div>
+            </Link>
+            <div className="d-flex align-items-center">
+              <span>{created_on}</span>
+            </div>
+            <div>
+              <div className={styles.taskbody}>{task_body}</div>
+              <div>This post has : {comments_count} comments!</div>
+            </div>
+          </Container>
+        </Link>
       </Card.Body>
       <Card.Body>
         {title && <Card.Title className="text-center">{title}</Card.Title>}
@@ -124,7 +127,6 @@ const Task = (props) => {
         </div>
       </Card.Body>
     </Card>
-    </Link>
   );
 };
 

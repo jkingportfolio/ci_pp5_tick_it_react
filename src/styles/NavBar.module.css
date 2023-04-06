@@ -1,14 +1,41 @@
 .NavBar {
-  color: #373b61;
-  background-color: #a7d5e5;
-  border: solid 1px #373b61;
+  color: #F6F6F7 !important;
+  background-color: #613FE5;
+  border-bottom: solid 1px #F6F6F7;
 }
 
 .NavLink {
-  color: #373b61;
+  color: #F6F6F7;
   padding: 5px;
 }
 
 .Active i {
-  color: #2142b2;
+  color: #F6F6F7;
+}
+
+a {
+  color: #EDEFFE;
+  transition: color ease-in-out 0.3s;
+}
+
+a:hover {
+  color: #F6F6F7 !important;
+  text-decoration: none importt !important;
+}
+
+a:hover i {
+color: #ddbe10 !important;
+transition: color ease-in-out 0.3s;
+}
+
+i {
+color: #cfced3;
+font-size: 1.6rem;
+padding: 7px;
+vertical-align: middle;
+}
+
+i:hover {
+cursor: pointer;
+transition: color ease-in-out 0.3s;
 }

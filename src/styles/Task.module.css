@@ -1,7 +1,50 @@
 .Task {
-    background-color: #e61818;
+    background-color: #F6F6F8;
     border: 1px solid #1a1ab8;
     border-radius: 2px;
-    margin-bottom: 16px;
+    margin: 16px 0 16px 0;
     text-align: center;
   }
+
+.Container {
+  background-color: rgb(0, 128, 17);
+}
+
+.cardbody {
+  background-color: #F6F6F7;
+}
+
+a {
+  color: #EDEFFE;
+  transition: color ease-in-out 0.3s;
+}
+
+a:hover {
+text-decoration: none !important;
+}
+
+a:hover i {
+color: #b22121;
+transition: color ease-in-out 0.3s;
+}
+
+.title {
+  font-size: 20px;
+  text-align: center;
+  color: rgb(2, 2, 2);
+  text-decoration: underline;
+}
+
+.posted {
+  font-size: 16px;
+  text-align: left;
+  color: rgb(2, 2, 2);
+}
+
+.taskbody {
+  border: 1px solid black;
+  font-size: 16px;
+  text-align: left;
+  color: rgb(2, 2, 2);
+  text-decoration: underline;
+}

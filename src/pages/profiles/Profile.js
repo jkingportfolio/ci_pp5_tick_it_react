@@ -9,7 +9,6 @@ const Profile = (props) => {
   const { id, image, owner } = profile;
 
   const currentUser = useCurrentUser();
-  const is_owner = currentUser?.username === owner;
 
   return (
     <div
@@ -22,7 +21,6 @@ const Profile = (props) => {
       </div>
       <div className={`mx-2`}>
         <strong>{owner}</strong>
-        Are you the owner? {is_owner}
       </div>
     </div>
   );
