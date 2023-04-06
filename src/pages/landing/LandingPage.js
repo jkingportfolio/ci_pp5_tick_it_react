@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Button, Row, Col, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
-// import styles from "../styles/LandingPage.module.css";
+import styles from "../../styles/LandingPage.module.css";
 import appStyles from "../../App.module.css";
 
 
@@ -11,7 +11,7 @@ const LandingPage = () => {
       
       <Row className="text-center">
         <Col sm={12}>
-          <Container>
+          <Container className={styles.landingbox}>
             <Card>
               <Card.Body>
                 <Card.Title>
@@ -44,7 +44,7 @@ const LandingPage = () => {
       </Row>
       <Container>
         <footer>
-          <div className="float-left">
+          <div className="float-left text-light">
             <p>Created by Jamie King</p>
           </div>
           <div className="float-right pb-3">
