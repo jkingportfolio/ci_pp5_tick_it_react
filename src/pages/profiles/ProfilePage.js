@@ -14,6 +14,7 @@ import { Image } from "react-bootstrap";
 import { EditProfileDropdown } from "../../components/DropDown";
 // import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Task from "../tasks/Task";
+import Pack from "../packs/Pack";
 import { fetchMoreData } from "../../utils/utils";
 import NoResults from "../../assets/no-results.png";
 import InfiniteScroll from "react-infinite-scroll-component";
@@ -25,21 +26,24 @@ function ProfilePage() {
   const { pageProfile } = useProfileData();
   const [profile] = pageProfile.results;
   const [profileTasks, setProfileTasks] = useState({ results: [] });
+  const [profilePacks, setProfilePacks] = useState({ results: [] });
   // const currentUser = useCurrentUser();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [{ data: pageProfile }, { data: profileTasks }] =
+        const [{ data: pageProfile }, { data: profileTasks }, { data: profilePacks}] =
           await Promise.all([
             axiosReq.get(`/profiles/${id}/`),
             axiosReq.get(`/tasks/?owner__profile=${id}`),
+            axiosReq.get(`/packs/?owner__profile=${id}`),
           ]);
         setProfileData((prevState) => ({
           ...prevState,
           pageProfile: { results: [pageProfile] },
         }));
         setProfileTasks(profileTasks);
+        setProfilePacks(profilePacks);
         setHasLoaded(true);
       } catch (err) {
         console.log(err);
@@ -101,6 +105,30 @@ function ProfilePage() {
     </>
   );
 
+  const mainProfilePacks = (
+    <>
+      {/* <hr /> */}
+      {/* <p className="text-center">{profile?.owner}'s tasks</p>
+      <hr /> */}
+      {profilePacks.results.length ? (
+        <InfiniteScroll
+          children={profilePacks.results.map((pack) => (
+            <Pack key={pack.id} {...pack} setPacks={setProfilePacks} />
+          ))}
+          dataLength={profilePacks.results.length}
+          loader={<Asset spinner />}
+          hasMore={!!profilePacks.next}
+          next={() => fetchMoreData(profilePacks, setProfileTasks)}
+        />
+      ) : (
+        <Asset
+          src={NoResults}
+          message={`No results found, ${profile?.owner} has created no packs.`}
+        />
+      )}
+    </>
+  );
+
   return (
     <div>
       <Row>
@@ -113,7 +141,7 @@ function ProfilePage() {
               {mainProfileTasks}
             </Tab>
             <Tab eventKey="pack" title="Packs" tabClassName={appStyles.tabs}>
-              List of profile owners packs
+              {mainProfilePacks}
             </Tab>
             <Tab eventKey="assigned" title="Assigned" tabClassName={appStyles.tabs}>
               List of tasks profile owner has been assigned
