@@ -15,13 +15,14 @@ const Profile = (props) => {
     <div
       className={`my-3 d-flex align-items-center ${mobile && "flex-column"}`}
     >
-      <div>
+      <div className={styles.Profile}>
         <Link className="align-self-center" to={`/profiles/${id}`}>
           <Avatar src={image} height={imageSize} />
         </Link>
       </div>
       <div className={`mx-2`}>
         <strong>{owner}</strong>
+        Are you the owner? {is_owner}
       </div>
     </div>
   );

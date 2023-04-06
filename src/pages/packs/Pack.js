@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../../styles/Pack.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { Card, Container, OverlayTrigger, Tooltip } from "react-bootstrap";
+import { Card, Container } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
@@ -20,7 +20,7 @@ const Pack = (props) => {
     members,
     tasks,
     packDetail,
-    setPacks,
+    // setPacks,
   } = props;
 
   const currentUser = useCurrentUser();
@@ -61,6 +61,12 @@ const Pack = (props) => {
       </Card.Body>
       <Card.Body>
         {pack_description && <Card.Text>{pack_description}</Card.Text>}
+      </Card.Body>
+      <Card.Body>
+        Created on: {created_on}
+        Members: {members}
+        Tasks: {tasks}
+
       </Card.Body>
     </Card>
     </Link>
