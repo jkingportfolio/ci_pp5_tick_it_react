@@ -47,7 +47,6 @@ function TasksListings({ message, filter = "" }) {
       <Col className="py-2 p-0 p-lg-2" lg={8}>
       <FreeProfiles mobile />
       <Form
-          className={styles.SearchBar}
           onSubmit={(event) => event.preventDefault()}
         >
           <Form.Control

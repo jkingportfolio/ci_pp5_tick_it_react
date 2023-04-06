@@ -79,9 +79,9 @@ function ProfilePage() {
 
   const mainProfileTasks = (
     <>
-      <hr />
-      <p className="text-center">{profile?.owner}'s tasks</p>
-      <hr />
+      {/* <hr /> */}
+      {/* <p className="text-center">{profile?.owner}'s tasks</p>
+      <hr /> */}
       {profileTasks.results.length ? (
         <InfiniteScroll
           children={profileTasks.results.map((task) => (
@@ -107,19 +107,19 @@ function ProfilePage() {
         <Col className="py-2 p-0 p-lg-2" lg={8}>
           <FreeProfiles mobile />
           <Container className={appStyles.Content}>
-            {hasLoaded ? <>{mainProfile}</> : <Asset spinner />}
-          </Container>
-          <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
-            <Tab eventKey="task" title="Tasks">
+            {hasLoaded ? <>{mainProfile}</> : <Asset spinner />}      
+          <Tabs defaultActiveKey="task">
+            <Tab eventKey="task" title="Tasks" tabClassName={appStyles.tabs}>
               {mainProfileTasks}
             </Tab>
-            <Tab eventKey="pack" title="Packs">
+            <Tab eventKey="pack" title="Packs" tabClassName={appStyles.tabs}>
               List of profile owners packs
             </Tab>
-            <Tab eventKey="assigned" title="Assigned">
+            <Tab eventKey="assigned" title="Assigned" tabClassName={appStyles.tabs}>
               List of tasks profile owner has been assigned
             </Tab>
           </Tabs>
+          </Container>
         </Col>
         <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
           <FreeProfiles />
