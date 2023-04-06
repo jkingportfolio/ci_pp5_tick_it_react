@@ -51,3 +51,11 @@ i:hover {
   margin: 20px;
   width: 150px;
 }
+
+.darktext {
+  color: #120E16 !important;
+}
+
+.topmargin {
+  margin-top: 10px;
+}

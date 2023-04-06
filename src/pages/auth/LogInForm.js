@@ -28,7 +28,7 @@ function SignInForm() {
       const { data } = await axios.post("/dj-rest-auth/login/", signInData);
       setCurrentUser(data.user);
       history.push("/");
-      console.log({setCurrentUser})
+      console.log({ setCurrentUser });
     } catch (err) {
       setErrors(err.response?.data);
     }
@@ -43,9 +43,10 @@ function SignInForm() {
 
   return (
     <Row className={styles.Row}>
-      <Col className="my-auto p-0 p-md-2" md={6}>
+      <Col className="col-sm-6 mx-auto" md={6}>
         <Container className={`${appStyles.Content} p-4 `}>
-          <h1 className={styles.Header}>sign in</h1>
+          <h1 className={styles.Header}>Sign in!</h1>
+          <p>Please enter your credentials below.</p>
           <Form onSubmit={handleSubmit}>
             <Form.Group controlId="username">
               <Form.Label className="d-none">Username</Form.Label>
@@ -80,10 +81,7 @@ function SignInForm() {
                 {message}
               </Alert>
             ))}
-            <Button
-              className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright}`}
-              type="submit"
-            >
+            <Button className={appStyles.button} type="submit">
               Sign in
             </Button>
             {errors.non_field_errors?.map((message, idx) => (
@@ -93,9 +91,11 @@ function SignInForm() {
             ))}
           </Form>
         </Container>
-        <Container className={`mt-3 ${appStyles.Content}`}>
-          <Link className={styles.Link} to="/signup">
-            Don't have an account? <span>Sign up now!</span>
+
+        <Container className={`${appStyles.Content} p-4`}>
+          <p>Don't have an account?</p>
+          <Link to="/signup">
+            <Button className={`${appStyles.button} mb-3`}>Sign up</Button>
           </Link>
         </Container>
       </Col>

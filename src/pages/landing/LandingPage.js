@@ -32,9 +32,9 @@ const LandingPage = () => {
                     Sign up
                   </Button>
                 </Link>
-                <Link to="/login">
+                <Link to="/signin">
                   <Button className={`${appStyles.button} mb-3`}>
-                    Log
+                    Log in
                   </Button>
                 </Link>
               </Card.Body>

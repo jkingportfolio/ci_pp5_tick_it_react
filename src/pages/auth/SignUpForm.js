@@ -5,14 +5,7 @@ import styles from "../../styles/SignUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 
-import {
-  Form,
-  Button,
-  Col,
-  Row,
-  Container,
-  Alert,
-} from "react-bootstrap";
+import { Form, Button, Col, Row, Container, Alert } from "react-bootstrap";
 import axios from "axios";
 
 const SignUpForm = () => {
@@ -46,10 +39,10 @@ const SignUpForm = () => {
 
   return (
     <Row className={styles.Row}>
-      <Col className="my-auto py-2 p-md-2" md={6}>
+      <Col className="col-sm-6 mx-auto" md={6}>
         <Container className={`${appStyles.Content} p-4 `}>
-          <h1 className={styles.Header}>sign up</h1>
-
+          <h1 className={styles.Header}>Sign up!</h1>
+          <p>Please enter your sign up details below.</p>
           <Form onSubmit={handleSubmit}>
             <Form.Group controlId="username">
               <Form.Label className="d-none">username</Form.Label>
@@ -102,10 +95,7 @@ const SignUpForm = () => {
               </Alert>
             ))}
 
-            <Button
-              className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright}`}
-              type="submit"
-            >
+            <Button className={appStyles.button} type="submit">
               Sign up
             </Button>
             {errors.non_field_errors?.map((message, idx) => (
@@ -115,10 +105,10 @@ const SignUpForm = () => {
             ))}
           </Form>
         </Container>
-
-        <Container className={`mt-3 ${appStyles.Content}`}>
-          <Link className={styles.Link} to="/signin">
-            Already have an account? <span>Sign in</span>
+        <Container className={`${appStyles.Content} p-4`}>
+          <p>Already have an account?</p>
+          <Link to="/signin">
+            <Button className={`${appStyles.button} mb-3`}>Log in</Button>
           </Link>
         </Container>
       </Col>
