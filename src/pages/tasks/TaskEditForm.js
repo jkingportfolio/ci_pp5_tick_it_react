@@ -26,8 +26,8 @@ function TaskEditForm() {
     task_body: "",
     priority: "",
     assigned_to: "",
-    due_date: "",
-    pack: "",
+    due_date: null,
+    pack: null,
     completed: false,
   });
   const { title, task_body, priority, assigned_to, due_date, pack, completed } =
@@ -198,20 +198,28 @@ function TaskEditForm() {
       </Form.Group>
 
       <Form.Group>
-        <Form>
-          {["checkbox"].map((type) => (
-            <div key={`inline-${type}`} className="mb-3">
-              <Form.Check
-                inline
-                label="Completed"
-                value={completed}
-                type={type}
-                id={`inline-${type}-1`}
-              />
-            </div>
-          ))}
-        </Form>
+        <Form.Label>Task Status</Form.Label>
+
+        <Form.Control
+          as="select"
+          name="completed"
+          className={appStyles.Input}
+          value={completed}
+          onChange={handleChange}
+          aria-label="completed"
+        >
+          <option>Select task completed</option>
+          <option value="NO">Yes</option>
+          <option value="IN-PROGRESS">In-progress</option>
+          <option value="COMPLETE">Complete</option>
+        </Form.Control>
       </Form.Group>
+
+      {errors?.completed?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
 
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}

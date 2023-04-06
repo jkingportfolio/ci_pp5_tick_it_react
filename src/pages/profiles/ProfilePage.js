@@ -12,7 +12,7 @@ import {
 } from "../../contexts/ProfileDataContext";
 import { Image } from "react-bootstrap";
 import { EditProfileDropdown } from "../../components/DropDown";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
+// import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Task from "../tasks/Task";
 import { fetchMoreData } from "../../utils/utils";
 import NoResults from "../../assets/no-results.png";
@@ -25,7 +25,7 @@ function ProfilePage() {
   const { pageProfile } = useProfileData();
   const [profile] = pageProfile.results;
   const [profileTasks, setProfileTasks] = useState({ results: [] });
-  const currentUser = useCurrentUser();
+  // const currentUser = useCurrentUser();
 
   useEffect(() => {
     const fetchData = async () => {

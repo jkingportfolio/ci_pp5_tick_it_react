@@ -1,29 +1,29 @@
 import React, { useEffect, useState } from "react";
 import { axiosReq } from "../../api/axiosDefaults";
 import Pack from "./Pack";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { Col, Row, Container } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import { useParams } from "react-router";
-import appStyles from "../../App.module.css";
-import PackListings from "./PackListings";
+// import appStyles from "../../App.module.css";
+// import PackListings from "./PackListings";
+// import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 function PackDetail() {
   const { id } = useParams();
   const [pack, setPack] = useState({ results: [] });
 
-  const currentUser = useCurrentUser();
-  const profile_image = currentUser?.profile_image;
-  const [comments, setComments] = useState({ results: [] });
+  // const currentUser = useCurrentUser();
+  // const profile_image = currentUser?.profile_image;
+  // const [comments, setComments] = useState({ results: [] });
 
   useEffect(() => {
     const handleMount = async () => {
       try {
-        const [{ data: pack }, { data: comments }] = await Promise.all([
+        const [{ data: pack } ] = await Promise.all([
           axiosReq.get(`/packs/${id}`),
-          axiosReq.get(`/comments/?pack=${id}`),
+          // axiosReq.get(`/comments/?pack=${id}`),
         ]);
         setPack({ results: [pack] });
-        setComments(comments);
+        // setComments(comments);
       } catch (err) {
         console.log(err);
       }
