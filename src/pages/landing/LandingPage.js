@@ -24,17 +24,17 @@ const LandingPage = () => {
                   Are you ready to create and complete some tasks?!
                 </Card.Text>
               </Card.Body>
-              <Card.Body>
+              <Card.Body>                
+                <Link to="/signin">
+                  <Button className={`${appStyles.button} mb-3`}>
+                    Log in
+                  </Button>
+                </Link>
                 <Link to="/signup">
                   <Button
                     className={`${appStyles.button} mb-3`}
                   >
                     Sign up
-                  </Button>
-                </Link>
-                <Link to="/signin">
-                  <Button className={`${appStyles.button} mb-3`}>
-                    Log in
                   </Button>
                 </Link>
               </Card.Body>

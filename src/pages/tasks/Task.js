@@ -19,7 +19,8 @@ const Task = (props) => {
     watching_id,
     taskDetail,
     setTasks,
-    comments_count,
+    assigned_to,
+    completed,
   } = props;
 
   const currentUser = useCurrentUser();
@@ -80,61 +81,67 @@ const Task = (props) => {
         </Link>
         <Container className="align-items-center justify-content-between">
           <div>
-            <Link to={`/profiles/${profile_id}`}>
-              <div className={styles.posted}>
-                Posted by: {owner} <Avatar src={profile_image} height={55} />
-              </div>
-            </Link>
+            <div className={styles.posted}>
+              Posted by:{" "}
+              <Link to={`/profiles/${profile_id}`}>
+                {" "}
+                <span className={styles.posted}>{owner}</span>{" "}
+                <Avatar src={profile_image} height={55} />
+              </Link>
+            </div>
           </div>
           <div className={styles.posted}>
-            <span className={styles.posted}>Posted on: {created_on}</span>
+            <div className={styles.posted}>Posted on: {created_on}</div>
           </div>
+          <hr></hr>
           <div>
             <div>
-              <div className={styles.detailtitle}>Detail of task:</div>
+              <div className={styles.posted}>Detail of task</div>
               <div className={styles.taskbody}>{task_body}</div>
             </div>
-            <div className={styles.posted}>
-              This post has : {comments_count} comments!
-            </div>
+            <hr></hr>
           </div>
         </Container>
       </Card.Body>
       <Card.Body>
-        <div className={styles.watchbtn}>
-          {is_owner ? (
-            <OverlayTrigger
-              placement="top"
-              overlay={<Tooltip>You already own this Task!</Tooltip>}
-            >
-              <i className="far fa-xmark" />
-            </OverlayTrigger>
-          ) : watching_id ? (
-            <OverlayTrigger
-              placement="top"
-              overlay={<Tooltip>Unwatch Task!</Tooltip>}
-            >
-              <span onClick={handleUnwatch}>
-                <i className={`fas fa-eye-slash`} />
-              </span>
-            </OverlayTrigger>
-          ) : currentUser ? (
-            <OverlayTrigger
-              placement="top"
-              overlay={<Tooltip>Watch Task!</Tooltip>}
-            >
-              <span onClick={handleWatch}>
-                <i className={`far fa-eye`} />
-              </span>
-            </OverlayTrigger>
-          ) : (
-            <OverlayTrigger
-              placement="top"
-              overlay={<Tooltip>Log in to watch this Task!</Tooltip>}
-            >
-              <i className="far fa-heart" />
-            </OverlayTrigger>
-          )}
+        <div className={styles.inline}>
+          <div className={styles.flex}>Task Completed: {completed}</div>
+          <div className={styles.flex}>Assigned to: {assigned_to}</div>
+          <div className={styles.watchbtn}>
+            {is_owner ? (
+              <OverlayTrigger
+                placement="top"
+                overlay={<Tooltip>You already own this Task!</Tooltip>}
+              >
+                <i className="fa-solid fa-eye-low-vision" />
+              </OverlayTrigger>
+            ) : watching_id ? (
+              <OverlayTrigger
+                placement="top"
+                overlay={<Tooltip>Unwatch Task!</Tooltip>}
+              >
+                <span onClick={handleUnwatch}>
+                  <i className={`${"fas fa-eye-slash"} ${styles.redicon}`} />
+                </span>
+              </OverlayTrigger>
+            ) : currentUser ? (
+              <OverlayTrigger
+                placement="top"
+                overlay={<Tooltip>Watch Task!</Tooltip>}
+              >
+                <span onClick={handleWatch}>
+                  <i className={`${"fas fa-eye"} ${styles.greenicon}`} />
+                </span>
+              </OverlayTrigger>
+            ) : (
+              <OverlayTrigger
+                placement="top"
+                overlay={<Tooltip>Log in to watch this Task!</Tooltip>}
+              >
+                <i className="far fa-eye" />
+              </OverlayTrigger>
+            )}
+          </div>
         </div>
       </Card.Body>
     </Card>

@@ -59,3 +59,12 @@ i:hover {
 .topmargin {
   margin-top: 10px;
 }
+
+.sidetitle {
+  font-size: 20px;
+  text-decoration: underline !important;
+}
+
+.boxborder {
+  border: #120E16 1px solid;
+}
