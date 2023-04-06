@@ -76,29 +76,32 @@ const Task = (props) => {
           )}
         </div>
         <Link to={`/tasks/${id}`}>
-          <Row>
-            <Container className={styles.title}>Task: {title}</Container>
-          </Row>
-          <Container className="align-items-center justify-content-between">
+          <Container className={styles.title}>Task: {title}</Container>
+        </Link>
+        <Container className="align-items-center justify-content-between">
+          <div>
             <Link to={`/profiles/${profile_id}`}>
               <div className={styles.posted}>
                 Posted by: {owner} <Avatar src={profile_image} height={55} />
               </div>
             </Link>
-            <div className="d-flex align-items-center">
-              <span>{created_on}</span>
-            </div>
+          </div>
+          <div className={styles.posted}>
+            <span className={styles.posted}>Posted on: {created_on}</span>
+          </div>
+          <div>
             <div>
+              <div className={styles.detailtitle}>Detail of task:</div>
               <div className={styles.taskbody}>{task_body}</div>
-              <div>This post has : {comments_count} comments!</div>
             </div>
-          </Container>
-        </Link>
+            <div className={styles.posted}>
+              This post has : {comments_count} comments!
+            </div>
+          </div>
+        </Container>
       </Card.Body>
       <Card.Body>
-        {title && <Card.Title className="text-center">{title}</Card.Title>}
-        {task_body && <Card.Text>{task_body}</Card.Text>}
-        <div className={styles.Task}>
+        <div className={styles.watchbtn}>
           {is_owner ? (
             <OverlayTrigger
               placement="top"
@@ -107,15 +110,23 @@ const Task = (props) => {
               <i className="far fa-xmark" />
             </OverlayTrigger>
           ) : watching_id ? (
-            <span onClick={handleUnwatch}>
-              <i className={`fas fa-eye-slash`} />
-              Un watch
-            </span>
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Unwatch Task!</Tooltip>}
+            >
+              <span onClick={handleUnwatch}>
+                <i className={`fas fa-eye-slash`} />
+              </span>
+            </OverlayTrigger>
           ) : currentUser ? (
-            <span onClick={handleWatch}>
-              <i className={`far fa-eye`} />
-              Watch
-            </span>
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Watch Task!</Tooltip>}
+            >
+              <span onClick={handleWatch}>
+                <i className={`far fa-eye`} />
+              </span>
+            </OverlayTrigger>
           ) : (
             <OverlayTrigger
               placement="top"

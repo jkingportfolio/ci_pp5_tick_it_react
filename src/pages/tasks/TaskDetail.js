@@ -34,9 +34,8 @@ function TaskDetail() {
   }, [id]);
 
   return (
-    <Row className="h-100">
-      
-      <Col className="py-2 p-0 p-lg-2" lg={8}>
+    <div className="h-100">      
+
         <Task {...task.results[0]} setTask={setTask} taskDetail />      
       <Container className={appStyles.Content}>
         {currentUser ? (
@@ -65,10 +64,10 @@ function TaskDetail() {
           <span>No comments... yet</span>
         )}
       </Container>
-      </Col>
+
       <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
       </Col>
-    </Row>
+    </div>
   );
 }
 
