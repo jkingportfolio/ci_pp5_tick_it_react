@@ -8,6 +8,7 @@ import appStyles from "../../App.module.css";
 const LandingPage = () => {
   return (
     <>
+      
       <Row className="text-center">
         <Col sm={12}>
           <Container>

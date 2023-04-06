@@ -16,6 +16,7 @@ import PackCreateForm from "./pages/packs/PackCreateForm";
 import PackDetail from "./pages/packs/PackDetail";
 import PackListings from "./pages/packs/PackListings";
 import LandingPage from "./pages/landing/LandingPage";
+import Dashboard from "./pages/dashboard/Dashboard";
 
 
 function App() {
@@ -30,12 +31,13 @@ function App() {
         {!currentUser ? (
           <Switch>
           <Route exact path="/" render={() => <LandingPage />} />
-          <Route exact path="/login" render={() => <LogInForm />} />
+          <Route exact path="/signin" render={() => <LogInForm />} />
           <Route exact path="/signup" render={() => <SignUpForm />} />          
           <Route render={() => <LandingPage />} />
         </Switch>
         ) : (
         <Switch>
+          <Route exact path="/" render={() => <Dashboard />} />
           <Route
             exact
             path="/tasks"
