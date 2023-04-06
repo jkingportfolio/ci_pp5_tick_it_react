@@ -15,6 +15,7 @@ import EditProfileForm from "./pages/profiles/EditProfileForm";
 import PackCreateForm from "./pages/packs/PackCreateForm";
 import PackDetail from "./pages/packs/PackDetail";
 import PackListings from "./pages/packs/PackListings";
+import LandingPage from "./pages/landing/LandingPage";
 
 
 function App() {
@@ -25,6 +26,15 @@ function App() {
     <div className={styles.App}>
       <NavBar />
       <Container className={styles.Main}>
+
+        {!currentUser ? (
+          <Switch>
+          <Route exact path="/" render={() => <LandingPage />} />
+          <Route exact path="/login" render={() => <LogInForm />} />
+          <Route exact path="/signup" render={() => <SignUpForm />} />          
+          <Route render={() => <LandingPage />} />
+        </Switch>
+        ) : (
         <Switch>
           <Route
             exact
@@ -65,6 +75,7 @@ function App() {
           <Route exact path="/packs/:id" render={() => <PackDetail />} />
           <Route render={() => <p>Page not found!</p>} />
         </Switch>
+        )}
       </Container>
     </div>
   );
