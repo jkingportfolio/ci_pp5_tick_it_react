@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 
-import styles from "../../styles/SignUpForm.module.css";
-import btnStyles from "../../styles/Button.module.css";
+import styles from "../../styles/CredentialsForm.module.css";
 import appStyles from "../../App.module.css";
 
 import { Form, Button, Col, Row, Container, Alert } from "react-bootstrap";
@@ -40,7 +39,7 @@ const SignUpForm = () => {
   return (
     <Row className={styles.Row}>
       <Col className="col-sm-6 mx-auto" md={6}>
-        <Container className={`${appStyles.Content} p-4 `}>
+        <Container className={`${styles.form} p-4 `}>
           <h1 className={styles.Header}>Sign up!</h1>
           <p>Please enter your sign up details below.</p>
           <Form onSubmit={handleSubmit}>
@@ -104,11 +103,9 @@ const SignUpForm = () => {
               </Alert>
             ))}
           </Form>
-        </Container>
-        <Container className={`${appStyles.Content} p-4`}>
-          <p>Already have an account?</p>
+          <p className={`${appStyles.darktext} ${styles.topmargin}`}>Already have an account?</p>
           <Link to="/signin">
-            <Button className={`${appStyles.button} mb-3`}>Log in</Button>
+          <p className={`${appStyles.darktext}`}>Click <span className={styles.link}>here </span>to Log in!</p>
           </Link>
         </Container>
       </Col>
