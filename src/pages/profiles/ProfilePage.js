@@ -118,7 +118,7 @@ function ProfilePage() {
           dataLength={profilePacks.results.length}
           loader={<Asset spinner />}
           hasMore={!!profilePacks.next}
-          next={() => fetchMoreData(profilePacks, setProfileTasks)}
+          next={() => fetchMoreData(profilePacks, setProfilePacks)}
         />
       ) : (
         <Asset

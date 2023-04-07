@@ -1,3 +1,8 @@
 .text {
     color: #F6F6F7;
 }
+
+.borderbox {
+    border: solid 2px white !important;
+    color: white;
+}
