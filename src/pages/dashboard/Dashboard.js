@@ -15,17 +15,16 @@ const Dashboard = () => {
   return (
     <>
     <Container>
-      <Row>
-        <Col md={12} className={`${appStyles.lighttext} ${styles.borderbox}`}>
-         Hello {currentUser.username} {currentUser.image}
-        </Col>
-        </Row>
+
         <Row>
         <Col md={8} className={`${appStyles.lighttext} ${styles.borderbox}`}>
           <Row>
+          <Col md={12} className={`${appStyles.lighttext} ${styles.borderbox}`}>
+         Hello {currentUser.username} {currentUser.image}
+        </Col>
+          </Row>
+          <Row>
             <Col md={6} className={`${appStyles.lighttext} ${styles.borderbox}`}>
-              TEXT FILER
-              TEXT FILER
               TEXT FILER
               TEXT FILER
               TEXT FILER
