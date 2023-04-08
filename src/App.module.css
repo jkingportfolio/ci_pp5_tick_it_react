@@ -93,3 +93,7 @@ i:hover {
 .nav-tabs > li > a {
   color: #000000;
 }
+
+.automargin {
+  margin: auto;
+}

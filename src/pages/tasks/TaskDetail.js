@@ -4,7 +4,7 @@ import Task from "./Task";
 import Comment from "../comments/Comment";
 import CommentForm from "../comments/CommentForm";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { Col, Row, Container } from "react-bootstrap";
+import { Col, Container } from "react-bootstrap";
 import { useParams } from "react-router";
 import appStyles from "../../App.module.css";
 

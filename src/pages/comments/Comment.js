@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Container } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import styles from "../../styles/Comment.module.css";
+import appStyles from "../../App.module.css";
 import { DropDown } from "../../components/DropDown";
 import CommentEditForm from "./CommentEditForm";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
@@ -46,13 +47,15 @@ const Comment = (props) => {
   return (
     <>
       <hr />
-      <Container>
-        <Link to={`/profiles/${profile_id}`}>
-          <Avatar src={profile_image} />
-        </Link>
-        <Container className="align-self-center ml-2">
-          <span className={styles.Owner}>{owner}</span>
-          <span className={styles.Date}>{updated_on}</span>
+      <Row>
+        <Col md={1} className={appStyles.automargin}>
+          <Link to={`/profiles/${profile_id}`}>
+            <Avatar src={profile_image} />
+          </Link>
+        </Col>
+        <Col className="align-self-center ml-2">
+          <div className={styles.Owner}>{owner}</div>
+          <div className={styles.Date}>{updated_on}</div>
           {showEditForm ? (
             <CommentEditForm
               id={id}
@@ -63,16 +66,16 @@ const Comment = (props) => {
               setShowEditForm={setShowEditForm}
             />
           ) : (
-            <p>{comment_body}</p>
+            <div>{comment_body}</div>
           )}
-        </Container>
+        </Col>
         {is_owner && !showEditForm && (
           <DropDown
             handleEdit={() => setShowEditForm(true)}
             handleDelete={handleDelete}
           />
         )}
-      </Container>
+      </Row>
     </>
   );
 };
