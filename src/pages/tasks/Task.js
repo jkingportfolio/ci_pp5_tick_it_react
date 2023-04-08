@@ -130,7 +130,7 @@ const Task = (props) => {
           </div>
         </Container>
       </Card.Body>
-      <Card.Body>
+      <Card.Body className={styles.cardbody}>
         <div className={styles.inline}>
           <div className={`${styles.flex} ${backgroundColorClass}`}>Task Completed: {completed}</div>
           <div className={styles.flex}>Assigned to: {assignedUser}</div>
