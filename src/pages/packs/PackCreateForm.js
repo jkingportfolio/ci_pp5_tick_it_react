@@ -166,6 +166,7 @@ function PackCreateForm() {
           <Container
             className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
           >
+            <h3>Create pack</h3>
             <div className={appStyles.Content}>
 
               {textFields}
