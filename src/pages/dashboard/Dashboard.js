@@ -34,12 +34,12 @@ const Dashboard = () => {
               
             </Col>
             <Col md={6} className={`${appStyles.lighttext} ${styles.borderbox}`}>
-              <TaskStatusTable />
+              {/* <TaskStatusTable /> */}
             </Col>
           </Row>
           <Row>
             <Col md={6} className={`${appStyles.lighttext} ${styles.borderbox}`}>
-            <TaskCompleteFilter />
+            {/* <TaskCompleteFilter /> */}
             </Col>
             <Col md={6} className={`${appStyles.lighttext} ${styles.borderbox}`}>
             TEXT FILER

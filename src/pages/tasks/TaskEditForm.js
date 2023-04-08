@@ -28,7 +28,7 @@ function TaskEditForm() {
     assigned_to: "",
     due_date: null,
     pack: null,
-    completed: false,
+    completed: "No",
   });
   const { title, task_body, priority, assigned_to, due_date, pack, completed } =
     taskData;
@@ -40,11 +40,11 @@ function TaskEditForm() {
     const handleMount = async () => {
       try {
         const { data } = await axiosReq.get(`/tasks/${id}/`);
-        const { title, task_body, priority, assigned_to, completed, is_owner } =
+        const { title, task_body, priority, due_date, assigned_to, completed, is_owner } =
           data;
 
         is_owner
-          ? setTaskData({ title, task_body, priority, assigned_to, completed })
+          ? setTaskData({ title, task_body, priority, due_date, assigned_to, completed })
           : history.push("/");
       } catch (err) {
         console.log(err);
@@ -188,6 +188,7 @@ function TaskEditForm() {
           onChange={handleChange}
           aria-label="assigned_to"
         >
+          <option>No one</option>
           {users.map((user) => (
             <option key={user.id} value={user.id}>
               {user.username}
@@ -198,7 +199,7 @@ function TaskEditForm() {
       </Form.Group>
 
       <Form.Group>
-        <Form.Label>Task Status</Form.Label>
+        <Form.Label>Task completed</Form.Label>
 
         <Form.Control
           as="select"
@@ -209,7 +210,7 @@ function TaskEditForm() {
           aria-label="completed"
         >
           <option>Select task completed</option>
-          <option value="NO">Yes</option>
+          <option value="NO">No</option>
           <option value="IN-PROGRESS">In-progress</option>
           <option value="COMPLETE">Complete</option>
         </Form.Control>
@@ -222,12 +223,12 @@ function TaskEditForm() {
       ))}
 
       <Button
-        className={`${btnStyles.Button} ${btnStyles.Blue}`}
+        className={`${appStyles.button}`}
         onClick={() => history.goBack()}
       >
         cancel
       </Button>
-      <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
+      <Button className={`${appStyles.button}`} type="submit">
         save
       </Button>
     </div>
@@ -235,18 +236,19 @@ function TaskEditForm() {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <Row>
+      <div className={styles.form}>
         <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
           <Container
             className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
           >
+            <div className={appStyles.Content}>
             <Form.Group className="text-center">
               <div>
                 <Form.Label
-                  className={`${btnStyles.Button} ${btnStyles.Blue} btn`}
+                  className={`${appStyles.button} `}
                   htmlFor="image-upload"
                 >
-                  Change the image
+                  Upload file
                 </Form.Label>
               </div>
             </Form.Group>
@@ -255,14 +257,13 @@ function TaskEditForm() {
                 {message}
               </Alert>
             ))}
-
-            <div className="d-md-none">{textFields}</div>
+            {textFields}</div>
           </Container>
         </Col>
-        <Col md={5} lg={4} className="d-none d-md-block p-0 p-md-2">
-          <Container className={appStyles.Content}>{textFields}</Container>
-        </Col>
-      </Row>
+        {/* <Col md={5} lg={4} className="d-none d-md-block p-0 p-md-2">
+          <div className={appStyles.Content}>{textFields}</div>
+        </Col> */}
+      </div>
     </Form>
   );
 }
