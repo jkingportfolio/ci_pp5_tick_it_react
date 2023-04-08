@@ -49,7 +49,7 @@ function App() {
             exact
             path="/packs"
             render={() => (
-              <PackListings message="It seems there are no packs. Click here to create one." />
+              <PackListings message="It seems there are no packs." />
             )}
           />
           <Route
