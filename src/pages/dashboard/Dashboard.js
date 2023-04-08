@@ -7,6 +7,7 @@ import FreeProfiles from "../profiles/FreeProfiles";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import TaskPieChart from "../../components/TaskPieChart";
 import TaskStatusTable from "../../components/TaskStatusTable";
+import TaskCompleteFilter from "../../components/TaskCompleteFilter";
 
 
 
@@ -38,7 +39,7 @@ const Dashboard = () => {
           </Row>
           <Row>
             <Col md={6} className={`${appStyles.lighttext} ${styles.borderbox}`}>
-            TEXT FILER
+            <TaskCompleteFilter />
             </Col>
             <Col md={6} className={`${appStyles.lighttext} ${styles.borderbox}`}>
             TEXT FILER
