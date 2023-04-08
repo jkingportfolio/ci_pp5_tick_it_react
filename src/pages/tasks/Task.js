@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from "../../styles/Task.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Card, Container, OverlayTrigger, Row, Tooltip } from "react-bootstrap";
@@ -6,6 +6,7 @@ import { Link, useHistory } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 import { DropDown } from "../../components/DropDown";
+import axios from 'axios';
 
 const Task = (props) => {
   const {
@@ -26,6 +27,7 @@ const Task = (props) => {
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
   const history = useHistory();
+  const [assignedUser, setAssignedUser] = useState(null);
 
   const handleEdit = () => {
     history.push(`/tasks/${id}/edit`);
@@ -66,13 +68,11 @@ const Task = (props) => {
     } catch (err) {
       console.log(err);
     }
-  };
-
-  
+  };  
 
   const backgroundColorClass = (() => {
     switch (completed) {
-      case 'cCOMPLETED':
+      case 'COMPLETED':
         return styles['green-background'];
       case 'IN_PROGRESSS':
         return styles['yellow-background'];
@@ -82,6 +82,16 @@ const Task = (props) => {
         return '';
     }
   })();
+
+  useEffect(() => {
+    if (assigned_to) {
+      axios.get(`/profiles/${assigned_to}/`).then((response) => {
+        setAssignedUser(response.data.owner);
+      });
+    } else {
+      setAssignedUser("no one");
+    }
+  }, [assigned_to]);
 
   return (
     <Card className={styles.Task}>
@@ -123,7 +133,7 @@ const Task = (props) => {
       <Card.Body>
         <div className={styles.inline}>
           <div className={`${styles.flex} ${backgroundColorClass}`}>Task Completed: {completed}</div>
-          <div className={styles.flex}>Assigned to: {assigned_to}</div>
+          <div className={styles.flex}>Assigned to: {assignedUser}</div>
           <div className={styles.watchbtn}>
             {is_owner ? (
               <OverlayTrigger
