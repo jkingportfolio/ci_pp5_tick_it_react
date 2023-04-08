@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { Form, Button } from "react-bootstrap";
 
-import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 
+import appStyles from "../../App.module.css";
 import styles from "../../styles/CommentForm.module.css";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
@@ -49,7 +50,6 @@ function CommentForm(props) {
             <Avatar src={profileImage} />
           </Link>
           <Form.Control
-            className={styles.Form}
             placeholder="my comment..."
             as="textarea"
             value={comment_body}
@@ -58,13 +58,15 @@ function CommentForm(props) {
           />
         </InputGroup>
       </Form.Group>
-      <button
-        className={`${styles.Button} btn d-block ml-auto`}
+      <div className={styles.buttondisplay}>
+      <Button
+        className={appStyles.button}
         disabled={!comment_body.trim()}
         type="submit"
       >
         Post
-      </button>
+      </Button>
+      </div>
     </Form>
   );
 }
