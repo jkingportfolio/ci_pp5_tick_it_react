@@ -7,6 +7,7 @@ import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 import { DropDown } from "../../components/DropDown";
 import axios from 'axios';
+import appStyles from "../../App.module.css";
 
 const Task = (props) => {
   const {
@@ -89,7 +90,7 @@ const Task = (props) => {
         setAssignedUser(response.data.owner);
       });
     } else {
-      setAssignedUser("no one");
+      setAssignedUser("Nobody yet");
     }
   }, [assigned_to]);
 
@@ -134,7 +135,7 @@ const Task = (props) => {
         <div className={styles.inline}>
           <div className={`${styles.flex} ${backgroundColorClass}`}>Task Completed: {completed}</div>
           <div className={styles.flex}>Assigned to: {assignedUser}</div>
-          <div className={styles.watchbtn}>
+          <div className={`${styles.watchbtn} ${appStyles.automargin}`}>
             {is_owner ? (
               <OverlayTrigger
                 placement="top"
