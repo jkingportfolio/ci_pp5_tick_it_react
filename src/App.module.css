@@ -79,6 +79,7 @@ i:hover {
 .sidetitle {
   font-size: 20px;
   text-decoration: underline !important;
+  text-align: center;
 }
 
 .boxborder {

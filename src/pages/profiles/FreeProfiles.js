@@ -19,12 +19,12 @@ const FreeProfiles = ({ mobile }) => {
           <p className={appStyles.sidetitle}>Profiles with least tasks</p>
           {mobile ? (
             <div className="d-flex justify-content-around">
-              {freeProfiles.results.slice(0, 4).map((profile) => (
+              {freeProfiles.results.slice(0, 3).map((profile) => (
                 <Profile key={profile.id} profile={profile} mobile />
               ))}
             </div>
           ) : (
-            freeProfiles.results.map((profile) => (
+            freeProfiles.results.slice(0, 5).map((profile) => (
               <Profile key={profile.id} profile={profile} />
             ))
           )}
