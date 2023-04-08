@@ -5,6 +5,8 @@ import styles from "../../styles/Dashboard.module.css";
 import appStyles from "../../App.module.css";
 import FreeProfiles from "../profiles/FreeProfiles";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import TaskPieChart from "../../components/TaskPieChart";
+import TaskStatusTable from "../../components/TaskStatusTable";
 
 
 
@@ -31,7 +33,7 @@ const Dashboard = () => {
               
             </Col>
             <Col md={6} className={`${appStyles.lighttext} ${styles.borderbox}`}>
-            TEXT FILER
+              <TaskStatusTable />
             </Col>
           </Row>
           <Row>
