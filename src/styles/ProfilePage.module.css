@@ -4,10 +4,19 @@
     width: 120px;
     margin: 4px;
   }
-  
+ 
+ .border {
+  border: 1px #120E16 solid;
+  border-radius: 2px;
+  margin: 50px 0 50px 0;
+  text-align: center;
+  padding: 10px;
+ } 
+
   @media screen and (max-width: 991px) {
     .ProfileImage {
       width: 250px;
       height: 250px;
     }
   }
+

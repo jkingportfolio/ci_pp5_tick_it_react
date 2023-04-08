@@ -32,12 +32,15 @@ function ProfilePage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [{ data: pageProfile }, { data: profileTasks }, { data: profilePacks}] =
-          await Promise.all([
-            axiosReq.get(`/profiles/${id}/`),
-            axiosReq.get(`/tasks/?owner__profile=${id}`),
-            axiosReq.get(`/packs/?owner__profile=${id}`),
-          ]);
+        const [
+          { data: pageProfile },
+          { data: profileTasks },
+          { data: profilePacks },
+        ] = await Promise.all([
+          axiosReq.get(`/profiles/${id}/`),
+          axiosReq.get(`/tasks/?owner__profile=${id}`),
+          axiosReq.get(`/packs/?owner__profile=${id}`),
+        ]);
         setProfileData((prevState) => ({
           ...prevState,
           pageProfile: { results: [pageProfile] },
@@ -54,8 +57,9 @@ function ProfilePage() {
 
   const mainProfile = (
     <>
-      {profile?.is_owner && <EditProfileDropdown id={profile?.id} />}
-      <Row className="px-3 text-center">
+      <Row className={`${styles.border} "px-3 text-center"`}>
+        
+        
         <Col lg={3} className="text-lg-left">
           <Image
             className={styles.ProfileImage}
@@ -75,6 +79,9 @@ function ProfilePage() {
               <div>Assigned tasks</div>
             </Col>
           </Row>
+        </Col>
+        <Col lg={3}>
+        {profile?.is_owner && <EditProfileDropdown id={profile?.id} />}
         </Col>
         {profile?.content && <Col className="p-3">{profile.content}</Col>}
       </Row>
@@ -135,18 +142,22 @@ function ProfilePage() {
         <Col className="py-2 p-0 p-lg-2" lg={8}>
           <FreeProfiles mobile />
           <Container className={appStyles.Content}>
-            {hasLoaded ? <>{mainProfile}</> : <Asset spinner />}      
-          <Tabs defaultActiveKey="task">
-            <Tab eventKey="task" title="Tasks" tabClassName={appStyles.tabs}>
-              {mainProfileTasks}
-            </Tab>
-            <Tab eventKey="pack" title="Packs" tabClassName={appStyles.tabs}>
-              {mainProfilePacks}
-            </Tab>
-            <Tab eventKey="assigned" title="Assigned" tabClassName={appStyles.tabs}>
-              List of tasks profile owner has been assigned
-            </Tab>
-          </Tabs>
+            {hasLoaded ? <>{mainProfile}</> : <Asset spinner />}
+            <Tabs defaultActiveKey="task">
+              <Tab eventKey="task" title="Tasks" tabClassName={appStyles.tabs}>
+                {mainProfileTasks}
+              </Tab>
+              <Tab eventKey="pack" title="Packs" tabClassName={appStyles.tabs}>
+                {mainProfilePacks}
+              </Tab>
+              <Tab
+                eventKey="assigned"
+                title="Assigned"
+                tabClassName={appStyles.tabs}
+              >
+                List of tasks profile owner has been assigned
+              </Tab>
+            </Tabs>
           </Container>
         </Col>
         <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
