@@ -57,28 +57,28 @@ function ProfilePage() {
 
   const mainProfile = (
     <>
-      <Row className={`${styles.border} "px-3 text-center"`}>
-        <Col lg={3} className="text-lg-left">
+      <Row className={`${styles.profilebox} "px-3 text-center"`}>
+        <Col lg={2} className="text-lg-left">
           <Image
             className={styles.ProfileImage}
             roundedCircle
             src={profile?.image}
           />
         </Col>
-        <Col lg={6}>
+        <Col lg={8}>
           <h3 className="m-2">{profile?.owner}</h3>
           <Row className="justify-content-center no-gutters">
-            <Col xs={3} className="my-2">
+            <Col xs={6} className="my-2">
               <div>{profile?.tasks_count}</div>
               <div>tasks</div>
             </Col>
-            <Col xs={3} className="my-2">
+            <Col xs={6} className="my-2">
               <div>{profile?.assigned_count}</div>
               <div>Assigned tasks</div>
             </Col>
           </Row>
         </Col>
-        <Col lg={3}>
+        <Col lg={2}>
           {profile?.is_owner && <EditProfileDropdown id={profile?.id} />}
         </Col>
         {profile?.content && <Col className="p-3">{profile.content}</Col>}
@@ -139,9 +139,9 @@ function ProfilePage() {
       <Row>
         <Col className="py-2 p-0 p-lg-2" lg={8}>
           <FreeProfiles mobile />
-          <Container className={appStyles.Content}>
+          <Container className={styles.profilebox}>
             {hasLoaded ? <>{mainProfile}</> : <Asset spinner />}
-            <Tabs defaultActiveKey="task">
+            <Tabs defaultActiveKey="task" fill>
               <Tab eventKey="task" title="Tasks" tabClassName={appStyles.tabs}>
                 {mainProfileTasks}
               </Tab>

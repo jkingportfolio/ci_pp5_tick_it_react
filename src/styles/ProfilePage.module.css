@@ -5,13 +5,10 @@
     margin: 4px;
   }
  
- .border {
-  border: 1px #120E16 solid;
-  border-radius: 2px;
-  margin: 50px 0 50px 0;
-  text-align: center;
+.profilebox {
+  background-color: #F6F6F7;
   padding: 10px;
- } 
+}
 
   @media screen and (max-width: 991px) {
     .ProfileImage {
