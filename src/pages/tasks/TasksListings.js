@@ -48,6 +48,7 @@ function TasksListings({ message, filter = "" }) {
       <FreeProfiles mobile />
       <Form
           onSubmit={(event) => event.preventDefault()}
+          className={styles.bottommargin}
         >
           <Form.Control
             value={query}
