@@ -2,6 +2,7 @@ import React from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import styles from "../styles/DropDown.module.css";
 import { useHistory } from "react-router";
+import appStyles from "../App.module.css";
 
 // The forwardRef is important!!
 // Dropdown needs access to the DOM node in order to position the Menu
@@ -54,7 +55,7 @@ export const EditProfileDropdown = ({ id }) => {
           onClick={() => history.push(`/profiles/${id}/edit`)}
           aria-label="edit-profile"
         >
-          <i className="fas fa-edit" /> Edit profile
+          <i className="fas fa-edit"/> <span className={appStyles.darktext}>Edit profile</span>
         </Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
