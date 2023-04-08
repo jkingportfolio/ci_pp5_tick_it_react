@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 
-import { Col, Container, Row, Form } from "react-bootstrap";
+import { Col, Container, Row, Form, Button } from "react-bootstrap";
+import { Link } from 'react-router-dom';
 
 import appStyles from "../../App.module.css";
 import styles from "../../styles/SearchBar.module.css";
-// import styles from "../../styles/PackListings.module.css";
+import packStyles from "../../styles/PackListings.module.css";
 
 import Pack from "./Pack";
 import Asset from "../../components/Asset";
@@ -45,9 +46,10 @@ function PackListings({ message, filter = "" }) {
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
-      <FreeProfiles mobile />
-      <Form
-          className={styles.SearchBar}
+        <FreeProfiles mobile />
+
+        <Form
+          className={styles.bottommargin}
           onSubmit={(event) => event.preventDefault()}
         >
           <Form.Control
@@ -58,6 +60,15 @@ function PackListings({ message, filter = "" }) {
             placeholder="Search packs"
           />
         </Form>
+        <div className={packStyles.packbutton}>
+        <Button
+        className={`${appStyles.button}`}
+        as={Link}
+        to="/packs/create"
+      >
+        Create Pack
+      </Button>
+        </div>
         {hasLoaded ? (
           <>
             {packs.results.length ? (

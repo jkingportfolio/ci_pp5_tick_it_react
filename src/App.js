@@ -42,14 +42,14 @@ function App() {
             exact
             path="/tasks"
             render={() => (
-              <TasksListings message="A list of all tasks will be here." />
+              <TasksListings message="Opps, that search didnt return anything, please try again." />
             )}
           />
           <Route
             exact
             path="/packs"
             render={() => (
-              <PackListings message="A list of all packs will be here." />
+              <PackListings message="It seems there are no packs. Click here to create one." />
             )}
           />
           <Route
@@ -57,7 +57,7 @@ function App() {
             path="/watched"
             render={() => (
               <TasksListings
-                message="A list of all watched tasks will be here."
+                message="You dont seem to be watching any tasks right now."
                 filter={`watches__owner__profile=${profile_id}&ordering=-watches__created_on&`}
               />
             )}
