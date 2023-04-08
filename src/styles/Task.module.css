@@ -81,3 +81,19 @@ transition: color ease-in-out 0.3s;
   flex: 1;
   margin: auto;
 }
+
+.topmargin {
+  margin-top: 10px;
+}
+
+.green-background {
+  background-color: green;
+}
+
+.yellow-background {
+  background-color: yellow;
+}
+
+.red-background {
+  background-color: red;
+}

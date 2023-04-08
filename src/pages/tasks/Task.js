@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from 'react';
 import styles from "../../styles/Task.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Card, Container, OverlayTrigger, Row, Tooltip } from "react-bootstrap";
@@ -68,6 +68,21 @@ const Task = (props) => {
     }
   };
 
+  
+
+  const backgroundColorClass = (() => {
+    switch (completed) {
+      case 'cCOMPLETED':
+        return styles['green-background'];
+      case 'IN_PROGRESSS':
+        return styles['yellow-background'];
+      case 'NO':
+        return styles['red-background'];
+      default:
+        return '';
+    }
+  })();
+
   return (
     <Card className={styles.Task}>
       <Card.Body className={styles.cardbody}>
@@ -97,7 +112,9 @@ const Task = (props) => {
           <div>
             <div>
               <div className={styles.posted}>Detail of task</div>
-              <div className={styles.taskbody}>{task_body}</div>
+              <div className={`${styles.taskbody} ${styles.topmargin}`}>
+                {task_body}
+              </div>
             </div>
             <hr></hr>
           </div>
@@ -105,7 +122,7 @@ const Task = (props) => {
       </Card.Body>
       <Card.Body>
         <div className={styles.inline}>
-          <div className={styles.flex}>Task Completed: {completed}</div>
+          <div className={`${styles.flex} ${backgroundColorClass}`}>Task Completed: {completed}</div>
           <div className={styles.flex}>Assigned to: {assigned_to}</div>
           <div className={styles.watchbtn}>
             {is_owner ? (
