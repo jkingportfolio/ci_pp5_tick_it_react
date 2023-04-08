@@ -4,7 +4,6 @@ import { Form, Button, Row, Col, Container, Alert } from "react-bootstrap";
 
 import styles from "../../styles/TaskCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
-import btnStyles from "../../styles/Button.module.css";
 
 import { useHistory, useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
@@ -40,11 +39,25 @@ function TaskEditForm() {
     const handleMount = async () => {
       try {
         const { data } = await axiosReq.get(`/tasks/${id}/`);
-        const { title, task_body, priority, due_date, assigned_to, completed, is_owner } =
-          data;
+        const {
+          title,
+          task_body,
+          priority,
+          due_date,
+          assigned_to,
+          completed,
+          is_owner,
+        } = data;
 
         is_owner
-          ? setTaskData({ title, task_body, priority, due_date, assigned_to, completed })
+          ? setTaskData({
+              title,
+              task_body,
+              priority,
+              due_date,
+              assigned_to,
+              completed,
+            })
           : history.push("/");
       } catch (err) {
         console.log(err);
@@ -242,27 +255,25 @@ function TaskEditForm() {
             className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
           >
             <div className={appStyles.Content}>
-            <Form.Group className="text-center">
-              <div>
-                <Form.Label
-                  className={`${appStyles.button} `}
-                  htmlFor="image-upload"
-                >
-                  Upload file
-                </Form.Label>
-              </div>
-            </Form.Group>
-            {errors?.image?.map((message, idx) => (
-              <Alert variant="warning" key={idx}>
-                {message}
-              </Alert>
-            ))}
-            {textFields}</div>
+              <Form.Group className="text-center">
+                <div>
+                  <Form.Label
+                    className={`${appStyles.button} `}
+                    htmlFor="image-upload"
+                  >
+                    Upload file
+                  </Form.Label>
+                </div>
+              </Form.Group>
+              {errors?.image?.map((message, idx) => (
+                <Alert variant="warning" key={idx}>
+                  {message}
+                </Alert>
+              ))}
+              {textFields}
+            </div>
           </Container>
         </Col>
-        {/* <Col md={5} lg={4} className="d-none d-md-block p-0 p-md-2">
-          <div className={appStyles.Content}>{textFields}</div>
-        </Col> */}
       </div>
     </Form>
   );

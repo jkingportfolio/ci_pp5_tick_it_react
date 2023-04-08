@@ -4,7 +4,6 @@ import { Alert, Form, Button, Row, Col, Container } from "react-bootstrap";
 
 import styles from "../../styles/PackCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
-import btnStyles from "../../styles/Button.module.css";
 
 import { useHistory } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
@@ -149,12 +148,12 @@ function PackCreateForm() {
       ))}
 
       <Button
-        className={`${btnStyles.Button} ${btnStyles.Dark}`}
+        className={`${appStyles.button}`}
         onClick={() => history.goBack()}
       >
         Cancel
       </Button>
-      <Button className={`${btnStyles.Button} ${btnStyles.Dark}`} type="submit">
+      <Button className={`${appStyles.button}`} type="submit">
         Submit
       </Button>
     </div>
@@ -162,26 +161,18 @@ function PackCreateForm() {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <Row>
+      <div className={styles.form}>
         <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
           <Container
             className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
           >
-            <Form.Group className="text-center">
-              <Form.Label
-                className="d-flex justify-content-center"
-                htmlFor="image-upload"
-              >
-                File Upload
-              </Form.Label>
-            </Form.Group>
-            <div className="d-md-none">{textFields}</div>
+            <div className={appStyles.Content}>
+
+              {textFields}
+            </div>
           </Container>
         </Col>
-        <Col md={5} lg={4} className="d-none d-md-block p-0 p-md-2">
-          <Container className={appStyles.Content}>{textFields}</Container>
-        </Col>
-      </Row>
+      </div>
     </Form>
   );
 }
