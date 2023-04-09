@@ -74,7 +74,7 @@ const Task = (props) => {
 
   const backgroundColorClass = (() => {
     switch (completed) {
-      case 'COMPLETED':
+      case 'COMPLETE':
         return styles['GreenBackground'];
       case 'IN_PROGRESSS':
         return styles['YellowBackground'];
