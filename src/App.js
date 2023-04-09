@@ -17,6 +17,7 @@ import PackDetail from "./pages/packs/PackDetail";
 import PackListings from "./pages/packs/PackListings";
 import LandingPage from "./pages/landing/LandingPage";
 import Dashboard from "./pages/dashboard/Dashboard";
+import EditPasswordForm from "./pages/profiles/EditPasswordForm";
 
 
 function App() {
@@ -75,6 +76,7 @@ function App() {
           />
           <Route exact path="/packs/create" render={() => <PackCreateForm />} />
           <Route exact path="/packs/:id" render={() => <PackDetail />} />
+          <Route exact path="/profiles/:id/edit/password" render={() => <EditPasswordForm />} />
           <Route render={() => <p>Page not found!</p>} />
         </Switch>
         )}
