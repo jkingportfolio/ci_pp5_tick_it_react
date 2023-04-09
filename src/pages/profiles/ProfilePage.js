@@ -142,16 +142,17 @@ function ProfilePage() {
           <Container className={styles.profilebox}>
             {hasLoaded ? <>{mainProfile}</> : <Asset spinner />}
             <Tabs defaultActiveKey="task" fill>
-              <Tab eventKey="task" title="Tasks" tabClassName={appStyles.tabs}>
+              <Tab eventKey="task" title="Tasks" tabClassName={appStyles.tabs} className={appStyles.boxborder}>
                 {mainProfileTasks}
               </Tab>
-              <Tab eventKey="pack" title="Packs" tabClassName={appStyles.tabs}>
+              <Tab eventKey="pack" title="Packs" tabClassName={appStyles.tabs} className={appStyles.boxborder}>
                 {mainProfilePacks}
               </Tab>
               <Tab
                 eventKey="assigned"
                 title="Assigned"
                 tabClassName={appStyles.tabs}
+                className={appStyles.boxborder}
               >
                 List of tasks profile owner has been assigned
               </Tab>

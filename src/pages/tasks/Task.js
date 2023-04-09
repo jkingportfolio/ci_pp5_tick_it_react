@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from "../../styles/Task.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { Card, Container, OverlayTrigger, Row, Tooltip } from "react-bootstrap";
+import { Card, Container, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
