@@ -1,11 +1,11 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import appStyles from "../../App.module.css";
-import Asset from "../../components/Asset";
-import { useProfileData } from "../../contexts/ProfileDataContext";
-import Profile from "./Profile";
+import appStyles from "../App.module.css";
+import Asset from "../components/Asset";
+import { useProfileData } from "../contexts/ProfileDataContext";
+import Profile from "../pages/profiles/Profile";
 
-const FreeProfiles = ({ mobile }) => {
+const ProfilesList = ({ mobile }) => {
   const { listProfiles } = useProfileData();
 
   return (
@@ -19,12 +19,12 @@ const FreeProfiles = ({ mobile }) => {
           <p className={appStyles.SideTitle}>Profiles with least tasks</p>
           {mobile ? (
             <div className="d-flex justify-content-around">
-              {listProfiles.results.slice(0, 3).map((profile) => (
+              {listProfiles.results.map((profile) => (
                 <Profile key={profile.id} profile={profile} mobile />
               ))}
             </div>
           ) : (
-            listProfiles.results.slice(0, 5).map((profile) => (
+            listProfiles.results.map((profile) => (
               <Profile key={profile.id} profile={profile} />
             ))
           )}
@@ -36,4 +36,4 @@ const FreeProfiles = ({ mobile }) => {
   );
 };
 
-export default FreeProfiles;
+export default ProfilesList;

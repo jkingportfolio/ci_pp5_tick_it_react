@@ -11,7 +11,7 @@ export const useSetProfileData = () => useContext(SetProfileDataContext);
 export const ProfileDataProvider = ({ children }) => {
   const [profileData, setProfileData] = useState({
     pageProfile: { results: [] },
-    freeProfiles: { results: [] },
+    listProfiles: { results: [] },
   });
 
   const currentUser = useCurrentUser();
@@ -24,7 +24,7 @@ export const ProfileDataProvider = ({ children }) => {
         );
         setProfileData((prevState) => ({
           ...prevState,
-          freeProfiles: data,
+          listProfiles: data,
         }));
       } catch (err) {
         console.log(err);

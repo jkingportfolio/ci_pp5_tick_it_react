@@ -8,6 +8,7 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import TaskPieChart from "../../components/TaskPieChart";
 import TaskStatusTable from "../../components/TaskStatusTable";
 import TaskCompleteFilter from "../../components/TaskCompleteFilter";
+import ProfilesList from "../../components/ProfilesList";
 
 
 
@@ -28,10 +29,7 @@ const Dashboard = () => {
           </Row>
           <Row>
             <Col md={6} className={`${appStyles.LightText} ${styles.BorderBox}`}>
-              TEXT FILER
-              TEXT FILER
-              TEXT FILER
-              
+              <ProfilesList />
             </Col>
             <Col md={6} className={`${appStyles.LightText} ${styles.BorderBox}`}>
               {/* <TaskStatusTable /> */}
