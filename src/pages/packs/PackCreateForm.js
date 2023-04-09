@@ -109,9 +109,6 @@ function PackCreateForm() {
           aria-label="members"
         >
           <option>Select task members</option>
-          <option value="HIGH">High</option>
-          <option value="MEDIUM">Medium</option>
-          <option value="LOW">Low</option>
         </Form.Control>
       </Form.Group>
 
@@ -132,6 +129,7 @@ function PackCreateForm() {
           onChange={handleChange}
           aria-label="tasks"
         >
+          <option>Select a user</option>
           {users.map((user) => (
             <option key={user.id} value={user.id}>
               {user.username}

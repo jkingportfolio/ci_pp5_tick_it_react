@@ -135,6 +135,7 @@ function TaskEditForm() {
 
         <Form.Control
           name="due_date"
+          type="date"
           className={appStyles.Input}
           value={due_date}
           onChange={handleChange}
@@ -177,7 +178,6 @@ function TaskEditForm() {
           onChange={handleChange}
           aria-label="priority"
         >
-          <option>Select task priority</option>
           <option value="HIGH">High</option>
           <option value="MEDIUM">Medium</option>
           <option value="LOW">Low</option>

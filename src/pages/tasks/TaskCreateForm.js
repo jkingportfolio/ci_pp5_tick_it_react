@@ -116,6 +116,7 @@ function TaskCreateForm() {
 
         <Form.Control
           name="due_date"
+          type="date"
           className={appStyles.Input}
           value={due_date}
           onChange={handleChange}
@@ -138,6 +139,7 @@ function TaskCreateForm() {
           onChange={handleChange}
           aria-label="pack"
         >
+          
           {/* {packs.map((pack) => (
             <option key={pack.id} value={pack.id}>
               {pack.id}
@@ -188,6 +190,7 @@ function TaskCreateForm() {
           onChange={handleChange}
           aria-label="assigned_to"
         >
+          <option>Select a user</option>
           {users.map((user) => (
             <option key={user.id} value={user.id}>
               {user.username}

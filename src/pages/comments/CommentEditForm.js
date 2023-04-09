@@ -50,7 +50,7 @@ function CommentEditForm(props) {
           rows={2}
         />
       </Form.Group>
-      <div className={styles.Buttondisplay}>
+      <div className={styles.ButtonDisplay}>
         <Button
           className={appStyles.Button}
           onClick={() => setShowEditForm(false)}
