@@ -34,9 +34,8 @@ function TaskDetail() {
   }, [id]);
 
   return (
-    <div className="h-100">      
-
-        <Task {...task.results[0]} setTask={setTask} taskDetail />      
+    <div className="h-100">
+      <Task {...task.results[0]} setTask={setTask} taskDetail />
       <Container className={appStyles.Content}>
         {currentUser ? (
           <CommentForm
@@ -65,8 +64,7 @@ function TaskDetail() {
         )}
       </Container>
 
-      <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
-      </Col>
+      <Col md={4} className="d-none d-lg-block p-0 p-lg-2"></Col>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Col, Row, Container, Tabs, Tab } from "react-bootstrap";
+import { Col, Row, Container, Tabs, Tab, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import Asset from "../../components/Asset";
 import styles from "../../styles/ProfilePage.module.css";
 import appStyles from "../../App.module.css";
@@ -57,21 +58,59 @@ function ProfilePage() {
 
   const mainProfile = (
     <>
-      <Row className={`${styles.profileBox} "px-3 text-center"`}>
+      <Row className={`${styles.ProfileBox} "px-3 text-center"`}>
         <Col xs={12} sm={4} md={4} lg={4} xl={4} className={`${styles.Border}`}>
           <div>
-          <Image
-            className={`${styles.ProfileImage}  ${appStyles.AutoMargin}`}
-            roundedCircle
-            src={profile?.image}
-          />
+            <Image
+              className={`${styles.ProfileImage}  ${appStyles.AutoMargin}`}
+              roundedCircle
+              fluid
+              src={profile?.image}
+            />
           </div>
           <div>
-          <h3 className>{profile?.owner}</h3>
-          </div>     
+            <h3 className={styles.TextAlignCenter}>{profile?.owner}</h3>
+          </div>
         </Col>
-        <Col xs={12} sm={4} md={4} lg={4} xl={4} className={`${styles.Border}`}></Col>
-        <Col xs={12} sm={4} md={4} lg={4} xl={4} className={`${styles.Border}`}></Col>
+        <Col xs={12} sm={4} md={4} lg={4} xl={4} className={`${styles.Border}`}>
+          <div className={`${styles.Border} ${styles.DivFlexParent}`}>
+            <div className={`${styles.Border} ${styles.DivFlexChild} ${styles.ButtonContainer}`}>
+            {profile?.owner} currently works as a {profile?.job_role}.
+            </div>
+            <div className={`${styles.Border} ${styles.DivFlexChild} ${styles.ButtonContainer}`}>
+            Currently has {profile?.tasks_count} tasks created.
+            </div>
+          </div>
+        </Col>
+        <Col xs={12} sm={4} md={4} lg={4} xl={4} className={`${styles.Border}`}>
+          <div className={`${styles.Border} ${styles.DivFlexParent} `}>
+            <div className={styles.PositionedButton}>
+            {profile?.is_owner && <EditProfileDropdown id={profile?.id} />}
+            </div>
+            <div
+              className={`${styles.Border} ${styles.DivFlexChild} ${styles.ButtonContainer} ${styles.TopMargin}`}
+            >
+              <Button
+                className={`${appStyles.Button}`}
+                as={Link}
+                to="/tasks/create"
+              >
+                Create Task
+              </Button>
+            </div>
+            <div
+              className={`${styles.Border} ${styles.DivFlexChild} ${styles.ButtonContainer} ${styles.TopMargin}`}
+            >
+              <Button
+                className={`${appStyles.Button}`}
+                as={Link}
+                to="/packs/create"
+              >
+                Create Pack
+              </Button>
+            </div>
+          </div>
+        </Col>
         {/* <Col lg={8}>
           
           <Row className="justify-content-center no-gutters">
@@ -84,11 +123,11 @@ function ProfilePage() {
               <div>Assigned tasks</div>
             </Col>
           </Row>
-        </Col>
-        <Col lg={2}>
+        </Col> */}
+        {/* <Col lg={2}>
           {profile?.is_owner && <EditProfileDropdown id={profile?.id} />}
-        </Col>
-        {profile?.content && <Col className="p-3">{profile.content}</Col>} */}
+        </Col> */}
+        {/* {profile?.content && <Col className="p-3">{profile.content}</Col>} */}
       </Row>
     </>
   );
@@ -148,11 +187,21 @@ function ProfilePage() {
           <FreeProfiles mobile />
           <Container className={styles.ProfileBox}>
             {hasLoaded ? <>{mainProfile}</> : <Asset spinner />}
-            <Tabs defaultActiveKey="task" fill>
-              <Tab eventKey="task" title="Tasks" tabClassName={appStyles.Tabs} className={appStyles.BoxBorder}>
+            <Tabs className={styles.TopMargin} defaultActiveKey="task" fill>
+              <Tab
+                eventKey="task"
+                title="Tasks"
+                tabClassName={appStyles.Tabs}
+                className={appStyles.BoxBorder}
+              >
                 {mainProfileTasks}
               </Tab>
-              <Tab eventKey="pack" title="Packs" tabClassName={appStyles.Tabs} className={appStyles.BoxBorder}>
+              <Tab
+                eventKey="pack"
+                title="Packs"
+                tabClassName={appStyles.Tabs}
+                className={appStyles.BoxBorder}
+              >
                 {mainProfilePacks}
               </Tab>
               <Tab
