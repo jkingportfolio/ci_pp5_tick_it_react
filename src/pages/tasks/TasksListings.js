@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 
-import { Col, Container, Row, Form } from "react-bootstrap";
+import { Col, Container, Row, Form, Button } from "react-bootstrap";
+import { Link } from 'react-router-dom';
 
 import appStyles from "../../App.module.css";
 import styles from "../../styles/SearchBar.module.css";
-// import styles from "../../styles/TasksListings.module.css";
+import taskStyles from "../../styles/TasksListings.module.css";
 
 import Task from "./Task";
 import Asset from "../../components/Asset";
@@ -58,6 +59,15 @@ function TasksListings({ message, filter = "" }) {
             placeholder="Search tasks"
           />
         </Form>
+        <div className={taskStyles.TaskButton}>
+        <Button
+        className={`${appStyles.Button}`}
+        as={Link}
+        to="/tasks/create"
+      >
+        Create Task
+      </Button>
+        </div>
         {hasLoaded ? (
           <>
             {tasks.results.length ? (
