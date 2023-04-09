@@ -15,7 +15,7 @@ import {
   useSetCurrentUser,
 } from "../../contexts/CurrentUserContext";
 
-import btnStyles from "../../styles/Button.module.css";
+
 import appStyles from "../../App.module.css";
 
 const EditProfileForm = () => {
@@ -119,12 +119,12 @@ const EditProfileForm = () => {
         </Alert>
       ))}
       <Button
-        className={`${btnStyles.Button} ${btnStyles.Blue}`}
+        className={`${appStyles.Button}`}
         onClick={() => history.goBack()}
       >
         cancel
       </Button>
-      <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
+      <Button className={`${appStyles.Button}`} type="submit">
         save
       </Button>
     </>
@@ -132,51 +132,53 @@ const EditProfileForm = () => {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <Row>
-        <Col className="py-2 p-0 p-md-2 text-center" md={7} lg={6}>
-          <Container className={appStyles.Content}>
-            <Form.Group>
-              {image && (
-                <figure>
-                  <Image src={image} fluid />
-                </figure>
-              )}
-              {errors?.image?.map((message, idx) => (
-                <Alert variant="warning" key={idx}>
-                  {message}
-                </Alert>
-              ))}
+      <div className={appStyles.Form}>
+        <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
+        <Container
+            className={`${appStyles.Content} d-flex flex-column justify-content-center`}
+          >
               <div>
-                <Form.Label
-                  className={`${btnStyles.Button} ${btnStyles.Blue} btn my-auto`}
-                  htmlFor="image-upload"
-                >
-                  Change the image
-                </Form.Label>
+                <Form.Group>
+                  {image && (
+                    <figure>
+                      <Image src={image} fluid />
+                    </figure>
+                  )}
+                  {errors?.image?.map((message, idx) => (
+                    <Alert variant="warning" key={idx}>
+                      {message}
+                    </Alert>
+                  ))}
+                  <Form.Label
+                    className={`${appStyles.Button}`}
+                    htmlFor="image-upload"
+                  >
+                    Change the image
+                  </Form.Label>
+
+                  <Form.File
+                    id="image-upload"
+                    ref={imageFile}
+                    accept="image/*"
+                    onChange={(e) => {
+                      if (e.target.files.length) {
+                        setProfileData({
+                          ...profileData,
+                          image: URL.createObjectURL(e.target.files[0]),
+                        });
+                      }
+                    }}
+                  />
+                  <div>{textFields}</div>
+                </Form.Group>
               </div>
-              <Form.File
-                id="image-upload"
-                ref={imageFile}
-                accept="image/*"
-                onChange={(e) => {
-                  if (e.target.files.length) {
-                    setProfileData({
-                      ...profileData,
-                      image: URL.createObjectURL(e.target.files[0]),
-                    });
-                  }
-                }}
-              />
-            </Form.Group>
-            <div className="d-md-none">{textFields}</div>
           </Container>
         </Col>
-        <Col md={5} lg={6} className="d-none d-md-block p-0 p-md-2 text-center">
-          <Container className={appStyles.Content}>{textFields}</Container>
-        </Col>
-      </Row>
+      </div>
     </Form>
   );
 };
 
 export default EditProfileForm;
+
+<div></div>;

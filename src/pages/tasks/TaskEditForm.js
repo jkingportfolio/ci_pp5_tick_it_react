@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
-
 import { Form, Button, Col, Container, Alert } from "react-bootstrap";
-
 import styles from "../../styles/TaskCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
-
 import { useHistory, useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import axios from "axios";
@@ -249,7 +246,7 @@ function TaskEditForm() {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <div className={styles.Form}>
+      <div className={appStyles.Form}>
         <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
           <Container
             className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
