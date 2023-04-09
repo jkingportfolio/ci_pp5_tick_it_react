@@ -16,18 +16,15 @@ const ProfilesList = ({ mobile }) => {
     >
       {listProfiles.results.length ? (
         <>
-          <p className={appStyles.SideTitle}>Profiles with least tasks</p>
-          {mobile ? (
-            <div className="d-flex justify-content-around">
-              {listProfiles.results.map((profile) => (
-                <Profile key={profile.id} profile={profile} mobile />
-              ))}
-            </div>
-          ) : (
-            listProfiles.results.map((profile) => (
-              <Profile key={profile.id} profile={profile} />
-            ))
-          )}
+          <p className={appStyles.SideTitle}>User List</p>
+          <div
+            className="d-flex flex-wrap justify-content-around"
+            style={{ height: "100px", overflowY: "scroll" }}
+          >
+            {listProfiles.results.map((profile) => (
+              <Profile key={profile.id} profile={profile} mobile={mobile} />
+            ))}
+          </div>
         </>
       ) : (
         <Asset spinner />

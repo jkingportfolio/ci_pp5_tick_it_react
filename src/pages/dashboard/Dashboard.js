@@ -28,7 +28,7 @@ const Dashboard = () => {
         </Col>
           </Row>
           <Row>
-            <Col md={6} className={`${appStyles.LightText} ${styles.BorderBox}`}>
+            <Col md={6} className={`${appStyles.DarkText} ${styles.BorderBox}`}>
               <ProfilesList />
             </Col>
             <Col md={6} className={`${appStyles.LightText} ${styles.BorderBox}`}>
@@ -37,7 +37,7 @@ const Dashboard = () => {
           </Row>
           <Row>
             <Col md={6} className={`${appStyles.LightText} ${styles.BorderBox}`}>
-            {/* <TaskCompleteFilter /> */}
+            <TaskCompleteFilter />
             </Col>
             <Col md={6} className={`${appStyles.LightText} ${styles.BorderBox}`}>
             TEXT FILER
