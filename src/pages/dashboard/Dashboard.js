@@ -20,33 +20,33 @@ const Dashboard = () => {
     <Container>
 
         <Row>
-        <Col md={8} className={`${appStyles.lighttext} ${styles.borderbox}`}>
+        <Col md={8} className={`${appStyles.LightText} ${styles.BorderBox}`}>
           <Row>
-          <Col md={12} className={`${appStyles.lighttext} ${styles.borderbox}`}>
+          <Col md={12} className={`${appStyles.LightText} ${styles.BorderBox}`}>
          Hello {currentUser.username} {currentUser.image}
         </Col>
           </Row>
           <Row>
-            <Col md={6} className={`${appStyles.lighttext} ${styles.borderbox}`}>
+            <Col md={6} className={`${appStyles.LightText} ${styles.BorderBox}`}>
               TEXT FILER
               TEXT FILER
               TEXT FILER
               
             </Col>
-            <Col md={6} className={`${appStyles.lighttext} ${styles.borderbox}`}>
+            <Col md={6} className={`${appStyles.LightText} ${styles.BorderBox}`}>
               {/* <TaskStatusTable /> */}
             </Col>
           </Row>
           <Row>
-            <Col md={6} className={`${appStyles.lighttext} ${styles.borderbox}`}>
+            <Col md={6} className={`${appStyles.LightText} ${styles.BorderBox}`}>
             {/* <TaskCompleteFilter /> */}
             </Col>
-            <Col md={6} className={`${appStyles.lighttext} ${styles.borderbox}`}>
+            <Col md={6} className={`${appStyles.LightText} ${styles.BorderBox}`}>
             TEXT FILER
             </Col>
           </Row>
         </Col>
-        <Col md={4} className={`${appStyles.darktext} ${styles.borderbox}`}>
+        <Col md={4} className={`${appStyles.DarkText} ${styles.BorderBox}`}>
         <FreeProfiles />
         </Col>
       </Row>

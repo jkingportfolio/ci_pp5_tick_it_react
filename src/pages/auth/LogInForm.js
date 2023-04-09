@@ -43,7 +43,7 @@ function SignInForm() {
   return (
     <Row className={styles.Row}>
       <Col className="col-sm-6 mx-auto" md={6}>
-        <Container className={`${styles.form} p-4 `}>
+        <Container className={`${styles.Form} p-4 `}>
           <h1 className={styles.Header}>Log in!</h1>
           <p>Please enter your credentials below.</p>
           <Form onSubmit={handleSubmit}>
@@ -80,7 +80,7 @@ function SignInForm() {
                 {message}
               </Alert>
             ))}
-            <Button className={appStyles.button} type="submit">
+            <Button className={appStyles.Button} type="submit">
               Log in
             </Button>
             {errors.non_field_errors?.map((message, idx) => (
@@ -89,9 +89,9 @@ function SignInForm() {
               </Alert>
             ))}
           </Form>
-          <p className={`${appStyles.darktext} ${styles.topmargin}`}>Don't have an account?</p>
+          <p className={`${appStyles.DarkText} ${styles.TopMargin}`}>Don't have an account?</p>
           <Link to="/signup">
-          <p className={`${appStyles.darktext}`}>Click <span className={styles.link}>here </span>to Sign up!</p>
+          <p className={`${appStyles.DarkText}`}>Click <span className={styles.Link}>here </span>to Sign up!</p>
           </Link>
         </Container>
       </Col>

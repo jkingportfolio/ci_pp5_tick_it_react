@@ -11,7 +11,7 @@ const LandingPage = () => {
       
       <Row className="text-center">
         <Col sm={12}>
-          <Container className={styles.landingbox}>
+          <Container className={styles.LandingBox}>
             <Card>
               <Card.Body>
                 <Card.Title>
@@ -26,13 +26,13 @@ const LandingPage = () => {
               </Card.Body>
               <Card.Body>                
                 <Link to="/signin">
-                  <Button className={`${appStyles.button} mb-3`}>
+                  <Button className={`${appStyles.Button} mb-3`}>
                     Log in
                   </Button>
                 </Link>
                 <Link to="/signup">
                   <Button
-                    className={`${appStyles.button} mb-3`}
+                    className={`${appStyles.Button} mb-3`}
                   >
                     Sign up
                   </Button>

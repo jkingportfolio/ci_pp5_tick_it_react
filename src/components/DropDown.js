@@ -31,14 +31,14 @@ export const DropDown = ({ handleEdit, handleDelete }) => {
           onClick={handleEdit}
           aria-label="edit"
         >
-          <i className="fas fa-edit" /><span className={appStyles.darktext}>Edit</span>
+          <i className="fas fa-edit" /><span className={appStyles.DarkText}>Edit</span>
         </Dropdown.Item>
         <Dropdown.Item
           className={styles.DropdownItem}
           onClick={handleDelete}
           aria-label="delete"
         >
-          <i className="fas fa-trash-alt" /><span className={appStyles.darktext}>Delete</span>
+          <i className="fas fa-trash-alt" /><span className={appStyles.DarkText}>Delete</span>
         </Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
@@ -55,7 +55,7 @@ export const EditProfileDropdown = ({ id }) => {
           onClick={() => history.push(`/profiles/${id}/edit`)}
           aria-label="edit-profile"
         >
-          <i className="fas fa-edit"/> <span className={appStyles.darktext}>Edit profile</span>
+          <i className="fas fa-edit"/> <span className={appStyles.DarkText}>Edit profile</span>
         </Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>

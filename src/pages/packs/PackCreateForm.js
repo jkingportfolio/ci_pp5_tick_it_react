@@ -148,12 +148,12 @@ function PackCreateForm() {
       ))}
 
       <Button
-        className={`${appStyles.button}`}
+        className={`${appStyles.Button}`}
         onClick={() => history.goBack()}
       >
         Cancel
       </Button>
-      <Button className={`${appStyles.button}`} type="submit">
+      <Button className={`${appStyles.Button}`} type="submit">
         Submit
       </Button>
     </div>
@@ -161,7 +161,7 @@ function PackCreateForm() {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <div className={styles.form}>
+      <div className={styles.Form}>
         <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
           <Container
             className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}

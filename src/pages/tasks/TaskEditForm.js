@@ -236,12 +236,12 @@ function TaskEditForm() {
       ))}
 
       <Button
-        className={`${appStyles.button}`}
+        className={`${appStyles.Button}`}
         onClick={() => history.goBack()}
       >
         Cancel
       </Button>
-      <Button className={`${appStyles.button}`} type="submit">
+      <Button className={`${appStyles.Button}`} type="submit">
         Save
       </Button>
     </div>
@@ -249,7 +249,7 @@ function TaskEditForm() {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <div className={styles.form}>
+      <div className={styles.Form}>
         <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
           <Container
             className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
@@ -258,7 +258,7 @@ function TaskEditForm() {
               <Form.Group className="text-center">
                 <div>
                   <Form.Label
-                    className={`${appStyles.button} `}
+                    className={`${appStyles.Button} `}
                     htmlFor="image-upload"
                   >
                     Upload file

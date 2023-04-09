@@ -48,7 +48,7 @@ const Comment = (props) => {
     <>
       <hr />
       <Row>
-        <Col md={1} className={appStyles.automargin}>
+        <Col md={1} className={appStyles.AutoMargin}>
           <Link to={`/profiles/${profile_id}`}>
             <Avatar src={profile_image} />
           </Link>

@@ -39,7 +39,7 @@ const SignUpForm = () => {
   return (
     <Row className={styles.Row}>
       <Col className="col-sm-6 mx-auto" md={6}>
-        <Container className={`${styles.form} p-4 `}>
+        <Container className={`${styles.Form} p-4 `}>
           <h1 className={styles.Header}>Sign up!</h1>
           <p>Please enter your sign up details below.</p>
           <Form onSubmit={handleSubmit}>
@@ -94,7 +94,7 @@ const SignUpForm = () => {
               </Alert>
             ))}
 
-            <Button className={appStyles.button} type="submit">
+            <Button className={appStyles.Button} type="submit">
               Sign up
             </Button>
             {errors.non_field_errors?.map((message, idx) => (
@@ -103,9 +103,9 @@ const SignUpForm = () => {
               </Alert>
             ))}
           </Form>
-          <p className={`${appStyles.darktext} ${styles.topmargin}`}>Already have an account?</p>
+          <p className={`${appStyles.DarkText} ${styles.TopMargin}`}>Already have an account?</p>
           <Link to="/signin">
-          <p className={`${appStyles.darktext}`}>Click <span className={styles.link}>here </span>to Log in!</p>
+          <p className={`${appStyles.DarkText}`}>Click <span className={styles.Link}>here </span>to Log in!</p>
           </Link>
         </Container>
       </Col>

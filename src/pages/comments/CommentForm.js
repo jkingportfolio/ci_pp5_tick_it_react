@@ -58,9 +58,9 @@ function CommentForm(props) {
           />
         </InputGroup>
       </Form.Group>
-      <div className={styles.buttondisplay}>
+      <div className={styles.Buttondisplay}>
       <Button
-        className={appStyles.button}
+        className={appStyles.Button}
         disabled={!comment_body.trim()}
         type="submit"
       >

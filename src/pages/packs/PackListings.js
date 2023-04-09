@@ -49,7 +49,7 @@ function PackListings({ message, filter = "" }) {
         <FreeProfiles mobile />
 
         <Form
-          className={styles.bottommargin}
+          className={styles.BottomMargin}
           onSubmit={(event) => event.preventDefault()}
         >
           <Form.Control
@@ -60,9 +60,9 @@ function PackListings({ message, filter = "" }) {
             placeholder="Search packs"
           />
         </Form>
-        <div className={packStyles.packbutton}>
+        <div className={packStyles.PackButton}>
         <Button
-        className={`${appStyles.button}`}
+        className={`${appStyles.Button}`}
         as={Link}
         to="/packs/create"
       >

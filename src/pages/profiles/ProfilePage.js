@@ -57,16 +57,23 @@ function ProfilePage() {
 
   const mainProfile = (
     <>
-      <Row className={`${styles.profilebox} "px-3 text-center"`}>
-        <Col lg={2} className="text-lg-left">
+      <Row className={`${styles.profileBox} "px-3 text-center"`}>
+        <Col xs={12} sm={4} md={4} lg={4} xl={4} className={`${styles.Border}`}>
+          <div>
           <Image
-            className={styles.ProfileImage}
+            className={`${styles.ProfileImage}  ${appStyles.AutoMargin}`}
             roundedCircle
             src={profile?.image}
           />
+          </div>
+          <div>
+          <h3 className>{profile?.owner}</h3>
+          </div>     
         </Col>
-        <Col lg={8}>
-          <h3 className="m-2">{profile?.owner}</h3>
+        <Col xs={12} sm={4} md={4} lg={4} xl={4} className={`${styles.Border}`}></Col>
+        <Col xs={12} sm={4} md={4} lg={4} xl={4} className={`${styles.Border}`}></Col>
+        {/* <Col lg={8}>
+          
           <Row className="justify-content-center no-gutters">
             <Col xs={6} className="my-2">
               <div>{profile?.tasks_count}</div>
@@ -81,7 +88,7 @@ function ProfilePage() {
         <Col lg={2}>
           {profile?.is_owner && <EditProfileDropdown id={profile?.id} />}
         </Col>
-        {profile?.content && <Col className="p-3">{profile.content}</Col>}
+        {profile?.content && <Col className="p-3">{profile.content}</Col>} */}
       </Row>
     </>
   );
@@ -139,20 +146,20 @@ function ProfilePage() {
       <Row>
         <Col className="py-2 p-0 p-lg-2" lg={8}>
           <FreeProfiles mobile />
-          <Container className={styles.profilebox}>
+          <Container className={styles.ProfileBox}>
             {hasLoaded ? <>{mainProfile}</> : <Asset spinner />}
             <Tabs defaultActiveKey="task" fill>
-              <Tab eventKey="task" title="Tasks" tabClassName={appStyles.tabs} className={appStyles.boxborder}>
+              <Tab eventKey="task" title="Tasks" tabClassName={appStyles.Tabs} className={appStyles.BoxBorder}>
                 {mainProfileTasks}
               </Tab>
-              <Tab eventKey="pack" title="Packs" tabClassName={appStyles.tabs} className={appStyles.boxborder}>
+              <Tab eventKey="pack" title="Packs" tabClassName={appStyles.Tabs} className={appStyles.BoxBorder}>
                 {mainProfilePacks}
               </Tab>
               <Tab
                 eventKey="assigned"
                 title="Assigned"
-                tabClassName={appStyles.tabs}
-                className={appStyles.boxborder}
+                tabClassName={appStyles.Tabs}
+                className={appStyles.BoxBorder}
               >
                 List of tasks profile owner has been assigned
               </Tab>

@@ -16,7 +16,7 @@ const FreeProfiles = ({ mobile }) => {
     >
       {freeProfiles.results.length ? (
         <>
-          <p className={appStyles.sidetitle}>Profiles with least tasks</p>
+          <p className={appStyles.SideTitle}>Profiles with least tasks</p>
           {mobile ? (
             <div className="d-flex justify-content-around">
               {freeProfiles.results.slice(0, 3).map((profile) => (

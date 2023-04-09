@@ -74,11 +74,11 @@ const Task = (props) => {
   const backgroundColorClass = (() => {
     switch (completed) {
       case 'COMPLETED':
-        return styles['green-background'];
+        return styles['GreenBackground'];
       case 'IN_PROGRESSS':
-        return styles['yellow-background'];
+        return styles['YellowBackground'];
       case 'NO':
-        return styles['red-background'];
+        return styles['RedBackground'];
       default:
         return '';
     }
@@ -107,23 +107,23 @@ const Task = (props) => {
         </Link>
         <Container className="align-items-center justify-content-between">
           <div>
-            <div className={styles.posted}>
+            <div className={styles.Posted}>
               Posted by:{" "}
               <Link to={`/profiles/${profile_id}`}>
                 {" "}
-                <span className={styles.posted}>{owner}</span>{" "}
+                <span className={styles.Posted}>{owner}</span>{" "}
                 <Avatar src={profile_image} height={55} />
               </Link>
             </div>
           </div>
-          <div className={styles.posted}>
-            <div className={styles.posted}>Posted on: {created_on}</div>
+          <div className={styles.Posted}>
+            <div className={styles.Posted}>Posted on: {created_on}</div>
           </div>
           <hr></hr>
           <div>
             <div>
-              <div className={styles.posted}>Detail of task</div>
-              <div className={`${styles.taskbody} ${styles.topmargin}`}>
+              <div className={styles.Posted}>Detail of task</div>
+              <div className={`${styles.TaskBody} ${styles.TopMargin}`}>
                 {task_body}
               </div>
             </div>
@@ -132,10 +132,10 @@ const Task = (props) => {
         </Container>
       </Card.Body>
       <Card.Body className={styles.cardbody}>
-        <div className={styles.inline}>
-          <div className={`${styles.flex} ${backgroundColorClass}`}>Task Completed: {completed}</div>
-          <div className={styles.flex}>Assigned to: {assignedUser}</div>
-          <div className={`${styles.watchbtn} ${appStyles.automargin}`}>
+        <div className={styles.Inline}>
+          <div className={`${styles.Flex} ${backgroundColorClass}`}>Task Completed: {completed}</div>
+          <div className={styles.Flex}>Assigned to: {assignedUser}</div>
+          <div className={`${styles.watchbtn} ${appStyles.AutoMargin}`}>
             {is_owner ? (
               <OverlayTrigger
                 placement="top"
@@ -149,7 +149,7 @@ const Task = (props) => {
                 overlay={<Tooltip>Unwatch Task!</Tooltip>}
               >
                 <span onClick={handleUnwatch}>
-                  <i className={`${"fas fa-eye-slash"} ${styles.redicon}`} />
+                  <i className={`${"fas fa-eye-slash"} ${styles.RedIcon}`} />
                 </span>
               </OverlayTrigger>
             ) : currentUser ? (
@@ -158,7 +158,7 @@ const Task = (props) => {
                 overlay={<Tooltip>Watch Task!</Tooltip>}
               >
                 <span onClick={handleWatch}>
-                  <i className={`${"fas fa-eye"} ${styles.greenicon}`} />
+                  <i className={`${"fas fa-eye"} ${styles.GreenIcon}`} />
                 </span>
               </OverlayTrigger>
             ) : (

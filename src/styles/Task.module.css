@@ -34,7 +34,7 @@ transition: color ease-in-out 0.3s;
   border-bottom: 2px solid #120E16;
 }
 
-.detailtitle {
+.DetailTitle {
   font-size: 20px;
   text-align: center;
   color: #120E16;
@@ -42,14 +42,14 @@ transition: color ease-in-out 0.3s;
   text-align: left;
 }
 
-.posted {
+.Posted {
   color: #120E16 !important;
   font-size: 16px;
   text-align: left;
   color: rgb(2, 2, 2);
 }
 
-.taskbody {
+.TaskBody {
   border: 1px solid #120E16;
   font-size: 16px;
   text-align: left;
@@ -66,37 +66,37 @@ transition: color ease-in-out 0.3s;
   flex: 1
 }
 
-.redicon {
+.RedIcon {
   color: red !important;
 }
 
-.greenicon {
+.GreenIcon {
   color: green !important;
 }
 
-.inline {
+.Inline {
   display: flex;
   justify-content: space-between;
   padding: 0px 5px;
 }
 
-.flex {
+.Flex {
   flex: 1;
   margin: auto;
 }
 
-.topmargin {
+.TopMargin {
   margin-top: 10px;
 }
 
-.green-background {
+.GreenBackground {
   border: 3px solid green;
 }
 
-.yellow-background {
+.YellowBackground {
   border: 3px solid orange;
 }
 
-.red-background {
+.RedBackground {
   border: 3px solid red;
 }
