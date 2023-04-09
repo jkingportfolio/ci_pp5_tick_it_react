@@ -102,3 +102,12 @@ i:hover {
 .AutoMargin {
   margin: auto;
 }
+
+.TextAlignCenter {
+  text-align: center;
+}
+
+.CenterAlignForm {
+  display: flex;
+  justify-content: center;
+}

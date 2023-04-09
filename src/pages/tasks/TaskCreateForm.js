@@ -139,7 +139,6 @@ function TaskCreateForm() {
           onChange={handleChange}
           aria-label="pack"
         >
-          
           {/* {packs.map((pack) => (
             <option key={pack.id} value={pack.id}>
               {pack.id}
@@ -220,26 +219,18 @@ function TaskCreateForm() {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <Row>
-        <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
-          <Container
-            className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
+      <div className={appStyles.CenterAlignForm}>
+        <Col md={7} lg={8}>
+          <div
+            className={`${appStyles.Content} ${appStyles.TextAlignCenter} d-flex flex-column justify-content-center`}
           >
-            <Form.Group className="text-center">
-              <Form.Label
-                className="d-flex justify-content-center"
-                htmlFor="image-upload"
-              >
-                File Upload
-              </Form.Label>
-            </Form.Group>
-            <div className="d-md-none">{textFields}</div>
-          </Container>
+            <h3>Create Task</h3>
+            <div className={appStyles.Content}>
+              {textFields}
+            </div>
+          </div>
         </Col>
-        <Col md={5} lg={4} className="d-none d-md-block p-0 p-md-2">
-          <Container className={appStyles.Content}>{textFields}</Container>
-        </Col>
-      </Row>
+      </div>
     </Form>
   );
 }

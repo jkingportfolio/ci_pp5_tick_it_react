@@ -159,14 +159,13 @@ function PackCreateForm() {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <div className={styles.Form}>
+      <div className={appStyles.CenterAlignForm}>
         <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
           <Container
-            className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
+            className={`${appStyles.Content} ${appStyles.TextAlignCenter} d-flex flex-column justify-content-center`}
           >
             <h3>Create pack</h3>
             <div className={appStyles.Content}>
-
               {textFields}
             </div>
           </Container>
