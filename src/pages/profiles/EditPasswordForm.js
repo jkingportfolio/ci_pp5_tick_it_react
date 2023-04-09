@@ -5,7 +5,7 @@ import { axiosRes } from "../../api/axiosDefaults";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import appStyles from "../../App.module.css";
 
-const UserPasswordForm = () => {
+const EditPasswordForm = () => {
   const history = useHistory();
   const { id } = useParams();
   const currentUser = useCurrentUser();
@@ -17,29 +17,21 @@ const UserPasswordForm = () => {
   const { new_password1, new_password2 } = userData;
   const [errors, setErrors] = useState({});
 
-  /* 
-    Handles changes to the input fields
-  */
+
   const handleChange = (event) => {
     setUserData({
       [event.target.name]: event.target.value,
     });
   };
 
-  /*
-    Handles the edit of user password
-  */
+
   useEffect(() => {
     if (currentUser?.profile_id?.toString() !== id) {
       history.push("/");
     }
   }, [currentUser, history, id]);
 
-  /* 
-    Handles the new password submission
-    Displays a feedback message to the user on successful password change
-    Redirects the user to the profile page after a short delay
-  */
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -60,7 +52,7 @@ const UserPasswordForm = () => {
             <Form.Group>
               <Form.Label>New password</Form.Label>
               <Form.Control
-                placeholder="type your new password"
+                placeholder="Enter new password"
                 type="password"
                 value={new_password1}
                 onChange={handleChange}
@@ -79,7 +71,7 @@ const UserPasswordForm = () => {
             <Form.Group>
               <Form.Label>Confirm password</Form.Label>
               <Form.Control
-                placeholder="confirm new password"
+                placeholder="Confirm new password"
                 type="password"
                 value={new_password2}
                 onChange={handleChange}
@@ -97,14 +89,14 @@ const UserPasswordForm = () => {
 
             <Button
               type="submit"
-              className={`mx-2 my-2 ${appStyles.button}`}
+              className={`mx-2 my-2 ${appStyles.Button}`}
               onMouseDown={(event) => event.preventDefault()}
             >
               Save
             </Button>
             <Button
               onMouseDown={(event) => event.preventDefault()}
-              className={`mx-2 ${appStyles.button}`}
+              className={`mx-2 ${appStyles.Button}`}
               onClick={() => history.goBack()}
             >
               Cancel
@@ -116,4 +108,4 @@ const UserPasswordForm = () => {
   );
 };
 
-export default UserPasswordForm;
+export default EditPasswordForm;
