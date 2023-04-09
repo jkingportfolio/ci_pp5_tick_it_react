@@ -16,10 +16,10 @@ const ProfilesList = ({ mobile }) => {
     >
       {listProfiles.results.length ? (
         <>
-          <p className={appStyles.SideTitle}>User List</p>
+          <p className={appStyles.SideTitle}>Profiles</p>
           <div
             className="d-flex flex-wrap justify-content-around"
-            style={{ height: "100px", overflowY: "scroll" }}
+            style={{ height: "400px", overflowY: "scroll" }}
           >
             {listProfiles.results.map((profile) => (
               <Profile key={profile.id} profile={profile} mobile={mobile} />

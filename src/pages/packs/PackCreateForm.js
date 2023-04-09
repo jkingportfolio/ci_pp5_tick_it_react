@@ -23,12 +23,10 @@ function PackCreateForm() {
   const [packData, setPackData] = useState({
     title: "",
     pack_description: "",
-    members: "",
     tasks: "",
   });
-  const { title, pack_description, members, tasks } = packData;
+  const { title, pack_description, tasks } = packData;
 
-  //   const fileInput = useRef(null);
   const history = useHistory();
 
   const handleChange = (event) => {
@@ -44,12 +42,11 @@ function PackCreateForm() {
 
     formData.append("title", title);
     formData.append("pack_description", pack_description);
-    formData.append("members", members);
     formData.append("tasks", tasks);
 
     try {
-      const { data } = await axiosReq.post("/tasks/", formData);
-      history.push(`/tasks/${data.id}`);
+      const { data } = await axiosReq.post("/packs/", formData);
+      history.push(`/packs/${data.id}`);
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
@@ -98,28 +95,7 @@ function PackCreateForm() {
       ))}
 
       <Form.Group>
-        <Form.Label>members</Form.Label>
-
-        <Form.Control
-          as="select"
-          name="members"
-          className={appStyles.Input}
-          value={members}
-          onChange={handleChange}
-          aria-label="members"
-        >
-          <option>Select task members</option>
-        </Form.Control>
-      </Form.Group>
-
-      {errors?.members?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
-
-      <Form.Group>
-        <Form.Label>Assigned to</Form.Label>
+        <Form.Label>Tasks</Form.Label>
 
         <Form.Control
           as="select"
@@ -129,12 +105,7 @@ function PackCreateForm() {
           onChange={handleChange}
           aria-label="tasks"
         >
-          <option>Select a user</option>
-          {users.map((user) => (
-            <option key={user.id} value={user.id}>
-              {user.username}
-            </option>
-          ))}
+          <option>Select a task</option>
           ;
         </Form.Control>
       </Form.Group>
@@ -165,9 +136,7 @@ function PackCreateForm() {
             className={`${appStyles.Content} ${appStyles.TextAlignCenter} d-flex flex-column justify-content-center`}
           >
             <h3>Create pack</h3>
-            <div className={appStyles.Content}>
-              {textFields}
-            </div>
+            <div className={appStyles.Content}>{textFields}</div>
           </Container>
         </Col>
       </div>
