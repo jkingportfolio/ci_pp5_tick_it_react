@@ -100,3 +100,11 @@ transition: color ease-in-out 0.3s;
 .RedBackground {
   border: 3px solid red;
 }
+
+.PositionedButton {
+  position: absolute;
+  top: 6px;
+  right: 20px;
+  width: 40px;
+  height: 30px;
+}

@@ -17,6 +17,7 @@ const Task = (props) => {
     profile_id,
     profile_image,
     created_on,
+    due_date,
     task_body,
     watching_id,
     taskDetail,
@@ -97,7 +98,7 @@ const Task = (props) => {
   return (
     <Card className={styles.Task}>
       <Card.Body className={styles.cardbody}>
-        <div class="position-absolute top-0 end-0">
+        <div class={styles.PositionedButton}>
           {is_owner && taskDetail && (
             <DropDown handleEdit={handleEdit} handleDelete={handleDelete} />
           )}
@@ -118,6 +119,9 @@ const Task = (props) => {
           </div>
           <div className={styles.Posted}>
             <div className={styles.Posted}>Posted on: {created_on}</div>
+          </div>
+          <div className={`{${styles.Posted} ${styles.TopMargin}`}>
+            <div className={styles.Posted}>Due on: {due_date}</div>
           </div>
           <hr></hr>
           <div>
