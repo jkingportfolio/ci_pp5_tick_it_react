@@ -18,7 +18,7 @@ import PackListings from "./pages/packs/PackListings";
 import LandingPage from "./pages/landing/LandingPage";
 import Dashboard from "./pages/dashboard/Dashboard";
 import EditPasswordForm from "./pages/profiles/EditPasswordForm";
-
+import ContactForm from "./pages/contact/ContactForm";
 
 function App() {
   const currentUser = useCurrentUser();
@@ -28,57 +28,74 @@ function App() {
     <div className={styles.App}>
       <NavBar />
       <Container className={styles.Main}>
-
         {!currentUser ? (
           <Switch>
-          <Route exact path="/" render={() => <LandingPage />} />
-          <Route exact path="/signin" render={() => <LogInForm />} />
-          <Route exact path="/signup" render={() => <SignUpForm />} />         
-          <Route render={() => <LandingPage />} />
-        </Switch>
+            <Route exact path="/" render={() => <LandingPage />} />
+            <Route exact path="/signin" render={() => <LogInForm />} />
+            <Route exact path="/signup" render={() => <SignUpForm />} />
+            <Route exact path="/contact" render={() => <ContactForm />} />
+            <Route render={() => <LandingPage />} />
+          </Switch>
         ) : (
-        <Switch>
-          <Route exact path="/" render={() => <Dashboard />} />
-          <Route
-            exact
-            path="/tasks"
-            render={() => (
-              <TasksListings message="Opps, that search didnt return anything, please try again." />
-            )}
-          />
-          <Route
-            exact
-            path="/packs"
-            render={() => (
-              <PackListings message="It seems there are no packs." />
-            )}
-          />
-          <Route
-            exact
-            path="/watched"
-            render={() => (
-              <TasksListings
-                message="You dont seem to be watching any tasks right now."
-                filter={`watches__owner__profile=${profile_id}&ordering=-watches__created_on&`}
-              />
-            )}
-          />
-          <Route exact path="/signin" render={() => <LogInForm />} />
-          <Route exact path="/signup" render={() => <SignUpForm />} />
-          <Route exact path="/tasks/create" render={() => <TaskCreateForm />} />
-          <Route exact path="/tasks/:id" render={() => <TaskDetail />} />
-          <Route exact path="/tasks/:id/edit" render={() => <TaskEditForm />} />
-          <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
-          <Route
-            exact
-            path="/profiles/:id/edit"
-            render={() => <EditProfileForm />}
-          />
-          <Route exact path="/packs/create" render={() => <PackCreateForm />} />
-          <Route exact path="/packs/:id" render={() => <PackDetail />} />
-          <Route exact path="/profiles/:id/edit/password" render={() => <EditPasswordForm />} />
-          <Route render={() => <p>Page not found!</p>} />
-        </Switch>
+          <Switch>
+            <Route exact path="/" render={() => <Dashboard />} />
+            <Route
+              exact
+              path="/tasks"
+              render={() => (
+                <TasksListings message="Opps, that search didnt return anything, please try again." />
+              )}
+            />
+            <Route
+              exact
+              path="/packs"
+              render={() => (
+                <PackListings message="It seems there are no packs." />
+              )}
+            />
+            <Route
+              exact
+              path="/watched"
+              render={() => (
+                <TasksListings
+                  message="You dont seem to be watching any tasks right now."
+                  filter={`watches__owner__profile=${profile_id}&ordering=-watches__created_on&`}
+                />
+              )}
+            />
+            <Route exact path="/signin" render={() => <LogInForm />} />
+            <Route exact path="/signup" render={() => <SignUpForm />} />
+            <Route
+              exact
+              path="/tasks/create"
+              render={() => <TaskCreateForm />}
+            />
+            <Route exact path="/tasks/:id" render={() => <TaskDetail />} />
+            <Route
+              exact
+              path="/tasks/:id/edit"
+              render={() => <TaskEditForm />}
+            />
+            <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
+            <Route
+              exact
+              path="/profiles/:id/edit"
+              render={() => <EditProfileForm />}
+            />
+            <Route
+              exact
+              path="/packs/create"
+              render={() => <PackCreateForm />}
+            />
+            <Route exact path="/packs/:id" render={() => <PackDetail />} />
+            <Route
+              exact
+              path="/profiles/:id/edit/password"
+              render={() => <EditPasswordForm />}
+            />
+            <Route exact path="/contact" render={() => <ContactForm />} />
+            <Route render={() => <p>Page not found!</p>} />
+          </Switch>
         )}
       </Container>
     </div>
