@@ -196,8 +196,7 @@ function ProfilePage() {
   return (
     <div>
       <Row>
-        <Col className="py-2 p-0 p-lg-2" lg={8}>
-          <FreeProfiles mobile />
+        <Col className="py-2 p-0 p-lg-2" lg={12}>
           <Container className={styles.ProfileBox}>
             {hasLoaded ? <>{mainProfile}</> : <Asset spinner />}
             <Tabs className={styles.TopMargin} defaultActiveKey="task" fill>
@@ -227,9 +226,6 @@ function ProfilePage() {
               </Tab>
             </Tabs>
           </Container>
-        </Col>
-        <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
-          <FreeProfiles />
         </Col>
       </Row>
     </div>
