@@ -1,35 +1,65 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
 
-function TaskCompleteFilter() {
-  const [tasks, setTasks] = useState([]);
+import { Col, Container, Row, Form, Button } from "react-bootstrap";
+
+import appStyles from "../App.module.css";
+import taskStyles from "../styles/TasksListings.module.css";
+
+import Task from "../pages/tasks/Task";
+import Asset from "../components/Asset";
+import { axiosReq } from "../api/axiosDefaults";
+
+import NoResults from "../assets/no-results.png";
+
+function TaskCompleteFilter({ message, filter = "" }) {
+  const [tasks, setTasks] = useState({ results: [] });
+  const [hasLoaded, setHasLoaded] = useState(false);
 
   useEffect(() => {
-    axios.get('/tasks/')
-      .then(response => {
-        if (Array.isArray(response.data)) {
-          // filter the tasks to only include completed tasks
-          const completedTasks = response.data.filter(task => task.completed === 'COMPLETE');
-          setTasks(completedTasks);
-        } else {
-          console.error('API response is not an array');
-        }
-      })
-      .catch(error => console.error(error));
-  }, []);
+    const fetchTasks = async () => {
+      try {
+        const { data } = await axiosReq.get(`/tasks/?completed=NO`);
+        setTasks(data);
+        setHasLoaded(true);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    setHasLoaded(false);
+    const timer = setTimeout(() => {
+      fetchTasks();
+    }, 1000);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [filter]);
 
   return (
-    <div>
-      {tasks.length ? (
-        <ul>
-          {tasks.map(task => (
-            <li key={task.id}>{task.title}</li>
-          ))}
-        </ul>
-      ) : (
-        <p>No results found</p>
-      )}
-    </div>
+    <Row  className={appStyles.JustifyContentCenter}>
+      <Col className="py-2 p-0 p-lg-2" lg={8}>
+        <div className={taskStyles.TaskButton}>
+        </div>
+        {hasLoaded ? (
+          <>
+            {tasks.results.length ? (
+              tasks.results.map((tasks) => (
+                <Task key={tasks.id} {...tasks} setTasks={setTasks} />
+              ))
+            ) : (
+              <Container className={appStyles.Content}>
+                <Asset src={NoResults} message={message} />
+                <p>It seems all tasks have been completed!</p>
+              </Container>
+            )}
+          </>
+        ) : (
+          <Container className={appStyles.Content}>
+            <Asset spinner />
+          </Container>
+        )}
+      </Col>
+    </Row>
   );
 }
 

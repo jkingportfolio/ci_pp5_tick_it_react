@@ -11,7 +11,6 @@ import TaskCompleteFilter from "../../components/TaskCompleteFilter";
 import ProfilesList from "../../components/ProfilesList";
 import HighPriorityTasks from "../../components/HighPriorityTasks";
 
-
 const Dashboard = () => {
   const currentUser = useCurrentUser();
 
@@ -42,17 +41,22 @@ const Dashboard = () => {
               <hr className={styles.HorizontalLine} />
             </Col>
             <Col
-              md={12}
-              className={`${appStyles.DarkText} ${styles.BorderBox}`}
-            >
-              <TaskCompleteFilter />
-            </Col>
-            <Col
               lg={12}
               className={`${appStyles.DarkText} ${styles.BorderBox} ${appStyles.TextAlignCenter}`}
             >
-              <h3 className={`${appStyles.LightText} ${styles.BorderBox}`}>High Priority tasks</h3>
+              <h3 className={`${appStyles.LightText} ${styles.BorderBox}`}>
+                High Priority tasks
+              </h3>
               <HighPriorityTasks />
+            </Col>
+            <Col
+              lg={12}
+              className={`${appStyles.DarkText} ${styles.BorderBox}  ${appStyles.TextAlignCenter}`}
+            >
+              <h3 className={`${appStyles.LightText} ${styles.BorderBox}`}>
+                Incomplete Tasks
+              </h3>
+              <TaskCompleteFilter />
             </Col>
           </Col>
         </Row>

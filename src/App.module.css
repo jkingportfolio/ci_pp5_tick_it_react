@@ -138,3 +138,7 @@ i:hover {
 .Form {
   text-align: -webkit-center;
 }
+
+.JustifyContentCenter {
+  justify-content: center !important;
+}
