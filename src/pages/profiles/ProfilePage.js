@@ -62,8 +62,8 @@ function ProfilePage() {
 
   const mainProfile = (
     <>
-      <Row className={`${styles.ProfileBox} "px-3 text-center"`}>
-        <Col xs={12} sm={4} md={4} lg={4} xl={4} className={`${styles.Border}`}>
+      <Row className={`${styles.ProfileBox}"px-3 text-center"`}>
+        <Col xs={12} sm={4} md={4} lg={4} xl={4} className={`${styles.Border} ${appStyles.AutoMargin} ${appStyles.TextAlignCenter}`}>
           <div>
             <Image
               className={`${styles.ProfileImage}  ${appStyles.AutoMargin}`}
