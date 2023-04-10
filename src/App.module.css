@@ -81,6 +81,10 @@ i:hover {
   margin-top: 10px;
 }
 
+.BottomMargin {
+  margin-bottom: 30px;
+}
+
 .SideTitle {
   font-size: 20px;
   text-decoration: underline !important;
@@ -141,4 +145,9 @@ i:hover {
 
 .JustifyContentCenter {
   justify-content: center !important;
+}
+
+.ScrollBox {
+    height: 450px;
+    overflow-y: scroll;
 }
