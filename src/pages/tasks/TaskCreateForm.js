@@ -206,12 +206,12 @@ function TaskCreateForm() {
       ))}
 
       <Button
-        className={`${btnStyles.Button} ${btnStyles.Dark}`}
+        className={`${appStyles.Button}`}
         onClick={() => history.goBack()}
       >
         Cancel
       </Button>
-      <Button className={`${btnStyles.Button} ${btnStyles.Dark}`} type="submit">
+      <Button className={`${appStyles.Button}`} type="submit">
         Submit
       </Button>
     </div>

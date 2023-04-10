@@ -99,7 +99,7 @@ const Task = (props) => {
   return (
     <Card className={styles.Task}>
       <Card.Body className={styles.cardbody}>
-        <div class={styles.PositionedButton}>
+        <div className={styles.PositionedButton}>
           {is_owner && taskDetail && (
             <DropDown handleEdit={handleEdit} handleDelete={handleDelete} />
           )}
