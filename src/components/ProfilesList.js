@@ -19,10 +19,15 @@ const ProfilesList = ({ mobile }) => {
           <p className={appStyles.SideTitle}>Profiles</p>
           <div
             className="d-flex flex-wrap justify-content-around"
-            style={{ height: "400px", overflowY: "scroll" }}
+            style={{ height: "200px", overflowY: "scroll" }}
           >
-            {listProfiles.results.map((profile) => (
-              <Profile key={profile.id} profile={profile} mobile={mobile} />
+            {listProfiles.results.map((profile, index) => (
+              <div
+                className={mobile ? "w-100 p-2" : "w-50 p-2"}
+                key={index}
+              >
+                <Profile key={profile.id} profile={profile} mobile={mobile} />
+              </div>
             ))}
           </div>
         </>
@@ -31,6 +36,6 @@ const ProfilesList = ({ mobile }) => {
       )}
     </Container>
   );
-};
+};;
 
 export default ProfilesList;

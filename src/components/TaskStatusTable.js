@@ -37,7 +37,7 @@ function TaskStatusTable() {
 
   return (
     <div> 
-      <h2 className={appStyles.TextAlignCenter}>Current Task stats</h2>     
+      <h2 className={appStyles.TextAlignCenter}>Task stats</h2>     
     <table className={appStyles.Table}>
       <thead>
         <tr>
