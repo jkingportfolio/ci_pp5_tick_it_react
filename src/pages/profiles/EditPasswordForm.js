@@ -4,8 +4,10 @@ import { useHistory, useParams } from "react-router-dom";
 import { axiosRes } from "../../api/axiosDefaults";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import appStyles from "../../App.module.css";
+import PasswordCriteria from "../../components/PasswordCriteria";
+import FeedbackMsg from "../../components/FeedBackMsg";
 
-const EditPasswordForm = () => {
+const UserPasswordForm = () => {
   const history = useHistory();
   const { id } = useParams();
   const currentUser = useCurrentUser();
@@ -16,26 +18,37 @@ const EditPasswordForm = () => {
   });
   const { new_password1, new_password2 } = userData;
   const [errors, setErrors] = useState({});
+  const [showAlert, setShowAlert] = useState(false);
 
-
+  /* 
+    Handles changes to the input fields
+  */
   const handleChange = (event) => {
     setUserData({
+      ...userData,
       [event.target.name]: event.target.value,
     });
   };
 
-
+  /*
+    Handles the edit of user password
+  */
   useEffect(() => {
     if (currentUser?.profile_id?.toString() !== id) {
       history.push("/");
     }
   }, [currentUser, history, id]);
 
-
+  /* 
+    Handles the new password submission
+    Displays a feedback message to the user on successful password change
+    Redirects the user to the profile page after a short delay
+  */
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
       await axiosRes.post("/dj-rest-auth/password/change/", userData);
+      setShowAlert(true);
       setTimeout(function () {
         history.goBack();
       }, 2500);
@@ -47,12 +60,19 @@ const EditPasswordForm = () => {
   return (
     <Row>
       <Col className="py-2 mx-auto text-center font-weight-bold" md={8}>
+        {showAlert && (
+          <FeedbackMsg
+            variant="info"
+            message="Password has been changed. Taking you back to your profile's page..."
+          />
+        )}
+
         <Container className={appStyles.Content}>
           <Form onSubmit={handleSubmit}>
             <Form.Group>
               <Form.Label>New password</Form.Label>
               <Form.Control
-                placeholder="Enter new password"
+                placeholder="type your new password"
                 type="password"
                 value={new_password1}
                 onChange={handleChange}
@@ -71,7 +91,7 @@ const EditPasswordForm = () => {
             <Form.Group>
               <Form.Label>Confirm password</Form.Label>
               <Form.Control
-                placeholder="Confirm new password"
+                placeholder="confirm new password"
                 type="password"
                 value={new_password2}
                 onChange={handleChange}
@@ -79,6 +99,8 @@ const EditPasswordForm = () => {
                 className={`${appStyles.Input} text-center`}
                 aria-label="confirm new password"
               />
+
+              <PasswordCriteria />
             </Form.Group>
 
             {errors?.new_password2?.map((message, idx) => (
@@ -89,14 +111,14 @@ const EditPasswordForm = () => {
 
             <Button
               type="submit"
-              className={`mx-2 my-2 ${appStyles.Button}`}
+              className={`mx-2 my-2 ${appStyles.button}`}
               onMouseDown={(event) => event.preventDefault()}
             >
               Save
             </Button>
             <Button
               onMouseDown={(event) => event.preventDefault()}
-              className={`mx-2 ${appStyles.Button}`}
+              className={`mx-2 ${appStyles.button}`}
               onClick={() => history.goBack()}
             >
               Cancel
@@ -108,4 +130,4 @@ const EditPasswordForm = () => {
   );
 };
 
-export default EditPasswordForm;
+export default UserPasswordForm;
