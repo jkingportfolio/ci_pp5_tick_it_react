@@ -46,7 +46,7 @@ function TasksListings({ message, filter = "" }) {
   return (
     <Row>
       <Col className="py-2 p-0 p-lg-2" lg={8}>
-      <ProfilesList mobile />
+      <ProfilesList mobile/>
       <Form
           onSubmit={(event) => event.preventDefault()}
           className={styles.BottomMargin}

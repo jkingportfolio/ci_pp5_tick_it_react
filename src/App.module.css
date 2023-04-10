@@ -151,3 +151,9 @@ i:hover {
     height: 450px;
     overflow-y: scroll;
 }
+
+@media (max-width: 990px) {
+  .Hide {
+    display: none;
+  }
+}

@@ -12,7 +12,7 @@ const ProfilesList = ({ mobile }) => {
     <Container
       className={`${appStyles.Content} ${
         mobile && "d-lg-none text-center mb-3"
-      }`}
+      } ${appStyles.Hide}`}
     >
       {listProfiles.results.length ? (
         <>
@@ -36,6 +36,6 @@ const ProfilesList = ({ mobile }) => {
       )}
     </Container>
   );
-};;
+};
 
 export default ProfilesList;
