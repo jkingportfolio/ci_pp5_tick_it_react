@@ -48,9 +48,10 @@ const Dashboard = () => {
               <TaskCompleteFilter />
             </Col>
             <Col
-              md={12}
-              className={`${appStyles.DarkText} ${styles.BorderBox}`}
+              lg={12}
+              className={`${appStyles.DarkText} ${styles.BorderBox} ${appStyles.TextAlignCenter}`}
             >
+              <h3 className={`${appStyles.LightText} ${styles.BorderBox}`}>High Priority tasks</h3>
               <HighPriorityTasks />
             </Col>
           </Col>

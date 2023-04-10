@@ -28,6 +28,7 @@ function ProfilePage() {
   const [profile] = pageProfile.results;
   const [profileTasks, setProfileTasks] = useState({ results: [] });
   const [profilePacks, setProfilePacks] = useState({ results: [] });
+  const [profileAssigned, setProfileAssigned] = useState({ results: [] });
   // const currentUser = useCurrentUser();
 
   useEffect(() => {
@@ -37,10 +38,12 @@ function ProfilePage() {
           { data: pageProfile },
           { data: profileTasks },
           { data: profilePacks },
+          { data: profileAssigned },
         ] = await Promise.all([
           axiosReq.get(`/profiles/${id}/`),
           axiosReq.get(`/tasks/?owner__profile=${id}`),
           axiosReq.get(`/packs/?owner__profile=${id}`),
+          axiosReq.get(`/tasks/?owner__assigned_to=${id}`),
         ]);
         setProfileData((prevState) => ({
           ...prevState,
@@ -48,6 +51,7 @@ function ProfilePage() {
         }));
         setProfileTasks(profileTasks);
         setProfilePacks(profilePacks);
+        setProfileAssigned(profileAssigned);
         setHasLoaded(true);
       } catch (err) {
         console.log(err);
@@ -122,32 +126,12 @@ function ProfilePage() {
             </div>
           </div>
         </Col>
-        {/* <Col lg={8}>
-          
-          <Row className="justify-content-center no-gutters">
-            <Col xs={6} className="my-2">
-              <div>{profile?.tasks_count}</div>
-              <div>tasks</div>
-            </Col>
-            <Col xs={6} className="my-2">
-              <div>{profile?.assigned_count}</div>
-              <div>Assigned tasks</div>
-            </Col>
-          </Row>
-        </Col> */}
-        {/* <Col lg={2}>
-          {profile?.is_owner && <EditProfileDropdown id={profile?.id} />}
-        </Col> */}
-        {/* {profile?.content && <Col className="p-3">{profile.content}</Col>} */}
       </Row>
     </>
   );
 
   const mainProfileTasks = (
     <>
-      {/* <hr /> */}
-      {/* <p className="text-center">{profile?.owner}'s tasks</p>
-      <hr /> */}
       {profileTasks.results.length ? (
         <InfiniteScroll
           children={profileTasks.results.map((task) => (
@@ -169,9 +153,6 @@ function ProfilePage() {
 
   const mainProfilePacks = (
     <>
-      {/* <hr /> */}
-      {/* <p className="text-center">{profile?.owner}'s tasks</p>
-      <hr /> */}
       {profilePacks.results.length ? (
         <InfiniteScroll
           children={profilePacks.results.map((pack) => (
@@ -186,6 +167,27 @@ function ProfilePage() {
         <Asset
           src={NoResults}
           message={`No results found, ${profile?.owner} has created no packs.`}
+        />
+      )}
+    </>
+  );
+
+  const mainProfileAssigned = (
+    <>
+      {profileAssigned.results.length ? (
+        <InfiniteScroll
+          children={profileAssigned.results.map((task) => (
+            <Task key={task.id} {...task} setTasks={setProfileAssigned} />
+          ))}
+          dataLength={profileAssigned.results.length}
+          loader={<Asset spinner />}
+          hasMore={!!profileAssigned.next}
+          next={() => fetchMoreData(profileAssigned, setProfileAssigned)}
+        />
+      ) : (
+        <Asset
+          src={NoResults}
+          message={`No results found, ${profile?.owner} has not been assigned any tasks.`}
         />
       )}
     </>
@@ -221,7 +223,7 @@ function ProfilePage() {
                 tabClassName={appStyles.Tabs}
                 className={appStyles.BoxBorder}
               >
-                List of tasks profile owner has been assigned
+                {mainProfileAssigned}
               </Tab>
             </Tabs>
           </Container>

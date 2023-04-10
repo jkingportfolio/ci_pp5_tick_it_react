@@ -18,6 +18,7 @@ const Task = (props) => {
     profile_image,
     created_on,
     due_date,
+    priority,
     task_body,
     watching_id,
     taskDetail,
@@ -122,6 +123,9 @@ const Task = (props) => {
           </div>
           <div className={`{${styles.Posted} ${styles.TopMargin}`}>
             <div className={styles.Posted}>Due on: {due_date}</div>
+          </div>
+          <div className={`{${styles.Posted} ${styles.TopMargin}`}>
+            <div className={styles.Posted}>Priority: {priority}</div>
           </div>
           <hr></hr>
           <div>
