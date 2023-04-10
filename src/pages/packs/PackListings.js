@@ -15,7 +15,7 @@ import { axiosReq } from "../../api/axiosDefaults";
 
 import NoResults from "../../assets/no-results.png";
 
-import FreeProfiles from "../profiles/FreeProfiles";
+import ProfilesList from "../../components/ProfilesList";
 
 function PackListings({ message, filter = "" }) {
   const [packs, setPacks] = useState({ results: [] });
@@ -46,7 +46,7 @@ function PackListings({ message, filter = "" }) {
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
-        <FreeProfiles mobile />
+        <ProfilesList mobile />
         <Form
           className={styles.BottomMargin}
           onSubmit={(event) => event.preventDefault()}
@@ -87,7 +87,7 @@ function PackListings({ message, filter = "" }) {
         )}
       </Col>
       <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
-        <FreeProfiles />
+        <ProfilesList />
       </Col>
     </Row>
   );

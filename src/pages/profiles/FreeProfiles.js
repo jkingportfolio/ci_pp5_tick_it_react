@@ -24,7 +24,7 @@ const FreeProfiles = ({ mobile }) => {
               ))}
             </div>
           ) : (
-            listProfiles.results.slice(0, 5).map((profile) => (
+            listProfiles.results.slice(0, 3).map((profile) => (
               <Profile key={profile.id} profile={profile} />
             ))
           )}

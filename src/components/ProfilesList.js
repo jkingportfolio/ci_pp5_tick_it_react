@@ -19,7 +19,7 @@ const ProfilesList = ({ mobile }) => {
           <p className={appStyles.SideTitle}>Profiles</p>
           <div
             className="d-flex flex-wrap justify-content-around"
-            style={{ height: "200px", overflowY: "scroll" }}
+            style={{ height: "800px", overflowY: "scroll" }}
           >
             {listProfiles.results.map((profile, index) => (
               <div
