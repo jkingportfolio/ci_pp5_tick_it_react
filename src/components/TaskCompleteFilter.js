@@ -11,6 +11,9 @@ import { axiosReq } from "../api/axiosDefaults";
 
 import NoResults from "../assets/no-results.png";
 
+import InfiniteScroll from "react-infinite-scroll-component";
+import { fetchMoreData } from "../utils/utils";
+
 function TaskCompleteFilter({ message, filter = "" }) {
   const [tasks, setTasks] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
@@ -43,9 +46,15 @@ function TaskCompleteFilter({ message, filter = "" }) {
         {hasLoaded ? (
           <div className={appStyles.ScrollBox}>
             {tasks.results.length ? (
-              tasks.results.map((tasks) => (
+              <InfiniteScroll
+              children={tasks.results.map((tasks) => (
                 <Task key={tasks.id} {...tasks} setTasks={setTasks} />
-              ))
+              ))}
+              dataLength={tasks.results.length}
+                loader={<Asset spinner />}
+                hasMore={!!tasks.next}
+                next={() => fetchMoreData(tasks, setTasks)}
+              />
             ) : (
               <Container className={appStyles.Content}>
                 <Asset src={NoResults} message={message} />
