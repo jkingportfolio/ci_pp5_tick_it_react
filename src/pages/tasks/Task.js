@@ -109,7 +109,7 @@ const Task = (props) => {
         </Link>
         <Container className="align-items-center justify-content-between">
           <div>
-            <div className={styles.Posted}>
+            <div className={`${styles.Posted} ${styles.TopMargin} ${styles.TopBottom}`}>
               Posted by:{" "}
               <Link to={`/profiles/${profile_id}`}>
                 {" "}
