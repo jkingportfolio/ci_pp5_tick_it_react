@@ -16,6 +16,8 @@ import { axiosReq } from "../../api/axiosDefaults";
 import NoResults from "../../assets/no-results.png";
 
 import ProfilesList from "../../components/ProfilesList";
+import InfiniteScroll from "react-infinite-scroll-component";
+import { fetchMoreData } from "../../utils/utils";
 
 function TasksListings({ message, filter = "" }) {
   const [tasks, setTasks] = useState({ results: [] });
@@ -71,9 +73,15 @@ function TasksListings({ message, filter = "" }) {
         {hasLoaded ? (
           <>
             {tasks.results.length ? (
-              tasks.results.map((tasks) => (
+              <InfiniteScroll
+              children={tasks.results.map((tasks) => (
                 <Task key={tasks.id} {...tasks} setTasks={setTasks} />
-              ))
+              ))}
+              dataLength={tasks.results.length}
+                loader={<Asset spinner />}
+                hasMore={!!tasks.next}
+                next={() => fetchMoreData(tasks, setTasks)}
+              />
             ) : (
               <Container className={appStyles.Content}>
                 <Asset src={NoResults} message={message} />
