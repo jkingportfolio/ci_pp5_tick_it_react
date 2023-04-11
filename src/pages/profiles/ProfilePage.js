@@ -44,7 +44,7 @@ function ProfilePage() {
           axiosReq.get(`/profiles/${id}/`),
           axiosReq.get(`/tasks/?owner__profile=${id}`),
           axiosReq.get(`/packs/?owner__profile=${id}`),
-          axiosReq.get(`/tasks/?assigned_to=${id}`),
+          axiosReq.get(`/tasks/`),
         ]);
         setProfileData((prevState) => ({
           ...prevState,
@@ -158,9 +158,13 @@ function ProfilePage() {
     <>
       {profileAssigned.results.length ? (
         <InfiniteScroll
-          children={profileAssigned.results.map((task) => (
-            <Task key={task.id} {...task} setTasks={setProfileAssigned} />
-          ))}
+          children={profileAssigned.results.map((task) => {
+            console.log(task)
+            if (task.assigned_to === profile.id) {
+              return <Task key={task.id} {...task} setTasks={setProfileAssigned} />;
+            }            
+            return null;
+          })}
           dataLength={profileAssigned.results.length}
           loader={<Asset spinner />}
           hasMore={!!profileAssigned.next}
