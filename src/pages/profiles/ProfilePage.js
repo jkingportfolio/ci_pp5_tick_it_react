@@ -75,8 +75,7 @@ function ProfilePage() {
         <Col xs={12} sm={4} md={4} lg={4} xl={4} className={`${styles.Border}`}>
           <div className={`${styles.Border} ${styles.DivFlexParent}`}>
             <div className={`${styles.Border} ${styles.DivFlexChild} ${styles.ButtonContainer}`}>
-            Currently has {profile?.tasks_count} tasks created.
-            {profile?.owner} currently works as a {profile?.job_role}.
+            {profile?.owner} currently works as a {profile?.job_role} and currently has a task count of {profile?.tasks_count}.
             </div>
           </div>
         </Col>
@@ -177,7 +176,7 @@ function ProfilePage() {
   );
 
   return (
-    <div>
+    <div className={styles.ContentWidth}>
       <Row>
         <Col className="py-2 p-0 p-lg-2" lg={12}>
           <Container className={styles.ProfileBox}>
