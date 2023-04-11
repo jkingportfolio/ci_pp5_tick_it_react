@@ -20,6 +20,7 @@ import Dashboard from "./pages/dashboard/Dashboard";
 import EditPasswordForm from "./pages/profiles/EditPasswordForm";
 import ContactForm from "./pages/contact/ContactForm";
 import PageNotFound from "./components/PageNotFound";
+import ProfilesList from "./components/ProfilesList";
 
 function App() {
   const currentUser = useCurrentUser();
@@ -95,6 +96,7 @@ function App() {
               render={() => <EditPasswordForm />}
             />
             <Route exact path="/contact" render={() => <ContactForm />} />
+            <Route exact path="/profiles" render={() => <ProfilesList />} />
             <Route render={() => <PageNotFound />} />
             <Route path="*">
             <PageNotFound />

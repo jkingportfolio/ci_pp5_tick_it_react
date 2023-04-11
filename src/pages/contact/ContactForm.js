@@ -1,17 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
-import { Alert, Form, Button, Row, Col, Container } from "react-bootstrap";
+import { Alert, Form, Button, Col } from "react-bootstrap";
 
 import appStyles from "../../App.module.css";
-import btnStyles from "../../styles/Button.module.css";
 
 import { useHistory } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
-import axios from "axios";
 
 function ContactForm() {
   const [errors, setErrors] = useState({});
-  const [users, setUsers] = useState([]);
 
   const [contactData, setContactData] = useState({
     reason: "General Enquiry",
