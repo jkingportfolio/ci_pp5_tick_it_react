@@ -46,7 +46,14 @@
   position: absolute;
   top: 0px;
   right: 0px;
-  width: 40px;
-  height: 30px;
+  width: 50px;
+  height: 20px;
 }
 
+.PasswordButton {
+  border-color: #F6F6F7;
+  background-color: #613FE5 !important;
+  color: #F6F6F7;
+  margin: 0 10px 20px 20px;
+  width: 200px;
+}

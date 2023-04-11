@@ -1,22 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useHistory, useParams } from "react-router-dom";
-
-import Form  from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import Image from "react-bootstrap/Image";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
-import Alert from "react-bootstrap/Alert";
-
+import { useHistory, useParams, Link } from "react-router-dom";
+import { Form, Button, Image, Col, Container, Alert } from "react-bootstrap";
 import { axiosReq } from "../../api/axiosDefaults";
 import {
   useCurrentUser,
   useSetCurrentUser,
 } from "../../contexts/CurrentUserContext";
-
-
 import appStyles from "../../App.module.css";
+import styles from "../../styles/ProfilePage.module.css";
+import FeedbackMsg from "../../components/FeedBackMsg";
 
 const EditProfileForm = () => {
   const currentUser = useCurrentUser();
@@ -31,8 +23,8 @@ const EditProfileForm = () => {
     image: "",
   });
   const { name, job_role, image } = profileData;
-
   const [errors, setErrors] = useState({});
+  const [showAlert, setShowAlert] = useState(false);
 
   useEffect(() => {
     const handleMount = async () => {
@@ -62,6 +54,7 @@ const EditProfileForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    
     const formData = new FormData();
     formData.append("name", name);
     formData.append("job_role", job_role);
@@ -76,7 +69,10 @@ const EditProfileForm = () => {
         ...currentUser,
         profile_image: data.image,
       }));
-      history.goBack();
+      setShowAlert(true);
+      setTimeout(function () {
+        history.goBack();
+      }, 3500);
     } catch (err) {
       console.log(err);
       setErrors(err.response?.data);
@@ -93,6 +89,7 @@ const EditProfileForm = () => {
           onChange={handleChange}
           name="name"
           rows={7}
+          className={appStyles.TextAlignLeft}
         />
       </Form.Group>
 
@@ -122,56 +119,72 @@ const EditProfileForm = () => {
         className={`${appStyles.Button}`}
         onClick={() => history.goBack()}
       >
-        cancel
+        Cancel
       </Button>
       <Button className={`${appStyles.Button}`} type="submit">
-        save
+        Save
       </Button>
+      {showAlert && (
+    <Alert variant="success" onClose={() => setShowAlert(false)} dismissible>
+      Form submitted successfully!
+    </Alert>
+  )}
     </>
   );
 
   return (
     <Form onSubmit={handleSubmit}>
+      {showAlert && (
+          <FeedbackMsg
+            variant="info"
+            message="Profile updated successfully. Taking you back to your profile's page..."
+          />
+        )}
       <div className={appStyles.Form}>
         <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
-        <Container
+          <Container
             className={`${appStyles.Content} d-flex flex-column justify-content-center`}
           >
-              <div>
-                <Form.Group>
-                  {image && (
-                    <figure>
-                      <Image src={image} fluid />
-                    </figure>
-                  )}
-                  {errors?.image?.map((message, idx) => (
-                    <Alert variant="warning" key={idx}>
-                      {message}
-                    </Alert>
-                  ))}
-                  <Form.Label
-                    className={`${appStyles.Button}`}
-                    htmlFor="image-upload"
+            <div className={appStyles.TextAlignCenter}>
+              <Form.Group>
+                {image && (
+                  <figure>
+                    <Image src={image} fluid />
+                  </figure>
+                )}
+                {errors?.image?.map((message, idx) => (
+                  <Alert variant="warning" key={idx}>
+                    {message}
+                  </Alert>
+                ))}
+                <Form.File
+                  id="image-upload"
+                  ref={imageFile}
+                  accept="image/*"
+                  onChange={(e) => {
+                    if (e.target.files.length) {
+                      setProfileData({
+                        ...profileData,
+                        image: URL.createObjectURL(e.target.files[0]),
+                      });
+                    }
+                  }}
+                />
+                <hr />
+                <div
+                  className={`${styles.Border} ${styles.DivFlexChild} ${styles.ButtonContainer} ${styles.TopMargin}`}
+                >
+                  <Button
+                    className={`${styles.PasswordButton}`}
+                    as={Link}
+                    to={`/profiles/${id}/edit/password`}
                   >
-                    Change the image
-                  </Form.Label>
-
-                  <Form.File
-                    id="image-upload"
-                    ref={imageFile}
-                    accept="image/*"
-                    onChange={(e) => {
-                      if (e.target.files.length) {
-                        setProfileData({
-                          ...profileData,
-                          image: URL.createObjectURL(e.target.files[0]),
-                        });
-                      }
-                    }}
-                  />
-                  <div>{textFields}</div>
-                </Form.Group>
-              </div>
+                    Change Password
+                  </Button>
+                </div>
+                <div>{textFields}</div>
+              </Form.Group>
+            </div>
           </Container>
         </Col>
       </div>
@@ -180,5 +193,3 @@ const EditProfileForm = () => {
 };
 
 export default EditProfileForm;
-
-<div></div>;

@@ -113,17 +113,6 @@ function ProfilePage() {
                 Create Pack
               </Button>
             </div>
-            <div
-              className={`${styles.Border} ${styles.DivFlexChild} ${styles.ButtonContainer} ${styles.TopMargin}`}
-            >
-              <Button
-                className={`${appStyles.Button}`}
-                as={Link}
-                to={`/profiles/${id}/edit/password`}
-              >
-                Change Password
-              </Button>
-            </div>
           </div>
         </Col>
       </Row>

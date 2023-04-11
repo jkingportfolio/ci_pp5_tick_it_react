@@ -111,6 +111,10 @@ i:hover {
   text-align: center;
 }
 
+.TextAlignLeft {
+  text-align: left;
+}
+
 .CenterAlignForm {
   display: flex;
   justify-content: center;
