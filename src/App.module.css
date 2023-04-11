@@ -120,6 +120,10 @@ i:hover {
   justify-content: center;
 }
 
+.FlexDisplay {
+  display: flex;
+}
+
 .Table {
   border-collapse: collapse;
   width: 100%;

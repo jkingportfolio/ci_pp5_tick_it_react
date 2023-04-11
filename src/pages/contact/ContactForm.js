@@ -12,35 +12,20 @@ import axios from "axios";
 function ContactForm() {
   const [errors, setErrors] = useState({});
   const [users, setUsers] = useState([]);
-  // const [packs, setPacks] = useState([]);
 
-  useEffect(() => {
-    axios
-      .get("/profile-list/")
-      .then((response) => setUsers(response.data))
-      .catch((error) => console.log(error));
-  }, []);
-
-  // useEffect(() => {
-  //   axios
-  //     .get("/packs/")
-  //     .then((response) => setUsers(response.data))
-  //     .catch((error) => console.log(error));
-  // }, []);
-
-  const [taskData, setTaskData] = useState({
+  const [contactData, setContactData] = useState({
     reason: "General Enquiry",
     name: "",
     email: "",
     message: "",
   });
-  const { reason, name, email, message } = taskData;
+  const { reason, name, email, message } = contactData;
 
   const history = useHistory();
 
   const handleChange = (event) => {
-    setTaskData({
-      ...taskData,
+    setContactData({
+      ...contactData,
       [event.target.name]: event.target.value,
     });
   };
@@ -56,7 +41,7 @@ function ContactForm() {
 
     try {
       const { data } = await axiosReq.post("/contact/", formData);
-      history.push(`/contact/${data.id}`);
+      history.goBack();
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
@@ -149,16 +134,17 @@ function ContactForm() {
           {message}
         </Alert>
       ))}
-
-      <Button
-        className={`${appStyles.Button}`}
-        onClick={() => history.goBack()}
-      >
-        Cancel
-      </Button>
-      <Button className={`${appStyles.Button}`} type="submit">
-        Submit
-      </Button>
+      <div className={`${appStyles.FlexDisplay}  ${appStyles.JustifyContentCenter}`}>
+        <Button
+          className={`${appStyles.Button}`}
+          onClick={() => history.goBack()}
+        >
+          Cancel
+        </Button>
+        <Button className={`${appStyles.Button}`} type="submit">
+          Submit
+        </Button>
+      </div>
     </div>
   );
 
