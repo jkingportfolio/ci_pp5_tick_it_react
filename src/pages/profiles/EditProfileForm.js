@@ -124,11 +124,6 @@ const EditProfileForm = () => {
       <Button className={`${appStyles.Button}`} type="submit">
         Save
       </Button>
-      {showAlert && (
-    <Alert variant="success" onClose={() => setShowAlert(false)} dismissible>
-      Form submitted successfully!
-    </Alert>
-  )}
     </>
   );
 

@@ -9,12 +9,12 @@ import btnStyles from "../../styles/Button.module.css";
 import { useHistory } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import axios from "axios";
-// import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import FeedbackMsg from "../../components/FeedBackMsg";
 
 function TaskCreateForm() {
   const [errors, setErrors] = useState({});
   const [users, setUsers] = useState([]);
-  // const [packs, setPacks] = useState([]);
+  const [showAlert, setShowAlert] = useState(false);
 
   useEffect(() => {
     axios
@@ -23,12 +23,7 @@ function TaskCreateForm() {
       .catch((error) => console.log(error));
   }, []);
 
-  // useEffect(() => {
-  //   axios
-  //     .get("/packs/")
-  //     .then((response) => setUsers(response.data))
-  //     .catch((error) => console.log(error));
-  // }, []);
+
 
   const [taskData, setTaskData] = useState({
     title: "",
@@ -40,7 +35,6 @@ function TaskCreateForm() {
   });
   const { title, task_body, priority, assigned_to, due_date, pack } = taskData;
 
-  //   const fileInput = useRef(null);
   const history = useHistory();
 
   const handleChange = (event) => {
@@ -52,8 +46,8 @@ function TaskCreateForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const formData = new FormData();
 
+    const formData = new FormData();
     formData.append("title", title);
     formData.append("task_body", task_body);
     formData.append("priority", priority);
@@ -63,7 +57,11 @@ function TaskCreateForm() {
 
     try {
       const { data } = await axiosReq.post("/tasks/", formData);
-      history.push(`/tasks/${data.id}`);
+      // history.push(`/tasks/${data.id}`);
+      setShowAlert(true);
+      setTimeout(function () {
+        history.push(`/tasks/${data.id}`);
+      }, 3500);
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
@@ -219,6 +217,12 @@ function TaskCreateForm() {
 
   return (
     <Form onSubmit={handleSubmit}>
+      {showAlert && (
+          <FeedbackMsg
+            variant="info"
+            message="Task created successfully!"
+          />
+        )}
       <div className={appStyles.CenterAlignForm}>
         <Col md={7} lg={8}>
           <div
