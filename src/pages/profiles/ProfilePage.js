@@ -19,6 +19,7 @@ import Pack from "../packs/Pack";
 import { fetchMoreData } from "../../utils/utils";
 import NoResults from "../../assets/no-results.png";
 import InfiniteScroll from "react-infinite-scroll-component";
+import Avatar from "../../components/Avatar";
 
 function ProfilePage() {
   const [hasLoaded, setHasLoaded] = useState(false);
@@ -43,7 +44,7 @@ function ProfilePage() {
           axiosReq.get(`/profiles/${id}/`),
           axiosReq.get(`/tasks/?owner__profile=${id}`),
           axiosReq.get(`/packs/?owner__profile=${id}`),
-          axiosReq.get(`/tasks/?owner__assigned_to=${id}`),
+          axiosReq.get(`/tasks/?assigned_to=${id}`),
         ]);
         setProfileData((prevState) => ({
           ...prevState,
@@ -62,15 +63,10 @@ function ProfilePage() {
 
   const mainProfile = (
     <>
-      <Row className={`${styles.ProfileBox}"px-3 text-center"`}>
+      <Row className={`${styles.ProfileBox}"px-3 text-center"  ${styles.TopMargin}`}>
         <Col xs={12} sm={4} md={4} lg={4} xl={4} className={`${styles.Border} ${appStyles.AutoMargin} ${appStyles.TextAlignCenter}`}>
           <div>
-            <Image
-              className={`${styles.ProfileImage}  ${appStyles.AutoMargin}`}
-              roundedCircle
-              fluid
-              src={profile?.image}
-            />
+          <Avatar src={profile?.image} height={150} className={`${appStyles.AutoMargin} ${appStyles.TopMargin} ${styles.AvatarBorder}`}/>
           </div>
           <div>
             <h3 className={styles.TextAlignCenter}>{profile?.owner}</h3>
@@ -79,10 +75,8 @@ function ProfilePage() {
         <Col xs={12} sm={4} md={4} lg={4} xl={4} className={`${styles.Border}`}>
           <div className={`${styles.Border} ${styles.DivFlexParent}`}>
             <div className={`${styles.Border} ${styles.DivFlexChild} ${styles.ButtonContainer}`}>
-            {profile?.owner} currently works as a {profile?.job_role}.
-            </div>
-            <div className={`${styles.Border} ${styles.DivFlexChild} ${styles.ButtonContainer}`}>
             Currently has {profile?.tasks_count} tasks created.
+            {profile?.owner} currently works as a {profile?.job_role}.
             </div>
           </div>
         </Col>
