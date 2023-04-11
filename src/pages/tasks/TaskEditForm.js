@@ -23,8 +23,8 @@ function TaskEditForm() {
     task_body: "",
     priority: "",
     assigned_to: "",
-    due_date: null,
-    pack: null,
+    due_date: "",
+    pack: "",
     completed: "No",
   });
   const { title, task_body, priority, assigned_to, due_date, pack, completed } =
@@ -42,8 +42,9 @@ function TaskEditForm() {
           title,
           task_body,
           priority,
-          due_date,
           assigned_to,
+          due_date,
+          pack,
           completed,
           is_owner,
         } = data;
@@ -53,8 +54,9 @@ function TaskEditForm() {
               title,
               task_body,
               priority,
-              due_date,
               assigned_to,
+              due_date,              
+              pack,
               completed,
             })
           : history.push("/");
@@ -76,22 +78,25 @@ function TaskEditForm() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData();
-
+    console.log("DATE:" + due_date)
+    console.log("PACK:" + pack)
     formData.append("title", title);
     formData.append("task_body", task_body);
     formData.append("priority", priority);
-    formData.append("assigned_to", assigned_to);
-    formData.append("due_date", due_date);
-    formData.append("pack", pack);
+    // formData.append("assigned_to", assigned_to);
+    if (due_date !== null && due_date !== '') {
+      formData.append("due_date", due_date);
+    }
+    if (pack !== null && pack !== '') {
+      formData.append("packe", pack);
+    }
+      formData.append("pack", pack);
     formData.append("completed", completed);
 
     try {
       await axiosReq.put(`/tasks/${id}/`, formData);
       history.push(`/tasks/${id}`);
       setShowAlert(true);
-      setTimeout(function () {
-        history.goBack();
-      }, 3500);
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
@@ -193,7 +198,7 @@ function TaskEditForm() {
         </Alert>
       ))}
 
-      <Form.Group>
+      {/* <Form.Group>
         <Form.Label>Assigned to</Form.Label>
 
         <Form.Control
@@ -212,7 +217,7 @@ function TaskEditForm() {
           ))}
           ;
         </Form.Control>
-      </Form.Group>
+      </Form.Group> */}
 
       <Form.Group>
         <Form.Label>Task completed</Form.Label>
@@ -264,7 +269,7 @@ function TaskEditForm() {
             className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
           >
             <div className={appStyles.Content}>
-              <Form.Group className="text-center">
+              {/* <Form.Group className="text-center">
                 <div>
                   <Form.Label
                     className={`${appStyles.Button} `}
@@ -278,7 +283,7 @@ function TaskEditForm() {
                 <Alert variant="warning" key={idx}>
                   {message}
                 </Alert>
-              ))}
+              ))} */}
               {textFields}
             </div>
           </Container>
