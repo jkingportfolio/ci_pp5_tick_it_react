@@ -1,60 +1,62 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import { Table } from 'react-bootstrap';
 import axios from 'axios';
-import appStyles from "../App.module.css";
 
 function TaskStatusTable() {
-  const [tasks, setTasks] = useState([]);
+  const [taskCounts, setTaskCounts] = useState({});
+
+  async function getTaskCounts() {
+    try {
+      const response = await axios.get('/tasks/');
+      const tasks = response.data.results;
+      const counts = {
+        complete: 0,
+        no: 0,
+        inProgress: 0,
+      };
+      tasks.map(task => {
+        if (task.completed === 'COMPLETE') {
+          counts.complete += 1;
+        } else if (task.completed === 'NO') {
+          counts.no += 1;
+        } else if (task.completed === 'IN-PROGRESS') {
+          counts.inProgress += 1;
+        }
+        return null; // Need to return something from the map function
+      });
+      setTaskCounts(counts);
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('/tasks/');
-        // count tasks by complete field
-        const counts = {
-          'Complete': 0,
-          'In-progress': 0,
-          'No': 0,
-        };
-        if (Array.isArray(response.data)) {
-          response.data.forEach(task => {
-            if (task.completed === "COMPLETE") {
-              counts['Complete'] += 1;
-            } else if (task.completed === "IN-PROGRESS") {
-              counts['In-progress'] += 1;
-            } else {
-              counts['No'] += 1;
-            }
-          });
-        }
-        setTasks(counts);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    fetchData();
+    getTaskCounts();
   }, []);
 
   return (
-    <div> 
-      <h2 className={appStyles.TextAlignCenter}>Task stats</h2>     
-    <table className={appStyles.Table}>
+    <Table striped bordered hover>
       <thead>
         <tr>
-          <th className={appStyles.Th}>Status</th>
-          <th className={appStyles.Th}>Count</th>
+          <th>Status</th>
+          <th>Count</th>
         </tr>
       </thead>
       <tbody>
-        {Object.keys(tasks).map(completed => (
-          <tr key={completed}>
-            <td className={appStyles.Td}>{completed}</td>
-            <td className={appStyles.Td}>{tasks[completed]}</td>
-          </tr>
-        ))}
+        <tr>
+          <td>Complete</td>
+          <td>{taskCounts.complete}</td>
+        </tr>
+        <tr>
+          <td>No</td>
+          <td>{taskCounts.no}</td>
+        </tr>
+        <tr>
+          <td>In Progress</td>
+          <td>{taskCounts.inProgress}</td>
+        </tr>
       </tbody>
-    </table>
-    </div>
+    </Table>
   );
 }
 
