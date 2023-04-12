@@ -154,22 +154,34 @@ function ProfilePage() {
     </>
   );
 
+  let count = 0;
+
   const mainProfileAssigned = (
     <>
       {profileAssigned.results.length ? (
-        <InfiniteScroll
-          children={profileAssigned.results.map((task) => {
-            console.log(task)
-            if (task.assigned_to === profile.id) {
-              return <Task key={task.id} {...task} setTasks={setProfileAssigned} />;
-            }            
-            return null;
-          })}
-          dataLength={profileAssigned.results.length}
-          loader={<Asset spinner />}
-          hasMore={!!profileAssigned.next}
-          next={() => fetchMoreData(profileAssigned, setProfileAssigned)}
-        />
+        <React.Fragment>
+          <InfiniteScroll
+            children={profileAssigned.results.map((task) => {
+              console.log(task)
+              if (task.assigned_to === profile.id) {
+                return <Task key={task.id} {...task} setTasks={setProfileAssigned} />;
+              } else {
+                count++;
+                return null;
+              }
+            })}
+            dataLength={profileAssigned.results.length}
+            loader={<Asset spinner />}
+            hasMore={!!profileAssigned.next}
+            next={() => fetchMoreData(profileAssigned, setProfileAssigned)}
+          />
+          {count === profileAssigned.results.length && (
+            <Asset
+              src={NoResults}
+              message={`No results found, ${profile?.owner} has not been assigned any tasks.`}
+            />
+          )}
+        </React.Fragment>
       ) : (
         <Asset
           src={NoResults}
@@ -189,24 +201,24 @@ function ProfilePage() {
               <Tab
                 eventKey="task"
                 title="Tasks"
-                tabClassName={appStyles.Tabs}
-                className={appStyles.BoxBorder}
+                tabClassName={appStyles.TabStyle}
+                // className={appStyles.BoxBorder}
               >
                 {mainProfileTasks}
               </Tab>
               <Tab
                 eventKey="pack"
                 title="Packs"
-                tabClassName={appStyles.Tabs}
-                className={appStyles.BoxBorder}
+                tabClassName={appStyles.TabStyle}
+                // className={appStyles.BoxBorder}
               >
                 {mainProfilePacks}
               </Tab>
               <Tab
                 eventKey="assigned"
                 title="Assigned"
-                tabClassName={appStyles.Tabs}
-                className={appStyles.BoxBorder}
+                tabClassName={appStyles.TabStyle}
+                // className={appStyles.BoxBorder}
               >
                 {mainProfileAssigned}
               </Tab>
