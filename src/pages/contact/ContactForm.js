@@ -60,7 +60,7 @@ const ContactForm = () => {
         </Form.Control>
       </Form.Group>
 
-      {errors?.priority?.map((message, idx) => (
+      {errors?.reason?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
         </Alert>
@@ -79,7 +79,7 @@ const ContactForm = () => {
         ></Form.Control>
       </Form.Group>
 
-      {errors?.task_body?.map((message, idx) => (
+      {errors?.name?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
         </Alert>
@@ -98,7 +98,7 @@ const ContactForm = () => {
         ></Form.Control>
       </Form.Group>
 
-      {errors?.due_date?.map((message, idx) => (
+      {errors?.email?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
         </Alert>
@@ -118,7 +118,7 @@ const ContactForm = () => {
         ></Form.Control>
       </Form.Group>
 
-      {errors?.task_body?.map((message, idx) => (
+      {errors?.message?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
         </Alert>
