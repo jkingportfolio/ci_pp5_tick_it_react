@@ -7,23 +7,30 @@ function TaskStatusTable() {
 
   async function getTaskCounts() {
     try {
-      const response = await axios.get('/tasks/');
-      const tasks = response.data.results;
+      let nextPage = '/tasks/';
       const counts = {
         complete: 0,
         no: 0,
         inProgress: 0,
       };
-      tasks.map(task => {
-        if (task.completed === 'COMPLETE') {
-          counts.complete += 1;
-        } else if (task.completed === 'NO') {
-          counts.no += 1;
-        } else if (task.completed === 'IN-PROGRESS') {
-          counts.inProgress += 1;
-        }
-        return null; // Need to return something from the map function
-      });
+
+      while (nextPage !== null) {
+        const response = await axios.get(nextPage);
+        const tasks = response.data.results;
+        
+        tasks.forEach(task => {
+          if (task.completed === 'COMPLETE') {
+            counts.complete += 1;
+          } else if (task.completed === 'NO') {
+            counts.no += 1;
+          } else if (task.completed === 'IN-PROGRESS') {
+            counts.inProgress += 1;
+          }
+        });
+
+        nextPage = response.data.next;
+      }
+
       setTaskCounts(counts);
     } catch (error) {
       console.error(error);
