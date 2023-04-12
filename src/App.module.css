@@ -45,13 +45,12 @@ i:hover {
 }
 
 .TabStyle {
-  background-color: #613FE5;
-  color: #F6F6F7;
+  background-color: #B5B5B5;
+  color: #120E16 !important;
   border: 1px #120E16 solid !important;
 }
 
-.TabStyle .nav-item.show .nav-link,
-.TabStyle .nav-link.active {
+.TabStyle.active {
   color: red !important;
 }
 
