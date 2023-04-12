@@ -1,36 +1,71 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { VictoryPie } from 'victory';
+import { useState, useEffect } from "react";
+import { Doughnut } from "react-chartjs-2";
+import axios from "axios";
+import appStyles from "../App.module.css";
 
-function TaskPieChart() {
-  const [data, setData] = useState([]);
+function TaskStatusTable() {
+  const [taskCounts, setTaskCounts] = useState({});
+
+  async function getTaskCounts() {
+    try {
+      let nextPage = "/tasks/";
+      const counts = {
+        complete: 0,
+        no: 0,
+        inProgress: 0,
+      };
+
+      while (nextPage !== null) {
+        const response = await axios.get(nextPage);
+        const tasks = response.data.results;
+
+        tasks.forEach((task) => {
+          if (task.completed === "COMPLETE") {
+            counts.complete += 1;
+          } else if (task.completed === "NO") {
+            counts.no += 1;
+          } else if (task.completed === "IN-PROGRESS") {
+            counts.inProgress += 1;
+          }
+        });
+
+        nextPage = response.data.next;
+      }
+
+      setTaskCounts(counts);
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
   useEffect(() => {
-    axios.get('/tasks/')
-      .then(response => {
-        const tasks = response.data;
-        const completedTasks = tasks.filter(task => task.completed === "COMPLETE");
-        const inProgressTasks = tasks.filter(task => task.completed === "IN-PROGRESS");
-        const notCompletedTasks = tasks.filter(task => task.completed === "NO");
-        setData([
-          { x: 'Completed', y: completedTasks.length },
-          { x: 'In-Progress', y: inProgressTasks.length },
-          { x: 'Not Completed', y: notCompletedTasks.length },
-        ]);
-      })
-      .catch(error => console.log(error));
+    getTaskCounts();
   }, []);
+
+  const chartData = {
+    labels: ["Complete", "No", "In Progress"],
+    datasets: [
+      {
+        label: "Task Status",
+        data: [
+          taskCounts.complete,
+          taskCounts.no,
+          taskCounts.inProgress
+        ],
+        backgroundColor: ["#36A2EB", "#FF6384", "#FFCE56"],
+        hoverBackgroundColor: ["#36A2EB", "#FF6384", "#FFCE56"],
+      },
+    ],
+  };
 
   return (
     <div>
-      <VictoryPie
-        data={data}
-        colorScale={['#36A2EB', '#FF6384']}
-        innerRadius={50}
-        style={{ labels: { fontSize: 20, fill: 'white' } }}
-      />
+      <h2 className={appStyles.TextAlignCenter}>Task stats</h2>
+      <div className={appStyles.ChartContainer}>
+        <Doughnut data={chartData} />
+      </div>
     </div>
   );
 }
 
-export default TaskPieChart;
+export default TaskStatusTable;

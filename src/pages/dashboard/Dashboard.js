@@ -35,7 +35,8 @@ const Dashboard = () => {
                   <TaskStatusTable />
                 </Col>
                 <Col className={`${appStyles.DarkText} ${styles.BorderBox}`}>
-                  <FreeProfiles />
+                  {/* <FreeProfiles /> */}
+                  <TaskPieChart />
                 </Col>
               </Row>
               <hr className={styles.HorizontalLine} />
