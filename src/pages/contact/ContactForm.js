@@ -1,14 +1,23 @@
-import React, { useState } from 'react';
-import { Form, Button } from 'react-bootstrap';
-import axios from 'axios';
+import React, { useState } from "react";
+import { Alert, Form, Button, Col } from "react-bootstrap";
+import axios from "axios";
+import appStyles from "../../App.module.css";
+import { useHistory } from "react-router";
+import FeedbackMsg from "../../components/FeedBackMsg";
 
 const ContactForm = () => {
   const [form, setForm] = useState({
-    name: '',
-    email: '',
-    reason: '',
-    message: '',
+    reason: "GENERAL",
+    name: "",
+    email: "",
+    message: "",
   });
+
+  const { reason, name, email, message } = form;
+
+  const history = useHistory();
+  const [showAlert, setShowAlert] = useState(false);
+  const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -17,48 +26,134 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form data:', form); // <-- Log the form data
     try {
-      const res = await axios.post('/contact/', form);
-      console.log(res.data);
-      // ...
+      const res = await axios.post("/contact/", form);
+      setShowAlert(true);
+      setTimeout(function () {
+        history.goBack();
+      }, 3500);
     } catch (err) {
       console.log(err);
-      // ...
+      if (err.response?.status !== 401) {
+        setErrors(err.response?.data);
+      }
     }
   };
 
-  return (
-    <Form onSubmit={handleSubmit}>
-      <Form.Group controlId="name">
-        <Form.Label>Name</Form.Label>
-        <Form.Control type="text" name="name" value={form.name} onChange={handleChange} />
-      </Form.Group>
+  const textFields = (
+    <div className="text-center">
+      <Form.Group>
+        <Form.Label>Reason</Form.Label>
 
-      <Form.Group controlId="email">
-        <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" name="email" value={form.email} onChange={handleChange} />
-      </Form.Group>
-
-      <Form.Group controlId="reason">
-        <Form.Label>Reason for Contacting</Form.Label>
-        <Form.Control as="select" name="reason" value={form.reason} onChange={handleChange}>
-          <option value="">-- Select a Reason --</option>
-          <option value="LOGIN">Login Issue</option>
-          <option value="REPORT_POST">Report a Post</option>
-          <option value="GENERAL">General Inquiry</option>
+        <Form.Control
+          as="select"
+          name="reason"
+          className={appStyles.Input}
+          value={reason}
+          onChange={handleChange}
+          aria-label="reason"
+        >
+          <option value="GENERAL">General Enquiry</option>
+          <option value="LOGIN">Login issue</option>
+          <option value="REPORT_POST">Report a task</option>
           <option value="DELETE_ACCOUNT">Delete Account</option>
         </Form.Control>
       </Form.Group>
 
-      <Form.Group controlId="message">
-        <Form.Label>Message</Form.Label>
-        <Form.Control as="textarea" rows={3} name="message" value={form.message} onChange={handleChange} />
+      {errors?.priority?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
+
+      <Form.Group>
+        <Form.Label>Name</Form.Label>
+
+        <Form.Control
+          as="input"
+          name="name"
+          className={appStyles.Input}
+          value={name}
+          onChange={handleChange}
+          aria-label="name"
+        ></Form.Control>
       </Form.Group>
 
-      <Button variant="primary" type="submit">
-        Submit
-      </Button>
+      {errors?.task_body?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
+
+      <Form.Group>
+        <Form.Label>Email</Form.Label>
+
+        <Form.Control
+          name="email"
+          type="email"
+          className={appStyles.Input}
+          value={email}
+          onChange={handleChange}
+          aria-label="email"
+        ></Form.Control>
+      </Form.Group>
+
+      {errors?.due_date?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
+
+      <Form.Group>
+        <Form.Label>Message</Form.Label>
+
+        <Form.Control
+          as="textarea"
+          name="message"
+          className={appStyles.Input}
+          value={message}
+          onChange={handleChange}
+          aria-label="message"
+          rows={7}
+        ></Form.Control>
+      </Form.Group>
+
+      {errors?.task_body?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
+      <div
+        className={`${appStyles.FlexDisplay}  ${appStyles.JustifyContentCenter}`}
+      >
+        <Button
+          className={`${appStyles.Button}`}
+          onClick={() => history.goBack()}
+        >
+          Cancel
+        </Button>
+        <Button className={`${appStyles.Button}`} type="submit">
+          Submit
+        </Button>
+      </div>
+    </div>
+  );
+
+  return (
+    <Form onSubmit={handleSubmit}>
+      {showAlert && (
+        <FeedbackMsg variant="info" message="Thank you for contacting us!" />
+      )}
+      <div className={appStyles.CenterAlignForm}>
+        <Col md={7} lg={8}>
+          <div
+            className={`${appStyles.Content} ${appStyles.TextAlignCenter} d-flex flex-column justify-content-center`}
+          >
+            <h3>Contact us</h3>
+            <div className={appStyles.Content}>{textFields}</div>
+          </div>
+        </Col>
+      </div>
     </Form>
   );
 };
