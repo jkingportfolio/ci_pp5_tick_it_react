@@ -10,6 +10,7 @@ import TaskStatusTable from "../../components/TaskStatusTable";
 import TaskCompleteFilter from "../../components/TaskCompleteFilter";
 import ProfilesList from "../../components/ProfilesList";
 import HighPriorityTasks from "../../components/HighPriorityTasks";
+import ScrollToTop from "../../components/ScrollToTop";
 
 const Dashboard = () => {
   const currentUser = useCurrentUser();
@@ -61,6 +62,7 @@ const Dashboard = () => {
             </Col>
           </Col>
         </Row>
+        <ScrollToTop />
       </Container>
     </>
   );
