@@ -17,13 +17,17 @@
 }
 
 a {
-  
+  color: #EDEFFE !important;
   transition: color ease-in-out 0.3s;
 }
 
 a:hover {
-color: #613FE5 !important;
 text-decoration: none !important;
+}
+
+a:hover i {
+color: #b22121;
+transition: color ease-in-out 0.3s;
 }
 
 .title {

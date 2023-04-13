@@ -202,7 +202,7 @@ function ProfilePage() {
                 eventKey="task"
                 title="My Tasks"
                 tabClassName={appStyles.TabStyle}
-                // className={appStyles.BoxBorder}
+                activeClassName={styles.ActiveTab}
               >
                 {mainProfileTasks}
               </Tab>
@@ -210,7 +210,7 @@ function ProfilePage() {
                 eventKey="pack"
                 title="My Packs"
                 tabClassName={appStyles.TabStyle}
-                // className={appStyles.BoxBorder}
+                activeClassName={appStyles.BoxBorder}
               >
                 {mainProfilePacks}
               </Tab>
@@ -218,7 +218,7 @@ function ProfilePage() {
                 eventKey="assigned"
                 title="Assigned to me"
                 tabClassName={appStyles.TabStyle}
-                // className={appStyles.BoxBorder}
+                activeClassName={appStyles.BoxBorder}
               >
                 {mainProfileAssigned}
               </Tab>
