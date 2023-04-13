@@ -6,6 +6,7 @@ import appStyles from "../../App.module.css";
 
 import { Form, Button, Col, Row, Container, Alert } from "react-bootstrap";
 import axios from "axios";
+import FeedbackMsg from "../../components/FeedBackMsg";
 
 const SignUpForm = () => {
   const [signUpData, setSignUpData] = useState({
@@ -16,6 +17,7 @@ const SignUpForm = () => {
   const { username, password1, password2 } = signUpData;
 
   const [errors, setErrors] = useState({});
+  const [showAlert, setShowAlert] = useState(false);
 
   const history = useHistory();
 
@@ -30,7 +32,10 @@ const SignUpForm = () => {
     event.preventDefault();
     try {
       await axios.post("/dj-rest-auth/registration/", signUpData);
-      history.push("/signin");
+      setShowAlert(true);
+      setTimeout(function () {
+        history.push("/signin");
+      }, 3500);
     } catch (err) {
       setErrors(err.response?.data);
     }
@@ -43,6 +48,12 @@ const SignUpForm = () => {
           <h1 className={styles.Header}>Sign up!</h1>
           <p>Please enter your sign up details below.</p>
           <Form onSubmit={handleSubmit}>
+            {showAlert && (
+              <FeedbackMsg
+                variant="success"
+                message="Signup successful, redirecting to log in page!"
+              />
+            )}
             <Form.Group controlId="username">
               <Form.Label className="d-none">username</Form.Label>
               <Form.Control
@@ -103,9 +114,13 @@ const SignUpForm = () => {
               </Alert>
             ))}
           </Form>
-          <p className={`${appStyles.DarkText} ${styles.TopMargin}`}>Already have an account?</p>
+          <p className={`${appStyles.DarkText} ${styles.TopMargin}`}>
+            Already have an account?
+          </p>
           <Link to="/signin">
-          <p className={`${appStyles.DarkText}`}>Click <span className={styles.Link}>here </span>to Log in!</p>
+            <p className={`${appStyles.DarkText}`}>
+              Click <span className={styles.Link}>here </span>to Log in!
+            </p>
           </Link>
         </Container>
       </Col>
