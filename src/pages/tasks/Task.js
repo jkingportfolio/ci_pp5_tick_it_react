@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import styles from "../../styles/Task.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Card, Container, OverlayTrigger, Tooltip } from "react-bootstrap";
@@ -6,7 +6,7 @@ import { Link, useHistory } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 import { DropDown } from "../../components/DropDown";
-import axios from 'axios';
+import axios from "axios";
 import appStyles from "../../App.module.css";
 
 const Task = (props) => {
@@ -71,18 +71,18 @@ const Task = (props) => {
     } catch (err) {
       console.log(err);
     }
-  };  
+  };
 
   const backgroundColorClass = (() => {
     switch (completed) {
-      case 'COMPLETE':
-        return styles['GreenBackground'];
-      case 'IN-PROGRESS':
-        return styles['YellowBackground'];
-      case 'NO':
-        return styles['RedBackground'];
+      case "COMPLETE":
+        return styles["GreenBackground"];
+      case "IN-PROGRESS":
+        return styles["YellowBackground"];
+      case "NO":
+        return styles["RedBackground"];
       default:
-        return '';
+        return "";
     }
   })();
 
@@ -109,7 +109,9 @@ const Task = (props) => {
         </Link>
         <Container className="align-items-center justify-content-between">
           <div>
-            <div className={`${styles.Posted} ${styles.TopMargin} ${styles.TopBottom}`}>
+            <div
+              className={`${styles.Posted} ${styles.TopMargin} ${styles.TopBottom}`}
+            >
               Posted by:{" "}
               <Link to={`/profiles/${profile_id}`}>
                 {" "}
@@ -141,10 +143,20 @@ const Task = (props) => {
       </Card.Body>
       <Card.Body className={styles.cardbody}>
         <div className={styles.Inline}>
-          <div className={`${styles.Flex} ${backgroundColorClass}`}>Task Completed: {completed}</div>
-          <Link to={`/profiles/${assigned_to}`}  className={`${styles.Flex} ${styles.NavLink}`}>
-          <div>Assigned to: {assignedUser}</div>
-          </Link>
+          <div className={`${styles.Flex} ${backgroundColorClass}`}>
+            Task Completed: {completed}
+          </div>
+          {assigned_to ? (
+            <Link
+              to={`/profiles/${assigned_to}`}
+              className={`${styles.Flex} ${styles.NavLink}`}
+              
+            >
+              <div>Assigned to: {assignedUser}</div>
+            </Link>
+          ) : (
+            <div className={`${styles.Flex} ${styles.NavLink}`}>Assigned to: {assignedUser}</div>
+          )}
           <div className={`${styles.watchbtn} ${appStyles.AutoMargin}`}>
             {is_owner ? (
               <OverlayTrigger
