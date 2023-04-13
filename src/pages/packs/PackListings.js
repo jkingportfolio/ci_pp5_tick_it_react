@@ -17,6 +17,9 @@ import NoResults from "../../assets/no-results.png";
 
 import ProfilesList from "../../components/ProfilesList";
 
+import InfiniteScroll from "react-infinite-scroll-component";
+import { fetchMoreData } from "../../utils/utils";
+
 function PackListings({ message, filter = "" }) {
   const [packs, setPacks] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
