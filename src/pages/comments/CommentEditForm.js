@@ -5,17 +5,19 @@ import { axiosRes } from "../../api/axiosDefaults";
 
 import styles from "../../styles/CommentForm.module.css";
 import appStyles from "../../App.module.css";
+import FeedbackMsg from "../../components/FeedBackMsg";
 
 function CommentEditForm(props) {
   const { id, comment_body, setShowEditForm, setComments } = props;
 
   const [formContent, setFormContent] = useState(comment_body);
+  const [showAlert, setShowAlert] = useState(false);
 
   const handleChange = (event) => {
     setFormContent(event.target.value);
   };
-
   const handleSubmit = async (event) => {
+    setShowAlert(true);
     event.preventDefault();
     try {
       await axiosRes.put(`/comments/${id}/`, {
@@ -33,7 +35,8 @@ function CommentEditForm(props) {
             : comment;
         }),
       }));
-      setShowEditForm(false);
+      
+      setShowEditForm(false);     
     } catch (err) {
       console.log(err);
     }
@@ -41,6 +44,12 @@ function CommentEditForm(props) {
 
   return (
     <Form onSubmit={handleSubmit}>
+       {showAlert && (
+          <FeedbackMsg
+            variant="info"
+            message="Comment updated successfully!"
+          />
+        )}
       <Form.Group className="pr-1">
         <Form.Control
           className={styles.Form}
