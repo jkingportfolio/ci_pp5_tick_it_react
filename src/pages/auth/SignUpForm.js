@@ -50,7 +50,7 @@ const SignUpForm = () => {
           <Form onSubmit={handleSubmit}>
             {showAlert && (
               <FeedbackMsg
-                variant="success"
+                variant="info"
                 message="Signup successful, redirecting to log in page!"
               />
             )}

@@ -193,7 +193,7 @@ function TaskCreateForm() {
       {showAlert && (
           <FeedbackMsg
             variant="info"
-            message="Task created successfully!"
+            message="Task created successfully! Redirecting to task detail."
           />
         )}
       <div className={appStyles.CenterAlignForm}>

@@ -265,7 +265,7 @@ function TaskEditForm() {
       {showAlert && (
           <FeedbackMsg
             variant="info"
-            message="Task updated successfully."
+            message="Task updated successfully. Redirecting to the post detail."
           />
         )}
       <div className={appStyles.Form}>
