@@ -142,7 +142,9 @@ const Task = (props) => {
       <Card.Body className={styles.cardbody}>
         <div className={styles.Inline}>
           <div className={`${styles.Flex} ${backgroundColorClass}`}>Task Completed: {completed}</div>
-          <div className={styles.Flex}>Assigned to: {assignedUser}</div>
+          <Link to={`/profiles/${assigned_to}`}  className={`${styles.Flex} ${styles.NavLink}`}>
+          <div>Assigned to: {assignedUser}</div>
+          </Link>
           <div className={`${styles.watchbtn} ${appStyles.AutoMargin}`}>
             {is_owner ? (
               <OverlayTrigger
