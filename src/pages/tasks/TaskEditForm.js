@@ -98,8 +98,10 @@ function TaskEditForm() {
 
     try {
       await axiosReq.put(`/tasks/${id}/`, formData);
-      history.push(`/tasks/${id}`);
       setShowAlert(true);
+      setTimeout(function () {
+        history.push(`/tasks/${id}`);
+      }, 3500);
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
