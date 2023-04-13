@@ -31,9 +31,8 @@ function TaskCreateForm() {
     priority: "LOW",
     assigned_to: "",
     due_date: "",
-    pack: "",
   });
-  const { title, task_body, priority, assigned_to, due_date, pack } = taskData;
+  const { title, task_body, priority, assigned_to, due_date } = taskData;
 
   const history = useHistory();
 
@@ -53,11 +52,9 @@ function TaskCreateForm() {
     formData.append("priority", priority);
     formData.append("assigned_to", assigned_to);
     formData.append("due_date", due_date);
-    // formData.append("pack", pack);
 
     try {
       const { data } = await axiosReq.post("/tasks/", formData);
-      // history.push(`/tasks/${data.id}`);
       setShowAlert(true);
       setTimeout(function () {
         history.push(`/tasks/${data.id}`);
@@ -123,30 +120,6 @@ function TaskCreateForm() {
       </Form.Group>
 
       {errors?.due_date?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
-
-      <Form.Group>
-        <Form.Label>Assign to Pack</Form.Label>
-        <Form.Control
-          name="pack"
-          className={appStyles.Input}
-          value={pack}
-          onChange={handleChange}
-          aria-label="pack"
-        >
-          {/* {packs.map((pack) => (
-            <option key={pack.id} value={pack.id}>
-              {pack.id}
-            </option>
-          ))}
-          ; */}
-        </Form.Control>
-      </Form.Group>
-
-      {errors?.pack?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
         </Alert>

@@ -60,10 +60,12 @@ const Dashboard = () => {
               </h3>
               <TaskCompleteFilter />
             </Col>
+            <ScrollToTop />
           </Col>
-        </Row>
-        <ScrollToTop />
+          
+        </Row>        
       </Container>
+      
     </>
   );
 };
