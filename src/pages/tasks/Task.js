@@ -77,7 +77,7 @@ const Task = (props) => {
     switch (completed) {
       case 'COMPLETE':
         return styles['GreenBackground'];
-      case 'IN_PROGRESSS':
+      case 'IN-PROGRESS':
         return styles['YellowBackground'];
       case 'NO':
         return styles['RedBackground'];

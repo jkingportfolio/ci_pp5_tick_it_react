@@ -46,7 +46,6 @@ function PackListings({ message, filter = "" }) {
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
-        <ProfilesList mobile />
         <Form
           className={styles.BottomMargin}
           onSubmit={(event) => event.preventDefault()}
@@ -71,9 +70,15 @@ function PackListings({ message, filter = "" }) {
         {hasLoaded ? (
           <>
             {packs.results.length ? (
-              packs.results.map((packs) => (
+              <InfiniteScroll
+              children={packs.results.map((packs) => (
                 <Pack key={packs.id} {...packs} setPacks={setPacks} />
-              ))
+              ))}
+              dataLength={packs.results.length}
+                loader={<Asset spinner />}
+                hasMore={!!packs.next}
+                next={() => fetchMoreData(packs, setPacks)}
+              />
             ) : (
               <Container className={appStyles.Content}>
                 <Asset src={NoResults} message={message} />

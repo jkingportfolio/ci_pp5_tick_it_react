@@ -95,14 +95,17 @@ transition: color ease-in-out 0.3s;
 
 .GreenBackground {
   border: 3px solid green;
+  background-color: rgba(0, 255, 0, 0.3)
 }
 
 .YellowBackground {
   border: 3px solid orange;
+  background-color: rgba(225, 225, 20, 0.3)
 }
 
 .RedBackground {
   border: 3px solid red;
+  background-color: rgba(255, 0, 0, 0.3)
 }
 
 .PositionedButton {

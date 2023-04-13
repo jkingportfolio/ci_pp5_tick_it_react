@@ -200,7 +200,7 @@ function ProfilePage() {
             <Tabs className={styles.TopMargin} defaultActiveKey="task" fill>
               <Tab
                 eventKey="task"
-                title="Tasks"
+                title="My Tasks"
                 tabClassName={appStyles.TabStyle}
                 // className={appStyles.BoxBorder}
               >
@@ -208,7 +208,7 @@ function ProfilePage() {
               </Tab>
               <Tab
                 eventKey="pack"
-                title="Packs"
+                title="My Packs"
                 tabClassName={appStyles.TabStyle}
                 // className={appStyles.BoxBorder}
               >
@@ -216,7 +216,7 @@ function ProfilePage() {
               </Tab>
               <Tab
                 eventKey="assigned"
-                title="Assigned"
+                title="Assigned to me"
                 tabClassName={appStyles.TabStyle}
                 // className={appStyles.BoxBorder}
               >
