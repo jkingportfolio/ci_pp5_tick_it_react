@@ -80,15 +80,18 @@ function TaskEditForm() {
     const formData = new FormData();
     console.log("DATE:" + due_date)
     console.log("PACK:" + pack)
+    console.log("Assigned to:" + assigned_to)
     formData.append("title", title);
     formData.append("task_body", task_body);
     formData.append("priority", priority);
-    // formData.append("assigned_to", assigned_to);
+    if (assigned_to !== null && assigned_to !== "No one") {
+      formData.append("assigned_to", assigned_to);
+    }    
     if (due_date !== null && due_date !== '') {
       formData.append("due_date", due_date);
     }
     if (pack !== null && pack !== '') {
-      formData.append("packe", pack);
+      formData.append("pack", pack);
     }
       formData.append("pack", pack);
     formData.append("completed", completed);
@@ -198,7 +201,7 @@ function TaskEditForm() {
         </Alert>
       ))}
 
-      {/* <Form.Group>
+      <Form.Group>
         <Form.Label>Assigned to</Form.Label>
 
         <Form.Control
@@ -217,7 +220,7 @@ function TaskEditForm() {
           ))}
           ;
         </Form.Control>
-      </Form.Group> */}
+      </Form.Group>
 
       <Form.Group>
         <Form.Label>Task completed</Form.Label>
@@ -269,21 +272,6 @@ function TaskEditForm() {
             className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
           >
             <div className={appStyles.Content}>
-              {/* <Form.Group className="text-center">
-                <div>
-                  <Form.Label
-                    className={`${appStyles.Button} `}
-                    htmlFor="image-upload"
-                  >
-                    Upload file
-                  </Form.Label>
-                </div>
-              </Form.Group>
-              {errors?.image?.map((message, idx) => (
-                <Alert variant="warning" key={idx}>
-                  {message}
-                </Alert>
-              ))} */}
               {textFields}
             </div>
           </Container>
