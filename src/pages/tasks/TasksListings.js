@@ -9,7 +9,6 @@ import Asset from "../../components/Asset";
 import { useLocation } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import NoResults from "../../assets/no-results.png";
-import ProfilesList from "../../components/ProfilesList";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import ScrollToTop from "../../components/ScrollToTop";
