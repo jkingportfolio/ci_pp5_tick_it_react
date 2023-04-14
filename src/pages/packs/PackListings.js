@@ -42,6 +42,9 @@ function PackListings({ message, filter = "" }) {
   return (
     <Row className="h-100">
       <Col className={`${appStyles.AutoMargin} "py-2 p-0 p-lg-2"`} lg={8}>
+        <div className={`${appStyles.TextAlignCenter} ${appStyles.AutoMargin}`}>
+          <h1 className={`${appStyles.LightText}`}>Packs</h1>
+        </div>
         <Form
           className={styles.BottomMargin}
           onSubmit={(event) => event.preventDefault()}
