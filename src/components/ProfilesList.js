@@ -11,7 +11,6 @@ import { axiosReq } from "../api/axiosDefaults";
 import NoResults from "../assets/no-results.png";
 
 const ProfilesList = ({ mobile }) => {
-  // const { listProfiles } = useProfileData();
   const [profiles, setProfiles] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
 

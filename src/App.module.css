@@ -153,6 +153,10 @@ i:hover {
   right: 30px !important;
 }
 
+/* .ChartContainer {
+  height: 200px;
+} */
+
 @media (max-width: 990px) {
   .Hide {
     display: none;

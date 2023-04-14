@@ -60,7 +60,7 @@ function TaskStatusTable() {
 
   return (
     <div>
-      <h2 className={appStyles.TextAlignCenter}>Task stats</h2>
+      <h2 className={appStyles.TextAlignCenter}>Tasks Chart</h2>
       <div className={appStyles.ChartContainer}>
         <Doughnut data={chartData} />
       </div>

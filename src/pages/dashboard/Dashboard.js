@@ -5,7 +5,7 @@ import styles from "../../styles/Dashboard.module.css";
 import appStyles from "../../App.module.css";
 import FreeProfiles from "../profiles/FreeProfiles";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import TaskPieChart from "../../components/TaskPieChart";
+import TaskDoughnutChart from "../../components/TaskDoughnutChart";
 import TaskStatusTable from "../../components/TaskStatusTable";
 import TaskCompleteFilter from "../../components/TaskCompleteFilter";
 import ProfilesList from "../../components/ProfilesList";
@@ -35,9 +35,8 @@ const Dashboard = () => {
                 <Col>
                   <TaskStatusTable />
                 </Col>
-                <Col className={`${appStyles.DarkText} ${styles.BorderBox}`}>
-                  {/* <FreeProfiles /> */}
-                  <TaskPieChart />
+                <Col className={`${appStyles.LightText} ${styles.BorderBox}`}>
+                  <TaskDoughnutChart />
                 </Col>
               </Row>
               <hr className={styles.HorizontalLine} />

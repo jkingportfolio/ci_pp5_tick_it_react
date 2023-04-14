@@ -91,9 +91,9 @@ function TasksListings({ message, filter = "" }) {
       <div className={appStyles.ScrollToTopButton}>
           <ScrollToTop />
         </div>
-      <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
+      {/* <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
         <ProfilesList />
-      </Col>
+      </Col> */}
     </Row>
   );
 }

@@ -44,7 +44,7 @@ function TaskStatusTable() {
 
   return (
     <div>
-      <h2 className={appStyles.TextAlignCenter}>Task stats</h2>
+      <h2 className={appStyles.TextAlignCenter}>Tasks Table</h2>
       <Table striped bordered hover>
         <thead>
           <tr>
