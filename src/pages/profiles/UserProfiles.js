@@ -40,7 +40,7 @@ function UserProfiles({ message, filter = "" }) {
   }, [filter, query, pathname]);
 
   return (
-    <Row>
+    <Row> className={styles.SearchMargin} 
       <Col className={`${appStyles.AutoMargin} "py-2 p-0 p-lg-2"`} lg={8}>
         <Form
           onSubmit={(event) => event.preventDefault()}

@@ -28,7 +28,6 @@ function ProfilePage() {
   const [profileTasks, setProfileTasks] = useState({ results: [] });
   const [profilePacks, setProfilePacks] = useState({ results: [] });
   const [profileAssigned, setProfileAssigned] = useState({ results: [] });
-  // const currentUser = useCurrentUser();
 
   useEffect(() => {
     const fetchData = async () => {
