@@ -42,7 +42,7 @@ function TasksListings({ message, filter = "" }) {
 
   return (
     <Row>
-      <Col className="py-2 p-0 p-lg-2" lg={8}>
+      <Col className={`${appStyles.AutoMargin} "py-2 p-0 p-lg-2"`} lg={8}>
       <Form
           onSubmit={(event) => event.preventDefault()}
           className={styles.BottomMargin}
@@ -91,9 +91,6 @@ function TasksListings({ message, filter = "" }) {
       <div className={appStyles.ScrollToTopButton}>
           <ScrollToTop />
         </div>
-      {/* <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
-        <ProfilesList />
-      </Col> */}
     </Row>
   );
 }

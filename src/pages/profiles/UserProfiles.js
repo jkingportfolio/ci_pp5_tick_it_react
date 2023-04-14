@@ -41,7 +41,7 @@ function UserProfiles({ message, filter = "" }) {
 
   return (
     <Row>
-      <Col className="py-2 p-0 p-lg-2" lg={8}>
+      <Col className={`${appStyles.AutoMargin} "py-2 p-0 p-lg-2"`} lg={8}>
         <Form
           onSubmit={(event) => event.preventDefault()}
           className={styles.BottomMargin}
@@ -91,9 +91,6 @@ function UserProfiles({ message, filter = "" }) {
           )}
         </div>
       </Col>
-      <div className={appStyles.ScrollToTopButton}>
-        <ScrollToTop />
-      </div>
     </Row>
   );
 }

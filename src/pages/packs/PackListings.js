@@ -42,7 +42,7 @@ function PackListings({ message, filter = "" }) {
 
   return (
     <Row className="h-100">
-      <Col className="py-2 p-0 p-lg-2" lg={8}>
+      <Col className={`${appStyles.AutoMargin} "py-2 p-0 p-lg-2"`} lg={8}>
         <Form
           className={styles.BottomMargin}
           onSubmit={(event) => event.preventDefault()}
@@ -87,9 +87,6 @@ function PackListings({ message, filter = "" }) {
             <Asset spinner />
           </Container>
         )}
-      </Col>
-      <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
-        <ProfilesList />
       </Col>
       <div className={appStyles.ScrollToTopButton}>
         <ScrollToTop />
