@@ -60,7 +60,9 @@ const Dashboard = () => {
               </h3>
               <TaskCompleteFilter />
             </Col>
-            <ScrollToTop />
+            <div className={appStyles.ScrollToTopButton}>
+            <ScrollToTop/>
+            </div>
           </Col>
           
         </Row>        

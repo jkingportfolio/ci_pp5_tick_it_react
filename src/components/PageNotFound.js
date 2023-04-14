@@ -10,9 +10,7 @@ const PageNotFound = () => {
         <Container className={appStyles.Content}>
           <h3 className="my-3">Opps! This page has not been found</h3>
           <Link to="/">
-            <Button className={`${appStyles.Button} my-3`}>
-              Go to the home page
-            </Button>
+            <Button className={`${appStyles.Button} my-3`}>Return Home</Button>
           </Link>
         </Container>
       </Col>

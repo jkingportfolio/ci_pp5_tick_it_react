@@ -1,23 +1,18 @@
 import React, { useState, useEffect } from "react";
-
 import { Col, Container, Row, Form, Button } from "react-bootstrap";
 import { Link } from 'react-router-dom';
-
 import appStyles from "../../App.module.css";
 import styles from "../../styles/SearchBar.module.css";
 import taskStyles from "../../styles/TasksListings.module.css";
-
 import Task from "./Task";
 import Asset from "../../components/Asset";
-
 import { useLocation } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
-
 import NoResults from "../../assets/no-results.png";
-
 import ProfilesList from "../../components/ProfilesList";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
+import ScrollToTop from "../../components/ScrollToTop";
 
 function TasksListings({ message, filter = "" }) {
   const [tasks, setTasks] = useState({ results: [] });
@@ -93,6 +88,9 @@ function TasksListings({ message, filter = "" }) {
           </Container>
         )}
       </Col>
+      <div className={appStyles.ScrollToTopButton}>
+          <ScrollToTop />
+        </div>
       <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
         <ProfilesList />
       </Col>

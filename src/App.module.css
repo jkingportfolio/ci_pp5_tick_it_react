@@ -143,8 +143,14 @@ i:hover {
 }
 
 .ScrollBox {
-    height: 450px;
-    overflow-y: scroll;
+  height: 450px;
+  overflow-y: scroll;
+}
+
+.ScrollToTopButton {
+  position: fixed !important;
+  bottom: 30px !important;
+  right: 30px !important;
 }
 
 @media (max-width: 990px) {

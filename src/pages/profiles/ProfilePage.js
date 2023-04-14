@@ -4,22 +4,20 @@ import { Link } from "react-router-dom";
 import Asset from "../../components/Asset";
 import styles from "../../styles/ProfilePage.module.css";
 import appStyles from "../../App.module.css";
-import FreeProfiles from "./FreeProfiles";
 import { useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import {
   useProfileData,
   useSetProfileData,
 } from "../../contexts/ProfileDataContext";
-import { Image } from "react-bootstrap";
 import { EditProfileDropdown } from "../../components/DropDown";
-// import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Task from "../tasks/Task";
 import Pack from "../packs/Pack";
 import { fetchMoreData } from "../../utils/utils";
 import NoResults from "../../assets/no-results.png";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Avatar from "../../components/Avatar";
+import ScrollToTop from "../../components/ScrollToTop";
 
 function ProfilePage() {
   const [hasLoaded, setHasLoaded] = useState(false);
@@ -63,10 +61,23 @@ function ProfilePage() {
 
   const mainProfile = (
     <>
-      <Row className={`${styles.ProfileBox}"px-3 text-center"  ${styles.TopMargin}`}>
-        <Col xs={12} sm={4} md={4} lg={4} xl={4} className={`${styles.Border} ${appStyles.AutoMargin} ${appStyles.TextAlignCenter}`}>
+      <Row
+        className={`${styles.ProfileBox}"px-3 text-center"  ${styles.TopMargin}`}
+      >
+        <Col
+          xs={12}
+          sm={4}
+          md={4}
+          lg={4}
+          xl={4}
+          className={`${styles.Border} ${appStyles.AutoMargin} ${appStyles.TextAlignCenter}`}
+        >
           <div>
-          <Avatar src={profile?.image} height={150} className={`${appStyles.AutoMargin} ${appStyles.TopMargin} ${styles.AvatarBorder}`}/>
+            <Avatar
+              src={profile?.image}
+              height={150}
+              className={`${appStyles.AutoMargin} ${appStyles.TopMargin} ${styles.AvatarBorder}`}
+            />
           </div>
           <div>
             <h3 className={styles.TextAlignCenter}>{profile?.owner}</h3>
@@ -74,15 +85,18 @@ function ProfilePage() {
         </Col>
         <Col xs={12} sm={4} md={4} lg={4} xl={4} className={`${styles.Border}`}>
           <div className={`${styles.Border} ${styles.DivFlexParent}`}>
-            <div className={`${styles.Border} ${styles.DivFlexChild} ${styles.ButtonContainer}`}>
-            {profile?.owner} currently works as a {profile?.job_role} and currently has a task count of {profile?.tasks_count}.
+            <div
+              className={`${styles.Border} ${styles.DivFlexChild} ${styles.ButtonContainer}`}
+            >
+              {profile?.owner} currently works as a {profile?.job_role} and
+              currently has a task count of {profile?.tasks_count}.
             </div>
           </div>
         </Col>
         <Col xs={12} sm={4} md={4} lg={4} xl={4} className={`${styles.Border}`}>
           <div className={`${styles.Border} ${styles.DivFlexParent} `}>
             <div className={styles.PositionedButton}>
-            {profile?.is_owner && <EditProfileDropdown id={profile?.id} />}
+              {profile?.is_owner && <EditProfileDropdown id={profile?.id} />}
             </div>
             <div
               className={`${styles.Border} ${styles.DivFlexChild} ${styles.ButtonContainer} ${styles.TopMargin}`}
@@ -162,9 +176,11 @@ function ProfilePage() {
         <React.Fragment>
           <InfiniteScroll
             children={profileAssigned.results.map((task) => {
-              console.log(task)
+              console.log(task);
               if (task.assigned_to === profile.id) {
-                return <Task key={task.id} {...task} setTasks={setProfileAssigned} />;
+                return (
+                  <Task key={task.id} {...task} setTasks={setProfileAssigned} />
+                );
               } else {
                 count++;
                 return null;
@@ -225,6 +241,9 @@ function ProfilePage() {
             </Tabs>
           </Container>
         </Col>
+        <div className={appStyles.ScrollToTopButton}>
+          <ScrollToTop />
+        </div>
       </Row>
     </div>
   );
