@@ -29,6 +29,7 @@ function ProfilePage() {
   const [profilePacks, setProfilePacks] = useState({ results: [] });
   const [profileAssigned, setProfileAssigned] = useState({ results: [] });
 
+
   useEffect(() => {
     const fetchData = async () => {
       try {

@@ -12,7 +12,7 @@ const Profile = (props) => {
 
   return (
     <div
-      className={`my-3 d-flex align-items-center ${mobile && "flex-column"} ${styles.ProfileBox}`}
+      className={`my-3 d-flex align-items-center ${mobile && "flex-column"} ${styles.MiniProfileBox}`}
     >
       <div>
         <Link className="align-self-center" to={`/profiles/${id}`}>
