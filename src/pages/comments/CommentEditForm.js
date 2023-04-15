@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-
-import { Form, Button } from "react-bootstrap";
+import { Form, Button, Modal } from "react-bootstrap";
 import { axiosRes } from "../../api/axiosDefaults";
-
 import styles from "../../styles/CommentForm.module.css";
 import appStyles from "../../App.module.css";
 import FeedbackMsg from "../../components/FeedBackMsg";
@@ -12,12 +10,13 @@ function CommentEditForm(props) {
 
   const [formContent, setFormContent] = useState(comment_body);
   const [showAlert, setShowAlert] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const handleChange = (event) => {
     setFormContent(event.target.value);
   };
+
   const handleSubmit = async (event) => {
-    setShowAlert(true);
     event.preventDefault();
     try {
       await axiosRes.put(`/comments/${id}/`, {
@@ -35,21 +34,35 @@ function CommentEditForm(props) {
             : comment;
         }),
       }));
-      
-      setShowEditForm(false);     
+      setShowAlert(true);
+      setShowModal(true);     
     } catch (err) {
       console.log(err);
     }
   };
 
+  const handleCloseModal = () => {
+    setShowModal(false);
+    setShowEditForm(false);
+  };
+
   return (
     <Form onSubmit={handleSubmit}>
-       {showAlert && (
-          <FeedbackMsg
-            variant="info"
-            message="Comment updated successfully!"
-          />
-        )}
+      {showAlert && (
+        <Modal show={showModal} onHide={handleCloseModal} centered={true}>
+          <Modal.Header closeButton>
+            <Modal.Title>Success</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            Comment updated successfully!
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleCloseModal}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      )}
       <Form.Group className="pr-1">
         <Form.Control
           className={styles.Form}
