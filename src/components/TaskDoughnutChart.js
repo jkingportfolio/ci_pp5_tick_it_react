@@ -58,11 +58,20 @@ function TaskStatusTable() {
     ],
   };
 
+  const options = {
+    plugins: {
+      legend: {
+        labels: {
+          color: 'white', // set the color of the legend labels to white
+        },
+      },
+    },
+  };
   return (
     <div>
       <h2 className={appStyles.TextAlignCenter}>Tasks Chart</h2>
       <div className={appStyles.ChartContainer}>
-        <Doughnut data={chartData} />
+        <Doughnut data={chartData} options={options}/>
       </div>
     </div>
   );

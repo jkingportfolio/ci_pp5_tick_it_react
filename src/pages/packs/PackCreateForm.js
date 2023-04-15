@@ -1,147 +1,79 @@
-import React, { useState, useEffect } from "react";
-
-import { Alert, Form, Button, Col, Container } from "react-bootstrap";
-
-import styles from "../../styles/PackCreateEditForm.module.css";
-import appStyles from "../../App.module.css";
-
-import { useHistory } from "react-router";
-import { axiosReq } from "../../api/axiosDefaults";
+import { useState, useEffect } from "react";
+import { MultiSelect } from "react-multi-select-component";
 import axios from "axios";
 
-function PackCreateForm() {
-  const [errors, setErrors] = useState({});
-  const [users, setUsers] = useState([]);
+const PackCreateForm = () => {
+  const [options, setOptions] = useState([]);
+  const [selectedOptions, setSelectedOptions] = useState([]);
+  const colorStyles = {
+    control: (styles) => ({ ...styles, backgroundColor: "white" }),
+    option: (styles, { data, isDisabled, isFocused, isSelected }) => {
+      return { ...styles, color: data.color };
+    },
+    multiValue: (styles, { data }) => {
+      return {
+        ...styles,
+        backgroundColor: data.color,
+        color: "#fff",
+      };
+    },
+    multiValueLabel: (styles, { data }) => {
+      return {
+        ...styles,
+        color: "#fff",
+      };
+    },
+    multiValueRemove: (styles, { data }) => {
+      return {
+        ...styles,
+        color: "#fff",
+        cursor: "pointer",
+        ":hover": {
+          color: "#fff",
+        },
+      };
+    },
+  };
 
   useEffect(() => {
-    axios
-      .get("/profile-list/")
-      .then((response) => setUsers(response.data))
-      .catch((error) => console.log(error));
+    const fetchTasks = async () => {
+      try {
+        const response = await axios.get("/tasks/");
+        console.log(response)
+        const data = response.data;
+        console.log(data)
+        const optionsData = data.map((task) => ({
+          value: task.title,
+          label: task.title,
+          color: "#36B37E",
+        }));
+        setOptions(optionsData);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchTasks();
   }, []);
 
-  const [packData, setPackData] = useState({
-    title: "",
-    pack_description: "",
-    tasks: "",
-  });
-  const { title, pack_description, tasks } = packData;
-
-  const history = useHistory();
-
-  const handleChange = (event) => {
-    setPackData({
-      ...packData,
-      [event.target.name]: event.target.value,
-    });
+  const handleChange = (selectedOption, actionMeta) => {
+    setSelectedOptions(selectedOption);
+    console.log("handleChange", selectedOption, actionMeta);
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    const formData = new FormData();
-
-    formData.append("title", title);
-    formData.append("pack_description", pack_description);
-    formData.append("tasks", tasks);
-
-    try {
-      const { data } = await axiosReq.post("/packs/", formData);
-      history.push(`/packs/${data.id}`);
-    } catch (err) {
-      console.log(err);
-      if (err.response?.status !== 401) {
-        setErrors(err.response?.data);
-      }
-    }
+  const handleInputChange = (inputValue, actionMeta) => {
+    console.log("handleInputChange", inputValue, actionMeta);
   };
-
-  const textFields = (
-    <div className="text-center">
-      <Form.Group>
-        <Form.Label>Title</Form.Label>
-
-        <Form.Control
-          name="title"
-          className={appStyles.Input}
-          value={title}
-          onChange={handleChange}
-          aria-label="title"
-        ></Form.Control>
-      </Form.Group>
-
-      {errors?.title?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
-
-      <Form.Group>
-        <Form.Label>Details</Form.Label>
-
-        <Form.Control
-          as="textarea"
-          name="pack_description"
-          className={appStyles.Input}
-          value={pack_description}
-          onChange={handleChange}
-          aria-label="pack_description"
-        ></Form.Control>
-      </Form.Group>
-
-      {errors?.pack_description?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
-
-      <Form.Group>
-        <Form.Label>Tasks</Form.Label>
-
-        <Form.Control
-          as="select"
-          name="tasks"
-          className={appStyles.Input}
-          value={tasks}
-          onChange={handleChange}
-          aria-label="tasks"
-        >
-          <option>Select a task</option>
-          ;
-        </Form.Control>
-      </Form.Group>
-
-      {errors?.tasks?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
-
-      <Button
-        className={`${appStyles.Button}`}
-        onClick={() => history.goBack()}
-      >
-        Cancel
-      </Button>
-      <Button className={`${appStyles.Button}`} type="submit">
-        Submit
-      </Button>
-    </div>
-  );
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <div className={appStyles.CenterAlignForm}>
-        <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
-          <Container
-            className={`${appStyles.Content} ${appStyles.TextAlignCenter} d-flex flex-column justify-content-center`}
-          >
-            <h3>Create pack</h3>
-            <div className={appStyles.Content}>{textFields}</div>
-          </Container>
-        </Col>
-      </div>
-    </Form>
+    <MultiSelect
+      options={options}
+      value={selectedOptions}
+      onChange={handleChange}
+      onInputChange={handleInputChange}
+      isMulti
+      styles={colorStyles}
+    />
   );
-}
+};
 
 export default PackCreateForm;
