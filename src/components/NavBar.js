@@ -2,6 +2,7 @@ import React from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import logo from "../assets/logo.png";
 import styles from "../styles/NavBar.module.css";
+import appStyles from "../App.module.css";
 import { NavLink } from "react-router-dom";
 import {
   useCurrentUser,
@@ -33,7 +34,10 @@ const NavBar = () => {
       activeClassName={styles.Active}
       to="/tasks/create"
     >
-      <i className="far fa-plus-square"></i>Add task
+      <div className={appStyles.FlexDisplay}>
+        <i className="far fa-plus-square"></i>
+        <div className={appStyles.AutoMargin}>Add task</div>
+      </div>
     </NavLink>
   );
   const loggedInIcons = (
