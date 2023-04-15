@@ -8,6 +8,8 @@ import { DropDown } from "../../components/DropDown";
 import CommentEditForm from "./CommentEditForm";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { axiosRes } from "../../api/axiosDefaults";
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 
 const Comment = (props) => {
   const {
@@ -22,6 +24,7 @@ const Comment = (props) => {
   } = props;
 
   const [showEditForm, setShowEditForm] = useState(false);
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
 
@@ -42,6 +45,7 @@ const Comment = (props) => {
         results: prevComments.results.filter((comment) => comment.id !== id),
       }));
     } catch (err) {}
+    setShowDeleteModal(false);
   };
 
   return (
@@ -72,10 +76,27 @@ const Comment = (props) => {
         {is_owner && !showEditForm && (
           <DropDown
             handleEdit={() => setShowEditForm(true)}
-            handleDelete={handleDelete}
+            handleDelete={() => setShowDeleteModal(true)}
           />
         )}
       </Row>
+
+      <Modal show={showDeleteModal} onHide={() => setShowDeleteModal(false)} centered={true}>
+        <Modal.Header closeButton>
+          <Modal.Title>Confirm Delete</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          Are you sure you want to delete this comment?
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => setShowDeleteModal(false)}>
+            Cancel
+          </Button>
+          <Button variant="danger" onClick={handleDelete}>
+            Delete
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </>
   );
 };
