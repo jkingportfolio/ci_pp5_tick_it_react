@@ -98,14 +98,28 @@ Google Fonts were implemented on the website.
 
 ### Wireframes
 
-<details><summary>Big screens - laptop & desktop</summary>
-<img src="docs/wireframes/wireframes-tick-it-desktop.png">
-</details>
-<details><summary>Medium screens - tablet</summary>
-<img src="docs/wireframes/wireframes-tick-it-tablet.png">
-</details>
-<details><summary>Small screens - mobile</summary>
-<img src="docs/wireframes/wireframes-tick-it-mobile.png">
+Balsamiq was used to create wireframes of the sites pages
+
+<details>
+<summary>Wireframes</summary>
+<img src="docs/wireframes/wireframe-home-not-signed-in.png">
+<img src="docs/wireframes/wireframe-hopme-signed-in.png">
+<img src="docs/wireframes/wireframe-sign-up.png">
+<img src="docs/wireframes/wireframe-log-in.png">
+<img src="docs/wireframes/wireframe-task-list.png">
+<img src="docs/wireframes/wireframe-task-detail.png">
+<img src="docs/wireframes/wireframe-watched-list.png">
+<img src="docs/wireframes/wireframe-pack-list.png">
+<img src="docs/wireframes/wireframe-pack-detail.png">
+<img src="docs/wireframes/wireframe-create-task.png">
+<img src="docs/wireframes/wireframe-edit-task.png">
+<img src="docs/wireframes/wireframe-create-pack.png">
+<img src="docs/wireframes/wireframe-edit-pack.png">
+<img src="docs/wireframes/wireframe-profile.png">
+<img src="docs/wireframes/wireframe-edit-profile.png">
+<img src="docs/wireframes/wireframe-users.png">
+<img src="docs/wireframes/wireframe-contact.png">
+
 </details>
 
 ##### Back to [top](#tick-it)
