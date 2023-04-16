@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { Alert, Form, Button, Col } from "react-bootstrap";
+import { Alert, Form, Button, Col, Modal } from "react-bootstrap";
 import axios from "axios";
 import appStyles from "../../App.module.css";
-import { useHistory } from "react-router";
-import FeedbackMsg from "../../components/FeedBackMsg";
+import { useHistory } from "react-router-dom";
 
 const ContactForm = () => {
   const [form, setForm] = useState({
@@ -18,6 +17,7 @@ const ContactForm = () => {
   const history = useHistory();
   const [showAlert, setShowAlert] = useState(false);
   const [errors, setErrors] = useState({});
+  const [showModal, setShowModal] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -28,16 +28,18 @@ const ContactForm = () => {
     e.preventDefault();
     try {
       const res = await axios.post("/contact/", form);
-      setShowAlert(true);
-      setTimeout(function () {
-        history.goBack();
-      }, 3500);
+      setShowModal(true); 
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }
     }
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+    history.push("/");
   };
 
   const textFields = (
@@ -141,8 +143,20 @@ const ContactForm = () => {
 
   return (
     <Form onSubmit={handleSubmit}>
-      {showAlert && (
-        <FeedbackMsg variant="info" message="Thank you for contacting us!" />
+      {showModal && (
+        <Modal show={showModal} onHide={handleCloseModal} centered={true}>
+          <Modal.Header closeButton>
+            <Modal.Title>Success</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            Thank you for contacting us, we will get back you shortly!
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleCloseModal}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
       )}
       <div className={appStyles.CenterAlignForm}>
         <Col md={7} lg={8}>
@@ -156,6 +170,7 @@ const ContactForm = () => {
       </div>
     </Form>
   );
+
 };
 
 export default ContactForm;
