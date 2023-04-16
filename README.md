@@ -183,16 +183,45 @@ Balsamiq was used to create wireframes of the sites pages
 
 ### React
 
-React is..... 
+The React.js framework is an open-source JavaScript framework and library developed by Facebook. It's used for building interactive user interfaces and web applications quickly and efficiently with significantly less code than you would with vanilla JavaScript  
 
 I used React for this application for several reasons:
-- xxx - xxxx
+
+ - Flexibility – Due to having a modular structure React code is easier to maintain compared to other front-end frameworks.
+
+ - Speed – Creating sites/apps with React significantly increases the page loading speed as the entire page does not require to refresh and reload all components. Components are updated dynamically thus reducing the wait and load times, which affects user experience.
+
+ - React Bootstrap - When used for styling and responsiveness React Bootstrap is a great choice as it comes with ready-to-use React built components thus taking away alot of need to create commonly used code from scratch.
+
+- It is the most widely used library for developing social networking and media content applications - Sites such as Meta (formerly Facebook), Instagram, Netflix, Airbnb are all made with React.
+
+- Reusability of components – Components can be created and re used throught the app with no need to re write code for the same features.
 
 There were various components created and reused across this application.
 
 - `<Asset />` - resuable component, used to ...
 
-- `<Asset />` - resuable component, used to ...
+- `<Avatar />` - resuable component, used to ...
+
+- `<DropDown />` - resuable component, used to ...
+
+- `<FeedBackMsg />` - resuable component, used to ...
+
+- `<HighPriorityTasks />` - resuable component, used to ...
+
+- `<NavBar />` - resuable component, used to ...
+
+- `<PageNotFound />` - resuable component, used to ...
+
+- `<PasswordCriteria />` - resuable component, used to ...
+
+- `<ScrollToTop />` - resuable component, used to ...
+
+- `<TaskCompleteFilter />` - resuable component, used to ...
+
+- `<TaskDoughnutChart />` - resuable component, used to ...
+
+- `<TaskStatusTable />` - resuable component, used to ...
 
 
 ## Back-End API
