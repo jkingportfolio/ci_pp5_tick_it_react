@@ -1,3 +1,12 @@
-.LandingBox {
+.LandingBoxMargin {
     padding: 0 7px;
+}
+
+.LandingBoxPos {
+    margin: auto;
+    max-width: 600px !important;
+}
+
+.FooterWidth {
+    max-width: 550px !important;
 }

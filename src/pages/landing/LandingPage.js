@@ -10,8 +10,8 @@ const LandingPage = () => {
     <>
       
       <Row className="text-center">
-        <Col sm={12}>
-          <Container className={styles.LandingBox}>
+        <Col className={styles.LandingBoxPos} sm={12}>
+          <Container className={styles.LandingBoxPos}>
             <Card>
               <Card.Body>
                 <Card.Title>
@@ -42,7 +42,7 @@ const LandingPage = () => {
           </Container>
         </Col>
       </Row>
-      <Container>
+      <Container className={styles.FooterWidth}>
         <footer>
           <div className="float-left text-light">
             <p>Created by Jamie King</p>
