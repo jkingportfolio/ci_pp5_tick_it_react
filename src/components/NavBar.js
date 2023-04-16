@@ -24,18 +24,18 @@ const NavBar = () => {
   const handleSignOut = async () => {
     try {
       await axios.post("dj-rest-auth/logout/");
-      setShowModal(true);
-      
+      setCurrentUser(null);
+      // setShowModal(true);      
     } catch (err) {
       console.log(err);
     }
   };
 
-  const handleCloseModal = () => {
-    setCurrentUser(null);
-    setShowModal(false);
-    history.push("/");
-  };
+  // const handleCloseModal = () => {
+    
+  //   setShowModal(false);
+  //   history.push("/");
+  // };
 
   const addTaskIcon = (
     <NavLink
@@ -87,13 +87,13 @@ const NavBar = () => {
         <i className="fas fa-users"></i>Users
       </NavLink>
       <NavLink className={styles.NavLink} to="/" onClick={handleSignOut}>
-      {showModal && (
+      {/* {showModal && (
         <Modal show={showModal} onHide={handleCloseModal} centered={true}>
           <Modal.Header closeButton>
             <Modal.Title>Success</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            Log out successful, we hope to see you again soon!
+            Log out successful, we will get back you shortly!
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleCloseModal}>
@@ -101,7 +101,7 @@ const NavBar = () => {
             </Button>
           </Modal.Footer>
         </Modal>
-      )}
+      )} */}
         <i className="fas fa-sign-out-alt"></i>Log out
       </NavLink>
       <NavLink

@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Form, Button, Col, Container, Alert } from "react-bootstrap";
+import { Form, Button, Col, Container, Alert, Modal } from "react-bootstrap";
 import styles from "../../styles/TaskCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
 import { useHistory, useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import axios from "axios";
-import FeedbackMsg from "../../components/FeedBackMsg";
 
 function TaskEditForm() {
   const [errors, setErrors] = useState({});
@@ -32,7 +31,7 @@ function TaskEditForm() {
 
   const history = useHistory();
   const { id } = useParams();
-  const [showAlert, setShowAlert] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const handleMount = async () => {
@@ -98,16 +97,18 @@ function TaskEditForm() {
 
     try {
       await axiosReq.put(`/tasks/${id}/`, formData);
-      setShowAlert(true);
-      setTimeout(function () {
-        history.push(`/tasks/${id}`);
-      }, 3500);
+      setShowModal(true);
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }
     }
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+    history.push(`/tasks/${id}`);    
   };
 
   const textFields = (
@@ -262,12 +263,21 @@ function TaskEditForm() {
 
   return (
     <Form onSubmit={handleSubmit}>
-      {showAlert && (
-          <FeedbackMsg
-            variant="info"
-            message="Task updated successfully. Redirecting to the post detail."
-          />
-        )}
+      {showModal && (
+        <Modal show={showModal} onHide={handleCloseModal} centered={true}>
+          <Modal.Header closeButton>
+            <Modal.Title>Success</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            Task updated successfully!
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleCloseModal}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      )}
       <div className={appStyles.Form}>
         <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
           <Container
