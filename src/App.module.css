@@ -161,4 +161,8 @@ i:hover {
   .Hide {
     display: none;
   }
+  .Button {
+    margin: 5px;
+  }
 }
+
