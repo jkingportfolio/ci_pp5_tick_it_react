@@ -26,12 +26,11 @@ text-decoration: none !important;
 }
 
 a:hover i {
-color: #b22121;
 transition: color ease-in-out 0.3s;
 }
 
 .title {
-  background-color: #F6F6F8;
+  background-color: #F6F6F7;
   font-size: 20px;
   text-align: center;
   color: #120E16;
@@ -61,7 +60,7 @@ transition: color ease-in-out 0.3s;
   color: #120E16;
   text-decoration: none;
   min-height: 90px;
-  background-color: #F6F6F8;
+  background-color: #F6F6F7;
   padding: 10px;
 }
 

@@ -98,13 +98,13 @@ The key functionality aspects:
 
 ### Colours
 
-The colour scheme for this application was inspired by 
+The colour scheme for this application was kept minimal with a monochromatic theme kept in mind. 
 
-<img src="docs/readme/color-scheme-tick-it.png">
+<img src="docs/readme/colours.png">
 
 ### Fonts
 
-Google Fonts were implemented on the website. 
+Google Fonts were implemented on the website. 'Josefin Sans' with a back up of sans-serif was decided as the ideal font for the site.
 
 ### Wireframes
 
@@ -149,9 +149,14 @@ Balsamiq was used to create wireframes of the sites pages
 - [Axios](https://axios-http.com/docs/intro) - axios were used for promise-based HTTP. Justification: I used axios to send API requests from the React project to the API and avoid any CORS errors when sending cookies.
 - [JWT](https://jwt.io/) - library to decode out JSON Web token. Justification: I used JWT to  from the browser when the user refreshes token expires or the user logs out.
 - [React 17](https://17.reactjs.org/) - JavaScript library for building user interfaces
-- [React-Bootstrap 2.7.2](https://) - Justification: I used Bootstrap React library for UI components, styling and responsiveness.
+- [React-Bootstrap 1.6.3](https://) - Justification: I used Bootstrap React library for UI components, styling and responsiveness.
 - [React Infinite Scroll](https://www.npmjs.com/package/react-infinite-scroll-component) - Justification: I used this component to load content (tasks/comments) automatically as the user scrolls towards the bottom of the page without having to jump to next/previous page.
-- [React Router](https://v5.reactrouter.com/web/guides/quick-start) - used for dynamic routing. Justification: I used this library to 
+- [React Router](https://v5.reactrouter.com/web/guides/quick-start) - Justification: I used this library to enable navigation between views of components and to have the ability to control what is presented to the user based on the URL they have accessed in the browser. 
+- [React ChartJS2](https://react-chartjs-2.js.org/) - Justification: used for producing the doughnut chart on the main page. 
+- [React Multi Select Component](https://www.npmjs.com/package/react-multi-select-component) - Justification: I used this component to have the ability to select multiple tasks to assign to a pack.
+
+
+
 
 ### Tools & Programs
 
