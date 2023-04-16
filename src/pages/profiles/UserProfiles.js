@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Col, Container, Row, Form, Button } from "react-bootstrap";
+import { Col, Container, Row, Form } from "react-bootstrap";
 import appStyles from "../../App.module.css";
 import styles from "../../styles/UserProfiles.module.css";
 import Asset from "../../components/Asset";
@@ -8,7 +8,6 @@ import { axiosReq } from "../../api/axiosDefaults";
 import NoResults from "../../assets/no-results.png";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
-import ScrollToTop from "../../components/ScrollToTop";
 import Profile from "./Profile";
 
 function UserProfiles({ message, filter = "" }) {

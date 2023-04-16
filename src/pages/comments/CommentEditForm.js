@@ -3,7 +3,6 @@ import { Form, Button, Modal } from "react-bootstrap";
 import { axiosRes } from "../../api/axiosDefaults";
 import styles from "../../styles/CommentForm.module.css";
 import appStyles from "../../App.module.css";
-import FeedbackMsg from "../../components/FeedBackMsg";
 
 function CommentEditForm(props) {
   const { id, comment_body, setShowEditForm, setComments } = props;
