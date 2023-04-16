@@ -3,7 +3,7 @@ Developer: Jamie King
 
 ![Mockup image](docs/readme/am-i-responsive.png)
 
-The Tick It........ 
+The Tick It web app has been developed to provide user's the chance to create and carry out tasks online.
 
 [View live website](https://tick-it-app-pp5.herokuapp.com/)
 
