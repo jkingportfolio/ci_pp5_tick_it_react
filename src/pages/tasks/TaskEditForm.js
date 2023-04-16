@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Form, Button, Col, Container, Alert, Modal } from "react-bootstrap";
+import { Form, Button, Col, Container, Alert, Modal, Row } from "react-bootstrap";
 import styles from "../../styles/TaskCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
 import { useHistory, useParams } from "react-router";
@@ -262,6 +262,11 @@ function TaskEditForm() {
   );
 
   return (
+    <Row>
+      <Col className={`${appStyles.AutoMargin} "py-2 p-0 p-lg-2"`} lg={8}>
+    <div className={`${appStyles.TextAlignCenter} ${appStyles.AutoMargin}`}>
+        <h1 className={`${appStyles.LightText}`}>Edit Task</h1>
+        </div>
     <Form onSubmit={handleSubmit}>
       {showModal && (
         <Modal show={showModal} onHide={handleCloseModal} centered={true}>
@@ -290,6 +295,8 @@ function TaskEditForm() {
         </Col>
       </div>
     </Form>
+    </Col>
+    </Row>
   );
 }
 

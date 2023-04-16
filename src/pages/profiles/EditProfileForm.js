@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useHistory, useParams, Link } from "react-router-dom";
-import { Form, Button, Image, Col, Container, Alert, Modal } from "react-bootstrap";
+import { Form, Button, Image, Col, Container, Alert, Modal, Row } from "react-bootstrap";
 import { axiosReq } from "../../api/axiosDefaults";
 import {
   useCurrentUser,
@@ -129,6 +129,11 @@ const EditProfileForm = () => {
   );
 
   return (
+    <Row>
+      <Col className={`${appStyles.AutoMargin} "py-2 p-0 p-lg-2"`} lg={8}>
+        <div className={`${appStyles.TextAlignCenter} ${appStyles.AutoMargin}`}>
+        <h1 className={`${appStyles.LightText}`}>Edit Profile</h1>
+        </div>
     <Form onSubmit={handleSubmit}>
       {showModal && (
         <Modal show={showModal} onHide={handleCloseModal} centered={true}>
@@ -194,6 +199,8 @@ const EditProfileForm = () => {
         </Col>
       </div>
     </Form>
+    </Col>
+    </Row>
   );
 };
 

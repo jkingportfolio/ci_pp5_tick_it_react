@@ -39,8 +39,11 @@ function UserProfiles({ message, filter = "" }) {
   }, [filter, query, pathname]);
 
   return (
-    <Row> className={styles.SearchMargin} 
+    <Row>
       <Col className={`${appStyles.AutoMargin} "py-2 p-0 p-lg-2"`} lg={8}>
+      <div className={`${appStyles.TextAlignCenter} ${appStyles.AutoMargin}`}>
+        <h1 className={`${appStyles.LightText}`}>Users</h1>
+        </div>
         <Form
           onSubmit={(event) => event.preventDefault()}
           className={styles.BottomMargin}
