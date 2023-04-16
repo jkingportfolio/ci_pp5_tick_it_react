@@ -1,9 +1,9 @@
-import React from "react";
-import { Navbar, Container, Nav } from "react-bootstrap";
+import React, { useState } from "react";
+import { Navbar, Container, Nav, Modal, Button } from "react-bootstrap";
 import logo from "../assets/logo.png";
 import styles from "../styles/NavBar.module.css";
 import appStyles from "../App.module.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import {
   useCurrentUser,
   useSetCurrentUser,
@@ -16,16 +16,25 @@ import useClickOutsideToggle from "../hooks/useClickOutsideToggle";
 const NavBar = () => {
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
+  const [showModal, setShowModal] = useState(false);
+  const history = useHistory();
 
   const { expanded, setExpanded, ref } = useClickOutsideToggle();
 
   const handleSignOut = async () => {
     try {
       await axios.post("dj-rest-auth/logout/");
-      setCurrentUser(null);
+      setShowModal(true);
+      
     } catch (err) {
       console.log(err);
     }
+  };
+
+  const handleCloseModal = () => {
+    setCurrentUser(null);
+    setShowModal(false);
+    history.push("/");
   };
 
   const addTaskIcon = (
@@ -78,6 +87,21 @@ const NavBar = () => {
         <i className="fas fa-users"></i>Users
       </NavLink>
       <NavLink className={styles.NavLink} to="/" onClick={handleSignOut}>
+      {showModal && (
+        <Modal show={showModal} onHide={handleCloseModal} centered={true}>
+          <Modal.Header closeButton>
+            <Modal.Title>Success</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            Log out successful, we hope to see you again soon!
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleCloseModal}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      )}
         <i className="fas fa-sign-out-alt"></i>Log out
       </NavLink>
       <NavLink
