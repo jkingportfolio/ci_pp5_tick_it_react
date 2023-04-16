@@ -56,38 +56,38 @@ The key functionality aspects:
 
 1. As a new user, I can register an account with Tick It so that I can become a member and use the app as intended.
 2. As a user, I can use the navigation bar so that I can seamlessly navigate around the app.
-3. As a user, I can to see visual indicators for example of having watched / unwatched a task so that I can tell what my status of watching is.
+3. As a user, I can see visual indicators for example of having watched / unwatched a task so that I can tell what my status of watching is.
 4. As a user, I can watch and unwatch tasks so that I can keep up to date with that particular task via a filtered list.
-As a user, I can view a list of my watched tasks so that I can focus on content I wish to view.
-As a user, I can use the search bar on the Task list section so that I can find particular tasks easier.
-5. As a user, I can delete my tasks so that I can permanently remove tasks I do not wish to keep.
-6. As a user, I can edit my tasks so that I can correct spelling mistakes or I may have entered into the task information fields.
-7. As a user, I can view task comments so that I can obtain more information on the task in question.
-8. As a user, I can comment on other tasks so that I can interact with other users.
-As a user, I can edit or delete my comment on a task incase of input error.
-9. As a user, I can manage my tasks so that I can add, edit or delete posts as needed.
-10. As a user, I can request a password so that I can log back into my account if I have forgotten my password.
-11. As a user, I can log in so that I can access my account, view my profile, tasks and other user's tasks.
-12. As a user, I can log out so that other users using the same device cannot access my account.
-13. As a user, I can have a profile page so that I and other users can view my list of tasks, packs and assigned tasks.
-14. As a user, I can update my profile so that my profile can stay up to date with my latest information.
-15. As a user, I can add a profile picture so that other members can easily recognize my tasks or comments.
-16. As a user, I can view the Home Page so that I can understand what the website is about, create an account or log in.
-17. As a user, I can display basic info on my profile page so that other members can learn more about me.
-18. As a user, I can search for tasks via a task bar so that I can specific tasks based on those keywords.
-19. As a user, I can fill in a contact form so that I can enquire about issues I may have regarding the app.
-20. As a user, I can receive feedback so that I can confirm whether the contact form submission was successful or not.
-21. As a user, I can scroll through the latest tasks on the app so that I can find new tasks to complete.
-22. As a user, I can browse a list of user accounts so that I can view that particular account.
+5. As a user, I can view a list of my watched tasks so that I can focus on content I wish to view.
+6. As a user, I can use the search bar on the Task list section so that I can find particular tasks easier.
+7. As a user, I can delete my tasks so that I can permanently remove tasks I do not wish to keep.
+8. As a user, I can edit my tasks so that I can correct spelling mistakes or I may have entered into the task information fields.
+9. As a user, I can view task comments so that I can obtain more information on the task in question.
+10. As a user, I can comment on other tasks so that I can interact with other users.
+11. As a user, I can edit or delete my comment on a task incase of input error.
+12. As a user, I can manage my tasks so that I can add, edit or delete posts as needed.
+13. As a user, I can request a password so that I can log back into my account if I have forgotten my password.
+14. As a user, I can log in so that I can access my account, view my profile, tasks and other user's tasks.
+15. As a user, I can log out so that other users using the same device cannot access my account.
+16. As a user, I can have a profile page so that I and other users can view my list of tasks, packs and assigned tasks.
+17. As a user, I can update my profile so that my profile can stay up to date with my latest information.
+18. As a user, I can add a profile picture so that other members can easily recognize my tasks or comments.
+19. As a user, I can view the Home Page so that I can understand what the website is about, create an account or log in.
+20. As a user, I can display basic info on my profile page so that other members can learn more about me.
+21. As a user, I can search for tasks via a task bar so that I can specific tasks based on those keywords.
+22. As a user, I can fill in a contact form so that I can enquire about issues I may have regarding the app.
+23. As a user, I can receive feedback so that I can confirm whether the contact form submission was successful or not.
+24. As a user, I can scroll through the latest tasks on the app so that I can find new tasks to complete.
+25. As a user, I can browse a list of user accounts so that I can view that particular account.
 
 ## Site Owner Stories
 
-23. As the site owner, I would want to validate users' data entries on sign up so that users can create a log in which meets the requirements.
-24. As the site owner, I would want to ensure only logged in users can post from their account and edit their profile so that data privacy is ensured.
-25. As the site owner, I would want to have the ability to remove posts so that I can keep the app clean and friendly.
-26. As the site owner, I would want the site to be fully responsive so that users can use it across multiple devices and create a good user experience.
-27. As the site owner, I would want to use the app search function so that I can search for particular tasks by their title.
-28. As the site owner, I would want 404 and 500 error pages so that users do not have to use the back navigation button if an error occurs.
+26. As the site owner, I would want to validate users' data entries on sign up so that users can create a log in which meets the requirements.
+27. As the site owner, I would want to ensure only logged in users can post from their account and edit their profile so that data privacy is ensured.
+28. As the site owner, I would want to have the ability to remove posts so that I can keep the app clean and friendly.
+29. As the site owner, I would want the site to be fully responsive so that users can use it across multiple devices and create a good user experience.
+30. As the site owner, I would want to use the app search function so that I can search for particular tasks by their title.
+31. As the site owner, I would want 404 and 500 error pages so that users do not have to use the back navigation button if an error occurs.
  
 
 
