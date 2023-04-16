@@ -265,7 +265,7 @@ The API for this Front-End application was built with the Django REST Framework.
 - User stories covered: 1, 3
 
 <details><summary>See feature screenshot</summary>
-<img src="docs/features/feature-xxxxx-page.png">
+<img src="docs/features/feature-xxxxx.png">
 </details>
 
 
