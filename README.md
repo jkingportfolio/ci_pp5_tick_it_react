@@ -1,7 +1,7 @@
 # Tick It
 Developer: Jamie King
 
-![Mockup image](readme/misc/mock-up.png)
+![Mockup image](docs/readme/am-i-responsive.png)
 
 The Tick It........ 
 
