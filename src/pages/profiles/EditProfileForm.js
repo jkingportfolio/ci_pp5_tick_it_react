@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useHistory, useParams, Link } from "react-router-dom";
-import { Form, Button, Image, Col, Container, Alert } from "react-bootstrap";
+import { Form, Button, Image, Col, Container, Alert, Modal } from "react-bootstrap";
 import { axiosReq } from "../../api/axiosDefaults";
 import {
   useCurrentUser,
@@ -8,7 +8,6 @@ import {
 } from "../../contexts/CurrentUserContext";
 import appStyles from "../../App.module.css";
 import styles from "../../styles/ProfilePage.module.css";
-import FeedbackMsg from "../../components/FeedBackMsg";
 
 const EditProfileForm = () => {
   const currentUser = useCurrentUser();
@@ -24,7 +23,7 @@ const EditProfileForm = () => {
   });
   const { name, job_role, image } = profileData;
   const [errors, setErrors] = useState({});
-  const [showAlert, setShowAlert] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const handleMount = async () => {
@@ -69,14 +68,16 @@ const EditProfileForm = () => {
         ...currentUser,
         profile_image: data.image,
       }));
-      setShowAlert(true);
-      setTimeout(function () {
-        history.goBack();
-      }, 3500);
+      setShowModal(true);
     } catch (err) {
       console.log(err);
       setErrors(err.response?.data);
     }
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+    history.goBack();
   };
 
   const textFields = (
@@ -129,12 +130,21 @@ const EditProfileForm = () => {
 
   return (
     <Form onSubmit={handleSubmit}>
-      {showAlert && (
-          <FeedbackMsg
-            variant="info"
-            message="Profile updated successfully. Taking you back to your profile's page..."
-          />
-        )}
+      {showModal && (
+        <Modal show={showModal} onHide={handleCloseModal} centered={true}>
+          <Modal.Header closeButton>
+            <Modal.Title>Success</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            Profile updated successfully!
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleCloseModal}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      )}
       <div className={appStyles.Form}>
         <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
           <Container

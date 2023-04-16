@@ -15,7 +15,6 @@ const ContactForm = () => {
   const { reason, name, email, message } = form;
 
   const history = useHistory();
-  const [showAlert, setShowAlert] = useState(false);
   const [errors, setErrors] = useState({});
   const [showModal, setShowModal] = useState(false);
 
