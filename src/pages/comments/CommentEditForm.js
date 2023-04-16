@@ -8,7 +8,6 @@ function CommentEditForm(props) {
   const { id, comment_body, setShowEditForm, setComments } = props;
 
   const [formContent, setFormContent] = useState(comment_body);
-  const [showAlert, setShowAlert] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
   const handleChange = (event) => {
@@ -33,7 +32,6 @@ function CommentEditForm(props) {
             : comment;
         }),
       }));
-      setShowAlert(true);
       setShowModal(true);     
     } catch (err) {
       console.log(err);
@@ -47,7 +45,7 @@ function CommentEditForm(props) {
 
   return (
     <Form onSubmit={handleSubmit}>
-      {showAlert && (
+      {showModal && (
         <Modal show={showModal} onHide={handleCloseModal} centered={true}>
           <Modal.Header closeButton>
             <Modal.Title>Success</Modal.Title>
