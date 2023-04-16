@@ -199,29 +199,53 @@ I used React for this application for several reasons:
 
 There were various components created and reused across this application.
 
-- `<Asset />` - resuable component, used to ...
+- `<Asset />` - multi purpose component, used to display a range of items due to being passed props. Those include a loading gif, image with source and alt attribute or a message consisting of a paragraph.
 
-- `<Avatar />` - resuable component, used to ...
+  - User stories covered: xx, xx
 
-- `<DropDown />` - resuable component, used to ...
+- `<Avatar />` - resuable component, used to display the relevant user profile picture. This component uses props which can specify the source of the image and also its size, an example of this components re-use ability is the image size on the profile page being bigger than that of the one in the Nav Bar yet it is the same component and source image used.
 
-- `<FeedBackMsg />` - resuable component, used to ...
+  - User stories covered: xx, xx
 
-- `<HighPriorityTasks />` - resuable component, used to ...
+- `<DropDown />` - resuable component, used to display the three dots option button based on the required rights of the user and the item in question for example if a user is on their own profile the drop down to edit the profile will appear, however this will not be the case when viewing other users profile pages.
 
-- `<NavBar />` - resuable component, used to ...
+  - User stories covered: xx, xx
 
-- `<PageNotFound />` - resuable component, used to ...
+- `<FeedBackMsg />` - resuable component, used to display a bootstrap alart based on the message prop it has been provided. 
 
-- `<PasswordCriteria />` - resuable component, used to ...
+  - User stories covered: xx, xx
 
-- `<ScrollToTop />` - resuable component, used to ...
+- `<HighPriorityTasks />` - specific component, used to display a filtered result of all task with the priority status of HIGH.
 
-- `<TaskCompleteFilter />` - resuable component, used to ...
+  - User stories covered: xx, xx
 
-- `<TaskDoughnutChart />` - resuable component, used to ...
+- `<NavBar />` - resuable component, used for easy navigation of the site. This component is re usable as it will display different icons based on a users logged in status. If no user is logged in a log in, sign up and contact icon will be available however if a user is currently logged in, the full range of icons will be available apart from log in.
 
-- `<TaskStatusTable />` - resuable component, used to ...
+  - User stories covered: xx, xx
+
+- `<PageNotFound />` - specific component, used to display a 404 page made up of an image file and return home button for when the page does not exist.
+
+  - User stories covered: xx, xx
+
+- `<PasswordCriteria />` - re-usable component, used to display the validation criteria needed for a valid password entry.
+
+  - User stories covered: xx, xx
+
+- `<ScrollToTop />` - specific component, used to produce a button that will show when the user reaches the bottom of the page, this will allow the user to quickly return to the top of the page without the need for scrolling.
+
+  - User stories covered: xx, xx
+
+- `<TaskCompleteFilter />` - specific component, used to display a filtered result of all task with the complete status of incomplete or in-progress.
+
+  - User stories covered: xx, xx
+
+- `<TaskDoughnutChart />` - specific component, used to display a doughnut chart of all tasks completion status providing an easy visual indication of the tasks status.
+
+  - User stories covered: xx, xx
+
+- `<TaskStatusTable />` - specific component, used to display a numbered table of all tasks completion status providing an easy visual indication of the tasks status.
+
+  - User stories covered: xx, xx
 
 
 ## Back-End API
