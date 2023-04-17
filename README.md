@@ -256,12 +256,6 @@ Balsamiq was used to create wireframes of the sites pages
 | react-scroll | 1.8.9|
 
 
-
-
-
-
-
-
 ##### Back to [top](#tick-it)
 
 
@@ -1022,7 +1016,9 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   |  |
+|  Authentication  |   |   |  |
+|  Sign Up  |   |   |  |
+|  Input Validation  |   |   |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -1033,7 +1029,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   |  |
+|  Nav Bar  |   |   |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -1044,7 +1040,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   |  |
+|  Watched / Unwatched button  |   |   |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -1055,7 +1051,8 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   |  |
+|  Watch / Unwatch task  |   |   |  |
+|  Watched / Unwatched button  |   |   |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -1066,7 +1063,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   |  |
+|  Watched list  |   |   |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -1077,7 +1074,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   |  |
+| Search Bar   |   |   |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -1088,7 +1085,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   |  |
+|  Delete Task  |   |   |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -1099,7 +1096,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   |  |
+|  Edit Task  |   |   |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -1110,7 +1107,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   |  |
+|  Task Comment  |   |   |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -1121,7 +1118,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   |  |
+|  Create task comment  |   |   |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -1132,7 +1129,8 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   |  |
+|  Edit task comment  |   |   |  |
+|  Delete task comment  |   |   |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -1143,7 +1141,9 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   |  |
+|  Create task  |   |   |  |
+|  Delete task  |   |   |  |
+|  Edit task  |   |   |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -1154,7 +1154,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   |  |
+|  Change Password  |   |   |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -1165,7 +1165,9 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   |  |
+|  Authentication  |   |   |  |
+|  Log in  |   |   |  |
+|  Input validation  |   |   |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -1176,7 +1178,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   |  |
+|  Log out  |   |   |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -1187,7 +1189,8 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   |  |
+|  Profile section  |   |   |  |
+|  Profile tabs  |   |   |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -1198,7 +1201,8 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   |  |
+|  Edit Profile  |   |   |  |
+|  Task count  |   |   |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -1209,7 +1213,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   |  |
+| Edit profile   |   |   |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -1220,7 +1224,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   |  |
+|  home page  |   |   |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -1231,7 +1235,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   |  |
+| Profile section   |   |   |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -1242,7 +1246,8 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   |  |
+| Task list   |   |   |  |
+| Task search   |   |   |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -1253,7 +1258,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   |  |
+|  Contact  |   |   |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -1264,7 +1269,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   |  |
+|  Site feedback  |   |   |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -1275,7 +1280,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   |  |
+|  Task list  |   |   |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -1286,7 +1291,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   |  |
+|  Users list  |   |   |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -1299,7 +1304,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   |  |
+| Input validation   |   |   |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -1310,7 +1315,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   |  |
+| Authentication   |   |   |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -1321,7 +1326,8 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   |  |
+|  Delete task  |   |   |  |
+|  Delete task comment  |   |   |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -1332,7 +1338,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   |  |
+|  Responsiveness  |   |   |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -1343,7 +1349,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   |  |
+|  Task search  |   |   |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -1354,7 +1360,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   |  |
+|  site feedback  |   |   |  |
 
 <details>
 <summary>Screenshots</summary>
