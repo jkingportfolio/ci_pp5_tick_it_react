@@ -81,8 +81,9 @@ The key functionality aspects:
 
 ### Target Audience
 
-- People who enjoy 
-- People who 
+- People who would like help with completing a task
+- People who would like to keep track of outstanding tasks they may have
+- People who are looking for some tasks to help others with
 
 
 ### User Requirements and Expectations
