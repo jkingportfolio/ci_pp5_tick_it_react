@@ -281,41 +281,28 @@ There were various components created and reused across this application.
 
 - `<Asset />` - multi purpose component, used to display a range of items due to being passed props. Those include a loading gif, image with source and alt attribute or a message consisting of a paragraph.
 
-x
 
 - `<Avatar />` - resuable component, used to display the relevant user profile picture. This component uses props which can specify the source of the image and also its size, an example of this components re-use ability is the image size on the profile page being bigger than that of the one in the Nav Bar yet it is the same component and source image used.
 
-
 - `<DropDown />` - resuable component, used to display the three dots option button based on the required rights of the user and the item in question for example if a user is on their own profile the drop down to edit the profile will appear, however this will not be the case when viewing other users profile pages.
-
 
 - `<FeedBackMsg />` - resuable component, used to display a bootstrap alart based on the message prop it has been provided. 
 
-
 - `<HighPriorityTasks />` - specific component, used to display a filtered result of all task with the priority status of HIGH.
-
 
 - `<NavBar />` - resuable component, used for easy navigation of the site. This component is re usable as it will display different icons based on a users logged in status. If no user is logged in a log in, sign up and contact icon will be available however if a user is currently logged in, the full range of icons will be available apart from log in.
 
-
 - `<PageNotFound />` - specific component, used to display a 404 page made up of an image file and return home button for when the page does not exist.
-
 
 - `<PasswordCriteria />` - re-usable component, used to display the validation criteria needed for a valid password entry.
 
-
 - `<ScrollToTop />` - specific component, used to produce a button that will show when the user reaches the bottom of the page, this will allow the user to quickly return to the top of the page without the need for scrolling.
-
 
 - `<TaskCompleteFilter />` - specific component, used to display a filtered result of all task with the complete status of incomplete or in-progress.
 
-
 - `<TaskDoughnutChart />` - specific component, used to display a doughnut chart of all tasks completion status providing an easy visual indication of the tasks status.
 
-
 - `<TaskStatusTable />` - specific component, used to display a numbered table of all tasks completion status providing an easy visual indication of the tasks status.
-
-
 
 ## Back-End API
 
@@ -343,7 +330,7 @@ Authentication is a feature of the Tick It site, users will have to be authentic
 
 ### Log In
 
-Log in is a feature of the Tick It site, 
+Log in is a feature of the Tick It site this allows users to log in and view content relevant to their profiles, this feature also controls security and rights of the site with it requiring authentication
 
 <details>
 <summary>Log In image</summary>
@@ -355,7 +342,7 @@ Log in is a feature of the Tick It site,
 
 ### Log Out
 
-Log Out is a feature of the Tick It site, users will have 
+Log Out is a feature of the Tick It site this will give users the ability to log out of their profile providing a level of security if using the same device as others.
 
 <details>
 <summary>Log Out image</summary>
@@ -367,7 +354,7 @@ Log Out is a feature of the Tick It site, users will have
 
 ### Sign Up
 
-Sign Up is a feature of the Tick It site, users will have 
+Sign Up is a feature of the Tick It site this will give users the ability to create an account and get involved in the site and use its features. 
 
 <details>
 <summary>Sign Up image</summary>
@@ -379,7 +366,7 @@ Sign Up is a feature of the Tick It site, users will have
 
 ### Home page
 
-Home page is a feature of the Tick It site, users will have 
+Home page is a feature of the Tick It site users will gain an understanding of what the site is about if not logged in and if logged in will be shown various information which is of high priority.
 
 <details>
 <summary>Home page image</summary>
@@ -391,7 +378,7 @@ Home page is a feature of the Tick It site, users will have
 
 ### Nav Bar
 
-Nav Bar is a feature of the Tick It site, users will have 
+Nav Bar is a feature of the Tick It site giving users the ability to seamlessly navigate the site 
 
 <details>
 <summary>Nav Bar image</summary>
@@ -403,7 +390,7 @@ Nav Bar is a feature of the Tick It site, users will have
 
 ### Profile Section
 
-Profile Section is a feature of the Tick It site, users will have 
+Profile Section is a feature of the Tick It site giving users some personality on the platform and also grouping all their relevant information in one central point.  
 
 <details>
 <summary>Profile Section image</summary>
@@ -415,7 +402,7 @@ Profile Section is a feature of the Tick It site, users will have
 
 ### Edit Profile
 
-Edit Profile is a feature of the Tick It site, users will have 
+Edit Profile is a feature of the Tick It site giving users the ability to update their profile with their latest information 
 
 <details>
 <summary>Edit Profile image</summary>
@@ -427,7 +414,7 @@ Edit Profile is a feature of the Tick It site, users will have
 
 ### Change Password
 
-Change Password is a feature of the Tick It site, users will have 
+Change Password is a feature of the Tick It site giving users the ability to change their password if they so desire. 
 
 <details>
 <summary>Change Password image</summary>
@@ -439,7 +426,7 @@ Change Password is a feature of the Tick It site, users will have
 
 ### Create task
 
-Create task is a feature of the Tick It site, users will have 
+Create task is a feature of the Tick It site giving users the ability to perform the main functionality of the site which is to create a task based from a form.
 
 <details>
 <summary>Create task image</summary>
@@ -451,7 +438,7 @@ Create task is a feature of the Tick It site, users will have
 
 ### Delete task
 
-Delete task is a feature of the Tick It site, users will have 
+Delete task is a feature of the Tick It site giving users the ability to delete their owned tasks at their will. 
 
 <details>
 <summary>Delete task image</summary>
@@ -463,7 +450,7 @@ Delete task is a feature of the Tick It site, users will have
 
 ### Edit task
 
-Edit task is a feature of the Tick It site, users will have 
+Edit task is a feature of the Tick It site giving users the ability to edit their owned tasks at their will via a form.  
 
 <details>
 <summary>Edit task image</summary>
@@ -475,7 +462,7 @@ Edit task is a feature of the Tick It site, users will have
 
 ### Task comment
 
-Task comment is a feature of the Tick It site, users will have 
+Task comment is a feature of the Tick It site giving users the ability to read or create comments on tasks.
 
 <details>
 <summary>Task comment image</summary>
@@ -487,7 +474,7 @@ Task comment is a feature of the Tick It site, users will have
 
 ### Create task comment
 
-Create task comment is a feature of the Tick It site, users will have 
+Create task comment is a feature of the Tick It site giving users the ability to create comments on tasks. This will then display in order of time create and have the users profile image and username next to it. 
 
 <details>
 <summary>Create task comment image</summary>
@@ -499,7 +486,7 @@ Create task comment is a feature of the Tick It site, users will have
 
 ### Edit task comment
 
-Edit task comment is a feature of the Tick It site, users will have 
+Edit task comment is a feature of the Tick It site giving users the ability to edit comments that they own and posted themselves.
 
 <details>
 <summary>Edit task comment image</summary>
@@ -511,7 +498,7 @@ Edit task comment is a feature of the Tick It site, users will have
 
 ### Delete task comment
 
-Delete task comment is a feature of the Tick It site, users will have 
+Delete task comment is a feature of the Tick It site giving users the ability to delete comments that they own.
 
 <details>
 <summary>Delete task comment image</summary>
@@ -524,7 +511,7 @@ Delete task comment is a feature of the Tick It site, users will have
 
 ### Task list
 
-Task list is a feature of the Tick It site, users will have 
+Task list is a feature of the Tick It site giving users the ability to view all tasks that have been created on the app.
 
 <details>
 <summary>Task list image</summary>
@@ -536,7 +523,7 @@ Task list is a feature of the Tick It site, users will have
 
 ### Task Search
 
-Task Search is a feature of the Tick It site, users will have 
+Task Search is a feature of the Tick It site giving users the ability to search for tasks or users via a keyword query search bar. 
 
 <details>
 <summary>Task Search image</summary>
@@ -548,7 +535,7 @@ Task Search is a feature of the Tick It site, users will have
 
 ### Watch / Unwatch task
 
-Watch / Unwatch task is a feature of the Tick It site, users will have 
+Watch / Unwatch task is a feature of the Tick It site giving users the ability to watch and unwatch tasks which if watched will be displayed in the users watched list, giving the user a means for keeping track of specific tasks. 
 
 <details>
 <summary>Watch / Unwatch task image</summary>
@@ -560,7 +547,7 @@ Watch / Unwatch task is a feature of the Tick It site, users will have
 
 ### Watch / Unwatch button
 
-Watch / Unwatch button is a feature of the Tick It site, users will have 
+Watch / Unwatch button is a feature of the Tick It site giving users the ability to add or remove a watch object to a specific task.
 
 <details>
 <summary>Watch / Unwatch button image</summary>
@@ -573,7 +560,7 @@ Watch / Unwatch button is a feature of the Tick It site, users will have
 
 ### Watched list
 
-Watched list is a feature of the Tick It site, users will have 
+Watched list is a feature of the Tick It site giving users the ability to view all of their watched tasks in one central place.
 
 <details>
 <summary>Watched list image</summary>
@@ -585,7 +572,7 @@ Watched list is a feature of the Tick It site, users will have
 
 ### Input Validation
 
-Input Validation is a feature of the Tick It site, users will have 
+Input Validation is a feature of the Tick It used throughout the site for form inputs. 
 
 <details>
 <summary>Input Validation image</summary>
@@ -597,7 +584,7 @@ Input Validation is a feature of the Tick It site, users will have
 
 ### Task Count
 
-Task Count is a feature of the Tick It site, users will have 
+Task Count is a feature of the Tick It site giving users the ability to display the total amount of tasks they have created and display it on their profile page. 
 
 <details>
 <summary>Task Count image</summary>
@@ -609,7 +596,7 @@ Task Count is a feature of the Tick It site, users will have
 
 ### Create Pack
 
-Create Pack is a feature of the Tick It site, users will have 
+Create Pack is a feature of the Tick It site giving users the ability to add task to a pack, thus grouping relevant tasks together in one central location.
 
 <details>
 <summary>Create Pack image</summary>
@@ -621,7 +608,7 @@ Create Pack is a feature of the Tick It site, users will have
 
 ### Edit Pack
 
-Edit Pack is a feature of the Tick It site, users will have 
+Edit Pack is a feature of the Tick It site giving users the ability to add or remove tasks from the pack and also update the title and pack description via a form.
 
 <details>
 <summary>Edit Pack image</summary>
@@ -633,7 +620,7 @@ Edit Pack is a feature of the Tick It site, users will have
 
 ### Delete Pack
 
-Delete Pack is a feature of the Tick It site, users will have 
+Delete Pack is a feature of the Tick It site giving users the ability to delete an owner pack.
 
 <details>
 <summary>Delete Pack image</summary>
@@ -645,7 +632,7 @@ Delete Pack is a feature of the Tick It site, users will have
 
 ### Responsiveness
 
-Responsiveness is a feature of the Tick It site, users will have 
+Responsiveness is a feature which can be seen through the Tick It site giving users the ability to view the site on various display sizes whilst still having an enojoyable user experience.
 
 <details>
 <summary>Responsiveness image</summary>
@@ -657,7 +644,7 @@ Responsiveness is a feature of the Tick It site, users will have
 
 ### Search Bar
 
-Search Bar is a feature of the Tick It site, users will have 
+Search Bar is a feature of the Tick It site giving users the ability to search for tasks or users based on key word input. 
 
 <details>
 <summary>Search Bar image</summary>
@@ -669,7 +656,7 @@ Search Bar is a feature of the Tick It site, users will have
 
 ### Contact
 
-Contact is a feature of the Tick It site, users will have 
+Contact is a feature of the Tick It site giving users the ability to contact the site admin for any reason such as log in issues, reporting a comment or a general enquiry.
 
 <details>
 <summary>Contact image</summary>
@@ -681,7 +668,7 @@ Contact is a feature of the Tick It site, users will have
 
 ### Error pages
 
-Error pages is a feature of the Tick It site, users will have 
+Error pages is a feature of the Tick It site which will display a 404 error page and allow the user to easily navigate back to the site.
 
 <details>
 <summary>Error pages image</summary>
@@ -693,7 +680,7 @@ Error pages is a feature of the Tick It site, users will have
 
 ### Site Feedback
 
-Site Feedback is a feature of the Tick It site, users will have 
+Site Feedback is a feature of the Tick It site which will presented to users at various times in the form of successful html pages and modal messages.
 
 <details>
 <summary>Site Feedback image</summary>
@@ -705,7 +692,7 @@ Site Feedback is a feature of the Tick It site, users will have
 
 ### Users list
 
-Users list is a feature of the Tick It site, users will have 
+Users list is a feature of the Tick It site giving users the ability to view all users signed up to the site.
 
 <details>
 <summary>Users list image</summary>
