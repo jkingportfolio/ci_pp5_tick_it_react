@@ -1,3 +1,121 @@
-Text {
-    color: red
+.Task {
+    border: 1px solid #1a1ab8;
+    border-radius: 2px;
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 10px;
+  }
+
+.cardbody {
+  padding: 0 !important;
+  border: 1px #120E16 solid;
+}
+
+.NavLink {
+  color: #120E16 !important;
+  padding: 5px;
+}
+
+a {
+  color: #EDEFFE !important;
+  transition: color ease-in-out 0.3s;
+}
+
+a:hover {
+text-decoration: none !important;
+}
+
+a:hover i {
+transition: color ease-in-out 0.3s;
+}
+
+.title {
+  background-color: #F6F6F7;
+  font-size: 20px;
+  text-align: center;
+  color: #120E16;
+  text-decoration: underline;
+  border-bottom: 2px solid #120E16;
+}
+
+.DetailTitle {
+  font-size: 20px;
+  text-align: center;
+  color: #120E16;
+  text-decoration: underline;
+  text-align: left;
+}
+
+.Posted {
+  color: #120E16 !important;
+  font-size: 16px;
+  text-align: left;
+  color: rgb(2, 2, 2);
+}
+
+.TaskBody {
+  border: 1px solid #120E16;
+  font-size: 16px;
+  text-align: left;
+  color: #120E16;
+  text-decoration: none;
+  min-height: 90px;
+  background-color: #F6F6F7;
+  padding: 10px;
+}
+
+.watchbtn {
+  width: 50px;
+  float: right;
+  flex: 1
+}
+
+.RedIcon {
+  color: red !important;
+}
+
+.GreenIcon {
+  color: green !important;
+}
+
+.Inline {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 5px;
+}
+
+.Flex {
+  flex: 1;
+  margin: auto;
+}
+
+.TopMargin {
+  margin-top: 10px;
+}
+
+.BottomMargin {
+  margin-bottom: 30px;
+}
+
+.GreenBackground {
+  border: 3px solid green;
+  background-color: rgba(0, 255, 0, 0.3)
+}
+
+.YellowBackground {
+  border: 3px solid orange;
+  background-color: rgba(225, 225, 20, 0.3)
+}
+
+.RedBackground {
+  border: 3px solid red;
+  background-color: rgba(255, 0, 0, 0.3)
+}
+
+.PositionedButton {
+  position: absolute;
+  top: 6px;
+  right: 20px;
+  width: 40px;
+  height: 30px;
 }

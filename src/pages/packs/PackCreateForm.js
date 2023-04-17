@@ -59,6 +59,8 @@ function PackCreateForm() {
     });
   };
 
+  
+
   const handleMultiSelectChange = (selected) => {
   setPackData({
     ...packData,
@@ -66,24 +68,31 @@ function PackCreateForm() {
   });
 };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    const formData = new FormData();
+const handleSubmit = async (event) => {
+  event.preventDefault();
 
-    formData.append("title", title);
-    formData.append("pack_description", pack_description);
-    formData.append("tasks", tasks);
-
-    try {
-      const { data } = await axiosReq.post("/packs/", formData);
-      history.push(`/packs/${data.id}`);
-    } catch (err) {
-      console.log(err);
-      if (err.response?.status !== 401) {
-        setErrors(err.response?.data);
-      }
-    }
+  const packDataToSend = {
+    title: title,
+    pack_description: pack_description,
+    tasks: tasks.map(task => task.value),
   };
+
+  console.log("Payload:", packDataToSend);
+
+  try {
+    const { data } = await axiosReq.post("/packs/", packDataToSend);
+    history.push(`/packs/${data.id}`);
+  } catch (err) {
+    console.log(err);
+    if (err.response?.status !== 401) {
+      setErrors(err.response?.data);
+    }
+  }
+};
+
+
+  
+
 
   const textFields = (
     <div className="text-center">
