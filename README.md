@@ -142,7 +142,23 @@ The key functionality aspects:
 
 ### Agile Design
 
+An Agile approach to creating this app has been applied. GitHub's projects was used to track user stories and implement ideas based on their level of importance for allowing use of the app with no loss of functionality or user experience. Three categories were created indicating their level of importance, those were:
+- MUST HAVE
+- SHOULD HAVE
+- COULD HAVE
+
+By using AGILE methodology in this project I was able to deliver a site which had all required functionality and some more. Due to the time limit on this project I was not able to incorporate all initial listed features, but this is where an AGILE approach is great for app design. The project displays this by having User stories in the Done section and the ones which decided to be left for future put in the future implementation.
+
+The GitHub project can be found [here](https://github.com/users/jkingportfolio/projects/9)
+
 ### CRUD Functionality
+
+Tick It handles data with full CRUD Functionality:
+<br>
+- Create -  Users can create, account, profile, tasks, comment, and watch objects.
+- Read - Users can view the tasks of other users and also the profiles of these users.
+- Update - Users can update their profile, password, posted tasks and watch status of tasks via the interactive forms and buttons on the site.
+- Delete - Users can delete tasks, comments and watch objects via the interactive buttons on the site.
 
 ### Colours
 
@@ -220,6 +236,17 @@ Balsamiq was used to create wireframes of the sites pages
   - [Wave](https://wave.webaim.org/) - used to evaluate the applications accessibility
 
 ### Libraries
+
+#### Installed Libraries
+
+| Package       | Version        |
+| ------------- | ------------- |
+| lib | x.x.x |
+| lib | x.x.x |
+| lib | x.x.x |
+| lib | x.x.x |
+| lib | x.x.x |
+| lib | x.x.x |
 
 
 
