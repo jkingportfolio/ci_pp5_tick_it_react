@@ -6,11 +6,12 @@ import { axiosReq } from "../../api/axiosDefaults";
 import axios from "axios";
 import styles from "../../styles/PackCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
+import TasksListings from "../tasks/TasksListings";
 
 function PackCreateForm() {
   const [errors, setErrors] = useState({});
   // const [users, setUsers] = useState([]);
-  const [settingTasks, setTasks] = useState([]);
+  const [tasksListing, setTasks] = useState({ results: [] });
   const [packData, setPackData] = useState({
     title: "",
     pack_description: "",
@@ -18,24 +19,37 @@ function PackCreateForm() {
   });
   const { title, pack_description, tasks } = packData;
 
-  const taskOptions = settingTasks.map((task) => ({
-    label: task.title,
-    value: task.id,
-  }));
-
   const history = useHistory();
 
+  const [hasLoaded, setHasLoaded] = useState(false);
+
   useEffect(() => {
-    axios
-      .get("/tasks/")
-      .then((response) =>
-        setTasks(
-          response.data.map((task) => ({ title: task.title, id: task.id }))
-        )
-      )
-      
-      .catch((error) => console.log(error));
+    const fetchTasks = async () => {
+      try {
+        const { data } = await axiosReq.get(`/tasks/`);
+        setTasks(data);
+        setHasLoaded(true);
+        console.log(data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    setHasLoaded(false);
+    const timer = setTimeout(() => {
+      fetchTasks();
+    }, 1000);
+    return () => {
+      clearTimeout(timer);
+    };
   }, []);
+
+
+  const taskOptions = tasksListing.results.map((taskListing) => ({
+    label: taskListing.title,
+    value: taskListing.id,
+  }));
+
 
 
   const handleChange = (event) => {
@@ -46,11 +60,11 @@ function PackCreateForm() {
   };
 
   const handleMultiSelectChange = (selected) => {
-    setPackData({
-      ...packData,
-      tasks: selected.map((option) => option.value),
-    });
-  };
+  setPackData({
+    ...packData,
+    tasks: selected.map((option) => ({ label: option.label, value: option.value })),
+  });
+};
 
   const handleSubmit = async (event) => {
     event.preventDefault();
