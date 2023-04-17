@@ -58,7 +58,7 @@ function TaskStatusTable() {
             <td className={appStyles.Td}>{taskCounts.complete}</td>
           </tr>
           <tr>
-            <td className={appStyles.Td}>No</td>
+            <td className={appStyles.Td}>Incomplete</td>
             <td className={appStyles.Td}>{taskCounts.no}</td>
           </tr>
           <tr>

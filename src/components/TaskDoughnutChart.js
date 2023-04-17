@@ -43,7 +43,7 @@ function TaskStatusTable() {
   }, []);
 
   const chartData = {
-    labels: ["Complete", "No", "In Progress"],
+    labels: ["Complete", "Incomplete", "In Progress"],
     datasets: [
       {
         label: "Task Status",

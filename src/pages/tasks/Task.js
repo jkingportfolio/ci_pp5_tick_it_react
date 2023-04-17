@@ -144,7 +144,7 @@ const Task = (props) => {
       <Card.Body className={styles.cardbody}>
         <div className={styles.Inline}>
           <div className={`${styles.Flex} ${backgroundColorClass}`}>
-            Task Completed: {completed}
+            Status: {completed}
           </div>
           {assigned_to ? (
             <Link
