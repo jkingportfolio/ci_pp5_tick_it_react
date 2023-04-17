@@ -917,16 +917,24 @@ Lighthouse was used to test the performance, accessibility, best practice and SE
 
 #### Desktop 
 
-<details><summary>page</summary> 
-<img src="docs/validation/lighthouse-page-desktop.png "> 
+<details><summary>Landing Page</summary> 
+<img src="docs/validation/lighthouse-landing-page-desktop.png "> 
 </details> 
+
+<details><summary>Main Page</summary> 
+<img src="docs/validation/lighthouse-main-page-desktop.png "> 
+</details>
 
 
 
 #### Mobile 
 
-<details><summary>page</summary> 
-<img src="docs/validation/lighthouse-page-mobile.png "> 
+<details><summary>Landing Page</summary> 
+<img src="docs/validation/lighthouse-landing-page-mobile.png "> 
+</details> 
+
+<details><summary>Main Page</summary> 
+<img src="docs/validation/lighthouse-main-page-mobile.png "> 
 </details> 
 
 
