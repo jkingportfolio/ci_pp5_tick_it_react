@@ -1018,16 +1018,16 @@ There were a few errors related to missing labels and contrast issues on buttons
 
 ### Device Testing
 
-The website was tested using 
-
-The website was tested on the following devices:
-- Device one
-- Device two
+This site was tested on the following devices:
+- Windows 10 PC with a 24" MSI Curved gaming monitor
+- Raspberry Pi 4 with a 24" MSI Curved gaming monitor
+- Xiaomi Redmi Note 10 Pro
 
 ### Browser compatibility
 
-Testing has been carried out on the following browsers:
-- Googe Chrome, version xxx.xxx.xxx.xxx
+The website was tested on the following web browsers:
+- Google Chrome (Version 112.0.5615.121)
+- DuckDuckGo
  
 ### Manual testing
 
