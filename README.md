@@ -897,7 +897,7 @@ The website was deployed with Heroku by following these steps:
 4. Navigate to the Dashboard on Cloudinary
 <details>
 <summary>Screenshot</summary>
-<img src="readme/deployment/cloudinary-dashboard.png">
+<img src="docs/deployment/cloudinary-dashboard.png">
 </details>
 
 5. Copy and store the value of the 'API Environment Variable" beginning at cloudinary:// until the end, this will be used in the Heroku Config Vars. 
@@ -906,45 +906,45 @@ The website was deployed with Heroku by following these steps:
 8. Click on Create a new instance
 <details>
 <summary>Screenshot</summary>
-<img src="readme/deployment/elephant-sql-instance.png">
+<img src="docs/deployment/elephant-sql-instance.png">
 </details>
 
 9. Set up your plan. Give the 'plan' the desired name, select the Tiny Turtle (free) plan and leave tags blank.
 <details>
 <summary>Screenshot</summary>
-<img src="readme/deployment/elephant-sql-plan.png">
+<img src="docs/deployment/elephant-sql-plan.png">
 </details>
 
 10. Select the region and choose the nearest data centre to your location.
 <details>
 <summary>Screenshot</summary>
-<img src="readme/deployment/elephant-sql-region.png">
+<img src="docs/deployment/elephant-sql-region.png">
 </details>
 
 11. Click 'review' and if happy with the details presented click on the create instance button.
 <details>
 <summary>Screenshot</summary>
-<img src="readme/deployment/elephant-sql-create.png">
+<img src="docs/deployment/elephant-sql-create.png">
 </details>
 
 12. From the instances section click on the instance with the name that was just created.
 13. Get the ElephantSQL database URL from the instance details page and copy, this will be used in the Heroku Config Vars
 <details>
 <summary>Screenshot</summary>
-<img src="readme/deployment/elephant-sql-url.png">
+<img src="docs/deployment/elephant-sql-url.png">
 </details>
 
 14. Navigate to https://www.heroku.com/ and login or create an account. 
 15. Click the "new" button in the upper right corner and select "create new app".
 <details>
 <summary>Screenshot</summary>
-<img src="readme/deployment/new-app.png">
+<img src="docs/deployment/new-app.png">
 </details>
 
 16. Choose an app name and your region and click "Create app".
 <details>
 <summary>Screenshot</summary>
-<img src="readme/deployment/app-name.png">
+<img src="docs/deployment/app-name.png">
 </details>
 
 17. Reveal Config Vars and store the required config var names and values as below:
@@ -956,7 +956,7 @@ The website was deployed with Heroku by following these steps:
 
 <details>
 <summary>Screenshot</summary>
-<img src="readme/deployment/config-vars.png">
+<img src="docs/deployment/config-vars.png">
 </details>
 
 18. Go to the "deploy" tab and pick GitHub as a deployment method.
