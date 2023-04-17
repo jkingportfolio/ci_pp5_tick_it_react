@@ -33,11 +33,9 @@ Developer: Jamie King
   10. [Validation](#validation)
     1. [HTML](#html-validation)
     2. [CSS](#css-validation)
-    3. [Javascript](#javascript-validation)
-    4. [JSX](#jsx-validation)
-    5. [Python](#python-validation)
-    6. [Chrome Dev Tools Lighthouse](#chrome-dev-tools-lighthouse-validation)
-    6. [WAVE Validation](#wave-validation)
+    3. [JSX](#jsx-validation)
+    4. [Chrome Dev Tools Lighthouse](#chrome-dev-tools-lighthouse-validation)
+    5. [WAVE Validation](#wave-validation)
   11. [Testing](#testing)
     1. [Device Testing](#device-testing)
     2. [Browser Compatibility](#browser-compatibility)
@@ -733,14 +731,14 @@ Users list is a feature of the Tick It site, users will have
 
 ## Future features / improvements
 
-Example of potential improvements to this project:
+Although alot of effort was put into this project, due to time constraints there is still room for finer refactoring of code and additional functionality / features to implement to the site. 
 
-- Feature category
-  - Additional feature description
+- Password recovery
   - Forgotten password option to recover access to the account via email
+- Account creation via socials
   - Allow user authentication with already existing accounts, e.g. LinkedIn, Google, etc. 
-- Feature category
-  - Additional feature description
+- A notifications feature
+  - A feature to have notifications related to tasks you are invovled in / own and if their completion status has been updated.
 
 ##### Back to [top](#tick-it)
 
@@ -748,9 +746,14 @@ Example of potential improvements to this project:
 ## Validation 
 
 ### HTML Validation
+
 The W3C Markup Validation Service was used to validate the HTML of the website. No errors were identified. 
 
-<details><summary>Main page</summary> 
+<details><summary>Main page (not logged in)</summary> 
+<img src="docs/validation/html-validation-main-page.png"> 
+</details>
+
+<details><summary>Main page (logged in user)</summary> 
 <img src="docs/validation/html-validation-main-page.png"> 
 </details> 
 
@@ -762,8 +765,44 @@ The W3C Markup Validation Service was used to validate the HTML of the website. 
 <img src="docs/validation/html-validation-login-page.png"> 
 </details>
 
-<details><summary>Task page</summary>
-<img src="docs/validation/html-validation-task-page.png">
+<details><summary>Tasks page</summary>
+<img src="docs/validation/html-validation-tasks-page.png">
+</details>
+
+<details><summary>Task create page</summary>
+<img src="docs/validation/html-validation-task-create-page.png">
+</details>
+
+<details><summary>Task detail page</summary>
+<img src="docs/validation/html-validation-task-detail-page.png">
+</details>
+
+<details><summary>Watched page</summary>
+<img src="docs/validation/html-validation-watched-page.png">
+</details>
+
+<details><summary>Pack page</summary>
+<img src="docs/validation/html-validation-packs-page.png">
+</details>
+
+<details><summary>Pack create page</summary>
+<img src="docs/validation/html-validation-pack-create-page.png">
+</details>
+
+<details><summary>Pack detail page</summary>
+<img src="docs/validation/html-validation-pack-detail-page.png">
+</details>
+
+<details><summary>Contact page</summary>
+<img src="docs/validation/html-validation-contact-page.png">
+</details>
+
+<details><summary>Users page</summary>
+<img src="docs/validation/html-validation-users-page.png">
+</details>
+
+<details><summary>Profile page</summary>
+<img src="docs/validation/html-validation-profile-page.png">
 </details>
 
 
@@ -775,7 +814,82 @@ The W3C Jigsaw CSS Validation Service was used to validate the CSS of the websit
 <img src="docs/validation/css-validation-app.png"> 
 </details> 
 
-### Javascript Validation
+<details><summary>Asset.module.css</summary> 
+<img src="docs/validation/css-validation-asset.png"> 
+</details>
+
+<details><summary>Avatar.module.css</summary> 
+<img src="docs/validation/css-validation-avatar.png"> 
+</details>
+
+<details><summary>Comment.module.css</summary> 
+<img src="docs/validation/css-validation-comment.png"> 
+</details>
+
+<details><summary>CommentForm.module.css</summary> 
+<img src="docs/validation/css-validation-comment-form.png"> 
+</details>
+
+<details><summary>CredentialsForm.module.css</summary> 
+<img src="docs/validation/css-validation-credentials-form.png"> 
+</details>
+
+<details><summary>Dashboard.module.css</summary> 
+<img src="docs/validation/css-validation-dashboard.png"> 
+</details>
+
+<details><summary>DropdDown.module.css</summary> 
+<img src="docs/validation/css-validation-drop-down.png"> 
+</details>
+
+<details><summary>FeedBackMsg.module.css</summary> 
+<img src="docs/validation/css-validation-feedback-msg.png"> 
+</details>
+
+<details><summary>LandingPage.module.css</summary> 
+<img src="docs/validation/css-validation-landing-page.png"> 
+</details>
+
+<details><summary>NavBar.module.css</summary> 
+<img src="docs/validation/css-validation-nav-bar.png"> 
+</details>
+
+<details><summary>Pack.module.css</summary> 
+<img src="docs/validation/css-validation-pack.png"> 
+</details>
+
+<details><summary>PackCreateEditForm.module.css</summary> 
+<img src="docs/validation/css-validation-pack-create-edit-form.png"> 
+</details>
+
+<details><summary>PackListings.module.css</summary> 
+<img src="docs/validation/css-validation-pack-listings.png"> 
+</details>
+
+<details><summary>ProfilePage.module.css</summary> 
+<img src="docs/validation/css-validation-profile-page.png"> 
+</details>
+
+<details><summary>ScrollToTop.module.css</summary> 
+<img src="docs/validation/css-validation-scroll-to-top.png"> 
+</details>
+
+<details><summary>SearchBar.module.css</summary> 
+<img src="docs/validation/css-validation-search-bar.png"> 
+</details>
+
+<details><summary>Task.module.css</summary> 
+<img src="docs/validation/css-validation-task.png"> 
+</details>
+
+<details><summary>TaskListings.module.css</summary> 
+<img src="docs/validation/css-validation-task-listings.png"> 
+</details>
+
+<details><summary>UserProfiles.module.css</summary> 
+<img src="docs/validation/css-validation-user-profiles.png"> 
+</details>
+
 
 ### JSX Validation 
 
@@ -796,8 +910,6 @@ The JSX code was validated using the ESLint utility.
 <details><summary>Eslint validation for all pages</summary> 
 <img src="docs/validation/eslint-pages.png"> 
 </details> 
-
-### Python Validation
 
 ### Chrome Dev Tools Lighthouse Validation
 
