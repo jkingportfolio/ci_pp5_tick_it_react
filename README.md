@@ -1031,15 +1031,355 @@ The website was tested on the following web browsers:
  
 ### Manual testing
 
-1. As a user, I can 
+<summary>See Testing User Stories</summary>
 
-**Step** | **Expected Result** | **Actual Result**
------------- | ------------ | ------------ |
- |  | Works as expected |
- 
-<details><summary>Screenshot</summary>
-<img src="docs/testing/user-stories-testing/user-story-01.png">
+#### Testing User Stories - Users
+
+To avoid unnecessary repetition of images, only the feature being referred to will have screenshots. Information on how to navigate to the feature referred to will be described within its relevant table reference. 
+
+1. As a new user, I can register an account with Tick It so that I can become a member and use the app as intended. 
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-manual/1-xxxxxx-1.png">
 </details>
+
+2. As a user, I can use the navigation bar so that I can seamlessly navigate around the app. 
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-manual/2-xxxxxx-1.png">
+</details>
+
+3. As a user, I can see visual indicators for example of having watched / unwatched a task so that I can tell what my status of watching is.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-manual/3-xxxxxx-1.png">
+</details>
+
+4. As a user, I can watch and unwatch tasks so that I can keep up to date with that particular task via a filtered list. 
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-manual/4-xxxxxx-1.png">
+</details>
+
+5. As a user, I can view a list of my watched tasks so that I can focus on content I wish to view. 
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-manual/5-xxxxxx-1.png">
+</details>
+
+6. As a user, I can use the search bar on the Task list section so that I can find particular tasks easier. 
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-manual/6-xxxxxx-1.png">
+</details>
+
+7. As a user, I can delete my tasks so that I can permanently remove tasks I do not wish to keep. 
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-manual/7-xxxxxx-1.png">
+</details>
+
+8. As a user, I can edit my tasks so that I can correct spelling mistakes or I may have entered into the task information fields.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-manual/8-xxxxxx-1.png">
+</details>
+
+9. As a user, I can view task comments so that I can obtain more information on the task in question. 
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-manual/9-xxxxxx-1.png">
+</details>
+
+10. As a user, I can comment on other tasks so that I can interact with other users. 
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-manual/10-xxxxxx-1.png">
+</details>
+
+11. As a user, I can edit or delete my comment on a task incase of input error. 
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-manual/11-xxxxxx-1.png">
+</details>
+
+12. As a user, I can manage my tasks so that I can add, edit or delete posts as needed. 
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-manual/12-xxxxxx-1.png">
+</details>
+
+13. As a user, I can request a password so that I can log back into my account if I have forgotten my password. 
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-manual/13-xxxxxx-1.png">
+</details>
+
+14. As a user, I can log in so that I can access my account, view my profile, tasks and other user's tasks. 
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-manual/14-xxxxxx-1.png">
+</details>
+
+15. As a user, I can log out so that other users using the same device cannot access my account. 
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-manual/15-xxxxxx-1.png">
+</details>
+
+16. As a user, I can have a profile page so that I and other users can view my list of tasks, packs and assigned tasks.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-manual/16-xxxxxx-1.png">
+</details>
+
+17. As a user, I can update my profile so that my profile can stay up to date with my latest information. 
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-manual/17-xxxxxx-1.png">
+</details>
+
+18. As a user, I can add a profile picture so that other members can easily recognize my tasks or comments.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-manual/18-xxxxxx-1.png">
+</details>
+
+19. As a user, I can view the Home Page so that I can understand what the website is about, create an account or log in. 
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-manual/19-xxxxxx-1.png">
+</details>
+
+20. As a user, I can display basic info on my profile page so that other members can learn more about me. 
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-manual/20-xxxxxx-1.png">
+</details>
+
+21. As a user, I can search for tasks via a task bar so that I can specific tasks based on those keywords. 
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-manual/21-xxxxxx-1.png">
+</details>
+
+22. As a user, I can fill in a contact form so that I can enquire about issues I may have regarding the app. 
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-manual/22-xxxxxx-1.png">
+</details>
+
+23. As a user, I can receive feedback so that I can confirm whether the contact form submission was successful or not.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-manual/23-xxxxxx-1.png">
+</details>
+
+24. As a user, I can scroll through the latest tasks on the app so that I can find new tasks to complete.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-manual/24-xxxxxx-1.png">
+</details>
+
+25. As a user, I can browse a list of user accounts so that I can view that particular account. 
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-manual/25-xxxxxx-1.png">
+</details>
+
+#### Testing User Stories - Site Owner
+
+26. As the site owner, I would want to validate users' data entries on sign up so that users can create a log in which meets the requirements.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-manual/26-xxxxxx-1.png">
+</details>
+
+27. As the site owner, I would want to ensure only logged in users can post from their account and edit their profile so that data privacy is ensured. 
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-manual/27-xxxxxx-1.png">
+</details>
+
+28. As the site owner, I would want to have the ability to remove posts so that I can keep the app clean and friendly. 
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-manual/28-xxxxxx-1.png">
+</details>
+
+29. As the site owner, I would want the site to be fully responsive so that users can use it across multiple devices and create a good user experience. 
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-manual/29-xxxxxx-1.png">
+</details>
+
+30. As the site owner, I would want to use the app search function so that I can search for particular tasks by their title.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-manual/30-xxxxxx-1.png">
+</details>
+
+31. As the site owner, I would want 404 and 500 error pages so that users do not have to use the back navigation button if an error occurs.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-manual/31-xxxxxx-1.png">
+</details>
+
 
 
 ### Automated testing
