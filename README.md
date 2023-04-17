@@ -165,7 +165,11 @@ Tick It handles data with full CRUD Functionality:
 
 The colour scheme for this application was kept minimal with a monochromatic theme kept in mind. 
 
+<details>
+<summary>Colours</summary>
 <img src="docs/readme/colours.png">
+</details>
+
 
 ### Fonts
 
@@ -338,14 +342,393 @@ The API for this Front-End application was built with the Django REST Framework.
 
 ## Features
 
-### Feature name
-- Includes 
-- Contains direct links to 
-- User stories covered: 1, 3
+In its entirety the website consists of a variety of features across the many site pages as listed below.
 
-<details><summary>See feature screenshot</summary>
-<img src="docs/features/feature-xxxxx.png">
+### Authentication
+
+Authentication is a feature of the Tick It site, users will have to be authenticated whilst attempting to log in or else they will not be able to use any functionality of the site or view any information that Tick It users have posted.
+
+<details>
+<summary>Authentication image</summary>
+<img src="docs/features/authentication.png">
 </details>
+
+- Covered in user stories: 1, 14, 27
+
+### Log In
+
+Log in is a feature of the Tick It site, 
+
+<details>
+<summary>Log In image</summary>
+<img src="docs/features/login.png">
+<img src="docs/features/login-1.png">
+</details>
+
+- Covered in user stories: 14
+
+### Log Out
+
+Log Out is a feature of the Tick It site, users will have 
+
+<details>
+<summary>Log Out image</summary>
+<img src="docs/features/log-out.png">
+<img src="docs/features/log-out-1.png">
+</details>
+
+- Covered in user stories: 15
+
+### Sign Up
+
+Sign Up is a feature of the Tick It site, users will have 
+
+<details>
+<summary>Sign Up image</summary>
+<img src="docs/features/sign-up.png">
+<img src="docs/features/sign-up-1.png">
+</details>
+
+- Covered in user stories: 1
+
+### Home page
+
+Home page is a feature of the Tick It site, users will have 
+
+<details>
+<summary>Home page image</summary>
+<img src="docs/features/home-page.png">
+<img src="docs/features/home-page-1.png">
+</details>
+
+- Covered in user stories: 19
+
+### Nav Bar
+
+Nav Bar is a feature of the Tick It site, users will have 
+
+<details>
+<summary>Nav Bar image</summary>
+<img src="docs/features/nav-bar.png">
+<img src="docs/features/nav-bar-1.png">
+</details>
+
+- Covered in user stories: 2
+
+### Profile Section
+
+Profile Section is a feature of the Tick It site, users will have 
+
+<details>
+<summary>Profile Section image</summary>
+<img src="docs/features/profile-section.png">
+<img src="docs/features/profile-section-1.png">
+</details>
+
+- Covered in user stories: 16
+
+### Edit Profile
+
+Edit Profile is a feature of the Tick It site, users will have 
+
+<details>
+<summary>Edit Profile image</summary>
+<img src="docs/features/edit-profile.png">
+<img src="docs/features/edit-profile-1.png">
+</details>
+
+- Covered in user stories: 17 & 18
+
+### Change Password
+
+Change Password is a feature of the Tick It site, users will have 
+
+<details>
+<summary>Change Password image</summary>
+<img src="docs/features/change-password.png">
+<img src="docs/features/change-password-1.png">
+</details>
+
+- Covered in user stories: 13
+
+### Create task
+
+Create task is a feature of the Tick It site, users will have 
+
+<details>
+<summary>Create task image</summary>
+<img src="docs/features/create-task.png">
+<img src="docs/features/create-task-1.png">
+</details>
+
+- Covered in user stories: 12
+
+### Delete task
+
+Delete task is a feature of the Tick It site, users will have 
+
+<details>
+<summary>Delete task image</summary>
+<img src="docs/features/delete-task.png">
+<img src="docs/features/delete-task-1.png">
+</details>
+
+- Covered in user stories: 7, 12, 28
+
+### Edit task
+
+Edit task is a feature of the Tick It site, users will have 
+
+<details>
+<summary>Edit task image</summary>
+<img src="docs/features/edit-task.png">
+<img src="docs/features/edit-task-1.png">
+</details>
+
+- Covered in user stories: 8, 12
+
+### Task comment
+
+Task comment is a feature of the Tick It site, users will have 
+
+<details>
+<summary>Task comment image</summary>
+<img src="docs/features/task-comment.png">
+<img src="docs/features/task-comment-1.png">
+</details>
+
+- Covered in user stories: 9
+
+### Create task comment
+
+Create task comment is a feature of the Tick It site, users will have 
+
+<details>
+<summary>Create task comment image</summary>
+<img src="docs/features/create-task-comment.png">
+<img src="docs/features/create-task-comment-1.png">
+</details>
+
+- Covered in user stories: 10
+
+### Edit task comment
+
+Edit task comment is a feature of the Tick It site, users will have 
+
+<details>
+<summary>Edit task comment image</summary>
+<img src="docs/features/edit-task-comment.png">
+<img src="docs/features/edit-task-comment-1.png">
+</details>
+
+- Covered in user stories: 11
+
+### Delete task comment
+
+Delete task comment is a feature of the Tick It site, users will have 
+
+<details>
+<summary>Delete task comment image</summary>
+<img src="docs/features/delete-task-comment.png">
+<img src="docs/features/delete-task-comment-1.png">
+</details>
+
+- Covered in user stories: 11, 28
+
+
+### Task list
+
+Task list is a feature of the Tick It site, users will have 
+
+<details>
+<summary>Task list image</summary>
+<img src="docs/features/task-list.png">
+<img src="docs/features/task-list-1.png">
+</details>
+
+- Covered in user stories: 21, 24
+
+### Task Search
+
+Task Search is a feature of the Tick It site, users will have 
+
+<details>
+<summary>Task Search image</summary>
+<img src="docs/features/task-search.png">
+<img src="docs/features/task-search-1.png">
+</details>
+
+- Covered in user stories: 21, 30
+
+### Watch / Unwatch task
+
+Watch / Unwatch task is a feature of the Tick It site, users will have 
+
+<details>
+<summary>Watch / Unwatch task image</summary>
+<img src="docs/features/watch-task.png">
+<img src="docs/features/watch-task-1.png">
+</details>
+
+- Covered in user stories: 4
+
+### Watch / Unwatch button
+
+Watch / Unwatch button is a feature of the Tick It site, users will have 
+
+<details>
+<summary>Watch / Unwatch button image</summary>
+<img src="docs/features/watch-button.png">
+<img src="docs/features/watch-button-1.png">
+</details>
+
+- Covered in user stories: 3, 4
+
+
+### Watched list
+
+Watched list is a feature of the Tick It site, users will have 
+
+<details>
+<summary>Watched list image</summary>
+<img src="docs/features/watched-list.png">
+<img src="docs/features/watched-list-1.png">
+</details>
+
+- Covered in user stories: 5
+
+### Input Validation
+
+Input Validation is a feature of the Tick It site, users will have 
+
+<details>
+<summary>Input Validation image</summary>
+<img src="docs/features/input-validation.png">
+<img src="docs/features/input-validation-1.png">
+</details>
+
+- Covered in user stories: 1, 14, 26
+
+### Task Count
+
+Task Count is a feature of the Tick It site, users will have 
+
+<details>
+<summary>Task Count image</summary>
+<img src="docs/features/task-count.png">
+<img src="docs/features/task-count-1.png">
+</details>
+
+- Covered in user stories: 17
+
+### Create Pack
+
+Create Pack is a feature of the Tick It site, users will have 
+
+<details>
+<summary>Create Pack image</summary>
+<img src="docs/features/create-pack.png">
+<img src="docs/features/create-pack-1.png">
+</details>
+
+- Covered in user stories: ??
+
+### Edit Pack
+
+Edit Pack is a feature of the Tick It site, users will have 
+
+<details>
+<summary>Edit Pack image</summary>
+<img src="docs/features/edit-pack.png">
+<img src="docs/features/edit-pack-1.png">
+</details>
+
+- Covered in user stories: ??
+
+### Delete Pack
+
+Delete Pack is a feature of the Tick It site, users will have 
+
+<details>
+<summary>Delete Pack image</summary>
+<img src="docs/features/delete-pack.png">
+<img src="docs/features/delete-pack-1.png">
+</details>
+
+- Covered in user stories: ??
+
+### Responsiveness
+
+Responsiveness is a feature of the Tick It site, users will have 
+
+<details>
+<summary>Responsiveness image</summary>
+<img src="docs/features/delete-pack.png">
+<img src="docs/features/delete-pack-1.png">
+</details>
+
+- Covered in user stories: 29
+
+### Search Bar
+
+Search Bar is a feature of the Tick It site, users will have 
+
+<details>
+<summary>Search Bar image</summary>
+<img src="docs/features/search-bar.png">
+<img src="docs/features/search-bar-1.png">
+</details>
+
+- Covered in user stories: 29
+
+### Contact
+
+Contact is a feature of the Tick It site, users will have 
+
+<details>
+<summary>Contact image</summary>
+<img src="docs/features/contact.png">
+<img src="docs/features/contact-1.png">
+</details>
+
+- Covered in user stories: 22
+
+### Error pages
+
+Error pages is a feature of the Tick It site, users will have 
+
+<details>
+<summary>Error pages image</summary>
+<img src="docs/features/error-pages.png">
+<img src="docs/features/error-pages-1.png">
+</details>
+
+- Covered in user stories: 31
+
+### Site Feedback
+
+Site Feedback is a feature of the Tick It site, users will have 
+
+<details>
+<summary>Site Feedback image</summary>
+<img src="docs/features/site-feedback.png">
+<img src="docs/features/site-feedback-1.png">
+</details>
+
+- Covered in user stories: 23
+
+### Users list
+
+Users list is a feature of the Tick It site, users will have 
+
+<details>
+<summary>Users list image</summary>
+<img src="docs/features/users-list.png">
+<img src="docs/features/users-list-1.png">
+</details>
+
+- Covered in user stories: 25
+
 
 
 ## Future features / improvements
