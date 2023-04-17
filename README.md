@@ -243,12 +243,18 @@ Balsamiq was used to create wireframes of the sites pages
 
 | Package       | Version        |
 | ------------- | ------------- |
-| lib | x.x.x |
-| lib | x.x.x |
-| lib | x.x.x |
-| lib | x.x.x |
-| lib | x.x.x |
-| lib | x.x.x |
+| axios |1.3.4 |
+| bootstrap | 4.6.0 |
+| jwt-decode | 3.1.2 |
+| react-bootstrap | 1.6.3 |
+| react-chartjs-2 | 3.0.4 |
+| react-dom | 17.0.2 |
+| react-infinite-scroll-component |6.1.0 |
+| react-multi-select-component | 4.3.4|
+| react-router-dom | 5.3.0 |
+| react-scripts | 5.0.1 |
+| react-scroll | 1.8.9|
+
 
 
 
