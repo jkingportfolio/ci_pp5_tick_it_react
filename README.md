@@ -7,29 +7,54 @@ Developer: Jamie King
 
 
 ## Table of Contents
-  - [About](#about)
-  - [Project Goals](#project-goals)
-  - [User Stories](#user-stories)
-  - [Design](#design)
-    - [Colours](#colours)
-    - [Fonts](#fonts)
-    - [Wireframes](#wireframes)
-  - [Technologies Used](#technologies-used)
-    - [Languages](#languages)
-    - [Libraries, frameworks and dependencies](#libraries-frameworks-and-dependencies)
-    - [Tools & Programs](#tools--programs)
-  - [Front-End](#front-end)
-  - [Back-End API](#back-end-api)
-  - [Features](#features)
-  - [Future features / improvements](#future-features--improvements)
-  - [Validation](#validation)
-  - [Testing](#testing)
-    - [Manual testing of user stories](#manual-testing-of-user-stories)
-    - [Performing tests on various devices](#performing-tests-on-various-devices)
-    - [Browser compatibility](#browser-compatibility)
-  - [Bugs](#bugs)
-  - [Config](#config)
-  - [Credits](#credits)
+  1. [About](#about)
+  2. [Project Goals](#project-goals)
+  3. [User Experience](#user-experience)
+    1. [Target Audience](#target-audience)
+    2. [User Requirements and Expectations](#user-requirements-and-expectations)
+    3. [User Stories](#user-stories)
+    4. [Site Owner Stories](#site-owner-stories)
+  4. [Technical Design](#technical-design)
+    1. [Agile Design](#agile-design)
+    2. [CRUD Functionality](#crud-functionality)
+    3. [Colours](#colours)
+    4. [Fonts](#fonts)
+    5. [Wireframes](#wireframes)
+  5. [Technologies Used](#technologies-used)
+    - [Coding Languages](#coding-languages)
+    - [Frameworks and Tools](#frameworks-and-tools)
+    - [Libraries](#libraries)
+  6. [Front-End](#front-end)
+    1. [React](#react)
+  7. [Back-End API](#back-end-api)
+    1. [Django REST Framework](#django-rest-framework)
+  8. [Features](#features)
+  9. [Future features / improvements](#future-features--improvements)
+  10. [Validation](#validation)
+    1. [HTML](#html-validation)
+    2. [CSS](#css-validation)
+    3. [Javascript](#javascript-validation)
+    4. [JSX](#jsx-validation)
+    5. [Python](#python-validation)
+    6. [Chrome Dev Tools Lighthouse](#chrome-dev-tools-lighthouse-validation)
+    6. [WAVE Validation](#wave-validation)
+  11. [Testing](#testing)
+    1. [Device Testing](#device-testing)
+    2. [Browser Compatibility](#browser-compatibility)
+    3. [Manual Testing](#manual-testing)
+    4. [Automated Testing](#automated-testing)
+  12. [Bugs](#bugs)
+  13. [Configuration](#configuration)
+  14. [Deployment](#deployment)
+    1. [Heroku](#heroku)
+    2. [Forking GitHub Repo](#forking-the-github-repository)
+    3. [Clone a GitHub Repo](#clone-a-github-repository)
+  14. [Credits](#credits)
+    1. [Tutorial](#tutorials)
+    2. [Code](#code)
+    3. [Literature](#literature)
+    4. [Misc](#misc)
+  15. [Acknowledgements](#acknowledgements)
 
 
 ## About
@@ -52,7 +77,26 @@ The key functionality aspects:
 - Responsiveness to allow pleasant usage of the app across a range of devices woth varying display sizes
 
 
-## User Stories
+## User Experience
+
+### Target Audience
+
+- People who enjoy 
+- People who 
+
+
+### User Requirements and Expectations
+
+- A great site which provides a high level of interactiveness between users
+- Links and functions to act as expected
+- Notification to provide feedback on expected function outcomes
+- Simple "to the point" content that a user can easily digest
+- Accessibility for impaired users
+- Responsiveness to allow pleasant use across devices of different screen sizes 
+
+
+
+### User Stories
 
 1. As a new user, I can register an account with Tick It so that I can become a member and use the app as intended.
 2. As a user, I can use the navigation bar so that I can seamlessly navigate around the app.
@@ -80,7 +124,7 @@ The key functionality aspects:
 24. As a user, I can scroll through the latest tasks on the app so that I can find new tasks to complete.
 25. As a user, I can browse a list of user accounts so that I can view that particular account.
 
-## Site Owner Stories
+### Site Owner Stories
 
 26. As the site owner, I would want to validate users' data entries on sign up so that users can create a log in which meets the requirements.
 27. As the site owner, I would want to ensure only logged in users can post from their account and edit their profile so that data privacy is ensured.
@@ -94,7 +138,11 @@ The key functionality aspects:
 ##### Back to [top](#tick-it)
 
 
-## Design
+## Technical Design
+
+### Agile Design
+
+### CRUD Functionality
 
 ### Colours
 
@@ -137,14 +185,14 @@ Balsamiq was used to create wireframes of the sites pages
 
 ## Technologies Used
 
-### Languages
+### Coding Languages
 
 - HTML
 - CSS
 - Javascript
   - React (17.0.2)
 
-### Libraries, frameworks and dependencies
+### Frameworks and Tools
 
 - [Axios](https://axios-http.com/docs/intro) - axios were used for promise-based HTTP. Justification: I used axios to send API requests from the React project to the API and avoid any CORS errors when sending cookies.
 - [JWT](https://jwt.io/) - library to decode out JSON Web token. Justification: I used JWT to  from the browser when the user refreshes token expires or the user logs out.
@@ -154,11 +202,6 @@ Balsamiq was used to create wireframes of the sites pages
 - [React Router](https://v5.reactrouter.com/web/guides/quick-start) - Justification: I used this library to enable navigation between views of components and to have the ability to control what is presented to the user based on the URL they have accessed in the browser. 
 - [React ChartJS2](https://react-chartjs-2.js.org/) - Justification: used for producing the doughnut chart on the main page. 
 - [React Multi Select Component](https://www.npmjs.com/package/react-multi-select-component) - Justification: I used this component to have the ability to select multiple tasks to assign to a pack.
-
-
-
-
-### Tools & Programs
 
 - [Am I Responsive](http://ami.responsivedesign.is/) was used to create the multi-device mock-up at the top of this README.md file
 - [Balsamiq](https://balsamiq.com/) to create the projects wireframes
@@ -175,6 +218,14 @@ Balsamiq was used to create wireframes of the sites pages
   - [ESLint](https://eslint.org/) used to validate applications JSX code
   - [Lighthouse](https://developers.google.com/web/tools/lighthouse/) used to validate performance, accessibility, best practice and SEO of the application
   - [Wave](https://wave.webaim.org/) - used to evaluate the applications accessibility
+
+### Libraries
+
+
+
+
+
+
 
 ##### Back to [top](#tick-it)
 
@@ -285,7 +336,7 @@ Example of potential improvements to this project:
 
 ## Validation 
 
-### HTML
+### HTML Validation
 The W3C Markup Validation Service was used to validate the HTML of the website. No errors were identified. 
 
 <details><summary>Main page</summary> 
@@ -305,7 +356,7 @@ The W3C Markup Validation Service was used to validate the HTML of the website. 
 </details>
 
 
-### CSS
+### CSS Validation
 
 The W3C Jigsaw CSS Validation Service was used to validate the CSS of the website. All CSS modules pass the validation with no errors.
 
@@ -313,8 +364,10 @@ The W3C Jigsaw CSS Validation Service was used to validate the CSS of the websit
 <img src="docs/validation/css-validation-app.png"> 
 </details> 
 
+### Javascript Validation
 
-### JSX
+### JSX Validation 
+
 The JSX code was validated using the ESLint utility.
 
 <details><summary>Eslint validation for components</summary> 
@@ -333,8 +386,9 @@ The JSX code was validated using the ESLint utility.
 <img src="docs/validation/eslint-pages.png"> 
 </details> 
 
+### Python Validation
 
-### Chrome Dev Tools Lighthouse 
+### Chrome Dev Tools Lighthouse Validation
 
 Lighthouse was used to test the performance, accessibility, best practice and SEO of the site. The validation was done for both desktop & mobile.  
 
@@ -355,7 +409,8 @@ Lighthouse was used to test the performance, accessibility, best practice and SE
 
 
 
-### Wave
+### Wave Validation
+
 The WAVE WebAIM web accessibility evaluation tool was used to test the websites accessibility.
 There were a few errors related to missing labels and contrast issues on buttons. These errors were rectified.
 
@@ -369,8 +424,21 @@ There were a few errors related to missing labels and contrast issues on buttons
 
 
 ## Testing
+
+### Device Testing
+
+The website was tested using 
+
+The website was tested on the following devices:
+- Device one
+- Device two
+
+### Browser compatibility
+
+Testing has been carried out on the following browsers:
+- Googe Chrome, version xxx.xxx.xxx.xxx
  
-### Manual testing of user stories
+### Manual testing
 
 1. As a user, I can 
 
@@ -383,20 +451,9 @@ There were a few errors related to missing labels and contrast issues on buttons
 </details>
 
 
-
-### Performing tests on various devices
-
-The website was tested using 
-
-The website was tested on the following devices:
-- Device one
-- Device two
+### Automated testing
 
 
-### Browser compatibility
-
-Testing has been carried out on the following browsers:
-- Googe Chrome, version xxx.xxx.xxx.xxx
 
 ##### Back to [top](#tick-it)
 
@@ -411,7 +468,90 @@ Testing has been carried out on the following browsers:
 ##### Back to [top](#tick-it)
 
 
-## Config
+## Configuration
+
+Think this can be deleted
+
+## Deployment
+
+### Heroku
+
+This project was deployed to [Heroku](https://www.heroku.com) in the project's early stages to allow continual responsive testing. This was achieved via the following steps:
+
+The website was deployed with Heroku by following these steps:
+
+1. Use the "pip freeze -> requiremnts.txt" command in the terminal to save any libraries that need to be installed in the file.
+2. The app uses Cloudinary to host the post images therefore a Cloudinary account will be required. 
+3. Log in to [Cloudinary](https://cloudinary.com/) or create an account for free.
+4. Navigate to the Dashboard on Cloudinary
+<details>
+<summary>Screenshot</summary>
+<img src="readme/deployment/cloudinary-dashboard.png">
+</details>
+
+5. Copy and store the value of the 'API Environment Variable" beginning at cloudinary:// until the end, this will be used in the Heroku Config Vars. 
+6. The app also uses ElephantSQL to host the database
+7. Log in to [ElephantSQL](https://www.elephantsql.com/) or create an account for free.
+8. Click on Create a new instance
+<details>
+<summary>Screenshot</summary>
+<img src="readme/deployment/elephant-sql-instance.png">
+</details>
+
+9. Set up your plan. Give the 'plan' the desired name, select the Tiny Turtle (free) plan and leave tags blank.
+<details>
+<summary>Screenshot</summary>
+<img src="readme/deployment/elephant-sql-plan.png">
+</details>
+
+10. Select the region and choose the nearest data centre to your location.
+<details>
+<summary>Screenshot</summary>
+<img src="readme/deployment/elephant-sql-region.png">
+</details>
+
+11. Click 'review' and if happy with the details presented click on the create instance button.
+<details>
+<summary>Screenshot</summary>
+<img src="readme/deployment/elephant-sql-create.png">
+</details>
+
+12. From the instances section click on the instance with the name that was just created.
+13. Get the ElephantSQL database URL from the instance details page and copy, this will be used in the Heroku Config Vars
+<details>
+<summary>Screenshot</summary>
+<img src="readme/deployment/elephant-sql-url.png">
+</details>
+
+14. Navigate to https://www.heroku.com/ and login or create an account. 
+15. Click the "new" button in the upper right corner and select "create new app".
+<details>
+<summary>Screenshot</summary>
+<img src="readme/deployment/new-app.png">
+</details>
+
+16. Choose an app name and your region and click "Create app".
+<details>
+<summary>Screenshot</summary>
+<img src="readme/deployment/app-name.png">
+</details>
+
+17. Reveal Config Vars and store the required config var names and values as below:
+
+- `CLOUDINARY_URL`: *your Cloudinary URL as obtained above*
+- `DATABASE_URL`: *your ElephantSQL postgres database URL as obtained above*
+- `PORT`: `8000`
+- `SECRET_KEY`: *your secret key*
+
+<details>
+<summary>Screenshot</summary>
+<img src="readme/deployment/config-vars.png">
+</details>
+
+18. Go to the "deploy" tab and pick GitHub as a deployment method.
+19. Search for a repository to connect to and select the branch you would like to build the app from.
+20. If preferred, enable automatic deploys and then deploy branch.
+21. Wait for the app to build and then click on the "View" link which will redirect you to the deployed link.
 
 ### Forking the GitHub Repository
 
