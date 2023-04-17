@@ -7,6 +7,7 @@ import appStyles from "../../App.module.css";
 import { Form, Button, Col, Row, Container, Alert } from "react-bootstrap";
 import axios from "axios";
 import FeedbackMsg from "../../components/FeedBackMsg";
+import PasswordCriteria from "../../components/PasswordCriteria"
 
 const SignUpForm = () => {
   const [signUpData, setSignUpData] = useState({
@@ -98,6 +99,7 @@ const SignUpForm = () => {
                 value={password2}
                 onChange={handleChange}
               />
+              <PasswordCriteria />
             </Form.Group>
             {errors.password2?.map((message, idx) => (
               <Alert key={idx} variant="warning">
