@@ -42,8 +42,7 @@ Developer: Jamie King
     3. [Manual Testing](#manual-testing)
     4. [Automated Testing](#automated-testing)
   12. [Bugs](#bugs)
-  13. [Configuration](#configuration)
-  14. [Deployment](#deployment)
+  13. [Deployment](#deployment)
     1. [Heroku](#heroku)
     2. [Forking GitHub Repo](#forking-the-github-repository)
     3. [Clone a GitHub Repo](#clone-a-github-repository)
@@ -1398,10 +1397,6 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 ##### Back to [top](#tick-it)
 
-
-## Configuration
-
-Think this can be deleted
 
 ## Deployment
 
