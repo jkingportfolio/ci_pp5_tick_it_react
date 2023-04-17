@@ -805,6 +805,10 @@ The W3C Markup Validation Service was used to validate the HTML of the website. 
 <img src="docs/validation/html-validation-profile-page.png">
 </details>
 
+<details><summary>404 page</summary>
+<img src="docs/validation/html-validation-404-page.png">
+</details>
+
 
 ### CSS Validation
 
@@ -945,8 +949,64 @@ Lighthouse was used to test the performance, accessibility, best practice and SE
 The WAVE WebAIM web accessibility evaluation tool was used to test the websites accessibility.
 There were a few errors related to missing labels and contrast issues on buttons. These errors were rectified.
 
-<details><summary>Landing page</summary>
-<img src="docs/validation/wave-landing-page.png">
+<details><summary>Main page (not logged in)</summary> 
+<img src="docs/validation/wave-validation-main-page.png"> 
+</details>
+
+<details><summary>Main page (logged in user)</summary> 
+<img src="docs/validation/wave-validation-main-page.png"> 
+</details> 
+
+<details><summary>Signup page</summary> 
+<img src="docs/validation/wave-validation-signup-page.png"> 
+</details>
+
+<details><summary>Login page</summary> 
+<img src="docs/validation/wave-validation-login-page.png"> 
+</details>
+
+<details><summary>Tasks page</summary>
+<img src="docs/validation/wave-validation-tasks-page.png">
+</details>
+
+<details><summary>Task create page</summary>
+<img src="docs/validation/wave-validation-task-create-page.png">
+</details>
+
+<details><summary>Task detail page</summary>
+<img src="docs/validation/wave-validation-task-detail-page.png">
+</details>
+
+<details><summary>Watched page</summary>
+<img src="docs/validation/wave-validation-watched-page.png">
+</details>
+
+<details><summary>Pack page</summary>
+<img src="docs/validation/wave-validation-packs-page.png">
+</details>
+
+<details><summary>Pack create page</summary>
+<img src="docs/validation/wave-validation-pack-create-page.png">
+</details>
+
+<details><summary>Pack detail page</summary>
+<img src="docs/validation/wave-validation-pack-detail-page.png">
+</details>
+
+<details><summary>Contact page</summary>
+<img src="docs/validation/wave-validation-contact-page.png">
+</details>
+
+<details><summary>Users page</summary>
+<img src="docs/validation/wave-validation-users-page.png">
+</details>
+
+<details><summary>Profile page</summary>
+<img src="docs/validation/wave-validation-profile-page.png">
+</details>
+
+<details><summary>404 page</summary>
+<img src="docs/validation/wave-validation-404-page.png">
 </details>
 
 
