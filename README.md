@@ -1360,7 +1360,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|  site feedback  |   |   |  |
+|  Site feedback  |   |   |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -1380,7 +1380,11 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | **Bug** | **Fix** |
 | ------- | ------- |
-|  |  |
+| Pack not submitting the tasks array to the database |  |
+| Task edit form wont submit if due_date is not set a value | Update due_date to be an empty string and a conditional if statement was placed in the form append which checked if due_date was left empty or null and if true it wouldnt append this field. This fixed the issue as the field in the database has blank and null set to True |
+| Profile list only displaying the first 10 results in Infinite Scroll | fetchMoreData was properly implemented  |
+| assigned to tasks wouldnt display in the assigned to tab | A filter was added that would filter tasks based on if the assigned_to id matched that of the profile owners |
+| Tab active colour would revert to the default | Documentation for react bootstrap didnt mention that the css has to be over written by using activeClassName proprty. Once this was used the issue was resolved |
 
 
 ##### Back to [top](#tick-it)
