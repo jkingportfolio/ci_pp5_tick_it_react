@@ -27,15 +27,20 @@ function PackCreateForm() {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const { data } = await axiosReq.get(`/tasks/`);
-        setTasks(data);
+        let allTasks = [];
+        let nextUrl = "/tasks/";
+        while (nextUrl) {
+          const { data } = await axiosReq.get(nextUrl);
+          allTasks = [...allTasks, ...data.results];
+          nextUrl = data.next;
+        }
+        setTasks({ results: allTasks });
         setHasLoaded(true);
-        console.log(data)
       } catch (err) {
         console.log(err);
       }
     };
-
+  
     setHasLoaded(false);
     const timer = setTimeout(() => {
       fetchTasks();
