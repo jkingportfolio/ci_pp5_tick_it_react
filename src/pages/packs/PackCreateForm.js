@@ -44,7 +44,7 @@ function PackCreateForm() {
     setHasLoaded(false);
     const timer = setTimeout(() => {
       fetchTasks();
-    }, 1000);
+    }, 3000);
     return () => {
       clearTimeout(timer);
     };

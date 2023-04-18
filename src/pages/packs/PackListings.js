@@ -18,16 +18,28 @@ function PackListings({ message, filter = "" }) {
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
   const [query, setQuery] = useState("");
+  const MAX_RETRIES = 3; // maximum number of retries
 
   useEffect(() => {
     const fetchPacks = async () => {
-      try {
-        const { data } = await axiosReq.get(`/packs/?${filter}search=${query}`);
-        setPacks(data);
-        setHasLoaded(true);
-      } catch (err) {
-        console.log(err);
+      let retries = 0;
+      while (retries < MAX_RETRIES) {
+        try {
+          const { data } = await axiosReq.get(`/packs/?${filter}search=${query}`);
+          setPacks(data);
+          setHasLoaded(true);
+          return; // exit the while loop on success
+        } catch (err) {
+          console.log(err);
+          if (err.response && err.response.status === 500) {
+            retries++;
+            console.log(`Retrying fetchPacks, attempt ${retries}`);
+          } else {
+            break; // exit the while loop on other errors
+          }
+        }
       }
+      console.log(`Failed to fetchPacks after ${MAX_RETRIES} retries`);
     };
 
     setHasLoaded(false);

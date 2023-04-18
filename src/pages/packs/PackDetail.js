@@ -4,23 +4,24 @@ import Pack from "./Pack";
 import { Col, Container } from "react-bootstrap";
 import { useParams } from "react-router";
 import appStyles from "../../App.module.css";
+import Asset from "../../components/Asset";
+
 
 function PackDetail() {
   const { id } = useParams();
   const [pack, setPack] = useState({ results: [] });
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const handleMount = async () => {
-      try {
-        const [{ data: pack }] = await Promise.all([
-          axiosReq.get(`/packs/${id}`),
-          // axiosReq.get(`/comments/?pack=${id}`),
-        ]);
-        setPack({ results: [pack] });
-        // setComments(comments);
-      } catch (err) {
-        console.log(err);
-      }
+    const handleMount = () => {
+      axiosReq.get(`/packs/${id}`)
+        .then((response) => {
+          setPack({ results: [response.data] });
+          setIsLoading(false);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     };
 
     handleMount();
@@ -29,16 +30,18 @@ function PackDetail() {
   return (
     <div className="h-100">
       <div className={appStyles.BottomMargin}>
-      <h3
-        className={`${appStyles.LightText} ${appStyles.TextAlignCenter} ${appStyles.AutoMargin}`}
-      >
-        PACK DETAIL
-      </h3>
+        <h3
+          className={`${appStyles.LightText} ${appStyles.TextAlignCenter} ${appStyles.AutoMargin}`}
+        >
+          PACK DETAIL
+        </h3>
       </div>
 
-      <Pack {...pack.results[0]} setPack={setPack} packDetail/>
-      <Container className={appStyles.Content}></Container>
-      <Col md={4} className="d-none d-lg-block p-0 p-lg-2"></Col>
+      {isLoading ? (
+        <Asset spinner />
+      ) : (
+        <Pack {...pack.results[0]} setPack={setPack} packDetail/>
+      )}
     </div>
   );
 }
