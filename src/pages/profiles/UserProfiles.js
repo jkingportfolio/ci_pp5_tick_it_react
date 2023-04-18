@@ -42,7 +42,7 @@ function UserProfiles({ message, filter = "" }) {
     <Row>
       <Col className={`${appStyles.AutoMargin} "py-2 p-0 p-lg-2"`} lg={8}>
       <div className={`${appStyles.TextAlignCenter} ${appStyles.AutoMargin}`}>
-        <h1 className={`${appStyles.LightText}`}>Users</h1>
+        <h3 className={`${appStyles.LightText}`}>Users</h3>
         </div>
         <Form
           onSubmit={(event) => event.preventDefault()}

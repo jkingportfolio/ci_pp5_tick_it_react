@@ -21,6 +21,7 @@ import EditPasswordForm from "./pages/profiles/EditPasswordForm";
 import ContactForm from "./pages/contact/ContactForm";
 import PageNotFound from "./components/PageNotFound";
 import UserProfiles from "./pages/profiles/UserProfiles";
+import PackEditForm from "./pages/packs/PackEditForm";
 
 function App() {
   const currentUser = useCurrentUser();
@@ -90,6 +91,11 @@ function App() {
               render={() => <PackCreateForm />}
             />
             <Route exact path="/packs/:id" render={() => <PackDetail />} />
+            <Route
+              exact
+              path="/packs/:id/edit"
+              render={() => <PackEditForm />}
+            />
             <Route
               exact
               path="/profiles/:id/edit/password"
