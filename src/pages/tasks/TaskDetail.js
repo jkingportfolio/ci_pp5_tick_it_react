@@ -35,6 +35,13 @@ function TaskDetail() {
 
   return (
     <div className="h-100">
+      <div className={appStyles.BottomMargin}>
+        <h3
+          className={`${appStyles.LightText} ${appStyles.TextAlignCenter} ${appStyles.AutoMargin}`}
+        >
+          TASK DETAIL
+        </h3>
+      </div>
       <Task {...task.results[0]} setTask={setTask} taskDetail />
       <Container className={appStyles.Content}>
         {currentUser ? (
