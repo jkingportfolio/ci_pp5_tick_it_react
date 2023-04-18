@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../../styles/Pack.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Card, Container } from "react-bootstrap";
@@ -16,14 +16,12 @@ const Pack = (props) => {
     profile_id,
     profile_image,
     created_on,
-    updated_on,
     pack_description,
-    members,
     tasks,
     packDetail,
-    // setPacks,
   } = props;
 
+  const [taskTitles, setTaskTitles] = useState([]);
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
   const history = useHistory();
@@ -40,6 +38,19 @@ const Pack = (props) => {
       console.log(err);
     }
   };
+
+  useEffect(() => {
+    const fetchTaskTitles = async () => {
+      const titles = await Promise.all(
+        tasks.map(async (taskId) => {
+          const response = await axiosRes.get(`/tasks/${taskId}`);
+          return response.data.title;
+        })
+      );
+      setTaskTitles(titles);
+    };
+    fetchTaskTitles();
+  }, [tasks]);
 
   return (
     <Card className={styles.Pack}>
@@ -77,7 +88,14 @@ const Pack = (props) => {
               </div>
             </div>
             <hr></hr>
-            <div className={appStyles.DarkText}>Tasks: {tasks}</div>
+            <div className={appStyles.DarkText}>
+              Tasks:
+              <ul>
+                {taskTitles.map((title) => (
+                  <li key={title}>{title}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         </Container>
       </Card.Body>
