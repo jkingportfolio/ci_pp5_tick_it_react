@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-
 import styles from "../../styles/CredentialsForm.module.css";
 import appStyles from "../../App.module.css";
-
 import { Form, Button, Col, Row, Container, Alert, Modal } from "react-bootstrap";
 import axios from "axios";
-import FeedbackMsg from "../../components/FeedBackMsg";
 import PasswordCriteria from "../../components/PasswordCriteria";
 
 const SignUpForm = () => {
