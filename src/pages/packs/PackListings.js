@@ -40,7 +40,7 @@ function PackListings({ message, filter = "" }) {
   }, [filter, query, pathname]);
 
   return (
-    <Row className="h-100">
+    <Row>
       <Col className={`${appStyles.AutoMargin} "py-2 p-0 p-lg-2"`} lg={8}>
         <div className={`${appStyles.TextAlignCenter} ${appStyles.AutoMargin}`}>
           <h1 className={`${appStyles.LightText}`}>PACKS</h1>

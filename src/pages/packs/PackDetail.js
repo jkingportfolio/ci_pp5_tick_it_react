@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { axiosReq } from "../../api/axiosDefaults";
 import Pack from "./Pack";
-import { Col, Row } from "react-bootstrap";
+import { Col, Container } from "react-bootstrap";
 import { useParams } from "react-router";
-// import appStyles from "../../App.module.css";
+import appStyles from "../../App.module.css";
 // import PackListings from "./PackListings";
 // import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
@@ -33,13 +33,14 @@ function PackDetail() {
   }, [id]);
 
   return (
-    <Row className="h-100">      
-      <Col className="py-2 p-0 p-lg-2" lg={8}>
-        <Pack {...pack.results[0]} setPack={setPack} packDetail />      
-      </Col>
+    <div className="h-100">    
+    <Pack {...pack.results[0]} setPack={setPack} packDetail />  
+      <Container className={appStyles.Content}>
+              
+      </Container>
       <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
       </Col>
-    </Row>
+    </div>
   );
 }
 
