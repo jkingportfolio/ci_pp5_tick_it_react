@@ -70,18 +70,26 @@ function PackCreateForm() {
 
 const handleSubmit = async (event) => {
   event.preventDefault();
-
   const packDataToSend = {
     title: title,
     pack_description: pack_description,
-    tasks: tasks.map(task => task.value),
+    tasks: tasks.map(task => task.value) // include all values in tasklist
   };
-
-  console.log("Payload:", packDataToSend);
-
+  
   try {
     const { data } = await axiosReq.post("/packs/", packDataToSend);
-    history.push(`/packs/${data.id}`);
+    const packId = data.id;
+    
+    // update the pack with the remaining int values in tasklist
+    for (let i = 0; i < tasks.length; i++) {
+      const taskValue = tasks[i].value;
+      const { data: packData } = await axiosReq.get(`/packs/${packId}/`);
+      const updatedTasks = [...packData.tasks, taskValue];
+      const updateData = { tasks: updatedTasks };
+      await axiosReq.patch(`/packs/${packId}/`, updateData);
+    }
+    
+    history.push(`/packs/${packId}`);
   } catch (err) {
     console.log(err);
     if (err.response?.status !== 401) {
@@ -89,6 +97,34 @@ const handleSubmit = async (event) => {
     }
   }
 };
+
+
+// const handleSubmit = async (event) => {
+//   event.preventDefault();
+//   const packDataToSend = {
+//     title: title,
+//     pack_description: pack_description,
+//   };
+//   let tasksList = [...tasks];
+//   while (tasksList.length > 0) {
+//     const currentTask = tasksList[0].value;
+//     packDataToSend.tasks = [currentTask];
+//     console.log(currentTask)
+//     try {
+//       const { data } = await axiosReq.post("/packs/", packDataToSend);
+//       tasksList = tasksList.slice(1);
+//       if (tasksList.length === 0) {
+//         history.push(`/packs/${data.id}`);
+//       }
+//     } catch (err) {
+//       console.log(err);
+//       if (err.response?.status !== 401) {
+//         setErrors(err.response?.data);
+//       }
+//       break;
+//     }
+//   }
+// };
 
 
   
