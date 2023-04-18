@@ -82,17 +82,21 @@ const Pack = (props) => {
           <hr></hr>
           <div>
             <div>
-              <div className={styles.Posted}>Detail of pack</div>
+              <div className={`${styles.Posted} ${styles.Underline}`}>Detail of pack</div>
               <div className={`${styles.PackBody} ${styles.TopMargin}`}>
                 {pack_description}
               </div>
             </div>
             <hr></hr>
             <div className={appStyles.DarkText}>
-              Tasks:
-              <ul>
-                {taskTitles.map((title) => (
-                  <li key={title}>{title}</li>
+              <div className={` ${styles.TaskJustify} ${styles.Underline}`}>
+              Associated Tasks:
+              </div>              
+              <ul >
+                {taskTitles.map((title, index) => (
+                  <li key={index} className={`${styles.TaskList} ${styles.TaskJustify}`}>
+                    <Link to={`/tasks/${tasks[index]}`} className={appStyles.DarkText}>{title}</Link>
+                  </li>
                 ))}
               </ul>
             </div>
