@@ -4,10 +4,10 @@ import { Link, useHistory } from "react-router-dom";
 import styles from "../../styles/CredentialsForm.module.css";
 import appStyles from "../../App.module.css";
 
-import { Form, Button, Col, Row, Container, Alert } from "react-bootstrap";
+import { Form, Button, Col, Row, Container, Alert, Modal } from "react-bootstrap";
 import axios from "axios";
 import FeedbackMsg from "../../components/FeedBackMsg";
-import PasswordCriteria from "../../components/PasswordCriteria"
+import PasswordCriteria from "../../components/PasswordCriteria";
 
 const SignUpForm = () => {
   const [signUpData, setSignUpData] = useState({
@@ -18,7 +18,7 @@ const SignUpForm = () => {
   const { username, password1, password2 } = signUpData;
 
   const [errors, setErrors] = useState({});
-  const [showAlert, setShowAlert] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const history = useHistory();
 
@@ -33,13 +33,15 @@ const SignUpForm = () => {
     event.preventDefault();
     try {
       await axios.post("/dj-rest-auth/registration/", signUpData);
-      setShowAlert(true);
-      setTimeout(function () {
-        history.push("/signin");
-      }, 3500);
+      setShowModal(true);
     } catch (err) {
       setErrors(err.response?.data);
     }
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+    history.push(`/signin`);    
   };
 
   return (
@@ -49,11 +51,18 @@ const SignUpForm = () => {
           <h1 className={styles.Header}>Sign up!</h1>
           <p>Please enter your sign up details below.</p>
           <Form onSubmit={handleSubmit}>
-            {showAlert && (
-              <FeedbackMsg
-                variant="info"
-                message="Signup successful, redirecting to log in page!"
-              />
+            {showModal && (
+              <Modal show={showModal} onHide={handleCloseModal} centered={true}>
+                <Modal.Header closeButton>
+                  <Modal.Title>Success</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>Account created successfully!</Modal.Body>
+                <Modal.Footer>
+                  <Button variant="secondary" onClick={handleCloseModal}>
+                    Close
+                  </Button>
+                </Modal.Footer>
+              </Modal>
             )}
             <Form.Group controlId="username">
               <Form.Label className="d-none">username</Form.Label>

@@ -3,16 +3,13 @@ import { MultiSelect } from "react-multi-select-component";
 import { Alert, Form, Button, Col, Container } from "react-bootstrap";
 import { useHistory } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
-import axios from "axios";
-import styles from "../../styles/PackCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
-import TasksListings from "../tasks/TasksListings";
+
 import Asset from "../../components/Asset";
-import NoResults from "../../assets/no-results.png";
+
 
 function PackCreateForm() {
   const [errors, setErrors] = useState({});
-  // const [users, setUsers] = useState([]);
   const [tasksListing, setTasks] = useState({ results: [] });
   const [packData, setPackData] = useState({
     title: "",
@@ -33,7 +30,7 @@ function PackCreateForm() {
         const { data } = await axiosReq.get(`/tasks/`);
         setTasks(data);
         setHasLoaded(true);
-        console.log(data);
+        console.log(data)
       } catch (err) {
         console.log(err);
       }
@@ -53,6 +50,7 @@ function PackCreateForm() {
     value: taskListing.id,
   }));
 
+
   const handleChange = (event) => {
     setPackData({
       ...packData,
@@ -69,36 +67,6 @@ function PackCreateForm() {
       })),
     });
   };
-
-  // const handleSubmit = async (event) => {
-  //   event.preventDefault();
-  //   const packDataToSend = {
-  //     title: title,
-  //     pack_description: pack_description,
-  //     tasks: tasks.map(task => task.value) // include all values in tasklist
-  //   };
-
-  //   try {
-  //     const { data } = await axiosReq.post("/packs/", packDataToSend);
-  //     const packId = data.id;
-
-  //     // update the pack with the remaining int values in tasklist
-  //     for (let i = 0; i < tasks.length; i++) {
-  //       const taskValue = tasks[i].value;
-  //       const { data: packData } = await axiosReq.get(`/packs/${packId}/`);
-  //       const updatedTasks = [...packData.tasks, taskValue];
-  //       const updateData = { tasks: updatedTasks };
-  //       await axiosReq.patch(`/packs/${packId}/`, updateData);
-  //     }
-
-  //     history.push(`/packs/${packId}`);
-  //   } catch (err) {
-  //     console.log(err);
-  //     if (err.response?.status !== 401) {
-  //       setErrors(err.response?.data);
-  //     }
-  //   }
-  // };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -173,11 +141,14 @@ function PackCreateForm() {
       <Form.Group>
         <Form.Label>Tasks</Form.Label>
         <MultiSelect
+          name="tasks"
           options={taskOptions}
           value={tasks}
           onChange={handleMultiSelectChange}
-          labelledBy="Select"
-          className={styles.MultiSelect}
+          isMulti
+          menuPortalTarget={document.body}
+          menuPosition={'fixed'}
+          menuPlacement={'auto'}
         />
 
         {errors?.tasks?.map((message, idx) => (
