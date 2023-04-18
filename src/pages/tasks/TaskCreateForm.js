@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
 
-import { Alert, Form, Button, Col } from "react-bootstrap";
+import { Alert, Form, Button, Col, Modal } from "react-bootstrap";
 
 import appStyles from "../../App.module.css";
 
 import { useHistory } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import axios from "axios";
-import FeedbackMsg from "../../components/FeedBackMsg";
 
 function TaskCreateForm() {
   const [errors, setErrors] = useState({});
   const [users, setUsers] = useState([]);
-  const [showAlert, setShowAlert] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  
 
   useEffect(() => {
     axios
@@ -53,16 +53,18 @@ function TaskCreateForm() {
 
     try {
       const { data } = await axiosReq.post("/tasks/", formData);
-      setShowAlert(true);
-      setTimeout(function () {
-        history.push(`/tasks/${data.id}`);
-      }, 3500);
+      setShowModal(true);
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }
     }
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+    history.push(`/tasks/`);  
   };
 
   const textFields = (
@@ -174,26 +176,37 @@ function TaskCreateForm() {
         </Alert>
       ))}
 
+      <Button className={`${appStyles.Button}`} type="submit">
+        Submit
+      </Button>
+
       <Button
         className={`${appStyles.Button}`}
         onClick={() => history.goBack()}
       >
         Cancel
       </Button>
-      <Button className={`${appStyles.Button}`} type="submit">
-        Submit
-      </Button>
+      
     </div>
   );
 
   return (
     <Form onSubmit={handleSubmit}>
-      {showAlert && (
-          <FeedbackMsg
-            variant="info"
-            message="Task created successfully! Redirecting to task detail."
-          />
-        )}
+      {showModal && (
+        <Modal show={showModal} onHide={handleCloseModal} centered={true}>
+          <Modal.Header closeButton>
+            <Modal.Title>Success</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            Task created successfully!
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleCloseModal}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      )}
       <div className={appStyles.CenterAlignForm}>
         <Col md={7} lg={8}>
           <div
