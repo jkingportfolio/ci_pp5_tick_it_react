@@ -284,9 +284,7 @@ There were various components created and reused across this application.
 
 - `<Avatar />` - resuable component, used to display the relevant user profile picture. This component uses props which can specify the source of the image and also its size, an example of this components re-use ability is the image size on the profile page being bigger than that of the one in the Nav Bar yet it is the same component and source image used.
 
-- `<DropDown />` - resuable component, used to display the three dots option button based on the required rights of the user and the item in question for example if a user is on their own profile the drop down to edit the profile will appear, however this will not be the case when viewing other users profile pages.
-
-- `<FeedBackMsg />` - resuable component, used to display a bootstrap alart based on the message prop it has been provided. 
+- `<DropDown />` - resuable component, used to display the three dots option button based on the required rights of the user and the item in question for example if a user is on their own profile the drop down to edit the profile will appear, however this will not be the case when viewing other users profile pages. 
 
 - `<HighPriorityTasks />` - specific component, used to display a filtered result of all task with the priority status of HIGH.
 
@@ -819,10 +817,6 @@ The W3C Jigsaw CSS Validation Service was used to validate the CSS of the websit
 
 <details><summary>DropdDown.module.css</summary> 
 <img src="docs/validation/css-validation-drop-down.png"> 
-</details>
-
-<details><summary>FeedBackMsg.module.css</summary> 
-<img src="docs/validation/css-validation-feedback-msg.png"> 
 </details>
 
 <details><summary>LandingPage.module.css</summary> 
