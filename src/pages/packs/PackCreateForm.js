@@ -7,6 +7,8 @@ import axios from "axios";
 import styles from "../../styles/PackCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
 import TasksListings from "../tasks/TasksListings";
+import Asset from "../../components/Asset";
+import NoResults from "../../assets/no-results.png";
 
 function PackCreateForm() {
   const [errors, setErrors] = useState({});
@@ -22,6 +24,8 @@ function PackCreateForm() {
   const history = useHistory();
 
   const [hasLoaded, setHasLoaded] = useState(false);
+
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const fetchTasks = async () => {
@@ -44,13 +48,10 @@ function PackCreateForm() {
     };
   }, []);
 
-
   const taskOptions = tasksListing.results.map((taskListing) => ({
     label: taskListing.title,
     value: taskListing.id,
   }));
-
-
 
   const handleChange = (event) => {
     setPackData({
@@ -59,76 +60,76 @@ function PackCreateForm() {
     });
   };
 
-  
-
   const handleMultiSelectChange = (selected) => {
-  setPackData({
-    ...packData,
-    tasks: selected.map((option) => ({ label: option.label, value: option.value })),
-  });
-};
-
-const handleSubmit = async (event) => {
-  event.preventDefault();
-  const packDataToSend = {
-    title: title,
-    pack_description: pack_description,
-    tasks: tasks.map(task => task.value) // include all values in tasklist
+    setPackData({
+      ...packData,
+      tasks: selected.map((option) => ({
+        label: option.label,
+        value: option.value,
+      })),
+    });
   };
-  
-  try {
-    const { data } = await axiosReq.post("/packs/", packDataToSend);
-    const packId = data.id;
-    
-    // update the pack with the remaining int values in tasklist
-    for (let i = 0; i < tasks.length; i++) {
-      const taskValue = tasks[i].value;
-      const { data: packData } = await axiosReq.get(`/packs/${packId}/`);
-      const updatedTasks = [...packData.tasks, taskValue];
-      const updateData = { tasks: updatedTasks };
-      await axiosReq.patch(`/packs/${packId}/`, updateData);
+
+  // const handleSubmit = async (event) => {
+  //   event.preventDefault();
+  //   const packDataToSend = {
+  //     title: title,
+  //     pack_description: pack_description,
+  //     tasks: tasks.map(task => task.value) // include all values in tasklist
+  //   };
+
+  //   try {
+  //     const { data } = await axiosReq.post("/packs/", packDataToSend);
+  //     const packId = data.id;
+
+  //     // update the pack with the remaining int values in tasklist
+  //     for (let i = 0; i < tasks.length; i++) {
+  //       const taskValue = tasks[i].value;
+  //       const { data: packData } = await axiosReq.get(`/packs/${packId}/`);
+  //       const updatedTasks = [...packData.tasks, taskValue];
+  //       const updateData = { tasks: updatedTasks };
+  //       await axiosReq.patch(`/packs/${packId}/`, updateData);
+  //     }
+
+  //     history.push(`/packs/${packId}`);
+  //   } catch (err) {
+  //     console.log(err);
+  //     if (err.response?.status !== 401) {
+  //       setErrors(err.response?.data);
+  //     }
+  //   }
+  // };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setLoading(true);
+    const packDataToSend = {
+      title: title,
+      pack_description: pack_description,
+      tasks: tasks.map((task) => task.value),
+    };
+
+    try {
+      const { data } = await axiosReq.post("/packs/", packDataToSend);
+      const packId = data.id;
+
+      for (let i = 0; i < tasks.length; i++) {
+        const taskValue = tasks[i].value;
+        const { data: packData } = await axiosReq.get(`/packs/${packId}/`);
+        const updatedTasks = [...packData.tasks, taskValue];
+        const updateData = { tasks: updatedTasks };
+        await axiosReq.patch(`/packs/${packId}/`, updateData);
+      }
+
+      setLoading(false);
+      history.push(`/packs/${packId}`);
+    } catch (err) {
+      console.log(err);
+      if (err.response?.status !== 401) {
+        setErrors(err.response?.data);
+      }
     }
-    
-    history.push(`/packs/${packId}`);
-  } catch (err) {
-    console.log(err);
-    if (err.response?.status !== 401) {
-      setErrors(err.response?.data);
-    }
-  }
-};
-
-
-// const handleSubmit = async (event) => {
-//   event.preventDefault();
-//   const packDataToSend = {
-//     title: title,
-//     pack_description: pack_description,
-//   };
-//   let tasksList = [...tasks];
-//   while (tasksList.length > 0) {
-//     const currentTask = tasksList[0].value;
-//     packDataToSend.tasks = [currentTask];
-//     console.log(currentTask)
-//     try {
-//       const { data } = await axiosReq.post("/packs/", packDataToSend);
-//       tasksList = tasksList.slice(1);
-//       if (tasksList.length === 0) {
-//         history.push(`/packs/${data.id}`);
-//       }
-//     } catch (err) {
-//       console.log(err);
-//       if (err.response?.status !== 401) {
-//         setErrors(err.response?.data);
-//       }
-//       break;
-//     }
-//   }
-// };
-
-
-  
-
+  };
 
   const textFields = (
     <div className="text-center">
@@ -199,18 +200,28 @@ const handleSubmit = async (event) => {
   );
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <div className={appStyles.CenterAlignForm}>
-        <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
-          <Container
-            className={`${appStyles.Content} ${appStyles.TextAlignCenter} d-flex flex-column justify-content-center`}
-          >
-            <h3>Create pack</h3>
-            <div className={appStyles.Content}>{textFields}</div>
-          </Container>
-        </Col>
-      </div>
-    </Form>
+    <React.Fragment>
+      {loading && (
+        <div className="SpinnerOverlay">
+          <Asset spinner />
+        </div>
+      )}
+      <Form onSubmit={handleSubmit}>
+        <div className={appStyles.CenterAlignForm}>
+          <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
+            <Container
+              className={`${appStyles.Content} ${appStyles.TextAlignCenter} d-flex flex-column justify-content-center`}
+            >
+              <div className={appStyles.SpinnerCentered}>
+                {loading && <Asset spinner />}
+              </div>
+              <h3>Create pack</h3>
+              <div className={appStyles.Content}>{textFields}</div>
+            </Container>
+          </Col>
+        </div>
+      </Form>
+    </React.Fragment>
   );
 }
 
