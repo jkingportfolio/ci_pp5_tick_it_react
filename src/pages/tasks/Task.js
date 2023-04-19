@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from "react";
 import styles from "../../styles/Task.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { Card, Container, OverlayTrigger, Tooltip } from "react-bootstrap";
+import {
+  Card,
+  Container,
+  OverlayTrigger,
+  Tooltip,
+  Modal,
+  Button,
+} from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
@@ -31,6 +38,7 @@ const Task = (props) => {
   const is_owner = currentUser?.username === owner;
   const history = useHistory();
   const [assignedUser, setAssignedUser] = useState(null);
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
 
   const handleEdit = () => {
     history.push(`/tasks/${id}/edit`);
@@ -42,6 +50,7 @@ const Task = (props) => {
       history.goBack();
     } catch (err) {
       console.log(err);
+      setShowDeleteModal(false);
     }
   };
 
@@ -101,9 +110,33 @@ const Task = (props) => {
       <Card.Body className={styles.cardbody}>
         <div className={styles.PositionedButton}>
           {is_owner && taskDetail && (
-            <DropDown handleEdit={handleEdit} handleDelete={handleDelete} />
+            <DropDown
+              handleEdit={handleEdit}
+              handleDelete={() => setShowDeleteModal(true)}
+            />
           )}
         </div>
+        <Modal
+          show={showDeleteModal}
+          onHide={() => setShowDeleteModal(false)}
+          centered={true}
+        >
+          <Modal.Header closeButton>
+            <Modal.Title>Confirm Delete</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>Are you sure you want to delete this task?</Modal.Body>
+          <Modal.Footer>
+            <Button
+              variant="secondary"
+              onClick={() => setShowDeleteModal(false)}
+            >
+              Cancel
+            </Button>
+            <Button variant="danger" onClick={handleDelete}>
+              Delete
+            </Button>
+          </Modal.Footer>
+        </Modal>
         <Link to={`/tasks/${id}`}>
           <Container className={styles.title}>Task: {title}</Container>
         </Link>
@@ -150,12 +183,13 @@ const Task = (props) => {
             <Link
               to={`/profiles/${assigned_to}`}
               className={`${styles.Flex} ${styles.NavLink}`}
-              
             >
               <div>Assigned to: {assignedUser}</div>
             </Link>
           ) : (
-            <div className={`${styles.Flex} ${styles.NavLink}`}>Assigned to: {assignedUser}</div>
+            <div className={`${styles.Flex} ${styles.NavLink}`}>
+              Assigned to: {assignedUser}
+            </div>
           )}
           <div className={`${styles.watchbtn} ${appStyles.AutoMargin}`}>
             {is_owner ? (

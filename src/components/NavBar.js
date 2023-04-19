@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Navbar, Container, Nav, Modal, Button } from "react-bootstrap";
+import { Navbar, Container, Nav } from "react-bootstrap";
 import logo from "../assets/logo.png";
 import styles from "../styles/NavBar.module.css";
 import appStyles from "../App.module.css";
@@ -23,18 +23,12 @@ const NavBar = () => {
   const handleSignOut = async () => {
     try {
       await axios.post("dj-rest-auth/logout/");
-      setCurrentUser(null);
-      // setShowModal(true);      
+      setCurrentUser(null);      
     } catch (err) {
       console.log(err);
     }
   };
 
-  // const handleCloseModal = () => {
-    
-  //   setShowModal(false);
-  //   history.push("/");
-  // };
 
   const addTaskIcon = (
     <NavLink
@@ -86,21 +80,6 @@ const NavBar = () => {
         <i className="fas fa-users"></i>Users
       </NavLink>
       <NavLink className={styles.NavLink} to="/" onClick={handleSignOut}>
-      {/* {showModal && (
-        <Modal show={showModal} onHide={handleCloseModal} centered={true}>
-          <Modal.Header closeButton>
-            <Modal.Title>Success</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            Log out successful, we will get back you shortly!
-          </Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={handleCloseModal}>
-              Close
-            </Button>
-          </Modal.Footer>
-        </Modal>
-      )} */}
         <i className="fas fa-sign-out-alt"></i>Log out
       </NavLink>
       <NavLink
