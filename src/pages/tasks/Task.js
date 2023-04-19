@@ -105,6 +105,14 @@ const Task = (props) => {
     }
   }, [assigned_to]);
 
+  const options = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+  };
+
   return (
     <Card className={styles.Task}>
       <Card.Body className={styles.cardbody}>
@@ -157,7 +165,18 @@ const Task = (props) => {
             <div className={styles.Posted}>Posted on: {created_on}</div>
           </div>
           <div className={`{${styles.Posted} ${styles.TopMargin}`}>
-            <div className={styles.Posted}>Due on: {due_date}</div>
+            <div className={styles.Posted}>
+              Due Date:
+              {due_date && isNaN(Date.parse(due_date)) === false
+                ? ` ${new Date(due_date)
+                    .toLocaleString("en-US", {
+                      day: "2-digit",
+                      month: "2-digit",
+                      year: "numeric",
+                    })
+                    .replace(/\//g, " ")}`
+                : " No date allocated"}
+            </div>
           </div>
           <div className={`{${styles.Posted} ${styles.TopMargin}`}>
             <div className={styles.Posted}>Priority: {priority}</div>
