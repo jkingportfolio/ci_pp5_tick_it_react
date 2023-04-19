@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Navbar, Container, Nav } from "react-bootstrap";
+import { Navbar, Container, Nav, Modal, Button } from "react-bootstrap";
 import logo from "../assets/logo.png";
 import styles from "../styles/NavBar.module.css";
 import appStyles from "../App.module.css";
@@ -15,18 +15,24 @@ import useClickOutsideToggle from "../hooks/useClickOutsideToggle";
 const NavBar = () => {
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
-  const [showModal, setShowModal] = useState(false);
   const history = useHistory();
+  const [showModal, setShowModal] = useState(false);
 
   const { expanded, setExpanded, ref } = useClickOutsideToggle();
 
   const handleSignOut = async () => {
     try {
       await axios.post("dj-rest-auth/logout/");
-      setCurrentUser(null);      
+      setCurrentUser(null); 
+      setShowModal(true); 
     } catch (err) {
       console.log(err);
     }
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+    history.push("/");
   };
 
 
@@ -143,6 +149,17 @@ const NavBar = () => {
           </Nav>
         </Navbar.Collapse>
       </Container>
+      <Modal show={showModal} onHide={handleCloseModal} centered={true}>
+                <Modal.Header closeButton>
+                  <Modal.Title>Good bye!</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>Thank you for visiting, see you soon!</Modal.Body>
+                <Modal.Footer>
+                  <Button variant="secondary" onClick={handleCloseModal}>
+                    Close
+                  </Button>
+                </Modal.Footer>
+              </Modal>
     </Navbar>
   );
 };
