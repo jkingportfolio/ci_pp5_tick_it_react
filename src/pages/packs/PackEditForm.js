@@ -6,7 +6,6 @@ import { axiosReq } from "../../api/axiosDefaults";
 import appStyles from "../../App.module.css";
 import Asset from "../../components/Asset";
 
-
 function PackEditForm() {
   const [errors, setErrors] = useState({});
   const [tasksListing, setTasks] = useState({ results: [] });
@@ -25,12 +24,7 @@ function PackEditForm() {
     const handleMount = async () => {
       try {
         const { data } = await axiosReq.get(`/packs/${id}/`);
-        const {
-          title,
-          pack_description,
-          tasks,
-          is_owner,
-        } = data;
+        const { title, pack_description, tasks, is_owner } = data;
         is_owner
           ? setPackData({
               title,
@@ -52,7 +46,7 @@ function PackEditForm() {
         const { data } = await axiosReq.get(`/tasks/`);
         setTasks(data);
         setHasLoaded(true);
-        console.log(data)
+        console.log(data);
       } catch (err) {
         console.log(err);
       }
@@ -71,7 +65,6 @@ function PackEditForm() {
     label: taskListing.title,
     value: taskListing.id,
   }));
-
 
   const handleChange = (event) => {
     setPackData({
@@ -169,8 +162,8 @@ function PackEditForm() {
           onChange={handleMultiSelectChange}
           isMulti
           menuPortalTarget={document.body}
-          menuPosition={'fixed'}
-          menuPlacement={'auto'}
+          menuPosition={"fixed"}
+          menuPlacement={"auto"}
         />
 
         {errors?.tasks?.map((message, idx) => (
@@ -179,15 +172,14 @@ function PackEditForm() {
           </Alert>
         ))}
       </Form.Group>
-
+      <Button className={`${appStyles.Button}`} type="submit">
+        Submit
+      </Button>
       <Button
         className={`${appStyles.Button}`}
         onClick={() => history.goBack()}
       >
         Cancel
-      </Button>
-      <Button className={`${appStyles.Button}`} type="submit">
-        Submit
       </Button>
     </div>
   );

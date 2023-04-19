@@ -27,7 +27,7 @@ const ContactForm = () => {
     e.preventDefault();
     try {
       const res = await axios.post("/contact/", form);
-      setShowModal(true); 
+      setShowModal(true);
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
@@ -127,14 +127,14 @@ const ContactForm = () => {
       <div
         className={`${appStyles.FlexDisplay}  ${appStyles.JustifyContentCenter}`}
       >
+        <Button className={`${appStyles.Button}`} type="submit">
+          Submit
+        </Button>
         <Button
           className={`${appStyles.Button}`}
           onClick={() => history.goBack()}
         >
           Cancel
-        </Button>
-        <Button className={`${appStyles.Button}`} type="submit">
-          Submit
         </Button>
       </div>
     </div>
@@ -169,7 +169,6 @@ const ContactForm = () => {
       </div>
     </Form>
   );
-
 };
 
 export default ContactForm;

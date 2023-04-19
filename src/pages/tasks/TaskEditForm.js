@@ -247,16 +247,16 @@ function TaskEditForm() {
           {message}
         </Alert>
       ))}
-
+        <Button className={`${appStyles.Button}`} type="submit">
+        Save
+      </Button>
       <Button
         className={`${appStyles.Button}`}
         onClick={() => history.goBack()}
       >
         Cancel
       </Button>
-      <Button className={`${appStyles.Button}`} type="submit">
-        Save
-      </Button>
+
     </div>
   );
 

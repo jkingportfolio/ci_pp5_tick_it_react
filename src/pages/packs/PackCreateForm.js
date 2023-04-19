@@ -161,16 +161,16 @@ function PackCreateForm() {
           </Alert>
         ))}
       </Form.Group>
-
+      <Button className={`${appStyles.Button}`} type="submit">
+        Submit
+      </Button>
       <Button
         className={`${appStyles.Button}`}
         onClick={() => history.goBack()}
       >
         Cancel
       </Button>
-      <Button className={`${appStyles.Button}`} type="submit">
-        Submit
-      </Button>
+
     </div>
   );
 

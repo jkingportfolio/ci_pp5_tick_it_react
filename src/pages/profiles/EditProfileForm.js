@@ -1,6 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useHistory, useParams, Link } from "react-router-dom";
-import { Form, Button, Image, Col, Container, Alert, Modal, Row } from "react-bootstrap";
+import {
+  Form,
+  Button,
+  Image,
+  Col,
+  Container,
+  Alert,
+  Modal,
+  Row,
+} from "react-bootstrap";
 import { axiosReq } from "../../api/axiosDefaults";
 import {
   useCurrentUser,
@@ -53,7 +62,7 @@ const EditProfileForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    
+
     const formData = new FormData();
     formData.append("name", name);
     formData.append("job_role", job_role);
@@ -116,14 +125,14 @@ const EditProfileForm = () => {
           {message}
         </Alert>
       ))}
+      <Button className={`${appStyles.Button}`} type="submit">
+        Save
+      </Button>
       <Button
         className={`${appStyles.Button}`}
         onClick={() => history.goBack()}
       >
         Cancel
-      </Button>
-      <Button className={`${appStyles.Button}`} type="submit">
-        Save
       </Button>
     </>
   );
@@ -132,74 +141,72 @@ const EditProfileForm = () => {
     <Row>
       <Col className={`${appStyles.AutoMargin} "py-2 p-0 p-lg-2"`} lg={8}>
         <div className={`${appStyles.TextAlignCenter} ${appStyles.AutoMargin}`}>
-        <h1 className={`${appStyles.LightText}`}>Edit Profile</h1>
+          <h1 className={`${appStyles.LightText}`}>Edit Profile</h1>
         </div>
-    <Form onSubmit={handleSubmit}>
-      {showModal && (
-        <Modal show={showModal} onHide={handleCloseModal} centered={true}>
-          <Modal.Header closeButton>
-            <Modal.Title>Success</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            Profile updated successfully!
-          </Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={handleCloseModal}>
-              Close
-            </Button>
-          </Modal.Footer>
-        </Modal>
-      )}
-      <div className={appStyles.Form}>
-        <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
-          <Container
-            className={`${appStyles.Content} d-flex flex-column justify-content-center`}
-          >
-            <div className={appStyles.TextAlignCenter}>
-              <Form.Group>
-                {image && (
-                  <figure>
-                    <Image src={image} fluid />
-                  </figure>
-                )}
-                {errors?.image?.map((message, idx) => (
-                  <Alert variant="warning" key={idx}>
-                    {message}
-                  </Alert>
-                ))}
-                <Form.File
-                  id="image-upload"
-                  ref={imageFile}
-                  accept="image/*"
-                  onChange={(e) => {
-                    if (e.target.files.length) {
-                      setProfileData({
-                        ...profileData,
-                        image: URL.createObjectURL(e.target.files[0]),
-                      });
-                    }
-                  }}
-                />
-                <hr />
-                <div
-                  className={`${styles.Border} ${styles.DivFlexChild} ${styles.ButtonContainer} ${styles.TopMargin}`}
-                >
-                  <Button
-                    className={`${styles.PasswordButton}`}
-                    as={Link}
-                    to={`/profiles/${id}/edit/password`}
-                  >
-                    Change Password
-                  </Button>
+        <Form onSubmit={handleSubmit}>
+          {showModal && (
+            <Modal show={showModal} onHide={handleCloseModal} centered={true}>
+              <Modal.Header closeButton>
+                <Modal.Title>Success</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>Profile updated successfully!</Modal.Body>
+              <Modal.Footer>
+                <Button variant="secondary" onClick={handleCloseModal}>
+                  Close
+                </Button>
+              </Modal.Footer>
+            </Modal>
+          )}
+          <div className={appStyles.Form}>
+            <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
+              <Container
+                className={`${appStyles.Content} d-flex flex-column justify-content-center`}
+              >
+                <div className={appStyles.TextAlignCenter}>
+                  <Form.Group>
+                    {image && (
+                      <figure>
+                        <Image src={image} fluid />
+                      </figure>
+                    )}
+                    {errors?.image?.map((message, idx) => (
+                      <Alert variant="warning" key={idx}>
+                        {message}
+                      </Alert>
+                    ))}
+                    <Form.File
+                      id="image-upload"
+                      ref={imageFile}
+                      accept="image/*"
+                      onChange={(e) => {
+                        if (e.target.files.length) {
+                          setProfileData({
+                            ...profileData,
+                            image: URL.createObjectURL(e.target.files[0]),
+                          });
+                        }
+                      }}
+                    />
+                    <hr />
+                    <div
+                      className={`${styles.Border} ${styles.DivFlexChild} ${styles.ButtonContainer} ${styles.TopMargin}`}
+                    >
+                      <Button
+                        className={`${styles.PasswordButton}`}
+                        as={Link}
+                        to={`/profiles/${id}/edit/password`}
+                      >
+                        Change Password
+                      </Button>
+                    </div>
+                    <div>{textFields}</div>
+                  </Form.Group>
                 </div>
-                <div>{textFields}</div>
-              </Form.Group>
-            </div>
-          </Container>
-        </Col>
-      </div>
-    </Form>
-    </Col>
+              </Container>
+            </Col>
+          </div>
+        </Form>
+      </Col>
     </Row>
   );
 };

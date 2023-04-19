@@ -32,7 +32,7 @@ function CommentEditForm(props) {
             : comment;
         }),
       }));
-      setShowModal(true);     
+      setShowModal(true);
     } catch (err) {
       console.log(err);
     }
@@ -50,9 +50,7 @@ function CommentEditForm(props) {
           <Modal.Header closeButton>
             <Modal.Title>Success</Modal.Title>
           </Modal.Header>
-          <Modal.Body>
-            Comment updated successfully!
-          </Modal.Body>
+          <Modal.Body>Comment updated successfully!</Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleCloseModal}>
               Close
@@ -72,17 +70,17 @@ function CommentEditForm(props) {
       <div className={styles.ButtonDisplay}>
         <Button
           className={appStyles.Button}
-          onClick={() => setShowEditForm(false)}
-          type="button"
-        >
-          Cancel
-        </Button>
-        <Button
-          className={appStyles.Button}
           disabled={!comment_body.trim()}
           type="submit"
         >
           Save
+        </Button>
+        <Button
+          className={appStyles.Button}
+          onClick={() => setShowEditForm(false)}
+          type="button"
+        >
+          Cancel
         </Button>
       </div>
     </Form>
