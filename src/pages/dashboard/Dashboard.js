@@ -52,7 +52,7 @@ const Dashboard = () => {
               className={`${appStyles.DarkText} ${styles.BorderBox}  ${appStyles.TextAlignCenter}`}
             >
               <h3 className={`${appStyles.LightText} ${styles.BorderBox}`}>
-                Incomplete Tasks
+                Not Started Tasks
               </h3>
               <TaskCompleteFilter />
             </Col>
