@@ -333,7 +333,6 @@ Log in is a feature of the Tick It site this allows users to log in and view con
 <details>
 <summary>Log In image</summary>
 <img src="docs/features/login.png">
-<img src="docs/features/login-1.png">
 </details>
 
 - Covered in user stories: 14
@@ -345,7 +344,6 @@ Log Out is a feature of the Tick It site this will give users the ability to log
 <details>
 <summary>Log Out image</summary>
 <img src="docs/features/log-out.png">
-<img src="docs/features/log-out-1.png">
 </details>
 
 - Covered in user stories: 15
@@ -357,7 +355,6 @@ Sign Up is a feature of the Tick It site this will give users the ability to cre
 <details>
 <summary>Sign Up image</summary>
 <img src="docs/features/sign-up.png">
-<img src="docs/features/sign-up-1.png">
 </details>
 
 - Covered in user stories: 1
@@ -369,7 +366,6 @@ Home page is a feature of the Tick It site users will gain an understanding of w
 <details>
 <summary>Home page image</summary>
 <img src="docs/features/home-page.png">
-<img src="docs/features/home-page-1.png">
 </details>
 
 - Covered in user stories: 19
@@ -381,7 +377,6 @@ Nav Bar is a feature of the Tick It site giving users the ability to seamlessly 
 <details>
 <summary>Nav Bar image</summary>
 <img src="docs/features/nav-bar.png">
-<img src="docs/features/nav-bar-1.png">
 </details>
 
 - Covered in user stories: 2
@@ -393,7 +388,6 @@ Profile Section is a feature of the Tick It site giving users some personality o
 <details>
 <summary>Profile Section image</summary>
 <img src="docs/features/profile-section.png">
-<img src="docs/features/profile-section-1.png">
 </details>
 
 - Covered in user stories: 16
@@ -404,8 +398,8 @@ Edit Profile is a feature of the Tick It site giving users the ability to update
 
 <details>
 <summary>Edit Profile image</summary>
-<img src="docs/features/edit-profile.png">
 <img src="docs/features/edit-profile-1.png">
+<img src="docs/features/edit-profile-2.png">
 </details>
 
 - Covered in user stories: 17 & 18
@@ -416,8 +410,8 @@ Change Password is a feature of the Tick It site giving users the ability to cha
 
 <details>
 <summary>Change Password image</summary>
-<img src="docs/features/change-password.png">
 <img src="docs/features/change-password-1.png">
+<img src="docs/features/change-password-2.png">
 </details>
 
 - Covered in user stories: 13
@@ -428,8 +422,11 @@ Create task is a feature of the Tick It site giving users the ability to perform
 
 <details>
 <summary>Create task image</summary>
-<img src="docs/features/create-task.png">
 <img src="docs/features/create-task-1.png">
+<img src="docs/features/create-task-2.png">
+<img src="docs/features/create-task-3.png">
+<img src="docs/features/create-task-4.png">
+<img src="docs/features/create-task-5.png">
 </details>
 
 - Covered in user stories: 12
@@ -441,7 +438,6 @@ Delete task is a feature of the Tick It site giving users the ability to delete 
 <details>
 <summary>Delete task image</summary>
 <img src="docs/features/delete-task.png">
-<img src="docs/features/delete-task-1.png">
 </details>
 
 - Covered in user stories: 7, 12, 28
@@ -453,7 +449,6 @@ Edit task is a feature of the Tick It site giving users the ability to edit thei
 <details>
 <summary>Edit task image</summary>
 <img src="docs/features/edit-task.png">
-<img src="docs/features/edit-task-1.png">
 </details>
 
 - Covered in user stories: 8, 12
@@ -465,7 +460,6 @@ Task comment is a feature of the Tick It site giving users the ability to read o
 <details>
 <summary>Task comment image</summary>
 <img src="docs/features/task-comment.png">
-<img src="docs/features/task-comment-1.png">
 </details>
 
 - Covered in user stories: 9
@@ -477,7 +471,6 @@ Create task comment is a feature of the Tick It site giving users the ability to
 <details>
 <summary>Create task comment image</summary>
 <img src="docs/features/create-task-comment.png">
-<img src="docs/features/create-task-comment-1.png">
 </details>
 
 - Covered in user stories: 10
@@ -489,7 +482,6 @@ Edit task comment is a feature of the Tick It site giving users the ability to e
 <details>
 <summary>Edit task comment image</summary>
 <img src="docs/features/edit-task-comment.png">
-<img src="docs/features/edit-task-comment-1.png">
 </details>
 
 - Covered in user stories: 11
@@ -501,7 +493,6 @@ Delete task comment is a feature of the Tick It site giving users the ability to
 <details>
 <summary>Delete task comment image</summary>
 <img src="docs/features/delete-task-comment.png">
-<img src="docs/features/delete-task-comment-1.png">
 </details>
 
 - Covered in user stories: 11, 28
@@ -513,8 +504,7 @@ Task list is a feature of the Tick It site giving users the ability to view all 
 
 <details>
 <summary>Task list image</summary>
-<img src="docs/features/task-list.png">
-<img src="docs/features/task-list-1.png">
+<img src="docs/features/tasks-list.png">
 </details>
 
 - Covered in user stories: 21, 24
@@ -537,8 +527,9 @@ Watch / Unwatch task is a feature of the Tick It site giving users the ability t
 
 <details>
 <summary>Watch / Unwatch task image</summary>
-<img src="docs/features/watch-task.png">
 <img src="docs/features/watch-task-1.png">
+<img src="docs/features/watch-task-2.png">
+<img src="docs/features/watch-task-3.png">
 </details>
 
 - Covered in user stories: 4
@@ -549,8 +540,9 @@ Watch / Unwatch button is a feature of the Tick It site giving users the ability
 
 <details>
 <summary>Watch / Unwatch button image</summary>
-<img src="docs/features/watch-button.png">
-<img src="docs/features/watch-button-1.png">
+<img src="docs/features/watch-task-1.png">
+<img src="docs/features/watch-task-2.png">
+<img src="docs/features/watch-task-3.png">
 </details>
 
 - Covered in user stories: 3, 4
@@ -563,7 +555,6 @@ Watched list is a feature of the Tick It site giving users the ability to view a
 <details>
 <summary>Watched list image</summary>
 <img src="docs/features/watched-list.png">
-<img src="docs/features/watched-list-1.png">
 </details>
 
 - Covered in user stories: 5
@@ -575,7 +566,6 @@ Input Validation is a feature of the Tick It used throughout the site for form i
 <details>
 <summary>Input Validation image</summary>
 <img src="docs/features/input-validation.png">
-<img src="docs/features/input-validation-1.png">
 </details>
 
 - Covered in user stories: 1, 14, 26
@@ -587,7 +577,6 @@ Task Count is a feature of the Tick It site giving users the ability to display 
 <details>
 <summary>Task Count image</summary>
 <img src="docs/features/task-count.png">
-<img src="docs/features/task-count-1.png">
 </details>
 
 - Covered in user stories: 17
@@ -598,8 +587,8 @@ Create Pack is a feature of the Tick It site giving users the ability to add tas
 
 <details>
 <summary>Create Pack image</summary>
-<img src="docs/features/create-pack.png">
 <img src="docs/features/create-pack-1.png">
+<img src="docs/features/create-pack-2.png">
 </details>
 
 - Covered in user stories: ??
@@ -610,8 +599,8 @@ Edit Pack is a feature of the Tick It site giving users the ability to add or re
 
 <details>
 <summary>Edit Pack image</summary>
-<img src="docs/features/edit-pack.png">
 <img src="docs/features/edit-pack-1.png">
+<img src="docs/features/edit-pack-2.png">
 </details>
 
 - Covered in user stories: ??
@@ -622,8 +611,8 @@ Delete Pack is a feature of the Tick It site giving users the ability to delete 
 
 <details>
 <summary>Delete Pack image</summary>
-<img src="docs/features/delete-pack.png">
 <img src="docs/features/delete-pack-1.png">
+<img src="docs/features/delete-pack-2.png">
 </details>
 
 - Covered in user stories: ??
@@ -634,8 +623,8 @@ Responsiveness is a feature which can be seen through the Tick It site giving us
 
 <details>
 <summary>Responsiveness image</summary>
-<img src="docs/features/delete-pack.png">
-<img src="docs/features/delete-pack-1.png">
+<img src="docs/features/responsiveness-1.png">
+<img src="docs/features/responsiveness-2.png">
 </details>
 
 - Covered in user stories: 29
@@ -659,7 +648,6 @@ Contact is a feature of the Tick It site giving users the ability to contact the
 <details>
 <summary>Contact image</summary>
 <img src="docs/features/contact.png">
-<img src="docs/features/contact-1.png">
 </details>
 
 - Covered in user stories: 22
@@ -670,8 +658,7 @@ Error pages is a feature of the Tick It site which will display a 404 error page
 
 <details>
 <summary>Error pages image</summary>
-<img src="docs/features/error-pages.png">
-<img src="docs/features/error-pages-1.png">
+<img src="docs/features/404.png">
 </details>
 
 - Covered in user stories: 31
@@ -695,7 +682,6 @@ Users list is a feature of the Tick It site giving users the ability to view all
 <details>
 <summary>Users list image</summary>
 <img src="docs/features/users-list.png">
-<img src="docs/features/users-list-1.png">
 </details>
 
 - Covered in user stories: 25
