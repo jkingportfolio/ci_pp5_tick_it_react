@@ -129,7 +129,7 @@ The key functionality aspects:
 28. As the site owner, I would want to have the ability to remove posts so that I can keep the app clean and friendly.
 29. As the site owner, I would want the site to be fully responsive so that users can use it across multiple devices and create a good user experience.
 30. As the site owner, I would want to use the app search function so that I can search for particular tasks by their title.
-31. As the site owner, I would want 404 and 500 error pages so that users do not have to use the back navigation button if an error occurs.
+31. As the site owner, I would want a 404 error page so that users do not have to use the back navigation button if an error occurs.
  
 
 
@@ -1343,18 +1343,18 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|  Task search  |   |   | Works as expected |
+|  Task search  |When logged in, navigate to the task lists page from the nav bar. Use the search bar at the top of the page to search for tasks based on words, letter or numbers  | User to be able to query the database for specific tasks based on their search criteria | Works as expected |
 
 <details>
 <summary>Screenshots</summary>
 <img src="docs/testing-manual/30-xxxxxx-1.png">
 </details>
 
-31. As the site owner, I would want 404 and 500 error pages so that users do not have to use the back navigation button if an error occurs.
+31. As the site owner, I would want a 404 error page so that users do not have to use the back navigation button if an error occurs.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|  Site feedback  |   |   | Works as expected |
+|  Site feedback  | Navigate to any page that does not exist  | User to be presented with 404 error page and a button to return home  | Works as expected |
 
 <details>
 <summary>Screenshots</summary>
