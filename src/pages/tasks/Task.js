@@ -79,7 +79,7 @@ const Task = (props) => {
         return styles["GreenBackground"];
       case "IN-PROGRESS":
         return styles["YellowBackground"];
-      case "NO":
+      case "NOT-STARTED":
         return styles["RedBackground"];
       default:
         return "";

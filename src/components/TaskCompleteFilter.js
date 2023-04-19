@@ -16,7 +16,7 @@ function TaskCompleteFilter({ message, filter = "" }) {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const { data } = await axiosReq.get(`/tasks/?completed=NO`);
+        const { data } = await axiosReq.get(`/tasks/?completed=NOT-STARTED`);
         setTasks(data);
         setHasLoaded(true);
       } catch (err) {

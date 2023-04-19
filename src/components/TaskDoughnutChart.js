@@ -22,7 +22,7 @@ function TaskStatusTable() {
         tasks.forEach((task) => {
           if (task.completed === "COMPLETE") {
             counts.complete += 1;
-          } else if (task.completed === "NO") {
+          } else if (task.completed === "NOT-STARTED") {
             counts.no += 1;
           } else if (task.completed === "IN-PROGRESS") {
             counts.inProgress += 1;

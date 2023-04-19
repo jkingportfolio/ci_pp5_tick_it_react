@@ -1379,6 +1379,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 | Profile list only displaying the first 10 results in Infinite Scroll | fetchMoreData was properly implemented  |
 | assigned to tasks wouldnt display in the assigned to tab | A filter was added that would filter tasks based on if the assigned_to id matched that of the profile owners |
 | Tab active colour would revert to the default | Documentation for react bootstrap didnt mention that the css has to be over written by using activeClassName proprty. Once this was used the issue was resolved |
+| Searching for tasks if the single letter Y is entered, tasks with a title that only includes a number will be displayed | I could not work out why this was the case therefore this has had to be left in as a known bug |
 
 
 ##### Back to [top](#tick-it)

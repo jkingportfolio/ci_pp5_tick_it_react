@@ -236,7 +236,7 @@ function TaskEditForm() {
           aria-label="completed"
         >
           <option>Select task completed</option>
-          <option value="NO">No</option>
+          <option value="NOT-STARTED">Not started</option>
           <option value="IN-PROGRESS">In-progress</option>
           <option value="COMPLETE">Complete</option>
         </Form.Control>
