@@ -712,6 +712,8 @@ Although alot of effort was put into this project, due to time constraints there
   - Allow user authentication with already existing accounts, e.g. LinkedIn, Google, etc. 
 - A notifications feature
   - A feature to have notifications related to tasks you are invovled in / own and if their completion status has been updated.
+- Involvement specific edit rights
+  - Users to be able to make specific edits to a task dependant on their write rights. For example a user who is assigned a task could set it completion status to complete but wouldnt be allowed to edit the task body text or due date.
 
 ##### Back to [top](#tick-it)
 
