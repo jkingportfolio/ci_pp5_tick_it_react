@@ -102,7 +102,7 @@ function App() {
               render={() => <EditPasswordForm />}
             />
             <Route exact path="/contact" render={() => <ContactForm />} />
-            <Route exact path="/profiles" render={() => <UserProfiles />} />
+            <Route exact path="/profiles" render={() => <UserProfiles message="It seems there are no users with that name."/>} />
             <Route render={() => <PageNotFound />} />
             <Route path="*">
             <PageNotFound />
