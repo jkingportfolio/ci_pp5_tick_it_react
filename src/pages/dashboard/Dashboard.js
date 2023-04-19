@@ -1,6 +1,5 @@
 import React from "react";
-import { Card, Button, Row, Col, Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Row, Col, Container } from "react-bootstrap";
 import styles from "../../styles/Dashboard.module.css";
 import appStyles from "../../App.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";

@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-
 import { Alert, Form, Button, Col, Row, Container } from "react-bootstrap";
-
 import { Link, useHistory } from "react-router-dom";
-
 import styles from "../../styles/CredentialsForm.module.css";
 import appStyles from "../../App.module.css";
 import { useSetCurrentUser } from "../../contexts/CurrentUserContext";

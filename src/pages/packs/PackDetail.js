@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { axiosReq } from "../../api/axiosDefaults";
 import Pack from "./Pack";
-import { Col, Container } from "react-bootstrap";
 import { useParams } from "react-router";
 import appStyles from "../../App.module.css";
 import Asset from "../../components/Asset";

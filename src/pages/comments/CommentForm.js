@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Form, Button } from "react-bootstrap";
-
 import InputGroup from "react-bootstrap/InputGroup";
-
 import appStyles from "../../App.module.css";
 import styles from "../../styles/CommentForm.module.css";
 import Avatar from "../../components/Avatar";

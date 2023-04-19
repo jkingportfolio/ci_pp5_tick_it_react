@@ -1,9 +1,6 @@
-import React, { useState, useEffect } from "react";
-
+import React, { useState, useEffect } from "react"
 import { Alert, Form, Button, Col, Modal } from "react-bootstrap";
-
 import appStyles from "../../App.module.css";
-
 import { useHistory } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import axios from "axios";

@@ -19,9 +19,7 @@ const UserPasswordForm = () => {
   const [errors, setErrors] = useState({});
   const [showModal, setShowModal] = useState(false);
 
-  /* 
-    Handles changes to the input fields
-  */
+
   const handleChange = (event) => {
     setUserData({
       ...userData,
@@ -29,20 +27,14 @@ const UserPasswordForm = () => {
     });
   };
 
-  /*
-    Handles the edit of user password
-  */
+
   useEffect(() => {
     if (currentUser?.profile_id?.toString() !== id) {
       history.push("/");
     }
   }, [currentUser, history, id]);
 
-  /* 
-    Handles the new password submission
-    Displays a feedback message to the user on successful password change
-    Redirects the user to the profile page after a short delay
-  */
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -57,7 +49,6 @@ const UserPasswordForm = () => {
     setShowModal(false);
     history.goBack();    
   };
-
 
   return (
     <Row>
