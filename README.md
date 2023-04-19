@@ -515,8 +515,8 @@ Task Search is a feature of the Tick It site giving users the ability to search 
 
 <details>
 <summary>Task Search image</summary>
-<img src="docs/features/task-search.png">
 <img src="docs/features/task-search-1.png">
+<img src="docs/features/task-search-2.png">
 </details>
 
 - Covered in user stories: 21, 30
@@ -635,8 +635,8 @@ Search Bar is a feature of the Tick It site giving users the ability to search f
 
 <details>
 <summary>Search Bar image</summary>
-<img src="docs/features/search-bar.png">
 <img src="docs/features/search-bar-1.png">
+<img src="docs/features/search-bar-2.png">
 </details>
 
 - Covered in user stories: 29
@@ -669,8 +669,8 @@ Site Feedback is a feature of the Tick It site which will presented to users at 
 
 <details>
 <summary>Site Feedback image</summary>
-<img src="docs/features/site-feedback.png">
-<img src="docs/features/site-feedback-1.png">
+<img src="docs/features/feedback-1.png">
+<img src="docs/features/feedback-2.png">
 </details>
 
 - Covered in user stories: 23
@@ -681,7 +681,7 @@ Users list is a feature of the Tick It site giving users the ability to view all
 
 <details>
 <summary>Users list image</summary>
-<img src="docs/features/users-list.png">
+<img src="docs/features/user-list.png">
 </details>
 
 - Covered in user stories: 25
