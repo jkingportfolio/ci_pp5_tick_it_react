@@ -89,7 +89,7 @@ function ProfilePage() {
               className={`${styles.Border} ${styles.DivFlexChild} ${styles.ButtonContainer}`}
             >
               {profile?.owner} currently works as a {profile?.job_role} and
-              currently has a task count of {profile?.tasks_count}.
+              has a task count of {profile?.tasks_count}.
             </div>
           </div>
         </Col>
