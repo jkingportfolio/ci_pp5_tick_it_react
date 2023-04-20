@@ -18,6 +18,7 @@ module.exports = {
     ],
     "rules": {
         "react/prop-types": 0,
-        "react/no-children-prop": "off"
+        "react/no-children-prop": "off",
+        "react/display-name": "off"
     }
 }
