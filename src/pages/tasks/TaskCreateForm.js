@@ -49,7 +49,7 @@ function TaskCreateForm() {
     formData.append("due_date", due_date);
 
     try {
-      const { data } = await axiosReq.post("/tasks/", formData);
+      await axiosReq.post("/tasks/", formData);
       setShowModal(true);
     } catch (err) {
       console.log(err);
