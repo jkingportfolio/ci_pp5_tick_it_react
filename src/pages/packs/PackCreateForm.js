@@ -4,7 +4,6 @@ import { Alert, Form, Button, Col, Container } from "react-bootstrap";
 import { useHistory } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import appStyles from "../../App.module.css";
-import Asset from "../../components/Asset";
 
 
 function PackCreateForm() {
@@ -19,9 +18,6 @@ function PackCreateForm() {
 
   const history = useHistory();
 
-  // const [hasLoaded, setHasLoaded] = useState(false);
-
-  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const fetchTasks = async () => {
@@ -34,13 +30,11 @@ function PackCreateForm() {
           nextUrl = data.next;
         }
         setTasks({ results: allTasks });
-        setLoading(true);
       } catch (err) {
         console.log(err);
       }
     };
   
-    setLoading(false);
     const timer = setTimeout(() => {
       fetchTasks();
     }, 3000);
@@ -74,7 +68,6 @@ function PackCreateForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setLoading(true);
     const packDataToSend = {
       title: title,
       pack_description: pack_description,
@@ -93,7 +86,6 @@ function PackCreateForm() {
         await axiosReq.patch(`/packs/${packId}/`, updateData);
       }
 
-      setLoading(false);
       history.push(`/packs/${packId}`);
     } catch (err) {
       console.log(err);
@@ -175,28 +167,18 @@ function PackCreateForm() {
   );
 
   return (
-    <React.Fragment>
-      {loading && (
-        <div className="SpinnerOverlay">
-          <Asset spinner />
-        </div>
-      )}
       <Form onSubmit={handleSubmit}>
         <div className={appStyles.CenterAlignForm}>
           <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
             <Container
               className={`${appStyles.Content} ${appStyles.TextAlignCenter} d-flex flex-column justify-content-center`}
             >
-              <div className={appStyles.SpinnerCentered}>
-                {loading && <Asset spinner />}
-              </div>
               <h3>Create pack</h3>
               <div className={appStyles.Content}>{textFields}</div>
             </Container>
           </Col>
         </div>
       </Form>
-    </React.Fragment>
   );
 }
 
