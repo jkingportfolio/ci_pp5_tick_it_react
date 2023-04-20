@@ -4,7 +4,7 @@ import { Alert, Form, Button, Col, Container } from "react-bootstrap";
 import { useHistory, useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import appStyles from "../../App.module.css";
-import Asset from "../../components/Asset";
+// import Asset from "../../components/Asset";
 
 function PackEditForm() {
   const [errors, setErrors] = useState({});
@@ -16,8 +16,7 @@ function PackEditForm() {
   });
   const { title, pack_description, tasks } = packData;
   const history = useHistory();
-  const [hasLoaded, setHasLoaded] = useState(false);
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
   const { id } = useParams();
 
   useEffect(() => {
@@ -45,14 +44,14 @@ function PackEditForm() {
       try {
         const { data } = await axiosReq.get(`/tasks/`);
         setTasks(data);
-        setHasLoaded(true);
+        // setLoading(true);
         console.log(data);
       } catch (err) {
         console.log(err);
       }
     };
 
-    setHasLoaded(false);
+    // setLoading(false);
     const timer = setTimeout(() => {
       fetchTasks();
     }, 1000);
@@ -85,7 +84,7 @@ function PackEditForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setLoading(true);
+    // setLoading(true);
     const packDataToSend = {
       title: title,
       pack_description: pack_description,
@@ -104,7 +103,7 @@ function PackEditForm() {
         await axiosReq.patch(`/packs/${packId}/`, updateData);
       }
 
-      setLoading(false);
+      // setLoading(false);
       history.push(`/packs/${packId}`);
     } catch (err) {
       console.log(err);
@@ -185,12 +184,7 @@ function PackEditForm() {
   );
 
   return (
-    <React.Fragment>
-      {loading && (
-        <div className="SpinnerOverlay">
-          <Asset spinner />
-        </div>
-      )}
+
       <Form onSubmit={handleSubmit}>
         <div className={appStyles.CenterAlignForm}>
           <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
@@ -198,15 +192,14 @@ function PackEditForm() {
               className={`${appStyles.Content} ${appStyles.TextAlignCenter} d-flex flex-column justify-content-center`}
             >
               <div className={appStyles.SpinnerCentered}>
-                {loading && <Asset spinner />}
+                {/* {loading && <Asset spinner />} */}
               </div>
-              <h3>Create pack</h3>
+              <h3>Edit pack</h3>
               <div className={appStyles.Content}>{textFields}</div>
             </Container>
           </Col>
         </div>
       </Form>
-    </React.Fragment>
   );
 }
 

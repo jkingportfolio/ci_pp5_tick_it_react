@@ -26,7 +26,7 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("/contact/", form);
+      await axios.post("/contact/", form);
       setShowModal(true);
     } catch (err) {
       console.log(err);
