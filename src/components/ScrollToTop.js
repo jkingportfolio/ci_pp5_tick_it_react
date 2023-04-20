@@ -12,7 +12,7 @@ const ScrollToTop = () => {
 
   return (
     <button className={styles.ScollButton} onClick={handleClick}>
-      <i class="fa-solid fa-arrow-up"></i>
+      <i className="fa-solid fa-arrow-up"></i>
     </button>
   );
 }
