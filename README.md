@@ -715,7 +715,7 @@ The W3C Markup Validation Service was used to validate the HTML of the website. 
 </details>
 
 <details><summary>Main page (logged in user)</summary> 
-<img src="docs/validation/html-validation-main-page.png"> 
+<img src="docs/validation/html-validation-main-page-auth.png"> 
 </details> 
 
 <details><summary>Signup page</summary> 
