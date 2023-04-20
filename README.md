@@ -1595,19 +1595,20 @@ You can make a local clone of a repository via the following steps:
 ### Tutorials
 
 - Real Python Django redirects tutorial - [The Ultimate Guide to Django Redirects](https://realpython.com/django-redirects/)
+- React-multi-select-component video by [Monsterlessons Academy](https://www.youtube.com/@MonsterlessonsAcademy) - [React Select Example | React Dropdown Menu - Fully Customizable](https://www.youtube.com/watch?v=3u_ulMvTYZI)
 
 
 ### Code
 
  Code from external sources were used as a basis and built on top of in this project, they are credited below:
 
- - 
+ - The basis of tis project was inspired by the 'Moments' social media platform walk-through project with Code Institute. Using this a a basis for user log in, profile creation and posting to the API I have built my own app and added extra functionality, such as creating task packs and assigning tasks to users.
 
 ### Literature
 
 The use of reference books were used throughout the creation of this project and are credited below:
 
-- Title - Author, published by 
+- React Key Concepts - Roy Derks, published by Packt Publishing
 
 ### Misc
 
@@ -1616,9 +1617,7 @@ The source of where I learned how to produce a GitHub fork and clone was from th
 - https://docs.github.com/en/get-started/quickstart/fork-a-repo
 - https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
 
-Some images were used in this site and are credited below
-
-- [Image](link) image on xxxxx page -  by [Owner](link)
+Images such as no results found image used in this site were created by myself using Affinity Designer.
 
 
 ## Acknowledgements
