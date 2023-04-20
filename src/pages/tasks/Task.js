@@ -106,11 +106,9 @@ const Task = (props) => {
   }, [assigned_to]);
 
   const options = {
+    day: "2-digit",
+    month: "2-digit",
     year: "numeric",
-    month: "long",
-    day: "numeric",
-    hour: "numeric",
-    minute: "numeric",
   };
 
   return (
@@ -169,11 +167,7 @@ const Task = (props) => {
               Due Date:
               {due_date && isNaN(Date.parse(due_date)) === false
                 ? ` ${new Date(due_date)
-                    .toLocaleString("en-US", {
-                      day: "2-digit",
-                      month: "2-digit",
-                      year: "numeric",
-                    })
+                    .toLocaleString("en-GB", options)
                     .replace(/\//g, " ")}`
                 : " No date allocated"}
             </div>
