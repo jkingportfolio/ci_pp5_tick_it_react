@@ -881,26 +881,135 @@ The JSX code was validated using the ESLint utility.
 Lighthouse was used to test the performance, accessibility, best practice and SEO of the site. The validation was done for both desktop & mobile.  
 
 #### Desktop 
+<details><summary>Desktop</summary>
 
-<details><summary>Landing Page</summary> 
-<img src="docs/validation/lighthouse-landing-page-desktop.png "> 
+<details><summary>Main page (not logged in)</summary> 
+<img src="docs/validation/desktop-lighthouse-validation-main-page.png"> 
+</details>
+
+<details><summary>Main page (logged in user)</summary> 
+<img src="docs/validation/desktop-lighthouse-validation-main-page-auth.png"> 
 </details> 
 
-<details><summary>Main Page</summary> 
-<img src="docs/validation/lighthouse-main-page-desktop.png "> 
+<details><summary>Signup page</summary> 
+<img src="docs/validation/desktop-lighthouse-validation-signup-page.png"> 
+</details>
+
+<details><summary>Login page</summary> 
+<img src="docs/validation/desktop-lighthouse-validation-login-page.png"> 
+</details>
+
+<details><summary>Tasks page</summary>
+<img src="docs/validation/desktop-lighthouse-validation-tasks-page.png">
+</details>
+
+<details><summary>Task create page</summary>
+<img src="docs/validation/desktop-lighthouse-validation-task-create-page.png">
+</details>
+
+<details><summary>Task detail page</summary>
+<img src="docs/validation/desktop-lighthouse-validation-task-detail-page.png">
+</details>
+
+<details><summary>Watched page</summary>
+<img src="docs/validation/desktop-lighthouse-validation-watched-page.png">
+</details>
+
+<details><summary>Pack page</summary>
+<img src="docs/validation/desktop-lighthouse-validation-packs-page.png">
+</details>
+
+<details><summary>Pack create page</summary>
+<img src="docs/validation/desktop-lighthouse-validation-pack-create-page.png">
+</details>
+
+<details><summary>Pack detail page</summary>
+<img src="docs/validation/desktop-lighthouse-validation-pack-detail-page.png">
+</details>
+
+<details><summary>Contact page</summary>
+<img src="docs/validation/desktop-lighthouse-validation-contact-page.png">
+</details>
+
+<details><summary>Users page</summary>
+<img src="docs/validation/desktop-lighthouse-validation-users-page.png">
+</details>
+
+<details><summary>Profile page</summary>
+<img src="docs/validation/desktop-lighthouse-validation-profile-page.png">
+</details>
+
+<details><summary>404 page</summary>
+<img src="docs/validation/desktop-lighthouse-validation-404-page.png">
+</details>
 </details>
 
 
 
 #### Mobile 
 
-<details><summary>Landing Page</summary> 
-<img src="docs/validation/lighthouse-landing-page-mobile.png "> 
+<details><summary>Mobile</summary>
+
+<details><summary>Main page (not logged in)</summary> 
+<img src="docs/validation/mobile-lighthouse-validation-main-page.png"> 
+</details>
+
+<details><summary>Main page (logged in user)</summary> 
+<img src="docs/validation/mobile-lighthouse-validation-main-page-auth.png"> 
 </details> 
 
-<details><summary>Main Page</summary> 
-<img src="docs/validation/lighthouse-main-page-mobile.png "> 
-</details> 
+<details><summary>Signup page</summary> 
+<img src="docs/validation/mobile-lighthouse-validation-signup-page.png"> 
+</details>
+
+<details><summary>Login page</summary> 
+<img src="docs/validation/mobile-lighthouse-validation-login-page.png"> 
+</details>
+
+<details><summary>Tasks page</summary>
+<img src="docs/validation/mobile-lighthouse-validation-tasks-page.png">
+</details>
+
+<details><summary>Task create page</summary>
+<img src="docs/validation/mobile-lighthouse-validation-task-create-page.png">
+</details>
+
+<details><summary>Task detail page</summary>
+<img src="docs/validation/mobile-lighthouse-validation-task-detail-page.png">
+</details>
+
+<details><summary>Watched page</summary>
+<img src="docs/validation/mobile-lighthouse-validation-watched-page.png">
+</details>
+
+<details><summary>Pack page</summary>
+<img src="docs/validation/mobile-lighthouse-validation-packs-page.png">
+</details>
+
+<details><summary>Pack create page</summary>
+<img src="docs/validation/mobile-lighthouse-validation-pack-create-page.png">
+</details>
+
+<details><summary>Pack detail page</summary>
+<img src="docs/validation/mobile-lighthouse-validation-pack-detail-page.png">
+</details>
+
+<details><summary>Contact page</summary>
+<img src="docs/validation/mobile-lighthouse-validation-contact-page.png">
+</details>
+
+<details><summary>Users page</summary>
+<img src="docs/validation/mobile-lighthouse-validation-users-page.png">
+</details>
+
+<details><summary>Profile page</summary>
+<img src="docs/validation/mobile-lighthouse-validation-profile-page.png">
+</details>
+
+<details><summary>404 page</summary>
+<img src="docs/validation/mobile-lighthouse-validation-404-page.png">
+</details>
+</details>
 
 
 
