@@ -804,7 +804,7 @@ The W3C Jigsaw CSS Validation Service was used to validate the CSS of the websit
 </details>
 
 <details><summary>DropdDown.module.css</summary> 
-<img src="docs/validation/css-validation-drop-down.png"> 
+<img src="docs/validation/css-validation-dropdown.png"> 
 </details>
 
 <details><summary>DropdDown.module.css</summary> 
@@ -856,25 +856,19 @@ The W3C Jigsaw CSS Validation Service was used to validate the CSS of the websit
 </details>
 
 
-### JSX Validation 
+### ESLint JavaScript / JSX Validation 
 
-The JSX code was validated using the ESLint utility.
+All JavaScript files were validated using ESLint JavaScript validator. All files passed however there were some rules that needed to be set in the eslintrc.js file as described below:
 
-<details><summary>Eslint validation for components</summary> 
-<img src="docs/validation/eslint-components.png"> 
-</details> 
+`"rules": {
+        "react/prop-types": 0,
+        "react/no-children-prop": "off",
+        "react/display-name": "off"
+    }`
 
-<details><summary>Eslint validation for contexts</summary> 
-<img src="docs/validation/eslint-contexts.png"> 
-</details> 
-
-<details><summary>Eslint validation for hooks</summary> 
-<img src="docs/validation/eslint-hooks.png"> 
-</details> 
-
-<details><summary>Eslint validation for all pages</summary> 
-<img src="docs/validation/eslint-pages.png"> 
-</details> 
+  - `"react/prop-types": 0` was used to suppress the errors relating to prop-types
+  - `"react/no-children-prop": "off"` was used to suppress the errors related to the Infinit Scroll component using children={} 
+  - `"react/display-name": "off"` was used to suppress the need for a component display name 
 
 ### Chrome Dev Tools Lighthouse Validation
 
