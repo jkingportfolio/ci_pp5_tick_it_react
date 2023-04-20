@@ -515,8 +515,8 @@ Task Search is a feature of the Tick It site giving users the ability to search 
 
 <details>
 <summary>Task Search image</summary>
-<img src="docs/features/task-search-1.png">
-<img src="docs/features/task-search-2.png">
+<img src="docs/features/search-bar-1.png">
+<img src="docs/features/search-bar-2.png">
 </details>
 
 - Covered in user stories: 21, 30
@@ -875,7 +875,7 @@ All JavaScript files were validated using ESLint JavaScript validator. All files
 Lighthouse was used to test the performance, accessibility, best practice and SEO of the site. The validation was done for both desktop & mobile.  
 
 #### Desktop 
-<details><summary>Desktop</summary>
+<details><summary>Results</summary>
 
 <details><summary>Main page (not logged in)</summary> 
 <img src="docs/validation/desktop-lighthouse-validation-main-page.png"> 
@@ -942,7 +942,7 @@ Lighthouse was used to test the performance, accessibility, best practice and SE
 
 #### Mobile 
 
-<details><summary>Mobile</summary>
+<details><summary>Results</summary>
 
 <details><summary>Main page (not logged in)</summary> 
 <img src="docs/validation/mobile-lighthouse-validation-main-page.png"> 
@@ -1469,7 +1469,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | **Bug** | **Fix** |
 | ------- | ------- |
-| Pack not submitting the tasks array to the database |  |
+| Pack not submitting the tasks array to the database | Although the database has been created in such way to accept a list of taks, it didnt seem to work when passing a list of task id's in the form. Tests were conducted which proved that a single entry could be entered, i decided to try and create a for loop to pass in each task to the pack one a time and this acheived the desired outcome |
 | Task edit form wont submit if due_date is not set a value | Update due_date to be an empty string and a conditional if statement was placed in the form append which checked if due_date was left empty or null and if true it wouldnt append this field. This fixed the issue as the field in the database has blank and null set to True |
 | Profile list only displaying the first 10 results in Infinite Scroll | fetchMoreData was properly implemented  |
 | assigned to tasks wouldnt display in the assigned to tab | A filter was added that would filter tasks based on if the assigned_to id matched that of the profile owners |
