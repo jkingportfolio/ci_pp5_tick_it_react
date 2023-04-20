@@ -1,5 +1,5 @@
 import React from "react";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
+// import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import appStyles from "../../App.module.css";
@@ -8,7 +8,7 @@ import styles from "../../styles/ProfilePage.module.css";
 const Profile = (props) => {
   const { id, image, owner, mobile, imageSize = 55, job_role, created_on } = props;
 
-  const currentUser = useCurrentUser();
+  // const currentUser = useCurrentUser();
 
   return (
     <div

@@ -19,7 +19,7 @@ function PackCreateForm() {
 
   const history = useHistory();
 
-  const [hasLoaded, setHasLoaded] = useState(false);
+  // const [hasLoaded, setHasLoaded] = useState(false);
 
   const [loading, setLoading] = useState(false);
 
@@ -34,13 +34,13 @@ function PackCreateForm() {
           nextUrl = data.next;
         }
         setTasks({ results: allTasks });
-        setHasLoaded(true);
+        setLoading(true);
       } catch (err) {
         console.log(err);
       }
     };
   
-    setHasLoaded(false);
+    setLoading(false);
     const timer = setTimeout(() => {
       fetchTasks();
     }, 3000);
