@@ -807,6 +807,10 @@ The W3C Jigsaw CSS Validation Service was used to validate the CSS of the websit
 <img src="docs/validation/css-validation-drop-down.png"> 
 </details>
 
+<details><summary>DropdDown.module.css</summary> 
+<img src="docs/validation/css-validation-index.png"> 
+</details>
+
 <details><summary>LandingPage.module.css</summary> 
 <img src="docs/validation/css-validation-landing-page.png"> 
 </details>
@@ -844,7 +848,7 @@ The W3C Jigsaw CSS Validation Service was used to validate the CSS of the websit
 </details>
 
 <details><summary>TaskListings.module.css</summary> 
-<img src="docs/validation/css-validation-task-listings.png"> 
+<img src="docs/validation/css-validation-tasks-listings.png"> 
 </details>
 
 <details><summary>UserProfiles.module.css</summary> 

@@ -2,7 +2,6 @@
   color: #F6F6F7;
   background-color: #613FE5;
   border-bottom: solid 1px #F6F6F7;
-  /* font-size: 1vw; */
 }
 
 .NavLink {
@@ -21,7 +20,7 @@
 
 .Active a:hover {
   color: #F6F6F7;
-  text-decoration: none importt;
+  text-decoration: none;
 }
 
 .Active a:hover i {
