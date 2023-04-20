@@ -1475,6 +1475,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 | assigned to tasks wouldnt display in the assigned to tab | A filter was added that would filter tasks based on if the assigned_to id matched that of the profile owners |
 | Tab active colour would revert to the default | Documentation for react bootstrap didnt mention that the css has to be over written by using activeClassName proprty. Once this was used the issue was resolved |
 | Searching for tasks if the single letter Y is entered, tasks with a title that only includes a number will be displayed | I could not work out why this was the case therefore this has had to be left in as a known bug |
+| When editing a pack, the data is not correctly pulled from the database thus resulting in the user having to remove all tasks and re select them | Due to time constraints i was unable to find a solution to this bug so i had to be left as a know bug. This bug still allows functionality although the user experience is slightly impacted due to this |
 
 
 ##### Back to [top](#tick-it)
