@@ -1399,7 +1399,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|  Site feedback  |   |   | Works as expected |
+|  Site feedback  | Perform various tasks for exmaple a form to be sent which would require some form of feedback  | User to be provided feedback regarding the sucess status of the performed task  | Works as expected |
 
 <details>
 <summary>Screenshots</summary>
