@@ -148,7 +148,7 @@ const ContactForm = () => {
             <Modal.Title>Success</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            Thank you for contacting us, we will get back you shortly!
+            Thank you for contacting us, we will get back to you shortly!
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleCloseModal}>
