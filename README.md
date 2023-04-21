@@ -1112,7 +1112,8 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/1-xxxxxx-1.png">
+<img src="docs/testing-manual/1-testing-user-story-1.png">
+<img src="docs/testing-manual/1-testing-user-story-2.png">
 </details>
 
 2. As a user, I can use the navigation bar so that I can seamlessly navigate around the app. 
@@ -1123,7 +1124,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/2-xxxxxx-1.png">
+<img src="docs/testing-manual/2-testing-user-story-1.png">
 </details>
 
 3. As a user, I can see visual indicators for example of having watched / unwatched a task so that I can tell what my status of watching is.
@@ -1134,7 +1135,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/3-xxxxxx-1.png">
+<img src="docs/testing-manual/3-testing-user-story-1.png">
 </details>
 
 4. As a user, I can watch and unwatch tasks so that I can keep up to date with that particular task via a filtered list. 
@@ -1146,7 +1147,8 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/4-xxxxxx-1.png">
+<img src="docs/testing-manual/4-testing-user-story-1.png">
+<img src="docs/testing-manual/4-testing-user-story-2.png">
 </details>
 
 5. As a user, I can view a list of my watched tasks so that I can focus on content I wish to view. 
@@ -1157,7 +1159,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/5-xxxxxx-1.png">
+<img src="docs/testing-manual/5-testing-user-story-1.png">
 </details>
 
 6. As a user, I can use the search bar on the Task list section so that I can find particular tasks easier. 
@@ -1168,7 +1170,8 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/6-xxxxxx-1.png">
+<img src="docs/testing-manual/6-testing-user-story-1.png">
+<img src="docs/testing-manual/6-testing-user-story-2.png">
 </details>
 
 7. As a user, I can delete my tasks so that I can permanently remove tasks I do not wish to keep. 
@@ -1179,7 +1182,8 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/7-xxxxxx-1.png">
+<img src="docs/testing-manual/7-testing-user-story-1.png">
+<img src="docs/testing-manual/7-testing-user-story-2.png">
 </details>
 
 8. As a user, I can edit my tasks so that I can correct spelling mistakes or I may have entered into the task information fields.
@@ -1190,7 +1194,10 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/8-xxxxxx-1.png">
+<img src="docs/testing-manual/8-testing-user-story-1.png">
+<img src="docs/testing-manual/8-testing-user-story-2.png">
+<img src="docs/testing-manual/8-testing-user-story-3.png">
+<img src="docs/testing-manual/8-testing-user-story-4.png">
 </details>
 
 9. As a user, I can view task comments so that I can obtain more information on the task in question. 
@@ -1201,7 +1208,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/9-xxxxxx-1.png">
+<img src="docs/testing-manual/9-testing-user-story-1.png">
 </details>
 
 10. As a user, I can comment on other tasks so that I can interact with other users. 
@@ -1212,7 +1219,8 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/10-xxxxxx-1.png">
+<img src="docs/testing-manual/10-testing-user-story-1.png">
+<img src="docs/testing-manual/10-testing-user-story-2.png">
 </details>
 
 11. As a user, I can edit or delete my comment on a task incase of input error. 
@@ -1224,7 +1232,13 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/11-xxxxxx-1.png">
+<img src="docs/testing-manual/11-testing-user-story-1.png">
+<img src="docs/testing-manual/11-testing-user-story-2.png">
+<img src="docs/testing-manual/11-testing-user-story-3.png">
+<img src="docs/testing-manual/11-testing-user-story-4.png">
+<img src="docs/testing-manual/11-testing-user-story-5.png">
+<img src="docs/testing-manual/11-testing-user-story-6.png">
+<img src="docs/testing-manual/11-testing-user-story-7.png">
 </details>
 
 12. As a user, I can manage my tasks so that I can add, edit or delete posts as needed. 
@@ -1237,7 +1251,16 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/12-xxxxxx-1.png">
+<img src="docs/testing-manual/12-testing-user-story-1.png">
+<img src="docs/testing-manual/12-testing-user-story-2.png">
+<img src="docs/testing-manual/12-testing-user-story-3.png">
+<img src="docs/testing-manual/12-testing-user-story-4.png">
+<img src="docs/testing-manual/12-testing-user-story-5.png">
+<img src="docs/testing-manual/12-testing-user-story-6.png">
+<img src="docs/testing-manual/12-testing-user-story-7.png">
+<img src="docs/testing-manual/12-testing-user-story-8.png">
+<img src="docs/testing-manual/12-testing-user-story-9.png">
+<img src="docs/testing-manual/12-testing-user-story-10.png">
 </details>
 
 13. As a user, I can request a password so that I can log back into my account if I have forgotten my password. 
@@ -1248,7 +1271,8 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/13-xxxxxx-1.png">
+<img src="docs/testing-manual/13-testing-user-story-1.png">
+<img src="docs/testing-manual/13-testing-user-story-2.png">
 </details>
 
 14. As a user, I can log in so that I can access my account, view my profile, tasks and other user's tasks. 
@@ -1261,7 +1285,10 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/14-xxxxxx-1.png">
+<img src="docs/testing-manual/14-testing-user-story-1.png">
+<img src="docs/testing-manual/14-testing-user-story-2.png">
+<img src="docs/testing-manual/14-testing-user-story-3.png">
+<img src="docs/testing-manual/14-testing-user-story-4.png">
 </details>
 
 15. As a user, I can log out so that other users using the same device cannot access my account. 
@@ -1272,7 +1299,8 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/15-xxxxxx-1.png">
+<img src="docs/testing-manual/15-testing-user-story-1.png">
+<img src="docs/testing-manual/15-testing-user-story-2.png">
 </details>
 
 16. As a user, I can have a profile page so that I and other users can view my list of tasks, packs and assigned tasks.
@@ -1284,7 +1312,9 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/16-xxxxxx-1.png">
+<img src="docs/testing-manual/16-testing-user-story-1.png">
+<img src="docs/testing-manual/16-testing-user-story-2.png">
+<img src="docs/testing-manual/16-testing-user-story-3.png">
 </details>
 
 17. As a user, I can update my profile so that my profile can stay up to date with my latest information. 
@@ -1296,7 +1326,10 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/17-xxxxxx-1.png">
+<img src="docs/testing-manual/17-testing-user-story-1.png">
+<img src="docs/testing-manual/17-testing-user-story-2.png">
+<img src="docs/testing-manual/17-testing-user-story-3.png">
+<img src="docs/testing-manual/17-testing-user-story-4.png">
 </details>
 
 18. As a user, I can add a profile picture so that other members can easily recognize my tasks or comments.
@@ -1307,7 +1340,10 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/18-xxxxxx-1.png">
+<img src="docs/testing-manual/18-testing-user-story-1.png">
+<img src="docs/testing-manual/18-testing-user-story-2.png">
+<img src="docs/testing-manual/18-testing-user-story-3.png">
+<img src="docs/testing-manual/18-testing-user-story-4.png">
 </details>
 
 19. As a user, I can view the Home Page so that I can understand what the website is about, create an account or log in. 
@@ -1318,7 +1354,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/19-xxxxxx-1.png">
+<img src="docs/testing-manual/19-testing-user-story-1.png">
 </details>
 
 20. As a user, I can display basic info on my profile page so that other members can learn more about me. 
@@ -1329,7 +1365,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/20-xxxxxx-1.png">
+<img src="docs/testing-manual/20-testing-user-story-1.png">
 </details>
 
 21. As a user, I can search for tasks via a task bar so that I can specific tasks based on those keywords. 
@@ -1341,7 +1377,9 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/21-xxxxxx-1.png">
+<img src="docs/testing-manual/21-testing-user-story-1.png">
+<img src="docs/testing-manual/21-testing-user-story-2.png">
+<img src="docs/testing-manual/21-testing-user-story-3.png">
 </details>
 
 22. As a user, I can fill in a contact form so that I can enquire about issues I may have regarding the app. 
@@ -1352,7 +1390,9 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/22-xxxxxx-1.png">
+<img src="docs/testing-manual/22-testing-user-story-1.png">
+<img src="docs/testing-manual/22-testing-user-story-2.png">
+<img src="docs/testing-manual/22-testing-user-story-3.png">
 </details>
 
 23. As a user, I can receive feedback so that I can confirm whether the contact form submission was successful or not.
@@ -1363,7 +1403,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/23-xxxxxx-1.png">
+<img src="docs/testing-manual/23-testing-user-story-1.png">
 </details>
 
 24. As a user, I can scroll through the latest tasks on the app so that I can find new tasks to complete.
@@ -1374,7 +1414,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/24-xxxxxx-1.png">
+<img src="docs/testing-manual/24-testing-user-story-1.png">
 </details>
 
 25. As a user, I can browse a list of user accounts so that I can view that particular account. 
@@ -1385,7 +1425,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/25-xxxxxx-1.png">
+<img src="docs/testing-manual/25-testing-user-story-1.png">
 </details>
 
 #### Testing User Stories - Site Owner
@@ -1398,7 +1438,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/26-xxxxxx-1.png">
+<img src="docs/testing-manual/26-testing-user-story-1.png">
 </details>
 
 27. As the site owner, I would want to ensure only logged in users can post from their account and edit their profile so that data privacy is ensured. 
@@ -1409,7 +1449,8 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/27-xxxxxx-1.png">
+<img src="docs/testing-manual/27-testing-user-story-1.png">
+<img src="docs/testing-manual/27-testing-user-story-1.png">
 </details>
 
 28. As the site owner, I would want to have the ability to remove posts so that I can keep the app clean and friendly. 
@@ -1421,7 +1462,12 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/28-xxxxxx-1.png">
+<img src="docs/testing-manual/28-testing-user-story-1.png">
+<img src="docs/testing-manual/28-testing-user-story-2.png">
+<img src="docs/testing-manual/28-testing-user-story-3.png">
+<img src="docs/testing-manual/28-testing-user-story-4.png">
+<img src="docs/testing-manual/28-testing-user-story-5.png">
+<img src="docs/testing-manual/28-testing-user-story-6.png">
 </details>
 
 29. As the site owner, I would want the site to be fully responsive so that users can use it across multiple devices and create a good user experience. 
@@ -1432,7 +1478,8 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/29-xxxxxx-1.png">
+<img src="docs/testing-manual/29-testing-user-story-1.png">
+<img src="docs/testing-manual/29-testing-user-story-2.png">
 </details>
 
 30. As the site owner, I would want to use the app search function so that I can search for particular tasks by their title.
@@ -1443,7 +1490,8 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/30-xxxxxx-1.png">
+<img src="docs/testing-manual/30-testing-user-story-1.png">
+<img src="docs/testing-manual/30-testing-user-story-2.png">
 </details>
 
 31. As the site owner, I would want a 404 error page so that users do not have to use the back navigation button if an error occurs.
@@ -1454,7 +1502,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/31-xxxxxx-1.png">
+<img src="docs/testing-manual/31-testing-user-story-1.png">
 </details>
 
 
