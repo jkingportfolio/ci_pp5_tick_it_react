@@ -33,7 +33,7 @@ Developer: Jamie King
   10. [Validation](#validation)
       1. [HTML](#html-validation)
       2. [CSS](#css-validation)
-      3. [JSX](#jsx-validation)
+      3. [ESLint JavaScript JSX Validation](#eslint-javascript-jsx-validation)
       4. [Chrome Dev Tools Lighthouse](#chrome-dev-tools-lighthouse-validation)
       5. [WAVE Validation](#wave-validation)
   11. [Testing](#testing)
@@ -179,7 +179,7 @@ Balsamiq was used to create wireframes of the sites pages
 <details>
 <summary>Wireframes</summary>
 <img src="docs/wireframes/wireframe-home-not-signed-in.png">
-<img src="docs/wireframes/wireframe-hopme-signed-in.png">
+<img src="docs/wireframes/wireframe-home-signed-in.png">
 <img src="docs/wireframes/wireframe-sign-up.png">
 <img src="docs/wireframes/wireframe-log-in.png">
 <img src="docs/wireframes/wireframe-task-list.png">
@@ -516,7 +516,6 @@ Task Search is a feature of the Tick It site giving users the ability to search 
 <details>
 <summary>Task Search image</summary>
 <img src="docs/features/search-bar-1.png">
-<img src="docs/features/search-bar-2.png">
 </details>
 
 - Covered in user stories: 21, 30
@@ -856,7 +855,7 @@ The W3C Jigsaw CSS Validation Service was used to validate the CSS of the websit
 </details>
 
 
-### ESLint JavaScript / JSX Validation 
+### ESLint JavaScript JSX Validation 
 
 All JavaScript files were validated using ESLint JavaScript validator. All files passed however there were some rules that needed to be set in the eslintrc.js file as described below:
 
@@ -1013,6 +1012,7 @@ Lighthouse was used to test the performance, accessibility, best practice and SE
 The WAVE WebAIM web accessibility evaluation tool was used to test the websites accessibility.
 There were a few errors related to missing labels and contrast issues on buttons. These errors were rectified.
 
+<details><summary>Results</summary> 
 <details><summary>Main page (not logged in)</summary> 
 <img src="docs/validation/wave-validation-main-page.png"> 
 </details>
@@ -1071,6 +1071,7 @@ There were a few errors related to missing labels and contrast issues on buttons
 
 <details><summary>404 page</summary>
 <img src="docs/validation/wave-validation-404-page.png">
+</details>
 </details>
 
 
