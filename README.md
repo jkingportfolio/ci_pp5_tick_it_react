@@ -195,6 +195,7 @@ Balsamiq was used to create wireframes of the sites pages
 <img src="docs/wireframes/wireframe-edit-profile.png">
 <img src="docs/wireframes/wireframe-users.png">
 <img src="docs/wireframes/wireframe-contact.png">
+<img src="docs/wireframes/wireframe-update-password.png">
 
 </details>
 
