@@ -1,5 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Form, Button, Col, Container, Alert, Modal, Row } from "react-bootstrap";
+import {
+  Form,
+  Button,
+  Col,
+  Container,
+  Alert,
+  Modal,
+  Row,
+} from "react-bootstrap";
 import appStyles from "../../App.module.css";
 import { useHistory, useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
@@ -53,7 +61,7 @@ function TaskEditForm() {
               task_body,
               priority,
               assigned_to,
-              due_date,              
+              due_date,
               pack,
               completed,
             })
@@ -76,22 +84,22 @@ function TaskEditForm() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData();
-    console.log("DATE:" + due_date)
-    console.log("PACK:" + pack)
-    console.log("Assigned to:" + assigned_to)
+    console.log("DATE:" + due_date);
+    console.log("PACK:" + pack);
+    console.log("Assigned to:" + assigned_to);
     formData.append("title", title);
     formData.append("task_body", task_body);
     formData.append("priority", priority);
     if (assigned_to !== null && assigned_to !== "No one") {
       formData.append("assigned_to", assigned_to);
-    }    
-    if (due_date !== null && due_date !== '') {
+    }
+    if (due_date !== null && due_date !== "") {
       formData.append("due_date", due_date);
     }
-    if (pack !== null && pack !== '') {
+    if (pack !== null && pack !== "") {
       formData.append("pack", pack);
     }
-      formData.append("pack", pack);
+    formData.append("pack", pack);
     formData.append("completed", completed);
 
     try {
@@ -107,11 +115,14 @@ function TaskEditForm() {
 
   const handleCloseModal = () => {
     setShowModal(false);
-    history.push(`/tasks/${id}`);    
+    history.push(`/tasks/${id}`);
   };
 
   const textFields = (
     <div className="text-center">
+      <div className={`${appStyles.TextAlignCenter} ${appStyles.AutoMargin}`}>
+        <h1 className={`${appStyles.DarkText}`}>Edit Task</h1>
+      </div>
       <Form.Group>
         <Form.Label>Title</Form.Label>
         <Form.Control
@@ -119,6 +130,7 @@ function TaskEditForm() {
           name="title"
           value={title}
           onChange={handleChange}
+          aria-label="title"
         />
       </Form.Group>
       {errors?.title?.map((message, idx) => (
@@ -135,6 +147,7 @@ function TaskEditForm() {
           name="task_body"
           value={task_body}
           onChange={handleChange}
+          aria-label="Task body"
         />
       </Form.Group>
       {errors?.content?.map((message, idx) => (
@@ -247,7 +260,7 @@ function TaskEditForm() {
           {message}
         </Alert>
       ))}
-        <Button className={`${appStyles.Button}`} type="submit">
+      <Button className={`${appStyles.Button}`} type="submit">
         Save
       </Button>
       <Button
@@ -256,45 +269,37 @@ function TaskEditForm() {
       >
         Cancel
       </Button>
-
     </div>
   );
 
   return (
     <Row>
       <Col className={`${appStyles.AutoMargin} "py-2 p-0 p-lg-2"`} lg={8}>
-    <div className={`${appStyles.TextAlignCenter} ${appStyles.AutoMargin}`}>
-        <h1 className={`${appStyles.LightText}`}>Edit Task</h1>
-        </div>
-    <Form onSubmit={handleSubmit}>
-      {showModal && (
-        <Modal show={showModal} onHide={handleCloseModal} centered={true}>
-          <Modal.Header closeButton>
-            <Modal.Title>Success</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            Task updated successfully!
-          </Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={handleCloseModal}>
-              Close
-            </Button>
-          </Modal.Footer>
-        </Modal>
-      )}
-      <div className={appStyles.Form}>
-        <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
-          <Container
-            className={`d-flex flex-column justify-content-center`}
-          >
-            <div className={appStyles.Content}>
-              {textFields}
-            </div>
-          </Container>
-        </Col>
-      </div>
-    </Form>
-    </Col>
+        <Form onSubmit={handleSubmit}>
+          {showModal && (
+            <Modal show={showModal} onHide={handleCloseModal} centered={true}>
+              <Modal.Header closeButton>
+                <Modal.Title>Success</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>Task updated successfully!</Modal.Body>
+              <Modal.Footer>
+                <Button variant="secondary" onClick={handleCloseModal}>
+                  Close
+                </Button>
+              </Modal.Footer>
+            </Modal>
+          )}
+          <div className={appStyles.Form}>
+            <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
+              <Container
+                className={`d-flex flex-column justify-content-center`}
+              >
+                <div className={appStyles.Content}>{textFields}</div>
+              </Container>
+            </Col>
+          </div>
+        </Form>
+      </Col>
     </Row>
   );
 }

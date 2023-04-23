@@ -1038,6 +1038,10 @@ There were a few errors related to missing labels and contrast issues on buttons
 <img src="docs/validation/wave-validation-task-create-page.png">
 </details>
 
+<details><summary>Task edit page</summary>
+<img src="docs/validation/wave-validation-task-create-page.png">
+</details>
+
 <details><summary>Task detail page</summary>
 <img src="docs/validation/wave-validation-task-detail-page.png">
 </details>
@@ -1068,6 +1072,10 @@ There were a few errors related to missing labels and contrast issues on buttons
 
 <details><summary>Profile page</summary>
 <img src="docs/validation/wave-validation-profile-page.png">
+</details>
+
+<details><summary>Change password page</summary>
+<img src="docs/validation/wave-validation-change-password-page.png">
 </details>
 
 <details><summary>404 page</summary>
