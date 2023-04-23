@@ -1019,7 +1019,7 @@ There were a few errors related to missing labels and contrast issues on buttons
 </details>
 
 <details><summary>Main page (logged in user)</summary> 
-<img src="docs/validation/wave-validation-main-page.png"> 
+<img src="docs/validation/wave-validation-main-page-logged-in.png"> 
 </details> 
 
 <details><summary>Signup page</summary> 
@@ -1039,7 +1039,7 @@ There were a few errors related to missing labels and contrast issues on buttons
 </details>
 
 <details><summary>Task edit page</summary>
-<img src="docs/validation/wave-validation-task-create-page.png">
+<img src="docs/validation/wave-validation-task-edit-page.png">
 </details>
 
 <details><summary>Task detail page</summary>
@@ -1058,6 +1058,10 @@ There were a few errors related to missing labels and contrast issues on buttons
 <img src="docs/validation/wave-validation-pack-create-page.png">
 </details>
 
+<details><summary>Pack edit page</summary>
+<img src="docs/validation/wave-validation-pack-edit-page.png">
+</details>
+
 <details><summary>Pack detail page</summary>
 <img src="docs/validation/wave-validation-pack-detail-page.png">
 </details>
@@ -1072,6 +1076,10 @@ There were a few errors related to missing labels and contrast issues on buttons
 
 <details><summary>Profile page</summary>
 <img src="docs/validation/wave-validation-profile-page.png">
+</details>
+
+<details><summary>Profile edit page</summary>
+<img src="docs/validation/wave-validation-profile-edit-page.png">
 </details>
 
 <details><summary>Change password page</summary>
