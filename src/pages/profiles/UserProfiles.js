@@ -54,6 +54,7 @@ function UserProfiles({ message, filter = "" }) {
             type="text"
             className="mr-sm-2"
             placeholder="Search users"
+            aria-label="Search bar"
           />
         </Form>
         <div

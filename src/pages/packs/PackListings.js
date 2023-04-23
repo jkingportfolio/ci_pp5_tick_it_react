@@ -67,6 +67,7 @@ function PackListings({ message, filter = "" }) {
             type="text"
             className="mr-sm-2"
             placeholder="Search packs"
+            aria-label="Search bar"
           />
         </Form>
         <div className={packStyles.PackButton}>

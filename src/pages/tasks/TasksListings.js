@@ -61,6 +61,7 @@ function TasksListings({ message, filter = "" }) {
             type="text"
             className="mr-sm-2"
             placeholder="Search tasks"
+            aria-label="Search bar"
           />
         </Form>
         <div className={taskStyles.TaskButton}>

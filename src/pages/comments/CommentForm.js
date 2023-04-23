@@ -53,6 +53,7 @@ function CommentForm(props) {
             value={comment_body}
             onChange={handleChange}
             rows={2}
+            aria-label="Comment box"
           />
         </InputGroup>
       </Form.Group>

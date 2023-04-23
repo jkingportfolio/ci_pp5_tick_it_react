@@ -145,6 +145,7 @@ function PackCreateForm() {
           menuPortalTarget={document.body}
           menuPosition={'fixed'}
           menuPlacement={'auto'}
+          className={appStyles.Input}
         />
 
         {errors?.tasks?.map((message, idx) => (

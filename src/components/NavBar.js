@@ -132,7 +132,7 @@ const NavBar = () => {
       <Container>
         <NavLink to="/">
           <Navbar.Brand>
-            <img src={logo} alt="logo" height="45" />
+            <img src={logo} alt="tick-it site logo" height="45" />
           </Navbar.Brand>
         </NavLink>
         {currentUser && addTaskIcon}

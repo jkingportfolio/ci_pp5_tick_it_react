@@ -88,7 +88,7 @@ function SignInForm() {
           </Form>
           <p className={`${appStyles.DarkText} ${styles.TopMargin}`}>Dont have an account?</p>
           <Link to="/signup">
-          <p className={`${appStyles.DarkText}`}>Click <span className={styles.Link}>here </span>to Sign up!</p>
+          <p className={`${appStyles.DarkText}`}>Click <span className={appStyles.DarkText}>here </span>to Sign up!</p>
           </Link>
         </Container>
       </Col>

@@ -127,7 +127,7 @@ const SignUpForm = () => {
           </p>
           <Link to="/signin">
             <p className={`${appStyles.DarkText}`}>
-              Click <span className={styles.Link}>here </span>to Log in!
+              Click <span className={appStyles.DarkText}>here </span>to Log in!
             </p>
           </Link>
         </Container>

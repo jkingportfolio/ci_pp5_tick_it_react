@@ -100,6 +100,7 @@ const EditProfileForm = () => {
           name="name"
           rows={7}
           className={appStyles.TextAlignLeft}
+          aria-label="Name input"
         />
       </Form.Group>
 
@@ -117,6 +118,7 @@ const EditProfileForm = () => {
           onChange={handleChange}
           name="job_role"
           rows={7}
+          aria-label="Job role input"
         />
       </Form.Group>
 
@@ -166,7 +168,7 @@ const EditProfileForm = () => {
                   <Form.Group>
                     {image && (
                       <figure>
-                        <Image src={image} fluid />
+                        <Image src={image} fluid aria-label="Profile image"/>
                       </figure>
                     )}
                     {errors?.image?.map((message, idx) => (
@@ -176,6 +178,7 @@ const EditProfileForm = () => {
                     ))}
                     <Form.File
                       id="image-upload"
+                      aria-label="Profile image"
                       ref={imageFile}
                       accept="image/*"
                       onChange={(e) => {
