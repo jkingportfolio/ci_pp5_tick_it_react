@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import appStyles from "../App.module.css";
-import taskStyles from "../styles/TasksListings.module.css";
+import { axiosReq } from "../api/axiosDefaults";
 import Task from "../pages/tasks/Task";
 import Asset from "../components/Asset";
-import { axiosReq } from "../api/axiosDefaults";
 import NoResults from "../assets/no-results.png";
+import appStyles from "../App.module.css";
+import taskStyles from "../styles/TasksListings.module.css";
 
 function HighPriorityTaskListings({ message, filter = "" }) {
   const [tasks, setTasks] = useState({ results: [] });
@@ -31,11 +31,15 @@ function HighPriorityTaskListings({ message, filter = "" }) {
     };
   }, [filter]);
 
+  /*
+  Landing page with app description and links to social media in footer
+  */
   return (
-    <Row  className={`${appStyles.JustifyContentCenter} ${appStyles.BottomMargin}`}>
+    <Row
+      className={`${appStyles.JustifyContentCenter} ${appStyles.BottomMargin}`}
+    >
       <Col className="py-2 p-0 p-lg-2" lg={8}>
-        <div className={taskStyles.TaskButton}>
-        </div>
+        <div className={taskStyles.TaskButton}></div>
         {hasLoaded ? (
           <div className={appStyles.ScrollBox}>
             {tasks.results.length ? (
