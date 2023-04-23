@@ -738,6 +738,10 @@ The W3C Markup Validation Service was used to validate the HTML of the website. 
 <img src="docs/validation/html-validation-task-detail-page.png">
 </details>
 
+<details><summary>Task edit page</summary>
+<img src="docs/validation/html-validation-task-edit-page.png">
+</details>
+
 <details><summary>Watched page</summary>
 <img src="docs/validation/html-validation-watched-page.png">
 </details>
@@ -754,6 +758,10 @@ The W3C Markup Validation Service was used to validate the HTML of the website. 
 <img src="docs/validation/html-validation-pack-detail-page.png">
 </details>
 
+<details><summary>Pack edit page</summary>
+<img src="docs/validation/html-validation-pack-edit-page.png">
+</details>
+
 <details><summary>Contact page</summary>
 <img src="docs/validation/html-validation-contact-page.png">
 </details>
@@ -764,6 +772,14 @@ The W3C Markup Validation Service was used to validate the HTML of the website. 
 
 <details><summary>Profile page</summary>
 <img src="docs/validation/html-validation-profile-page.png">
+</details>
+
+<details><summary>Profile edit page</summary>
+<img src="docs/validation/html-validation-profile-edit-page.png">
+</details>
+
+<details><summary>Change password page</summary>
+<img src="docs/validation/html-validation-change-password-page.png">
 </details>
 
 <details><summary>404 page</summary>
@@ -901,6 +917,10 @@ Lighthouse was used to test the performance, accessibility, best practice and SE
 <img src="docs/validation/desktop-lighthouse-validation-task-create-page.png">
 </details>
 
+<details><summary>Task edit page</summary>
+<img src="docs/validation/desktop-lighthouse-validation-task-edit-page.png">
+</details>
+
 <details><summary>Task detail page</summary>
 <img src="docs/validation/desktop-lighthouse-validation-task-detail-page.png">
 </details>
@@ -917,6 +937,10 @@ Lighthouse was used to test the performance, accessibility, best practice and SE
 <img src="docs/validation/desktop-lighthouse-validation-pack-create-page.png">
 </details>
 
+<details><summary>Packe dit page</summary>
+<img src="docs/validation/desktop-lighthouse-validation-pack-edit-page.png">
+</details>
+
 <details><summary>Pack detail page</summary>
 <img src="docs/validation/desktop-lighthouse-validation-pack-detail-page.png">
 </details>
@@ -931,6 +955,14 @@ Lighthouse was used to test the performance, accessibility, best practice and SE
 
 <details><summary>Profile page</summary>
 <img src="docs/validation/desktop-lighthouse-validation-profile-page.png">
+</details>
+
+<details><summary>Profile edit page</summary>
+<img src="docs/validation/desktop-lighthouse-validation-profile-edit-page.png">
+</details>
+
+<details><summary>Change password page</summary>
+<img src="docs/validation/desktop-lighthouse-validation-change-password-page.png">
 </details>
 
 <details><summary>404 page</summary>
@@ -968,6 +1000,10 @@ Lighthouse was used to test the performance, accessibility, best practice and SE
 <img src="docs/validation/mobile-lighthouse-validation-task-create-page.png">
 </details>
 
+<details><summary>Task edit page</summary>
+<img src="docs/validation/mobile-lighthouse-validation-task-edit-page.png">
+</details>
+
 <details><summary>Task detail page</summary>
 <img src="docs/validation/mobile-lighthouse-validation-task-detail-page.png">
 </details>
@@ -984,6 +1020,10 @@ Lighthouse was used to test the performance, accessibility, best practice and SE
 <img src="docs/validation/mobile-lighthouse-validation-pack-create-page.png">
 </details>
 
+<details><summary>Pack edit page</summary>
+<img src="docs/validation/mobile-lighthouse-validation-pack-edit-page.png">
+</details>
+
 <details><summary>Pack detail page</summary>
 <img src="docs/validation/mobile-lighthouse-validation-pack-detail-page.png">
 </details>
@@ -998,6 +1038,14 @@ Lighthouse was used to test the performance, accessibility, best practice and SE
 
 <details><summary>Profile page</summary>
 <img src="docs/validation/mobile-lighthouse-validation-profile-page.png">
+</details>
+
+<details><summary>Profile edit page</summary>
+<img src="docs/validation/mobile-lighthouse-validation-profile-edit-page.png">
+</details>
+
+<details><summary>Change password page</summary>
+<img src="docs/validation/mobile-lighthouse-validation-change-password-page.png">
 </details>
 
 <details><summary>404 page</summary>
