@@ -1,7 +1,10 @@
 import React from "react";
 import { Button, OverlayTrigger, Popover } from "react-bootstrap";
 
-
+/*
+  Returns an overlay which displays the password
+  validation criteria 
+*/
 const PasswordCriteria = () => {
   return (
     <div className="my-4">

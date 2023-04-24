@@ -11,6 +11,9 @@ function HighPriorityTaskListings({ message, filter = "" }) {
   const [tasks, setTasks] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
 
+  /*
+  Make API request to get all tasks filter by priority of HIGH
+  */
   useEffect(() => {
     const fetchTasks = async () => {
       try {

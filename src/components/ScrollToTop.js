@@ -1,6 +1,9 @@
 import React from "react";
 import styles from "../styles/ScrollToTop.module.css";
 
+/*
+  Handles the scroll to top when button is clicked
+*/
 const ScrollToTop = () => {
   const handleClick = () => {
     window.scrollTo({
@@ -9,6 +12,9 @@ const ScrollToTop = () => {
     });
   };
 
+  /*
+  Displays the button to scroll to top
+  */
   return (
     <button
       className={styles.ScollButton}

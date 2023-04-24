@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import { Navbar, Container, Nav, Modal, Button } from "react-bootstrap";
-import logo from "../assets/logo.png";
-import styles from "../styles/NavBar.module.css";
-import appStyles from "../App.module.css";
 import { NavLink, useHistory } from "react-router-dom";
 import {
   useCurrentUser,
@@ -11,15 +8,21 @@ import {
 import Avatar from "./Avatar";
 import axios from "axios";
 import useClickOutsideToggle from "../hooks/useClickOutsideToggle";
+import logo from "../assets/logo.png";
+import styles from "../styles/NavBar.module.css";
+import appStyles from "../App.module.css";
 
 const NavBar = () => {
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
   const history = useHistory();
   const [showModal, setShowModal] = useState(false);
-
   const { expanded, setExpanded, ref } = useClickOutsideToggle();
 
+  /*
+    Handles user logout and
+    redirects to the landing page
+  */
   const handleSignOut = async () => {
     try {
       await axios.post("dj-rest-auth/logout/");
@@ -48,6 +51,11 @@ const NavBar = () => {
       </div>
     </NavLink>
   );
+
+  /* 
+    Displays current username with its avatar in the navbar
+    and dropdown offers options only available to auth user
+  */
   const loggedInIcons = (
     <>
       <NavLink
@@ -96,6 +104,11 @@ const NavBar = () => {
       </NavLink>
     </>
   );
+
+  /* 
+    Displays nav bar options visble to annoymous user
+    Sign up, login and contact
+  */
   const loggedOutIcons = (
     <>
     <NavLink

@@ -4,6 +4,10 @@ import appStyles from "../App.module.css";
 import { Link } from "react-router-dom";
 import Error from "../assets/404.png";
 
+/*
+  Returns a 404 page with a button
+  to return the user to the main page
+*/
 const PageNotFound = () => {
   return (
     <Row>

@@ -7,6 +7,10 @@ import appStyles from "../App.module.css";
 function TaskStatusTable() {
   const [taskCounts, setTaskCounts] = useState({});
 
+  /*
+  Make API request to get all tasks and create
+  a count of the status of each task
+  */
   async function getTaskCounts() {
     try {
       let nextPage = "/tasks/";
@@ -43,6 +47,10 @@ function TaskStatusTable() {
     getTaskCounts();
   }, []);
 
+    /*
+  Returns a table consisting of the total number of tasks
+  by their complete status
+  */
   return (
     <div>
       <h2 className={appStyles.TextAlignCenter}>Tasks Table</h2>

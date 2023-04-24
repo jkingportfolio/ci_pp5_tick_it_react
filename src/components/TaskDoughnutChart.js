@@ -6,6 +6,10 @@ import appStyles from "../App.module.css";
 function TaskStatusTable() {
   const [taskCounts, setTaskCounts] = useState({});
 
+  /*
+  Make API request to get all tasks and create
+  a count of the status of each task
+  */
   async function getTaskCounts() {
     try {
       let nextPage = "/tasks/";
@@ -42,36 +46,42 @@ function TaskStatusTable() {
     getTaskCounts();
   }, []);
 
+  /*
+  Create chart based on values gather in getTaskCounts
+  */
   const chartData = {
     labels: ["Complete", "Incomplete", "In Progress"],
     datasets: [
       {
         label: "Task Status",
-        data: [
-          taskCounts.complete,
-          taskCounts.no,
-          taskCounts.inProgress
-        ],
+        data: [taskCounts.complete, taskCounts.no, taskCounts.inProgress],
         backgroundColor: ["#36A2EB", "#FF6384", "#FFCE56"],
         hoverBackgroundColor: ["#36A2EB", "#FF6384", "#FFCE56"],
       },
     ],
   };
 
+  /*
+  Set font colour to white via options
+  */
   const options = {
     plugins: {
       legend: {
         labels: {
-          color: 'white', // set the color of the legend labels to white
+          color: "white",
         },
       },
     },
   };
+
+  /*
+  Returns an interactive doughnut chart  
+  */
   return (
     <div>
       <h2 className={appStyles.TextAlignCenter}>Tasks Chart</h2>
       <div className={appStyles.ChartContainer}>
-        <Doughnut data={chartData} options={options}/>
+        <Doughnut data={chartData} options={options} />
       </div>
     </div>
   );
