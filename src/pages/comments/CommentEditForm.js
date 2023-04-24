@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Form, Button, Modal } from "react-bootstrap";
 import { axiosRes } from "../../api/axiosDefaults";
+import { Form, Button, Modal } from "react-bootstrap";
 import styles from "../../styles/CommentForm.module.css";
 import appStyles from "../../App.module.css";
 
@@ -14,6 +14,9 @@ function CommentEditForm(props) {
     setFormContent(event.target.value);
   };
 
+  /* 
+    Handle comment form submit
+  */
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -43,6 +46,9 @@ function CommentEditForm(props) {
     setShowEditForm(false);
   };
 
+  /* 
+    Returns comment edit form
+  */
   return (
     <Form onSubmit={handleSubmit}>
       {showModal && (

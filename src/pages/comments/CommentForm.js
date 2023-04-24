@@ -1,20 +1,26 @@
 import React, { useState } from "react";
+import { axiosRes } from "../../api/axiosDefaults";
 import { Link } from "react-router-dom";
 import { Form, Button } from "react-bootstrap";
 import InputGroup from "react-bootstrap/InputGroup";
+import Avatar from "../../components/Avatar";
 import appStyles from "../../App.module.css";
 import styles from "../../styles/CommentForm.module.css";
-import Avatar from "../../components/Avatar";
-import { axiosRes } from "../../api/axiosDefaults";
 
 function CommentForm(props) {
   const { task, setTask, setComments, profileImage, profile_id } = props;
   const [comment_body, setCommentBody] = useState("");
 
+  /* 
+    Handle changes comment body fields
+  */
   const handleChange = (event) => {
     setCommentBody(event.target.value);
   };
 
+  /* 
+    Handle comment form submit
+  */
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -40,6 +46,9 @@ function CommentForm(props) {
     }
   };
 
+  /* 
+    Returns comment form
+  */
   return (
     <Form className="mt-2" onSubmit={handleSubmit}>
       <Form.Group>
@@ -58,13 +67,13 @@ function CommentForm(props) {
         </InputGroup>
       </Form.Group>
       <div className={styles.ButtonDisplay}>
-      <Button
-        className={appStyles.Button}
-        disabled={!comment_body.trim()}
-        type="submit"
-      >
-        Post
-      </Button>
+        <Button
+          className={appStyles.Button}
+          disabled={!comment_body.trim()}
+          type="submit"
+        >
+          Post
+        </Button>
       </div>
     </Form>
   );

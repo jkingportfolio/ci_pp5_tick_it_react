@@ -1,15 +1,13 @@
 import React, { useState } from "react";
-import { Row, Col } from "react-bootstrap";
+import { axiosRes } from "../../api/axiosDefaults";
+import { Row, Col, Modal, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
-import styles from "../../styles/Comment.module.css";
-import appStyles from "../../App.module.css";
 import { DropDown } from "../../components/DropDown";
 import CommentEditForm from "./CommentEditForm";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { axiosRes } from "../../api/axiosDefaults";
-import { Modal, Button } from 'react-bootstrap';
-
+import styles from "../../styles/Comment.module.css";
+import appStyles from "../../App.module.css";
 
 const Comment = (props) => {
   const {
@@ -28,6 +26,9 @@ const Comment = (props) => {
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
 
+  /* 
+    Handle comment delete
+  */
   const handleDelete = async () => {
     try {
       await axiosRes.delete(`/comments/${id}/`);
@@ -50,6 +51,9 @@ const Comment = (props) => {
     setShowDeleteModal(false);
   };
 
+  /* 
+    Returns comment form and comment edit form if owner
+  */
   return (
     <>
       <hr />
@@ -82,14 +86,15 @@ const Comment = (props) => {
           />
         )}
       </Row>
-
-      <Modal show={showDeleteModal} onHide={() => setShowDeleteModal(false)} centered={true}>
+      <Modal
+        show={showDeleteModal}
+        onHide={() => setShowDeleteModal(false)}
+        centered={true}
+      >
         <Modal.Header closeButton>
           <Modal.Title>Confirm Delete</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
-          Are you sure you want to delete this comment?
-        </Modal.Body>
+        <Modal.Body>Are you sure you want to delete this comment?</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={() => setShowDeleteModal(false)}>
             Cancel

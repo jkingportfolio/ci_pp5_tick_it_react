@@ -18,6 +18,9 @@ const ContactForm = () => {
   const [errors, setErrors] = useState({});
   const [showModal, setShowModal] = useState(false);
 
+  /* 
+    Handle changes to input fields
+  */
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((prevForm) => ({ ...prevForm, [name]: value }));
@@ -36,6 +39,9 @@ const ContactForm = () => {
     }
   };
 
+  /* 
+    Handle closing of modal
+  */
   const handleCloseModal = () => {
     setShowModal(false);
     history.push("/");
@@ -140,6 +146,9 @@ const ContactForm = () => {
     </div>
   );
 
+  /* 
+    Returns contact form page
+  */
   return (
     <Form onSubmit={handleSubmit}>
       {showModal && (
