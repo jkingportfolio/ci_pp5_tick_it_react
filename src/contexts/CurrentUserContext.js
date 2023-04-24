@@ -1,4 +1,10 @@
-import React, { createContext, useContext, useEffect, useMemo, useState } from "react";
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 import axios from "axios";
 import { axiosReq, axiosRes } from "../api/axiosDefaults";
 import { useHistory } from "react-router";
@@ -12,6 +18,9 @@ export const CurrentUserProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
   const history = useHistory();
 
+  /*
+  Make API request to get current user data
+  */
   const handleMount = async () => {
     try {
       const { data } = await axiosRes.get("dj-rest-auth/user/");
@@ -25,6 +34,10 @@ export const CurrentUserProvider = ({ children }) => {
     handleMount();
   }, []);
 
+  /* 
+    Handles access tokens
+    Redirects user to login page if refreshing of token fails
+  */
   useMemo(() => {
     axiosReq.interceptors.request.use(
       async (config) => {

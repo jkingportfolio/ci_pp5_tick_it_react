@@ -15,6 +15,11 @@ export const ProfileDataProvider = ({ children }) => {
 
   const currentUser = useCurrentUser();
 
+  /*
+    Makes API request to the /profiles/ endpoint
+    Sends profile information
+    Updates profile page and listProfiles data
+  */
   useEffect(() => {
     const handleMount = async () => {
       try {
