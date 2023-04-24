@@ -2,7 +2,15 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import styles from "../../styles/CredentialsForm.module.css";
 import appStyles from "../../App.module.css";
-import { Form, Button, Col, Row, Container, Alert, Modal } from "react-bootstrap";
+import {
+  Form,
+  Button,
+  Col,
+  Row,
+  Container,
+  Alert,
+  Modal,
+} from "react-bootstrap";
 import axios from "axios";
 import PasswordCriteria from "../../components/PasswordCriteria";
 
@@ -19,6 +27,9 @@ const SignUpForm = () => {
 
   const history = useHistory();
 
+  /* 
+    Handle changes input fields
+  */
   const handleChange = (event) => {
     setSignUpData({
       ...signUpData,
@@ -26,6 +37,9 @@ const SignUpForm = () => {
     });
   };
 
+  /* 
+    Handle submit of signup form
+  */
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -36,11 +50,17 @@ const SignUpForm = () => {
     }
   };
 
+  /* 
+    Handle modal close
+  */
   const handleCloseModal = () => {
     setShowModal(false);
-    history.push(`/signin`);    
+    history.push(`/signin`);
   };
 
+  /* 
+    Returns signup form
+  */
   return (
     <Row className={styles.Row}>
       <Col className="col-sm-6 mx-auto" md={6}>

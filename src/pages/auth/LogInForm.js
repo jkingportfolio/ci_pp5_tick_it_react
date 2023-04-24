@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Alert, Form, Button, Col, Row, Container } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
+import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
 import styles from "../../styles/CredentialsForm.module.css";
 import appStyles from "../../App.module.css";
-import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
 
 function SignInForm() {
   const setCurrentUser = useSetCurrentUser();
@@ -14,10 +14,12 @@ function SignInForm() {
     password: "",
   });
   const { username, password } = signInData;
-
   const [errors, setErrors] = useState({});
-
   const history = useHistory();
+
+  /* 
+    Handles submit of login form
+  */
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -30,6 +32,9 @@ function SignInForm() {
     }
   };
 
+  /* 
+    Handle changes input fields
+  */
   const handleChange = (event) => {
     setSignInData({
       ...signInData,
@@ -37,6 +42,9 @@ function SignInForm() {
     });
   };
 
+  /* 
+    Returns login form
+  */
   return (
     <Row className={styles.Row}>
       <Col className="col-sm-6 mx-auto" md={6}>
