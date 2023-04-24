@@ -40,7 +40,6 @@ Developer: Jamie King
       1. [Device Testing](#device-testing)
       2. [Browser Compatibility](#browser-compatibility)
       3. [Manual Testing](#manual-testing)
-      4. [Automated Testing](#automated-testing)
   12. [Bugs](#bugs)
   13. [Deployment](#deployment)
       1. [Heroku](#heroku)
@@ -1569,11 +1568,6 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 <summary>Screenshots</summary>
 <img src="docs/testing-manual/31-testing-user-story-1.png">
 </details>
-
-
-
-### Automated testing
-
 
 
 ##### Back to [top](#tick-it)
