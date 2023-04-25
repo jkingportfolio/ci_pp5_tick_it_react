@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Col, Container, Row, Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import packStyles from "../../styles/PackListings.module.css";
 import Pack from "./Pack";
 import Asset from "../../components/Asset";
 import { useLocation } from "react-router";
@@ -11,7 +10,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import ScrollToTop from "../../components/ScrollToTop";
 import appStyles from "../../App.module.css";
-import styles from "../../styles/SearchBar.module.css";
+import styles from "../../styles/PackListings.module.css";
 
 function PackListings({ message, filter = "" }) {
   const [packs, setPacks] = useState({ results: [] });
@@ -70,7 +69,7 @@ function PackListings({ message, filter = "" }) {
             aria-label="Search bar"
           />
         </Form>
-        <div className={packStyles.PackButton}>
+        <div className={styles.PackButton}>
           <Button
             className={`${appStyles.Button}`}
             as={Link}
