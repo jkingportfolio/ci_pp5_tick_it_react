@@ -1,13 +1,13 @@
 import React from "react";
 import { Row, Col, Container } from "react-bootstrap";
-import styles from "../../styles/Dashboard.module.css";
-import appStyles from "../../App.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import TaskDoughnutChart from "../../components/TaskDoughnutChart";
 import TaskStatusTable from "../../components/TaskStatusTable";
 import TaskCompleteFilter from "../../components/TaskCompleteFilter";
 import HighPriorityTasks from "../../components/HighPriorityTasks";
 import ScrollToTop from "../../components/ScrollToTop";
+import styles from "../../styles/Dashboard.module.css";
+import appStyles from "../../App.module.css";
 
 const Dashboard = () => {
   const currentUser = useCurrentUser();
