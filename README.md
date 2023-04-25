@@ -212,30 +212,30 @@ Balsamiq was used to create wireframes of the sites pages
 
 ### Frameworks and Tools
 
-- [Axios](https://axios-http.com/docs/intro) - axios were used for promise-based HTTP. Justification: I used axios to send API requests from the React project to the API and avoid any CORS errors when sending cookies.
-- [JWT](https://jwt.io/) - library to decode out JSON Web token. Justification: I used JWT to  from the browser when the user refreshes token expires or the user logs out.
-- [React 17](https://17.reactjs.org/) - JavaScript library for building user interfaces
-- [React-Bootstrap 1.6.3](https://) - Justification: I used Bootstrap React library for UI components, styling and responsiveness.
-- [React Infinite Scroll](https://www.npmjs.com/package/react-infinite-scroll-component) - Justification: I used this component to load content (tasks/comments) automatically as the user scrolls towards the bottom of the page without having to jump to next/previous page.
-- [React Router](https://v5.reactrouter.com/web/guides/quick-start) - Justification: I used this library to enable navigation between views of components and to have the ability to control what is presented to the user based on the URL they have accessed in the browser. 
-- [React ChartJS2](https://react-chartjs-2.js.org/) - Justification: used for producing the doughnut chart on the main page. 
-- [React Multi Select Component](https://www.npmjs.com/package/react-multi-select-component) - Justification: I used this component to have the ability to select multiple tasks to assign to a pack.
+- [Axios](https://axios-http.com/docs/intro) - Axios is a Promise API. Justification: I used axios to send API requests from the React project to the API and avoid any CORS errors when sending cookies.
+- [JWT](https://jwt.io/) - Library to decode JSON Web token. Justification: I used JWT to securely transmit data and to have the ability to verify that the content has not been tampered with.
+- [React 17](https://17.reactjs.org/) - JavaScript library for building user interfaces. Justification: To be able to showcase my newly learnt skills and for building intereactive user interfaces quickly.
+- [React-Bootstrap 1.6.3](https://) - CSS framework. Justification: I used Bootstrap React library for UI components, styling and responsiveness.
+- [React Infinite Scroll](https://www.npmjs.com/package/react-infinite-scroll-component) - React library. Justification: I used this component to load content (tasks/comments) automatically as the user scrolls towards the bottom of the page without having to jump to next/previous page.
+- [React Router](https://v5.reactrouter.com/web/guides/quick-start) - Javascript framework for routing. Justification: I used this library to enable navigation between views of components and to have the ability to control what is presented to the user based on the URL they have accessed in the browser. 
+- [React ChartJS2](https://react-chartjs-2.js.org/) - React Library. Justification: I used this component for producing the doughnut chart on the main page. 
+- [React Multi Select Component](https://www.npmjs.com/package/react-multi-select-component) - React Library. Justification: I used this component to have the ability to select multiple tasks to assign to a pack.
 
-- [Am I Responsive](http://ami.responsivedesign.is/) was used to create the multi-device mock-up at the top of this README.md file
-- [Balsamiq](https://balsamiq.com/) to create the projects wireframes
-- [Chrome dev tools](https://developers.google.com/web/tools/chrome-devtools/) was used for debugging of the code and checking site for responsiveness
-- [Cloudinary](https://cloudinary.com/) to store static files
-- [Font Awesome](https://fontawesome.com/) - Icons from Font Awesome were used throughout the site
-- [Google Fonts](https://fonts.google.com/) - import of Inter font
-- [Git](https://git-scm.com/) was used for version control within VSCode to push the code to GitHub
-- [GitHub](https://github.com/) was used as a remote repository to store project code
-- [Gitpod](https://gitpod.io) was used to host a virtual workspace
+- [Am I Responsive](http://ami.responsivedesign.is/) - Website responsive test site. Justification: I used this to create the multi-device mock-up at the top of this README.md file
+- [Balsamiq](https://balsamiq.com/) - Mock up software. Justification: I used this to create the projects wireframes
+- [Chrome dev tools](https://developers.google.com/web/tools/chrome-devtools/) - Developer tool. Justification: I used this for debugging of the code and checking site for responsiveness
+- [Cloudinary](https://cloudinary.com/) - File storage. Justification: I used this to store static files
+- [Font Awesome](https://fontawesome.com/) - Icon library. Justification: I used this to style the site with icons.
+- [Google Fonts](https://fonts.google.com/) - font library. Justification: I used this to import fonts
+- [Git](https://git-scm.com/) - Version control system. Justification: I used this for version control within VSCode to push the code to GitHub
+- [GitHub](https://github.com/) - Cloud based hosting service. Justification: I used this as a remote repository to store project code
+- [Gitpod](https://gitpod.io) - Cloud development environment. Justification: I used this to host a virtual workspace
 - Validation:
-  - [WC3 Validator](https://validator.w3.org/) was used to validate the applications html
-  - [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/) was used to validate the applications css
-  - [ESLint](https://eslint.org/) used to validate applications JSX code
-  - [Lighthouse](https://developers.google.com/web/tools/lighthouse/) used to validate performance, accessibility, best practice and SEO of the application
-  - [Wave](https://wave.webaim.org/) - used to evaluate the applications accessibility
+  - [WC3 Validator](https://validator.w3.org/) - HTML Validator. Justification: I used this to validate the applications html
+  - [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/) - CSS Validator. Justification: I used this to validate the applications css
+  - [ESLint](https://eslint.org/) - JavaScript Validator. Justification: I used this to validate applications JSX code
+  - [Lighthouse](https://developers.google.com/web/tools/lighthouse/) Site auditing tool. Justification: I used this to validate performance, accessibility, best practice and SEO of the application
+  - [Wave](https://wave.webaim.org/) - Site accesibility auditor. Justification: I used this to evaluate the applications accessibility
 
 ### Libraries
 
