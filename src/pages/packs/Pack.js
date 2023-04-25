@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import styles from "../../styles/Pack.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Card, Container, Modal, Button } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
@@ -7,6 +6,7 @@ import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 import { DropDown } from "../../components/DropDown";
 import appStyles from "../../App.module.css";
+import styles from "../../styles/Pack.module.css";
 
 const Pack = (props) => {
   const {

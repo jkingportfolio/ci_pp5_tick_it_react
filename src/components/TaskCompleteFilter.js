@@ -7,7 +7,6 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../utils/utils";
 import NoResults from "../assets/no-results.png";
 import appStyles from "../App.module.css";
-import taskStyles from "../styles/TasksListings.module.css";
 
 function TaskCompleteFilter({ message, filter = "" }) {
   const [tasks, setTasks] = useState({ results: [] });
@@ -46,7 +45,6 @@ function TaskCompleteFilter({ message, filter = "" }) {
       className={`${appStyles.JustifyContentCenter} ${appStyles.BottomMargin}`}
     >
       <Col className="py-2 p-0 p-lg-2" lg={8}>
-        <div className={taskStyles.TaskButton}></div>
         {hasLoaded ? (
           <div className={appStyles.ScrollBox}>
             {tasks.results.length ? (

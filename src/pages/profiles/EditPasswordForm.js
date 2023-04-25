@@ -3,8 +3,8 @@ import { Alert, Button, Col, Container, Form, Row, Modal } from "react-bootstrap
 import { useHistory, useParams } from "react-router-dom";
 import { axiosRes } from "../../api/axiosDefaults";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import appStyles from "../../App.module.css";
 import PasswordCriteria from "../../components/PasswordCriteria";
+import appStyles from "../../App.module.css";
 
 const UserPasswordForm = () => {
   const history = useHistory();

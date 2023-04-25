@@ -5,7 +5,6 @@ import Task from "../pages/tasks/Task";
 import Asset from "../components/Asset";
 import NoResults from "../assets/no-results.png";
 import appStyles from "../App.module.css";
-import taskStyles from "../styles/TasksListings.module.css";
 
 function HighPriorityTaskListings({ message, filter = "" }) {
   const [tasks, setTasks] = useState({ results: [] });
@@ -42,7 +41,6 @@ function HighPriorityTaskListings({ message, filter = "" }) {
       className={`${appStyles.JustifyContentCenter} ${appStyles.BottomMargin}`}
     >
       <Col className="py-2 p-0 p-lg-2" lg={8}>
-        <div className={taskStyles.TaskButton}></div>
         {hasLoaded ? (
           <div className={appStyles.ScrollBox}>
             {tasks.results.length ? (
