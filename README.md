@@ -720,79 +720,79 @@ Although alot of effort was put into this project, due to time constraints there
 The W3C Markup Validation Service was used to validate the HTML of the website. No errors were identified. 
 
 <details><summary>Main page (not logged in)</summary> 
-<img src="docs/validation/html-validation-main-page.png"> 
+<img src="docs/validation/html/html-validation-main-page.png"> 
 </details>
 
 <details><summary>Main page (logged in user)</summary> 
-<img src="docs/validation/html-validation-main-page-auth.png"> 
+<img src="docs/validation/html/html-validation-main-page-auth.png"> 
 </details> 
 
 <details><summary>Signup page</summary> 
-<img src="docs/validation/html-validation-signup-page.png"> 
+<img src="docs/validation/html/html-validation-signup-page.png"> 
 </details>
 
 <details><summary>Login page</summary> 
-<img src="docs/validation/html-validation-login-page.png"> 
+<img src="docs/validation/html/html-validation-login-page.png"> 
 </details>
 
 <details><summary>Tasks page</summary>
-<img src="docs/validation/html-validation-tasks-page.png">
+<img src="docs/validation/html/html-validation-tasks-page.png">
 </details>
 
 <details><summary>Task create page</summary>
-<img src="docs/validation/html-validation-task-create-page.png">
+<img src="docs/validation/html/html-validation-task-create-page.png">
 </details>
 
 <details><summary>Task detail page</summary>
-<img src="docs/validation/html-validation-task-detail-page.png">
+<img src="docs/validation/html/html-validation-task-detail-page.png">
 </details>
 
 <details><summary>Task edit page</summary>
-<img src="docs/validation/html-validation-task-edit-page.png">
+<img src="docs/validation/html/html-validation-task-edit-page.png">
 </details>
 
 <details><summary>Watched page</summary>
-<img src="docs/validation/html-validation-watched-page.png">
+<img src="docs/validation/html/html-validation-watched-page.png">
 </details>
 
 <details><summary>Pack page</summary>
-<img src="docs/validation/html-validation-packs-page.png">
+<img src="docs/validation/html/html-validation-packs-page.png">
 </details>
 
 <details><summary>Pack create page</summary>
-<img src="docs/validation/html-validation-pack-create-page.png">
+<img src="docs/validation/html/html-validation-pack-create-page.png">
 </details>
 
 <details><summary>Pack detail page</summary>
-<img src="docs/validation/html-validation-pack-detail-page.png">
+<img src="docs/validation/html/html-validation-pack-detail-page.png">
 </details>
 
 <details><summary>Pack edit page</summary>
-<img src="docs/validation/html-validation-pack-edit-page.png">
+<img src="docs/validation/html/html-validation-pack-edit-page.png">
 </details>
 
 <details><summary>Contact page</summary>
-<img src="docs/validation/html-validation-contact-page.png">
+<img src="docs/validation/html/html-validation-contact-page.png">
 </details>
 
 <details><summary>Users page</summary>
-<img src="docs/validation/html-validation-users-page.png">
+<img src="docs/validation/html/html-validation-users-page.png">
 </details>
 
 <details><summary>Profile page</summary>
-<img src="docs/validation/html-validation-profile-page.png">
+<img src="docs/validation/html/html-validation-profile-page.png">
 </details>
 
 <details><summary>Profile edit page</summary>
-<img src="docs/validation/html-validation-profile-edit-page.png">
+<img src="docs/validation/html/html-validation-profile-edit-page.png">
 </details>
 
 <details><summary>Change password page</summary>
-<img src="docs/validation/html-validation-change-password-page.png">
+<img src="docs/validation/html/html-validation-change-password-page.png">
 </details>
 
 <details><summary>404 page</summary>
-<img src="docs/validation/html-validation-404-page.png">
+<img src="docs/validation/html/html-validation-404-page.png">
 </details>
 
 
@@ -801,83 +801,83 @@ The W3C Markup Validation Service was used to validate the HTML of the website. 
 The W3C Jigsaw CSS Validation Service was used to validate the CSS of the website. All CSS modules pass the validation with no errors.
 
 <details><summary>App.module.css</summary> 
-<img src="docs/validation/css-validation-app.png"> 
+<img src="docs/validation/css/css-validation-app.png"> 
 </details> 
 
 <details><summary>Asset.module.css</summary> 
-<img src="docs/validation/css-validation-asset.png"> 
+<img src="docs/validation/css/css-validation-asset.png"> 
 </details>
 
 <details><summary>Avatar.module.css</summary> 
-<img src="docs/validation/css-validation-avatar.png"> 
+<img src="docs/validation/css/css-validation-avatar.png"> 
 </details>
 
 <details><summary>Comment.module.css</summary> 
-<img src="docs/validation/css-validation-comment.png"> 
+<img src="docs/validation/css/css-validation-comment.png"> 
 </details>
 
 <details><summary>CommentForm.module.css</summary> 
-<img src="docs/validation/css-validation-comment-form.png"> 
+<img src="docs/validation/css/css-validation-comment-form.png"> 
 </details>
 
 <details><summary>CredentialsForm.module.css</summary> 
-<img src="docs/validation/css-validation-credentials-form.png"> 
+<img src="docs/validation/css/css-validation-credentials-form.png"> 
 </details>
 
 <details><summary>Dashboard.module.css</summary> 
-<img src="docs/validation/css-validation-dashboard.png"> 
+<img src="docs/validation/css/css-validation-dashboard.png"> 
 </details>
 
 <details><summary>DropdDown.module.css</summary> 
-<img src="docs/validation/css-validation-dropdown.png"> 
+<img src="docs/validation/css/css-validation-dropdown.png"> 
 </details>
 
 <details><summary>DropdDown.module.css</summary> 
-<img src="docs/validation/css-validation-index.png"> 
+<img src="docs/validation/css/css-validation-index.png"> 
 </details>
 
 <details><summary>LandingPage.module.css</summary> 
-<img src="docs/validation/css-validation-landing-page.png"> 
+<img src="docs/validation/css/css-validation-landing-page.png"> 
 </details>
 
 <details><summary>NavBar.module.css</summary> 
-<img src="docs/validation/css-validation-nav-bar.png"> 
+<img src="docs/validation/css/css-validation-nav-bar.png"> 
 </details>
 
 <details><summary>Pack.module.css</summary> 
-<img src="docs/validation/css-validation-pack.png"> 
+<img src="docs/validation/css/css-validation-pack.png"> 
 </details>
 
 <details><summary>PackCreateEditForm.module.css</summary> 
-<img src="docs/validation/css-validation-pack-create-edit-form.png"> 
+<img src="docs/validation/css/css-validation-pack-create-edit-form.png"> 
 </details>
 
 <details><summary>PackListings.module.css</summary> 
-<img src="docs/validation/css-validation-pack-listings.png"> 
+<img src="docs/validation/css/css-validation-pack-listings.png"> 
 </details>
 
 <details><summary>ProfilePage.module.css</summary> 
-<img src="docs/validation/css-validation-profile-page.png"> 
+<img src="docs/validation/css/css-validation-profile-page.png"> 
 </details>
 
 <details><summary>ScrollToTop.module.css</summary> 
-<img src="docs/validation/css-validation-scroll-to-top.png"> 
+<img src="docs/validation/css/css-validation-scroll-to-top.png"> 
 </details>
 
 <details><summary>SearchBar.module.css</summary> 
-<img src="docs/validation/css-validation-search-bar.png"> 
+<img src="docs/validation/css/css-validation-search-bar.png"> 
 </details>
 
 <details><summary>Task.module.css</summary> 
-<img src="docs/validation/css-validation-task.png"> 
+<img src="docs/validation/css/css-validation-task.png"> 
 </details>
 
 <details><summary>TaskListings.module.css</summary> 
-<img src="docs/validation/css-validation-tasks-listings.png"> 
+<img src="docs/validation/css/css-validation-tasks-listings.png"> 
 </details>
 
 <details><summary>UserProfiles.module.css</summary> 
-<img src="docs/validation/css-validation-user-profiles.png"> 
+<img src="docs/validation/css/css-validation-user-profiles.png"> 
 </details>
 
 
@@ -903,79 +903,79 @@ Lighthouse was used to test the performance, accessibility, best practice and SE
 <details><summary>Results</summary>
 
 <details><summary>Main page (not logged in)</summary> 
-<img src="docs/validation/desktop-lighthouse-validation-main-page.png"> 
+<img src="docs/validation/lighthouse/desktop-lighthouse-validation-main-page.png"> 
 </details>
 
 <details><summary>Main page (logged in user)</summary> 
-<img src="docs/validation/desktop-lighthouse-validation-main-page-auth.png"> 
+<img src="docs/validation/lighthouse/desktop-lighthouse-validation-main-page-auth.png"> 
 </details> 
 
 <details><summary>Signup page</summary> 
-<img src="docs/validation/desktop-lighthouse-validation-signup-page.png"> 
+<img src="docs/validation/lighthouse/desktop-lighthouse-validation-signup-page.png"> 
 </details>
 
 <details><summary>Login page</summary> 
-<img src="docs/validation/desktop-lighthouse-validation-login-page.png"> 
+<img src="docs/validation/lighthouse/desktop-lighthouse-validation-login-page.png"> 
 </details>
 
 <details><summary>Tasks page</summary>
-<img src="docs/validation/desktop-lighthouse-validation-tasks-page.png">
+<img src="docs/validation/lighthouse/desktop-lighthouse-validation-tasks-page.png">
 </details>
 
 <details><summary>Task create page</summary>
-<img src="docs/validation/desktop-lighthouse-validation-task-create-page.png">
+<img src="docs/validation/lighthouse/desktop-lighthouse-validation-task-create-page.png">
 </details>
 
 <details><summary>Task edit page</summary>
-<img src="docs/validation/desktop-lighthouse-validation-task-edit-page.png">
+<img src="docs/validation/lighthouse/desktop-lighthouse-validation-task-edit-page.png">
 </details>
 
 <details><summary>Task detail page</summary>
-<img src="docs/validation/desktop-lighthouse-validation-task-detail-page.png">
+<img src="docs/validation/lighthouse/desktop-lighthouse-validation-task-detail-page.png">
 </details>
 
 <details><summary>Watched page</summary>
-<img src="docs/validation/desktop-lighthouse-validation-watched-page.png">
+<img src="docs/validation/lighthouse/desktop-lighthouse-validation-watched-page.png">
 </details>
 
 <details><summary>Pack page</summary>
-<img src="docs/validation/desktop-lighthouse-validation-packs-page.png">
+<img src="docs/validation/lighthouse/desktop-lighthouse-validation-packs-page.png">
 </details>
 
 <details><summary>Pack create page</summary>
-<img src="docs/validation/desktop-lighthouse-validation-pack-create-page.png">
+<img src="docs/validation/lighthouse/desktop-lighthouse-validation-pack-create-page.png">
 </details>
 
 <details><summary>Packe dit page</summary>
-<img src="docs/validation/desktop-lighthouse-validation-pack-edit-page.png">
+<img src="docs/validation/lighthouse/desktop-lighthouse-validation-pack-edit-page.png">
 </details>
 
 <details><summary>Pack detail page</summary>
-<img src="docs/validation/desktop-lighthouse-validation-pack-detail-page.png">
+<img src="docs/validation/lighthouse/desktop-lighthouse-validation-pack-detail-page.png">
 </details>
 
 <details><summary>Contact page</summary>
-<img src="docs/validation/desktop-lighthouse-validation-contact-page.png">
+<img src="docs/validation/lighthouse/desktop-lighthouse-validation-contact-page.png">
 </details>
 
 <details><summary>Users page</summary>
-<img src="docs/validation/desktop-lighthouse-validation-users-page.png">
+<img src="docs/validation/lighthouse/desktop-lighthouse-validation-users-page.png">
 </details>
 
 <details><summary>Profile page</summary>
-<img src="docs/validation/desktop-lighthouse-validation-profile-page.png">
+<img src="docs/validation/lighthouse/desktop-lighthouse-validation-profile-page.png">
 </details>
 
 <details><summary>Profile edit page</summary>
-<img src="docs/validation/desktop-lighthouse-validation-profile-edit-page.png">
+<img src="docs/validation/lighthouse/desktop-lighthouse-validation-profile-edit-page.png">
 </details>
 
 <details><summary>Change password page</summary>
-<img src="docs/validation/desktop-lighthouse-validation-change-password-page.png">
+<img src="docs/validation/lighthouse/desktop-lighthouse-validation-change-password-page.png">
 </details>
 
 <details><summary>404 page</summary>
-<img src="docs/validation/desktop-lighthouse-validation-404-page.png">
+<img src="docs/validation/lighthouse/desktop-lighthouse-validation-404-page.png">
 </details>
 </details>
 
@@ -986,79 +986,79 @@ Lighthouse was used to test the performance, accessibility, best practice and SE
 <details><summary>Results</summary>
 
 <details><summary>Main page (not logged in)</summary> 
-<img src="docs/validation/mobile-lighthouse-validation-main-page.png"> 
+<img src="docs/validation/lighthouse/mobile-lighthouse-validation-main-page.png"> 
 </details>
 
 <details><summary>Main page (logged in user)</summary> 
-<img src="docs/validation/mobile-lighthouse-validation-main-page-auth.png"> 
+<img src="docs/validation/lighthouse/mobile-lighthouse-validation-main-page-auth.png"> 
 </details> 
 
 <details><summary>Signup page</summary> 
-<img src="docs/validation/mobile-lighthouse-validation-signup-page.png"> 
+<img src="docs/validation/lighthouse/mobile-lighthouse-validation-signup-page.png"> 
 </details>
 
 <details><summary>Login page</summary> 
-<img src="docs/validation/mobile-lighthouse-validation-login-page.png"> 
+<img src="docs/validation/lighthouse/mobile-lighthouse-validation-login-page.png"> 
 </details>
 
 <details><summary>Tasks page</summary>
-<img src="docs/validation/mobile-lighthouse-validation-tasks-page.png">
+<img src="docs/validation/lighthouse/mobile-lighthouse-validation-tasks-page.png">
 </details>
 
 <details><summary>Task create page</summary>
-<img src="docs/validation/mobile-lighthouse-validation-task-create-page.png">
+<img src="docs/validation/lighthouse/mobile-lighthouse-validation-task-create-page.png">
 </details>
 
 <details><summary>Task edit page</summary>
-<img src="docs/validation/mobile-lighthouse-validation-task-edit-page.png">
+<img src="docs/validation/lighthouse/mobile-lighthouse-validation-task-edit-page.png">
 </details>
 
 <details><summary>Task detail page</summary>
-<img src="docs/validation/mobile-lighthouse-validation-task-detail-page.png">
+<img src="docs/validation/lighthouse/mobile-lighthouse-validation-task-detail-page.png">
 </details>
 
 <details><summary>Watched page</summary>
-<img src="docs/validation/mobile-lighthouse-validation-watched-page.png">
+<img src="docs/validation/lighthouse/mobile-lighthouse-validation-watched-page.png">
 </details>
 
 <details><summary>Pack page</summary>
-<img src="docs/validation/mobile-lighthouse-validation-packs-page.png">
+<img src="docs/validation/lighthouse/mobile-lighthouse-validation-packs-page.png">
 </details>
 
 <details><summary>Pack create page</summary>
-<img src="docs/validation/mobile-lighthouse-validation-pack-create-page.png">
+<img src="docs/validation/lighthouse/mobile-lighthouse-validation-pack-create-page.png">
 </details>
 
 <details><summary>Pack edit page</summary>
-<img src="docs/validation/mobile-lighthouse-validation-pack-edit-page.png">
+<img src="docs/validation/lighthouse/mobile-lighthouse-validation-pack-edit-page.png">
 </details>
 
 <details><summary>Pack detail page</summary>
-<img src="docs/validation/mobile-lighthouse-validation-pack-detail-page.png">
+<img src="docs/validation/lighthouse/mobile-lighthouse-validation-pack-detail-page.png">
 </details>
 
 <details><summary>Contact page</summary>
-<img src="docs/validation/mobile-lighthouse-validation-contact-page.png">
+<img src="docs/validation/lighthouse/mobile-lighthouse-validation-contact-page.png">
 </details>
 
 <details><summary>Users page</summary>
-<img src="docs/validation/mobile-lighthouse-validation-users-page.png">
+<img src="docs/validation/lighthouse/mobile-lighthouse-validation-users-page.png">
 </details>
 
 <details><summary>Profile page</summary>
-<img src="docs/validation/mobile-lighthouse-validation-profile-page.png">
+<img src="docs/validation/lighthouse/mobile-lighthouse-validation-profile-page.png">
 </details>
 
 <details><summary>Profile edit page</summary>
-<img src="docs/validation/mobile-lighthouse-validation-profile-edit-page.png">
+<img src="docs/validation/lighthouse/mobile-lighthouse-validation-profile-edit-page.png">
 </details>
 
 <details><summary>Change password page</summary>
-<img src="docs/validation/mobile-lighthouse-validation-change-password-page.png">
+<img src="docs/validation/lighthouse/mobile-lighthouse-validation-change-password-page.png">
 </details>
 
 <details><summary>404 page</summary>
-<img src="docs/validation/mobile-lighthouse-validation-404-page.png">
+<img src="docs/validation/lighthouse/mobile-lighthouse-validation-404-page.png">
 </details>
 </details>
 
@@ -1072,79 +1072,79 @@ There were a few errors related to missing labels and contrast issues on buttons
 
 <details><summary>Results</summary> 
 <details><summary>Main page (not logged in)</summary> 
-<img src="docs/validation/wave-validation-main-page.png"> 
+<img src="docs/validation/wave/wave-validation-main-page.png"> 
 </details>
 
 <details><summary>Main page (logged in user)</summary> 
-<img src="docs/validation/wave-validation-main-page-logged-in.png"> 
+<img src="docs/validation/wave/wave-validation-main-page-logged-in.png"> 
 </details> 
 
 <details><summary>Signup page</summary> 
-<img src="docs/validation/wave-validation-signup-page.png"> 
+<img src="docs/validation/wave/wave-validation-signup-page.png"> 
 </details>
 
 <details><summary>Login page</summary> 
-<img src="docs/validation/wave-validation-login-page.png"> 
+<img src="docs/validation/wave/wave-validation-login-page.png"> 
 </details>
 
 <details><summary>Tasks page</summary>
-<img src="docs/validation/wave-validation-tasks-page.png">
+<img src="docs/validation/wave/wave-validation-tasks-page.png">
 </details>
 
 <details><summary>Task create page</summary>
-<img src="docs/validation/wave-validation-task-create-page.png">
+<img src="docs/validation/wave/wave-validation-task-create-page.png">
 </details>
 
 <details><summary>Task edit page</summary>
-<img src="docs/validation/wave-validation-task-edit-page.png">
+<img src="docs/validation/wave/wave-validation-task-edit-page.png">
 </details>
 
 <details><summary>Task detail page</summary>
-<img src="docs/validation/wave-validation-task-detail-page.png">
+<img src="docs/validation/wave/wave-validation-task-detail-page.png">
 </details>
 
 <details><summary>Watched page</summary>
-<img src="docs/validation/wave-validation-watched-page.png">
+<img src="docs/validation/wave/wave-validation-watched-page.png">
 </details>
 
 <details><summary>Pack page</summary>
-<img src="docs/validation/wave-validation-packs-page.png">
+<img src="docs/validation/wave/wave-validation-packs-page.png">
 </details>
 
 <details><summary>Pack create page</summary>
-<img src="docs/validation/wave-validation-pack-create-page.png">
+<img src="docs/validation/wave/wave-validation-pack-create-page.png">
 </details>
 
 <details><summary>Pack edit page</summary>
-<img src="docs/validation/wave-validation-pack-edit-page.png">
+<img src="docs/validation/wave/wave-validation-pack-edit-page.png">
 </details>
 
 <details><summary>Pack detail page</summary>
-<img src="docs/validation/wave-validation-pack-detail-page.png">
+<img src="docs/validation/wave/wave-validation-pack-detail-page.png">
 </details>
 
 <details><summary>Contact page</summary>
-<img src="docs/validation/wave-validation-contact-page.png">
+<img src="docs/validation/wave/wave-validation-contact-page.png">
 </details>
 
 <details><summary>Users page</summary>
-<img src="docs/validation/wave-validation-users-page.png">
+<img src="docs/validation/wave/wave-validation-users-page.png">
 </details>
 
 <details><summary>Profile page</summary>
-<img src="docs/validation/wave-validation-profile-page.png">
+<img src="docs/validation/wave/wave-validation-profile-page.png">
 </details>
 
 <details><summary>Profile edit page</summary>
-<img src="docs/validation/wave-validation-profile-edit-page.png">
+<img src="docs/validation/wave/wave-validation-profile-edit-page.png">
 </details>
 
 <details><summary>Change password page</summary>
-<img src="docs/validation/wave-validation-change-password-page.png">
+<img src="docs/validation/wave/wave-validation-change-password-page.png">
 </details>
 
 <details><summary>404 page</summary>
-<img src="docs/validation/wave-validation-404-page.png">
+<img src="docs/validation/wave/wave-validation-404-page.png">
 </details>
 </details>
 
