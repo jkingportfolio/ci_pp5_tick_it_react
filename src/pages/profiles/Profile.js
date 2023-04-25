@@ -7,6 +7,9 @@ import styles from "../../styles/ProfilePage.module.css";
 const Profile = (props) => {
   const { id, image, owner, mobile, imageSize = 55, job_role, created_on } = props;
 
+  /* 
+    Returns user profile based on Profile Props
+  */
   return (
     <div
       className={`my-3 d-flex align-items-center ${mobile && "flex-column"} ${styles.MiniProfileBox}`}

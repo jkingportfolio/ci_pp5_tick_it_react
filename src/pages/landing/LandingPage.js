@@ -6,9 +6,13 @@ import appStyles from "../../App.module.css";
 
 
 const LandingPage = () => {
+
+  /* 
+    Returns landing page with buttons to 
+   login or signup
+  */
   return (
-    <>
-      
+    <>      
       <Row className="text-center">
         <Col className={styles.LandingBoxPos} sm={12}>
           <Container className={styles.LandingBoxPos}>

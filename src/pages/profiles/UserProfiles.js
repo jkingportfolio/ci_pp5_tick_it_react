@@ -16,6 +16,9 @@ function UserProfiles({ message, filter = "" }) {
   const { pathname } = useLocation();
   const [query, setQuery] = useState("");
 
+  /* 
+    Fetch all profiles and filter by search query
+  */
   useEffect(() => {
     const fetchProfiles = async () => {
       try {
@@ -38,6 +41,9 @@ function UserProfiles({ message, filter = "" }) {
     };
   }, [filter, query, pathname]);
 
+  /* 
+    Returns list of all users profiles
+  */
   return (
     <Row>
       <Col className={`${appStyles.AutoMargin} "py-2 p-0 p-lg-2"`} lg={8}>

@@ -19,7 +19,9 @@ const UserPasswordForm = () => {
   const [errors, setErrors] = useState({});
   const [showModal, setShowModal] = useState(false);
 
-
+  /* 
+    handles change in userData
+  */
   const handleChange = (event) => {
     setUserData({
       ...userData,
@@ -27,14 +29,19 @@ const UserPasswordForm = () => {
     });
   };
 
-
+  /* 
+    Validate user is owner of profile and if not
+    return to home page
+  */
   useEffect(() => {
     if (currentUser?.profile_id?.toString() !== id) {
       history.push("/");
     }
   }, [currentUser, history, id]);
 
-
+  /* 
+    Handle submit of new password form
+  */
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -45,11 +52,17 @@ const UserPasswordForm = () => {
     }
   };
 
+  /* 
+    handle closing of feedback modal
+  */
   const handleCloseModal = () => {
     setShowModal(false);
     history.goBack();    
   };
 
+  /* 
+    Returns password edit form and feedback modal
+  */
   return (
     <Row>
       <Col className="py-2 mx-auto text-center font-weight-bold" md={8}>

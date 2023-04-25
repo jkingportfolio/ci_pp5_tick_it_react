@@ -8,9 +8,11 @@ import axios from "axios";
 function TaskCreateForm() {
   const [errors, setErrors] = useState({});
   const [users, setUsers] = useState([]);
-  const [showModal, setShowModal] = useState(false);
-  
+  const [showModal, setShowModal] = useState(false);  
 
+  /* 
+    Fetch all profiles from the API
+  */
   useEffect(() => {
     axios
       .get("/profile-list/")
@@ -18,8 +20,9 @@ function TaskCreateForm() {
       .catch((error) => console.log(error));
   }, []);
 
-
-
+  /* 
+    Fetch state for Task
+  */
   const [taskData, setTaskData] = useState({
     title: "",
     task_body: "",
@@ -31,6 +34,9 @@ function TaskCreateForm() {
 
   const history = useHistory();
 
+  /* 
+    Handle change of TaskData
+  */
   const handleChange = (event) => {
     setTaskData({
       ...taskData,
@@ -38,6 +44,9 @@ function TaskCreateForm() {
     });
   };
 
+  /* 
+    Handle submit of task creation form
+  */
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -59,6 +68,9 @@ function TaskCreateForm() {
     }
   };
 
+  /* 
+    Handle close of feedback modal
+  */
   const handleCloseModal = () => {
     setShowModal(false);
     history.push(`/tasks/`);  
@@ -187,6 +199,10 @@ function TaskCreateForm() {
     </div>
   );
 
+  /* 
+    Returns the task create form and associated feedback
+    modals
+  */
   return (
     <Form onSubmit={handleSubmit}>
       {showModal && (

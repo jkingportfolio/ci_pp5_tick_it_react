@@ -19,6 +19,9 @@ function PackListings({ message, filter = "" }) {
   const [query, setQuery] = useState("");
   const maxRetries = 3;
 
+  /* 
+    Fetches all packs and retries if 500 server error
+  */
   useEffect(() => {
     const fetchPacks = async () => {
       let retries = 0;
@@ -50,6 +53,9 @@ function PackListings({ message, filter = "" }) {
     };
   }, [filter, query, pathname]);
 
+  /* 
+    Returns pack listing pages of all packs
+  */
   return (
     <Row>
       <Col className={`${appStyles.AutoMargin} "py-2 p-0 p-lg-2"`} lg={8}>

@@ -11,6 +11,9 @@ function PackDetail() {
   const [pack, setPack] = useState({ results: [] });
   const [isLoading, setIsLoading] = useState(true);
 
+  /* 
+    Fetches all packs by ID
+  */
   useEffect(() => {
     const handleMount = () => {
       axiosReq.get(`/packs/${id}`)
@@ -26,6 +29,9 @@ function PackDetail() {
     handleMount();
   }, [id]);
 
+  /* 
+    Returns a pack detail page
+  */
   return (
     <div className="h-100">
       <div className={appStyles.BottomMargin}>

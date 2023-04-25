@@ -17,6 +17,9 @@ function TaskEditForm() {
   const [errors, setErrors] = useState({});
   const [users, setUsers] = useState([]);
 
+  /* 
+    Fetch all profiles from the API
+  */
   useEffect(() => {
     axios
       .get("/profile-list/")
@@ -24,6 +27,9 @@ function TaskEditForm() {
       .catch((error) => console.log(error));
   }, []);
 
+  /* 
+    Set the state of the TaskData
+  */
   const [taskData, setTaskData] = useState({
     title: "",
     task_body: "",
@@ -40,6 +46,9 @@ function TaskEditForm() {
   const { id } = useParams();
   const [showModal, setShowModal] = useState(false);
 
+  /* 
+    Handle mount of task data from the API
+  */
   useEffect(() => {
     const handleMount = async () => {
       try {
@@ -74,6 +83,9 @@ function TaskEditForm() {
     handleMount();
   }, [history, id]);
 
+  /* 
+    Handle change to taskData
+  */
   const handleChange = (event) => {
     setTaskData({
       ...taskData,
@@ -81,6 +93,9 @@ function TaskEditForm() {
     });
   };
 
+  /* 
+    Handle submit of task edit form
+  */
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData();
@@ -113,6 +128,9 @@ function TaskEditForm() {
     }
   };
 
+  /* 
+    Handle closure of feedback modal
+  */
   const handleCloseModal = () => {
     setShowModal(false);
     history.push(`/tasks/${id}`);
@@ -272,6 +290,9 @@ function TaskEditForm() {
     </div>
   );
 
+  /* 
+    Returns task edit form and associated feedback modals
+  */
   return (
     <Row>
       <Col className={`${appStyles.AutoMargin} "py-2 p-0 p-lg-2"`} lg={8}>

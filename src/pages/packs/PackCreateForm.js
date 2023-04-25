@@ -19,6 +19,9 @@ function PackCreateForm() {
   const history = useHistory();
 
 
+  /* 
+    Fetch all tasks from the API
+  */
   useEffect(() => {
     const fetchTasks = async () => {
       try {
@@ -49,6 +52,9 @@ function PackCreateForm() {
   }));
 
 
+  /* 
+    Handle pack data change
+  */
   const handleChange = (event) => {
     setPackData({
       ...packData,
@@ -56,6 +62,9 @@ function PackCreateForm() {
     });
   };
 
+  /* 
+    Handle change in multi select task drop down
+  */
   const handleMultiSelectChange = (selected) => {
     setPackData({
       ...packData,
@@ -66,6 +75,9 @@ function PackCreateForm() {
     });
   };
 
+  /* 
+    Handle submit of Pack create form
+  */
   const handleSubmit = async (event) => {
     event.preventDefault();
     const packDataToSend = {
@@ -167,6 +179,9 @@ function PackCreateForm() {
     </div>
   );
 
+  /* 
+    Returns form to create a pack
+  */
   return (
       <Form onSubmit={handleSubmit}>
         <div className={appStyles.CenterAlignForm}>

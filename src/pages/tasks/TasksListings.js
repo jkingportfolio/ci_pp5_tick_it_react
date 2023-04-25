@@ -19,6 +19,10 @@ function TasksListings({ message, filter = "" }) {
   const { pathname } = useLocation();
   const [query, setQuery] = useState("");
 
+  /* 
+    Fetch all tasks and by query if a search has been carried out
+    Change header based on if the page is Tasks or Watched
+  */
   useEffect(() => {
     const fetchTasks = async () => {
       try {
@@ -45,6 +49,9 @@ function TasksListings({ message, filter = "" }) {
     headerText = "WATCHED";
   }
 
+  /* 
+    Returns list of all tasks including create task button
+  */
   return (
     <Row>
       <Col className={`${appStyles.AutoMargin} "py-2 p-0 p-lg-2"`} lg={8}>

@@ -29,7 +29,10 @@ function ProfilePage() {
   const [profilePacks, setProfilePacks] = useState({ results: [] });
   const [profileAssigned, setProfileAssigned] = useState({ results: [] });
 
-
+  /* 
+    Fetch all data for profile, tasks, packs and
+    assigned to tasks from the API
+  */
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -59,6 +62,9 @@ function ProfilePage() {
     fetchData();
   }, [id, setProfileData]);
 
+  /* 
+    Returns profile information
+  */
   const mainProfile = (
     <>
       <Row
@@ -88,8 +94,8 @@ function ProfilePage() {
             <div
               className={`${styles.Border} ${styles.DivFlexChild} ${styles.ButtonContainer}`}
             >
-              {profile?.owner} currently works as a {profile?.job_role} and
-              has a task count of {profile?.tasks_count}.
+              {profile?.owner} currently works as a {profile?.job_role} and has
+              a task count of {profile?.tasks_count}.
             </div>
           </div>
         </Col>
@@ -126,6 +132,9 @@ function ProfilePage() {
     </>
   );
 
+  /* 
+    Returns tasks owned by currently viewed profiles user
+  */
   const mainProfileTasks = (
     <>
       {profileTasks.results.length ? (
@@ -147,6 +156,9 @@ function ProfilePage() {
     </>
   );
 
+  /* 
+    Returns packs owned by the currently viewed profiles user
+  */
   const mainProfilePacks = (
     <>
       {profilePacks.results.length ? (
@@ -170,6 +182,9 @@ function ProfilePage() {
 
   let count = 0;
 
+  /* 
+    Returns all tasks currently assigned to viewed profiles user
+  */
   const mainProfileAssigned = (
     <>
       {profileAssigned.results.length ? (
@@ -207,6 +222,10 @@ function ProfilePage() {
     </>
   );
 
+  /* 
+    Returns complete user profile page with tabs for tasks, packs
+    and assigned to lists
+  */
   return (
     <div className={styles.ContentWidth}>
       <Row>

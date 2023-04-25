@@ -17,6 +17,10 @@ function PackEditForm() {
   const history = useHistory();
   const { id } = useParams();
 
+  /* 
+    Fetches all packs from the API
+    and determines if owner of pack
+  */
   useEffect(() => {
     const handleMount = async () => {
       try {
@@ -37,6 +41,9 @@ function PackEditForm() {
     handleMount();
   }, [history, id]);
 
+  /* 
+    Fetches all tasks from the API
+  */
   useEffect(() => {
     const fetchTasks = async () => {
       try {
@@ -61,6 +68,9 @@ function PackEditForm() {
     value: taskListing.id,
   }));
 
+  /* 
+    Handles change to pack data
+  */
   const handleChange = (event) => {
     setPackData({
       ...packData,
@@ -68,6 +78,10 @@ function PackEditForm() {
     });
   };
 
+  /* 
+    Handles change to task multi select
+    dropdown
+  */
   const handleMultiSelectChange = (selected) => {
     setPackData({
       ...packData,
@@ -78,6 +92,9 @@ function PackEditForm() {
     });
   };
 
+  /* 
+    Handles submit of pack edit form
+  */
   const handleSubmit = async (event) => {
     event.preventDefault();
     const packDataToSend = {
@@ -177,6 +194,9 @@ function PackEditForm() {
     </div>
   );
 
+  /* 
+    Returns pack edit form
+  */
   return (
 
       <Form onSubmit={handleSubmit}>

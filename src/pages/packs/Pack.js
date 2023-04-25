@@ -27,6 +27,9 @@ const Pack = (props) => {
   const history = useHistory();
   const [showDeleteModal, setShowDeleteModal] = useState(false);
 
+  /* 
+    Handles edit of a pack
+  */
   const handleEdit = () => {
     history.push(`/packs/${id}/edit`);
   };
@@ -41,6 +44,9 @@ const Pack = (props) => {
     }
   };
 
+  /* 
+    Fetches all tasks by their ID
+  */
   useEffect(() => {
     const fetchTaskTitles = async () => {
       const titles = await Promise.all(
@@ -54,6 +60,11 @@ const Pack = (props) => {
     fetchTaskTitles();
   }, [tasks]);
 
+  /* 
+    Returns pack with pack information and
+    if owner of pack buttons for editing and
+    deleting the pack
+  */
   return (
     <Card className={styles.Pack}>
       <Card.Body className={styles.cardbody}>

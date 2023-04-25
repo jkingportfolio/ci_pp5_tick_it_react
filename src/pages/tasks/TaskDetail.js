@@ -16,6 +16,9 @@ function TaskDetail() {
   const profile_image = currentUser?.profile_image;
   const [comments, setComments] = useState({ results: [] });
 
+  /* 
+    Fetch all tasks and their comments
+  */
   useEffect(() => {
     const handleMount = async () => {
       try {
@@ -33,6 +36,9 @@ function TaskDetail() {
     handleMount();
   }, [id]);
 
+  /* 
+    Returns detail page of task with comment form
+  */
   return (
     <div className="h-100">
       <div className={appStyles.BottomMargin}>

@@ -12,6 +12,11 @@ import appStyles from "../../App.module.css";
 const Dashboard = () => {
   const currentUser = useCurrentUser();
 
+  /* 
+    Returns dashboard page with task count table,
+    task doughnut chart, high priority tasks &
+    not started tasks
+  */
   return (
     <>
       <Container>

@@ -40,10 +40,16 @@ const Task = (props) => {
   const [assignedUser, setAssignedUser] = useState(null);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
 
+  /* 
+    Handle edit of Task
+  */
   const handleEdit = () => {
     history.push(`/tasks/${id}/edit`);
   };
 
+  /* 
+    Handle delete of Task
+  */
   const handleDelete = async () => {
     try {
       await axiosRes.delete(`/tasks/${id}/`);
@@ -54,6 +60,10 @@ const Task = (props) => {
     }
   };
 
+  /* 
+    Handle watch relationship creation between
+    user and task
+  */
   const handleWatch = async () => {
     try {
       const { data } = await axiosRes.post("/watches/", { task: id });
@@ -68,6 +78,10 @@ const Task = (props) => {
     }
   };
 
+  /* 
+    Handle deletion of watch relationship between
+    user and task
+  */
   const handleUnwatch = async () => {
     try {
       await axiosRes.delete(`/watches/${watching_id}/`);
@@ -82,6 +96,9 @@ const Task = (props) => {
     }
   };
 
+  /* 
+    Determine Colour of Completed field div border
+  */
   const backgroundColorClass = (() => {
     switch (completed) {
       case "COMPLETE":
@@ -95,6 +112,9 @@ const Task = (props) => {
     }
   })();
 
+  /* 
+    Fetch username of assigned to field for current task
+  */
   useEffect(() => {
     if (assigned_to) {
       axios.get(`/profiles/${assigned_to}/`).then((response) => {
@@ -111,6 +131,10 @@ const Task = (props) => {
     year: "numeric",
   };
 
+  /* 
+    Returns task with all fields populate by the DRF
+    Includes deletion and edit modal
+  */
   return (
     <Card className={styles.Task}>
       <Card.Body className={styles.cardbody}>

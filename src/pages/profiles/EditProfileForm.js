@@ -34,6 +34,9 @@ const EditProfileForm = () => {
   const [errors, setErrors] = useState({});
   const [showModal, setShowModal] = useState(false);
 
+  /* 
+    Fetch profile data based on auth user id
+  */
   useEffect(() => {
     const handleMount = async () => {
       if (currentUser?.profile_id?.toString() === id) {
@@ -53,6 +56,9 @@ const EditProfileForm = () => {
     handleMount();
   }, [currentUser, history, id]);
 
+  /* 
+    Handle change to ProfileData
+  */
   const handleChange = (event) => {
     setProfileData({
       ...profileData,
@@ -60,6 +66,10 @@ const EditProfileForm = () => {
     });
   };
 
+  /* 
+    Handle the submit of Profile edit
+    form
+  */
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -84,6 +94,9 @@ const EditProfileForm = () => {
     }
   };
 
+  /* 
+    Handle close of feedback modal
+  */
   const handleCloseModal = () => {
     setShowModal(false);
     history.goBack();
@@ -139,6 +152,10 @@ const EditProfileForm = () => {
     </>
   );
 
+  /* 
+    Returns form to edit user profile and feedback
+    modal
+  */
   return (
     <Row>
       <Col className={`${appStyles.AutoMargin} "py-2 p-0 p-lg-2"`} lg={8}>
@@ -168,7 +185,7 @@ const EditProfileForm = () => {
                   <Form.Group>
                     {image && (
                       <figure>
-                        <Image src={image} fluid aria-label="Profile image"/>
+                        <Image src={image} fluid aria-label="Profile image" />
                       </figure>
                     )}
                     {errors?.image?.map((message, idx) => (
