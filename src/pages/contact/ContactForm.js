@@ -21,13 +21,13 @@ const ContactForm = () => {
   /* 
     Handle changes to input fields
   */
-  const handleChange = (e) => {
-    const { name, value } = e.target;
+  const handleChange = (event) => {
+    const { name, value } = event.target;
     setForm((prevForm) => ({ ...prevForm, [name]: value }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
     try {
       await axios.post("/contact/", form);
       setShowModal(true);
