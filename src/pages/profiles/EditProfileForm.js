@@ -159,9 +159,6 @@ const EditProfileForm = () => {
   return (
     <Row>
       <Col className={`${appStyles.AutoMargin} "py-2 p-0 p-lg-2"`} lg={8}>
-        <div className={`${appStyles.TextAlignCenter} ${appStyles.AutoMargin}`}>
-          <h1 className={`${appStyles.LightText}`}>Edit Profile</h1>
-        </div>
         <Form onSubmit={handleSubmit}>
           {showModal && (
             <Modal show={showModal} onHide={handleCloseModal} centered={true}>
@@ -176,11 +173,17 @@ const EditProfileForm = () => {
               </Modal.Footer>
             </Modal>
           )}
+
           <div className={appStyles.Form}>
             <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
               <Container
                 className={`${appStyles.Content} d-flex flex-column justify-content-center`}
               >
+                <div
+                  className={`${appStyles.TextAlignCenter} ${appStyles.AutoMargin}`}
+                >
+                  <h1 className={`${appStyles.DarkText}`}>Edit Profile</h1>
+                </div>
                 <div className={appStyles.TextAlignCenter}>
                   <Form.Group>
                     {image && (
