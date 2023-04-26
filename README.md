@@ -152,10 +152,10 @@ The GitHub project can be found [here](https://github.com/users/jkingportfolio/p
 
 Tick It handles data with full CRUD Functionality:
 <br>
-- Create -  Users can create, account, profile, tasks, comment, and watch objects.
-- Read - Users can view the tasks of other users and also the profiles of these users.
-- Update - Users can update their profile, password, posted tasks and watch status of tasks via the interactive forms and buttons on the site.
-- Delete - Users can delete tasks, comments and watch objects via the interactive buttons on the site.
+- Create -  Users can create, an account, profile, tasks, comments, packs, contact messages and watch objects.
+- Read - Users can view the tasks, comments, packs of other users and also the profiles of these users.
+- Update - Users can update their profile, password, posted tasks, packs and watch status of tasks via the interactive forms and buttons on the site.
+- Delete - Users can delete tasks, comments, packs and watch objects via the interactive buttons on the site.
 
 ### Colours
 
