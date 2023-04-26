@@ -1636,6 +1636,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 | Tab active colour would revert to the default | Documentation for react bootstrap didnt mention that the css has to be over written by using activeClassName proprty. Once this was used the issue was resolved |
 | Searching for tasks if the single letter Y is entered, tasks with a title that only includes a number will be displayed | I could not work out why this was the case therefore this has had to be left in as a known bug |
 | When editing a pack, the data is not correctly pulled from the database thus resulting in the user having to remove all tasks and re select them | Due to time constraints i was unable to find a solution to this bug so i had to be left as a know bug. This bug still allows functionality although the user experience is slightly impacted due to this |
+| Pack details not displaying list of associated tasks due to server timing out | Due to not having control over the status of elephant SQLs servers i had to leave this as a know bug. This bug still allows functionality although the user experience is slightly impacted due to having to refresh the page manually in the occassional instances in which this happens |
 
 
 ##### Back to [top](#tick-it)
