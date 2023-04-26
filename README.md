@@ -123,7 +123,7 @@ The key functionality aspects:
 26. As a user, I can create tasks so that I can partake in the main purpose of the site.
 27. As a user, I can create packs so that I can group tasks together
 28. As a user, I can delete my packs so that I can permanently remove packs I do not wish to keep.
-29. As a user, I can edit my packss so that I can correct spelling mistakes or I may have entered into the pack information fields.
+29. As a user, I can edit my packs so that I can correct spelling mistakes or I may have entered into the pack information fields.
 
 ### Site Owner Stories
 
@@ -1372,12 +1372,12 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 <img src="docs/testing-manual/11-testing-user-story-7.png">
 </details>
 
-12. As a user, I can manage my tasks so that I can add, edit or delete posts as needed. 
+12. As a user, I can manage my tasks so that I can add, edit or delete tasks as needed. 
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
 |  Create task  | Click on the Create task button which is located at the top of the task list page or from your own profile. Fill in the form with the relevant information into the form fields and click save.  | User to be able to successfully create a task which will be added to the database and all relevant pages on the site  | Works as expected |
-|  Delete task  | Navigate to the task detail page by click on the relevant task on the task list, or from a users profile. Click on the 3 dots icon in the top right corner of the task. Click on the delete button  | User to click the delete button and the task to be deleted from the database  | Works as expected |
+|  Delete task  | Navigate to the task detail page by clicking on the relevant task on the task list, or from a users profile. Click on the 3 dots icon in the top right corner of the task. Click on the delete button  | User to click the delete button and the task to be deleted from the database  | Works as expected |
 |  Edit task  | Navigate to the task in questions task detail page, click on the 3 dots icon located in top right corner and click on the edit button to be taken to the edit task form. Enter relevant values into fields and click on save or cancel to cancel the current edit  | User to click the edit button and the task edit form to be displayed in which the user can update the tasks information  | Works as expected |
 
 <details>
@@ -1559,44 +1559,44 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 <img src="docs/testing-manual/25-testing-user-story-1.png">
 </details>
 
-26. As a user, I can create tasks so that I can partake in the main purpose of the site. 
+26. As a user, I can create tasks so that I can partake in the main purpose of the site.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |  |  | Works as expected |
+|  Create Task  | From the Nav bar click on the add task button or from the Tasks page, Watched page or profile page click on the create task button  | User to be presented with a form to create a task and upon submission create a task object | Works as expected |
 
 <details>
 <summary>Screenshots</summary>
 <img src="docs/testing-manual/26-testing-user-story-1.png">
 </details>
 
-27. As a user, I can create packs so that I can group tasks together 
+27. As a user, I can create packs so that I can group tasks together
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |  |  | Works as expected |
+|  Create Pack  | From packs page or profile page click on the create pack button  | User to be presented with a form to create a pack and upon submission create a pack object | Works as expected |
 
 <details>
 <summary>Screenshots</summary>
 <img src="docs/testing-manual/27-testing-user-story-1.png">
 </details>
 
-28. As a user, I can edit my packss so that I can correct spelling mistakes or I may have entered into the pack information fields.
+28. As a user, I can delete my packs so that I can permanently remove packs I do not wish to keep.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |  |  | Works as expected |
+|  Delete pack  | Navigate to the pack detail page by clicking on the relevant pack on the pack list, or from a users profile. Click on the 3 dots icon in the top right corner of the pack. Click on the delete button  | User to click the delete button and the pack to be deleted from the database  | Works as expected |
 
 <details>
 <summary>Screenshots</summary>
 <img src="docs/testing-manual/28-testing-user-story-1.png">
 </details>
 
-29. As a user, I can create tasks so that I can partake in the main purpose of the site. 
+29. As a user, I can edit my packs so that I can correct spelling mistakes or I may have entered into the pack information fields. 
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |  |  | Works as expected |
+|  Edit pack  | Navigate to the pack in questions pack detail page, click on the 3 dots icon located in top right corner and click on the edit button to be taken to the edit task form. Enter relevant values into fields and click on save or cancel to cancel the current edit  | User to click the edit button and the pack edit form to be displayed in which the user can update the packs information  | Works as expected |
 
 <details>
 <summary>Screenshots</summary>
