@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { MultiSelect } from "react-multi-select-component";
-import { Alert, Form, Button, Col, Container } from "react-bootstrap";
+import { Alert, Form, Button, Col, Container, Modal } from "react-bootstrap";
 import { useHistory, useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import appStyles from "../../App.module.css";
@@ -16,6 +16,7 @@ function PackEditForm() {
   const { title, pack_description, tasks } = packData;
   const history = useHistory();
   const { id } = useParams();
+  const [showModal, setShowModal] = useState(false);
 
   /* 
     Fetches all packs from the API
@@ -119,14 +120,21 @@ function PackEditForm() {
         const updateData = { tasks: updatedTasks };
         await axiosReq.patch(`/packs/${packId}/`, updateData);
       }
-
-      history.push(`/packs/${packId}`);
+      setShowModal(true);
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }
     }
+  };
+
+  /* 
+    Handle closure of feedback modal
+  */
+  const handleCloseModal = () => {
+    setShowModal(false);
+    history.push(`/packs/`);
   };
 
   const textFields = (
@@ -204,6 +212,19 @@ function PackEditForm() {
   */
   return (
     <Form onSubmit={handleSubmit}>
+      {showModal && (
+        <Modal show={showModal} onHide={handleCloseModal} centered={true}>
+          <Modal.Header closeButton>
+            <Modal.Title>Success</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>Pack updated successfully!</Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleCloseModal}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      )}
       <div className={appStyles.CenterAlignForm}>
         <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
           <Container
