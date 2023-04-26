@@ -643,42 +643,6 @@ Task Count is a feature of the Tick It site giving users the ability to display 
 
 - Covered in user stories: 17
 
-### Create Pack
-
-Create Pack is a feature of the Tick It site giving users the ability to add task to a pack, thus grouping relevant tasks together in one central location.
-
-<details>
-<summary>Create Pack image</summary>
-<img src="docs/features/create-pack-1.png">
-<img src="docs/features/create-pack-2.png">
-</details>
-
-- Covered in user stories: ??
-
-### Edit Pack
-
-Edit Pack is a feature of the Tick It site giving users the ability to add or remove tasks from the pack and also update the title and pack description via a form.
-
-<details>
-<summary>Edit Pack image</summary>
-<img src="docs/features/edit-pack-1.png">
-<img src="docs/features/edit-pack-2.png">
-</details>
-
-- Covered in user stories: ??
-
-### Delete Pack
-
-Delete Pack is a feature of the Tick It site giving users the ability to delete an owner pack.
-
-<details>
-<summary>Delete Pack image</summary>
-<img src="docs/features/delete-pack-1.png">
-<img src="docs/features/delete-pack-2.png">
-</details>
-
-- Covered in user stories: ??
-
 ### Responsiveness
 
 Responsiveness is a feature which can be seen through the Tick It site giving users the ability to view the site on various display sizes whilst still having an enojoyable user experience.
@@ -701,7 +665,7 @@ Search Bar is a feature of the Tick It site giving users the ability to search f
 <img src="docs/features/search-bar-2.png">
 </details>
 
-- Covered in user stories: 29
+- Covered in user stories: 6
 
 ### Contact
 
@@ -747,6 +711,42 @@ Users list is a feature of the Tick It site giving users the ability to view all
 </details>
 
 - Covered in user stories: 25
+
+### Create Pack
+
+Create Pack is a feature of the Tick It site giving users the ability to add tasks to a pack, thus grouping relevant tasks together in one central location.
+
+<details>
+<summary>Create Pack image</summary>
+<img src="docs/features/create-pack-1.png">
+<img src="docs/features/create-pack-2.png">
+</details>
+
+- Covered in user stories: ??
+
+### Edit Pack
+
+Edit Pack is a feature of the Tick It site giving users the ability to add or remove tasks from the pack and also update the title and pack description via a form.
+
+<details>
+<summary>Edit Pack image</summary>
+<img src="docs/features/edit-pack-1.png">
+<img src="docs/features/edit-pack-2.png">
+</details>
+
+- Covered in user stories: ??
+
+### Delete Pack
+
+Delete Pack is a feature of the Tick It site giving users the ability to delete an owner pack.
+
+<details>
+<summary>Delete Pack image</summary>
+<img src="docs/features/delete-pack-1.png">
+<img src="docs/features/delete-pack-2.png">
+</details>
+
+- Covered in user stories: ??
 
 
 

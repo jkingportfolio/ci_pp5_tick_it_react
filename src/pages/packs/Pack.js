@@ -37,7 +37,7 @@ const Pack = (props) => {
   const handleDelete = async () => {
     try {
       await axiosRes.delete(`/packs/${id}/`);
-      history.push(`/`);
+      history.push(`/profiles/${profile_id}`);
     } catch (err) {
       console.log(err);
       setShowDeleteModal(false);
