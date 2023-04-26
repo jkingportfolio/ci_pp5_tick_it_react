@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { MultiSelect } from "react-multi-select-component";
-import { Alert, Form, Button, Col, Container } from "react-bootstrap";
+import { Alert, Form, Button, Col, Container, Modal } from "react-bootstrap";
 import { useHistory } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import appStyles from "../../App.module.css";
-
 
 function PackCreateForm() {
   const [errors, setErrors] = useState({});
@@ -17,7 +16,7 @@ function PackCreateForm() {
   const { title, pack_description, tasks } = packData;
 
   const history = useHistory();
-
+  const [showModal, setShowModal] = useState(false);
 
   /* 
     Fetch all tasks from the API
@@ -37,7 +36,7 @@ function PackCreateForm() {
         console.log(err);
       }
     };
-  
+
     const timer = setTimeout(() => {
       fetchTasks();
     }, 3000);
@@ -50,7 +49,6 @@ function PackCreateForm() {
     label: taskListing.title,
     value: taskListing.id,
   }));
-
 
   /* 
     Handle pack data change
@@ -97,14 +95,21 @@ function PackCreateForm() {
         const updateData = { tasks: updatedTasks };
         await axiosReq.patch(`/packs/${packId}/`, updateData);
       }
-
-      history.push(`/packs/${packId}`);
+      setShowModal(true);
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }
     }
+  };
+
+  /* 
+    Handle close of feedback modal
+  */
+  const handleCloseModal = () => {
+    setShowModal(false);
+    history.push(`/packs/`);
   };
 
   const textFields = (
@@ -155,8 +160,8 @@ function PackCreateForm() {
           onChange={handleMultiSelectChange}
           isMulti
           menuPortalTarget={document.body}
-          menuPosition={'fixed'}
-          menuPlacement={'auto'}
+          menuPosition={"fixed"}
+          menuPlacement={"auto"}
           className={appStyles.Input}
         />
 
@@ -175,7 +180,6 @@ function PackCreateForm() {
       >
         Cancel
       </Button>
-
     </div>
   );
 
@@ -183,18 +187,31 @@ function PackCreateForm() {
     Returns form to create a pack
   */
   return (
-      <Form onSubmit={handleSubmit}>
-        <div className={appStyles.CenterAlignForm}>
-          <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
-            <Container
-              className={`${appStyles.Content} ${appStyles.TextAlignCenter} d-flex flex-column justify-content-center`}
-            >
-              <h3>Create pack</h3>
-              <div className={appStyles.Content}>{textFields}</div>
-            </Container>
-          </Col>
-        </div>
-      </Form>
+    <Form onSubmit={handleSubmit}>
+      {showModal && (
+        <Modal show={showModal} onHide={handleCloseModal} centered={true}>
+          <Modal.Header closeButton>
+            <Modal.Title>Success</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>Pack created successfully!</Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleCloseModal}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      )}
+      <div className={appStyles.CenterAlignForm}>
+        <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
+          <Container
+            className={`${appStyles.Content} ${appStyles.TextAlignCenter} d-flex flex-column justify-content-center`}
+          >
+            <h3>Create pack</h3>
+            <div className={appStyles.Content}>{textFields}</div>
+          </Container>
+        </Col>
+      </div>
+    </Form>
   );
 }
 
