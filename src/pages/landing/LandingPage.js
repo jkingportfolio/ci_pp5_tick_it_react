@@ -53,8 +53,8 @@ const LandingPage = () => {
           </div>
           <div className="float-right pb-3">
             <a
-              href="https://github.com/jkingportfolio/ci_pp5_tick_it_react"
-              aria-label="Check the website GitHub page"
+              href="https://github.com/jkingportfolio/"
+              aria-label="Visit me on Github (opens in new tab)"
               target="_blank"
               rel="noopener noreferrer"
             >
