@@ -234,6 +234,8 @@ Balsamiq was used to create wireframes of the sites pages
 - [Git](https://git-scm.com/) - Version control system. Justification: I used this for version control within VSCode to push the code to GitHub
 - [GitHub](https://github.com/) - Cloud based hosting service. Justification: I used this as a remote repository to store project code
 - [Gitpod](https://gitpod.io) - Cloud development environment. Justification: I used this to host a virtual workspace
+- [Microsoft Paint](https://apps.microsoft.com/store/detail/paint/9PCFS5B6T72H) - Graphics editor. Justification: I used this to edit the images for testing user stories.
+- [Affinity Designer](https://affinity.serif.com/en-gb/designer/) - Graphics editor. Justification: I used this to create the 404 and no search results images.
 - Validation:
   - [WC3 Validator](https://validator.w3.org/) - HTML Validator. Justification: I used this to validate the applications html
   - [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/) - CSS Validator. Justification: I used this to validate the applications css
