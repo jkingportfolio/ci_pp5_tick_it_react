@@ -36,10 +36,9 @@ function TaskEditForm() {
     priority: "",
     assigned_to: "",
     due_date: "",
-    pack: "",
     completed: "No",
   });
-  const { title, task_body, priority, assigned_to, due_date, pack, completed } =
+  const { title, task_body, priority, assigned_to, due_date, completed } =
     taskData;
 
   const history = useHistory();
@@ -59,7 +58,6 @@ function TaskEditForm() {
           priority,
           assigned_to,
           due_date,
-          pack,
           completed,
           is_owner,
         } = data;
@@ -71,7 +69,6 @@ function TaskEditForm() {
               priority,
               assigned_to,
               due_date,
-              pack,
               completed,
             })
           : history.push("/");
@@ -100,7 +97,6 @@ function TaskEditForm() {
     event.preventDefault();
     const formData = new FormData();
     console.log("DATE:" + due_date);
-    console.log("PACK:" + pack);
     console.log("Assigned to:" + assigned_to);
     formData.append("title", title);
     formData.append("task_body", task_body);
@@ -111,10 +107,6 @@ function TaskEditForm() {
     if (due_date !== null && due_date !== "") {
       formData.append("due_date", due_date);
     }
-    if (pack !== null && pack !== "") {
-      formData.append("pack", pack);
-    }
-    formData.append("pack", pack);
     formData.append("completed", completed);
 
     try {
@@ -188,24 +180,6 @@ function TaskEditForm() {
       </Form.Group>
 
       {errors?.due_date?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
-
-      <Form.Group>
-        <Form.Label>Assign to Pack</Form.Label>
-
-        <Form.Control
-          name="pack"
-          className={appStyles.Input}
-          value={pack}
-          onChange={handleChange}
-          aria-label="pack"
-        ></Form.Control>
-      </Form.Group>
-
-      {errors?.pack?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
         </Alert>
