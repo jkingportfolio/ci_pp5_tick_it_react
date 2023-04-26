@@ -104,7 +104,7 @@ function PackEditForm() {
     };
 
     try {
-      const { data } = await axiosReq.post("/packs/", packDataToSend);
+      const { data } = await axiosReq.patch(`/packs/${id}`, packDataToSend);
       const packId = data.id;
 
       for (let i = 0; i < tasks.length; i++) {
