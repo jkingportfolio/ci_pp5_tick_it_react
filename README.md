@@ -1763,7 +1763,7 @@ You can make a local clone of a repository via the following steps:
 
  Code from external sources were used as a basis and built on top of in this project, they are credited below:
 
- - The basis of tis project was inspired by the 'Moments' social media platform walk-through project with Code Institute. Using this a a basis for user log in, profile creation and posting to the API I have built my own app and added extra functionality, such as creating task packs and assigning tasks to users.
+ - The basis of this project was inspired by the 'Moments' social media platform walk-through project with Code Institute. Using this a a basis for user log in, profile creation and posting to the API I have built my own app and added extra functionality, such as creating task packs and assigning tasks to users.
 
 ### Literature
 
