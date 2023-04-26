@@ -10,7 +10,7 @@ import appStyles from "../../App.module.css";
 
 function TaskDetail() {
   const { id } = useParams();
-  const [task, setTask] = useState({ results: [] });
+  const [tasks, setTasks] = useState({ results: [] });
 
   const currentUser = useCurrentUser();
   const profile_image = currentUser?.profile_image;
@@ -22,11 +22,11 @@ function TaskDetail() {
   useEffect(() => {
     const handleMount = async () => {
       try {
-        const [{ data: task }, { data: comments }] = await Promise.all([
+        const [{ data: tasks }, { data: comments }] = await Promise.all([
           axiosReq.get(`/tasks/${id}`),
           axiosReq.get(`/comments/?task=${id}`),
         ]);
-        setTask({ results: [task] });
+        setTasks({ results: [tasks] });
         setComments(comments);
       } catch (err) {
         console.log(err);
@@ -48,14 +48,14 @@ function TaskDetail() {
           TASK DETAIL
         </h3>
       </div>
-      <Task {...task.results[0]} setTask={setTask} taskDetail />
+      <Task {...tasks.results[0]} setTasks={setTasks} taskDetail />
       <Container className={appStyles.Content}>
         {currentUser ? (
           <CommentForm
             profile_id={currentUser.profile_id}
             profileImage={profile_image}
             task={id}
-            setTask={setTask}
+            setTasks={setTasks}
             setComments={setComments}
           />
         ) : comments.results.length ? (
@@ -66,7 +66,7 @@ function TaskDetail() {
             <Comment
               key={comment.id}
               {...comment}
-              setTask={setTask}
+              setTasks={setTasks}
               setComments={setComments}
             />
           ))
