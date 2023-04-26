@@ -214,9 +214,9 @@ Balsamiq was used to create wireframes of the sites pages
 
 - [Axios](https://axios-http.com/docs/intro) - Axios is a Promise API. Justification: I used axios to send API requests from the React project to the API and avoid any CORS errors when sending cookies.
 - [JWT](https://jwt.io/) - Library to decode JSON Web token. Justification: I used JWT to securely transmit data and to have the ability to verify that the content has not been tampered with.
-- [React 17](https://17.reactjs.org/) - JavaScript library for building user interfaces. Justification: To be able to showcase my newly learnt skills and for building intereactive user interfaces quickly.
+- [React 17](https://17.reactjs.org/) - JavaScript library for building user interfaces. Justification: To be able to showcase my newly learnt skills and for building interactive user interfaces quickly.
 - [React-Bootstrap 1.6.3](https://react-bootstrap-v4.netlify.app/) - CSS framework. Justification: I used Bootstrap React library for UI components, styling and responsiveness.
-- [React Infinite Scroll](https://www.npmjs.com/package/react-infinite-scroll-component) - React library. Justification: I used this component to load content (tasks/comments) automatically as the user scrolls towards the bottom of the page without having to jump to next/previous page.
+- [React Infinite Scroll](https://www.npmjs.com/package/react-infinite-scroll-component) - React library. Justification: I used this component to load content (tasks/comments/users) automatically as the user scrolls towards the bottom of the page without having to jump to next/previous page.
 - [React Router](https://v5.reactrouter.com/web/guides/quick-start) - Javascript framework for routing. Justification: I used this library to enable navigation between views of components and to have the ability to control what is presented to the user based on the URL they have accessed in the browser. 
 - [React ChartJS2](https://react-chartjs-2.js.org/) - React Library. Justification: I used this component for producing the doughnut chart on the main page. 
 - [React Multi Select Component](https://www.npmjs.com/package/react-multi-select-component) - React Library. Justification: I used this component to have the ability to select multiple tasks to assign to a pack.
@@ -226,7 +226,7 @@ Balsamiq was used to create wireframes of the sites pages
 - [Chrome dev tools](https://developers.google.com/web/tools/chrome-devtools/) - Developer tool. Justification: I used this for debugging of the code and checking site for responsiveness
 - [Cloudinary](https://cloudinary.com/) - File storage. Justification: I used this to store static files
 - [Font Awesome](https://fontawesome.com/) - Icon library. Justification: I used this to style the site with icons.
-- [Google Fonts](https://fonts.google.com/) - font library. Justification: I used this to import fonts
+- [Google Fonts](https://fonts.google.com/) - Font library. Justification: I used this to import fonts
 - [Git](https://git-scm.com/) - Version control system. Justification: I used this for version control within VSCode to push the code to GitHub
 - [GitHub](https://github.com/) - Cloud based hosting service. Justification: I used this as a remote repository to store project code
 - [Gitpod](https://gitpod.io) - Cloud development environment. Justification: I used this to host a virtual workspace
@@ -263,7 +263,7 @@ Balsamiq was used to create wireframes of the sites pages
 
 ### React
 
-The React.js framework is an open-source JavaScript framework and library developed by Facebook. It's used for building interactive user interfaces and web applications quickly and efficiently with significantly less code than you would with vanilla JavaScript  
+The React.js framework is an open-source JavaScript framework and library developed by Jordan Walke, a software engineer at Meta. It's used for building interactive user interfaces and web applications quickly and efficiently with significantly less code than you would with vanilla JavaScript  
 
 I used React for this application for several reasons:
 
@@ -344,7 +344,7 @@ There were various pages created and used in this application
 	- EditProfileForm.js - This file handles the edit profile form
 	- Profile.js - This file returns the profile section
 	- ProfilePage.js - This file returns the entire Profile page
-	- UserProfiles.js - 
+	- UserProfiles.js - This file returns all users of the site
 
 
 - tasks - The tasks page group constisted of the following files:
@@ -440,6 +440,17 @@ Profile Section is a feature of the Tick It site giving users some personality o
 <details>
 <summary>Profile Section image</summary>
 <img src="docs/features/profile-section.png">
+</details>
+
+- Covered in user stories: 16 & 20
+
+### Profile Tabs
+
+Profile tabs is a feature of the Tick It site giving users the ability to view tasks, packs and tasks assigned to the user of the currently view profile.  
+
+<details>
+<summary>Profile Section image</summary>
+<img src="docs/features/tabs.png">
 </details>
 
 - Covered in user stories: 16
