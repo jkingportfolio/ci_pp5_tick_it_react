@@ -380,7 +380,7 @@ Authentication is a feature of the Tick It site, users will have to be authentic
 <img src="docs/features/authentication.png">
 </details>
 
-- Covered in user stories: 1, 14, 27
+- Covered in user stories: 1, 14, 31
 
 ### Log In
 
@@ -481,7 +481,7 @@ Change Password is a feature of the Tick It site giving users the ability to cha
 <img src="docs/features/change-password-2.png">
 </details>
 
-- Covered in user stories: 13
+- Covered in user stories: 17
 
 ### Create task
 
@@ -496,7 +496,7 @@ Create task is a feature of the Tick It site giving users the ability to perform
 <img src="docs/features/create-task-5.png">
 </details>
 
-- Covered in user stories: 12
+- Covered in user stories: 12, 26
 
 ### Delete task
 
@@ -507,7 +507,7 @@ Delete task is a feature of the Tick It site giving users the ability to delete 
 <img src="docs/features/delete-task.png">
 </details>
 
-- Covered in user stories: 7, 12, 28
+- Covered in user stories: 7, 12, 32
 
 ### Edit task
 
@@ -562,7 +562,7 @@ Delete task comment is a feature of the Tick It site giving users the ability to
 <img src="docs/features/delete-task-comment.png">
 </details>
 
-- Covered in user stories: 11, 28
+- Covered in user stories: 11, 32
 
 
 ### Task list
@@ -585,7 +585,7 @@ Task Search is a feature of the Tick It site giving users the ability to search 
 <img src="docs/features/search-bar-1.png">
 </details>
 
-- Covered in user stories: 21, 30
+- Covered in user stories: 21, 34
 
 ### Watch / Unwatch task
 
@@ -634,7 +634,7 @@ Input Validation is a feature of the Tick It used throughout the site for form i
 <img src="docs/features/input-validation.png">
 </details>
 
-- Covered in user stories: 1, 14, 26
+- Covered in user stories: 1, 14, 30
 
 ### Task Count
 
@@ -657,7 +657,7 @@ Responsiveness is a feature which can be seen through the Tick It site giving us
 <img src="docs/features/responsiveness-2.png">
 </details>
 
-- Covered in user stories: 29
+- Covered in user stories: 33
 
 ### Search Bar
 
@@ -691,7 +691,7 @@ Error pages is a feature of the Tick It site which will display a 404 error page
 <img src="docs/features/404.png">
 </details>
 
-- Covered in user stories: 31
+- Covered in user stories: 35
 
 ### Site Feedback
 
