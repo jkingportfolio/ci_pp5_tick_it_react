@@ -123,12 +123,12 @@ The key functionality aspects:
 
 ### Site Owner Stories
 
-26. As the site owner, I would want to validate users' data entries on sign up so that users can create a log in which meets the requirements.
-27. As the site owner, I would want to ensure only logged in users can post from their account and edit their profile so that data privacy is ensured.
-28. As the site owner, I would want to have the ability to remove posts so that I can keep the app clean and friendly.
-29. As the site owner, I would want the site to be fully responsive so that users can use it across multiple devices and create a good user experience.
-30. As the site owner, I would want to use the app search function so that I can search for particular tasks by their title.
-31. As the site owner, I would want a 404 error page so that users do not have to use the back navigation button if an error occurs.
+30. As the site owner, I would want to validate users' data entries on sign up so that users can create a log in which meets the requirements.
+31. As the site owner, I would want to ensure only logged in users can post from their account and edit their profile so that data privacy is ensured.
+32. As the site owner, I would want to have the ability to remove posts so that I can keep the app clean and friendly.
+33. As the site owner, I would want the site to be fully responsive so that users can use it across multiple devices and create a good user experience.
+34. As the site owner, I would want to use the app search function so that I can search for particular tasks by their title.
+35. As the site owner, I would want a 404 error page so that users do not have to use the back navigation button if an error occurs.
  
 
 
@@ -722,7 +722,7 @@ Create Pack is a feature of the Tick It site giving users the ability to add tas
 <img src="docs/features/create-pack-2.png">
 </details>
 
-- Covered in user stories: ??
+- Covered in user stories: 27
 
 ### Edit Pack
 
@@ -734,7 +734,7 @@ Edit Pack is a feature of the Tick It site giving users the ability to add or re
 <img src="docs/features/edit-pack-2.png">
 </details>
 
-- Covered in user stories: ??
+- Covered in user stories: 29
 
 ### Delete Pack
 
@@ -746,7 +746,7 @@ Delete Pack is a feature of the Tick It site giving users the ability to delete 
 <img src="docs/features/delete-pack-2.png">
 </details>
 
-- Covered in user stories: ??
+- Covered in user stories: 28
 
 
 
@@ -999,7 +999,7 @@ Lighthouse was used to test the performance, accessibility, best practice and SE
 <img src="docs/validation/lighthouse/desktop-lighthouse-validation-pack-create-page.png">
 </details>
 
-<details><summary>Packe dit page</summary>
+<details><summary>Pack edit page</summary>
 <img src="docs/validation/lighthouse/desktop-lighthouse-validation-pack-edit-page.png">
 </details>
 
@@ -1557,7 +1557,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 #### Testing User Stories - Site Owner
 
-26. As the site owner, I would want to validate users' data entries on sign up so that users can create a log in which meets the requirements.
+30. As the site owner, I would want to validate users' data entries on sign up so that users can create a log in which meets the requirements.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -1568,7 +1568,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 <img src="docs/testing-manual/26-testing-user-story-1.png">
 </details>
 
-27. As the site owner, I would want to ensure only logged in users can post from their account and edit their profile so that data privacy is ensured. 
+31. As the site owner, I would want to ensure only logged in users can post from their account and edit their profile so that data privacy is ensured. 
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -1580,7 +1580,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 <img src="docs/testing-manual/27-testing-user-story-1.png">
 </details>
 
-28. As the site owner, I would want to have the ability to remove posts so that I can keep the app clean and friendly. 
+32. As the site owner, I would want to have the ability to remove posts so that I can keep the app clean and friendly. 
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -1597,7 +1597,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 <img src="docs/testing-manual/28-testing-user-story-6.png">
 </details>
 
-29. As the site owner, I would want the site to be fully responsive so that users can use it across multiple devices and create a good user experience. 
+33. As the site owner, I would want the site to be fully responsive so that users can use it across multiple devices and create a good user experience. 
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -1609,7 +1609,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 <img src="docs/testing-manual/29-testing-user-story-2.png">
 </details>
 
-30. As the site owner, I would want to use the app search function so that I can search for particular tasks by their title.
+34. As the site owner, I would want to use the app search function so that I can search for particular tasks by their title.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -1621,7 +1621,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 <img src="docs/testing-manual/30-testing-user-story-2.png">
 </details>
 
-31. As the site owner, I would want a 404 error page so that users do not have to use the back navigation button if an error occurs.
+35. As the site owner, I would want a 404 error page so that users do not have to use the back navigation button if an error occurs.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
