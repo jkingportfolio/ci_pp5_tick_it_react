@@ -120,6 +120,10 @@ The key functionality aspects:
 23. As a user, I can receive feedback so that I can confirm whether the contact form submission was successful or not.
 24. As a user, I can scroll through the latest tasks on the app so that I can find new tasks to complete.
 25. As a user, I can browse a list of user accounts so that I can view that particular account.
+26. As a user, I can create tasks so that I can partake in the main purpose of the site.
+27. As a user, I can create packs so that I can group tasks together
+28. As a user, I can delete my packs so that I can permanently remove packs I do not wish to keep.
+29. As a user, I can edit my packss so that I can correct spelling mistakes or I may have entered into the pack information fields.
 
 ### Site Owner Stories
 
@@ -1555,6 +1559,50 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 <img src="docs/testing-manual/25-testing-user-story-1.png">
 </details>
 
+26. As a user, I can create tasks so that I can partake in the main purpose of the site. 
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |  |  | Works as expected |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-manual/26-testing-user-story-1.png">
+</details>
+
+27. As a user, I can create packs so that I can group tasks together 
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |  |  | Works as expected |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-manual/27-testing-user-story-1.png">
+</details>
+
+28. As a user, I can edit my packss so that I can correct spelling mistakes or I may have entered into the pack information fields.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |  |  | Works as expected |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-manual/28-testing-user-story-1.png">
+</details>
+
+29. As a user, I can create tasks so that I can partake in the main purpose of the site. 
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |  |  | Works as expected |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-manual/29-testing-user-story-1.png">
+</details>
+
 #### Testing User Stories - Site Owner
 
 30. As the site owner, I would want to validate users' data entries on sign up so that users can create a log in which meets the requirements.
@@ -1565,7 +1613,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/26-testing-user-story-1.png">
+<img src="docs/testing-manual/30-testing-user-story-1.png">
 </details>
 
 31. As the site owner, I would want to ensure only logged in users can post from their account and edit their profile so that data privacy is ensured. 
@@ -1576,8 +1624,8 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/27-testing-user-story-1.png">
-<img src="docs/testing-manual/27-testing-user-story-1.png">
+<img src="docs/testing-manual/31-testing-user-story-1.png">
+<img src="docs/testing-manual/31-testing-user-story-1.png">
 </details>
 
 32. As the site owner, I would want to have the ability to remove posts so that I can keep the app clean and friendly. 
@@ -1589,12 +1637,12 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/28-testing-user-story-1.png">
-<img src="docs/testing-manual/28-testing-user-story-2.png">
-<img src="docs/testing-manual/28-testing-user-story-3.png">
-<img src="docs/testing-manual/28-testing-user-story-4.png">
-<img src="docs/testing-manual/28-testing-user-story-5.png">
-<img src="docs/testing-manual/28-testing-user-story-6.png">
+<img src="docs/testing-manual/32-testing-user-story-1.png">
+<img src="docs/testing-manual/32-testing-user-story-2.png">
+<img src="docs/testing-manual/32-testing-user-story-3.png">
+<img src="docs/testing-manual/32-testing-user-story-4.png">
+<img src="docs/testing-manual/32-testing-user-story-5.png">
+<img src="docs/testing-manual/32-testing-user-story-6.png">
 </details>
 
 33. As the site owner, I would want the site to be fully responsive so that users can use it across multiple devices and create a good user experience. 
@@ -1605,8 +1653,8 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/29-testing-user-story-1.png">
-<img src="docs/testing-manual/29-testing-user-story-2.png">
+<img src="docs/testing-manual/33-testing-user-story-1.png">
+<img src="docs/testing-manual/33-testing-user-story-2.png">
 </details>
 
 34. As the site owner, I would want to use the app search function so that I can search for particular tasks by their title.
@@ -1617,8 +1665,8 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/30-testing-user-story-1.png">
-<img src="docs/testing-manual/30-testing-user-story-2.png">
+<img src="docs/testing-manual/34-testing-user-story-1.png">
+<img src="docs/testing-manual/34-testing-user-story-2.png">
 </details>
 
 35. As the site owner, I would want a 404 error page so that users do not have to use the back navigation button if an error occurs.
@@ -1629,7 +1677,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 <details>
 <summary>Screenshots</summary>
-<img src="docs/testing-manual/31-testing-user-story-1.png">
+<img src="docs/testing-manual/35-testing-user-story-1.png">
 </details>
 
 
