@@ -1625,7 +1625,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 <details>
 <summary>Screenshots</summary>
 <img src="docs/testing-manual/31-testing-user-story-1.png">
-<img src="docs/testing-manual/31-testing-user-story-1.png">
+<img src="docs/testing-manual/31-testing-user-story-2.png">
 </details>
 
 32. As the site owner, I would want to have the ability to remove posts so that I can keep the app clean and friendly. 
