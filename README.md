@@ -312,6 +312,48 @@ There were various components created and reused across this application.
 - `<TaskStatusTable />` - specific component, used to display a numbered table of all tasks completion status providing an easy visual indication of the tasks status.
   - Used in user story: N/A - This component is an extra feature
 
+There were various pages created and used in this application
+
+- auth - The auth page group constisted of the following files:
+	- LoginForm.js - This file handles the Login form
+	- SignUpForm.js - This file handles the Sign up form
+
+- comments - The comments page group constisted of the following files:
+	- Comment.js - This file returns the comments
+	- CommentEditForm.js - This file handles the Comment Edit form
+	- CommentForm.js - This file handles the create comment form
+
+- contact - The contact page group constisted of the following files:
+	- ContactForm.js - This file handles the contact form
+
+- dashboard - The dashboard page group constisted of the following file:
+	- Dashboard.js - This file returns the auth users main page (dashboard)
+
+- landing - The landing page group constisted of the following file:
+	- Landing.js - This file returns the main page to an annonymous user
+
+- packs - The packs page group constisted of the following files:
+	- Pack.js - This file returns the Pack and all its related info
+	- PackCreateForm.js - This file handles the Pack create form 
+	- PackDetail.js - This file returns the pack detail
+	- PackEditForm.js - This file handles the Pack edit form
+	- PackListings.js - This file returns the list of packs
+
+- profiles - The profiles page group constisted of the following files:
+	- EditPasswordForm.js - This file handles the Edit Password form
+	- EditProfileForm.js - This file handles the edit profile form
+	- Profile.js - This file returns the profile section
+	- ProfilePage.js - This file returns the entire Profile page
+	- UserProfiles.js - 
+
+
+- tasks - The tasks page group constisted of the following files:
+	- Task.js - This file returns the Task and all its related info
+	- TaskCreateForm.js - This file handles the Task create form 
+	- TaskDetail.js - This file returns the task detail
+	- TaskEditForm.js - This file handles the Task edit form
+	- TasksListings.js - This file returns the list of Tasks
+
 ## Back-End API
 
 ### Django REST Framework
