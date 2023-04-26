@@ -9,22 +9,22 @@ const PasswordCriteria = () => {
   return (
     <div className="my-4">
       <OverlayTrigger
-        key="bottom"
-        placement="bottom"
+        key="top"
+        placement="top"
         overlay={
-          <Popover id="popover-positioned-bottom">
+          <Popover id="popover-positioned-top">
             <Popover.Content>
-              <i className="fa-solid fa-check"></i> At least 8 characters
+              <i className="fa-solid fa-circle-check"></i> At least 8 characters long
               <br />
-              <i className="fa-solid fa-check"></i> Can’t be entirely numeric
+              <i className="fa-solid fa-circle-check"></i> Both password entries must match
               <br />
-              <i className="fa-solid fa-check"></i> Can’t be a commonly used
+              <i className="fa-solid fa-circle-check"></i> Cannot be a commonly used
               password
               <br />
-              <i className="fa-solid fa-check"></i> Can’t be too similar to your
-              other personal information.
+              <i className="fa-solid fa-circle-check"></i> Must not contain similarities to your
+              personal information.
               <br />
-              <i className="fa-solid fa-check"></i> Passwords must match
+              <i className="fa-solid fa-circle-check"></i> Cannot be entirely numeric
             </Popover.Content>
           </Popover>
         }
