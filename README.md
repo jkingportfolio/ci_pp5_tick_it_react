@@ -144,7 +144,7 @@ An Agile approach to creating this app has been applied. GitHub's projects was u
 - SHOULD HAVE
 - COULD HAVE
 
-By using AGILE methodology in this project I was able to deliver a site which had all required functionality and some more. Due to the time limit on this project I was not able to incorporate all initial listed features, but this is where an AGILE approach is great for app design. The project displays this by having User stories in the Done section and the ones which decided to be left for future put in the future implementation.
+By using AGILE methodology in this project I was able to deliver a site which had all required functionality and some more. Due to the time limit on this project I was not able to incorporate all initial listed features, but this is where an AGILE approach is great for app design. The project displays this by having User stories in the Done section and the ones which decided to be left for future put in the future implementations section of the readme.
 
 The GitHub project can be found [here](https://github.com/users/jkingportfolio/projects/9)
 
