@@ -47,9 +47,14 @@ function PackEditForm() {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const { data } = await axiosReq.get(`/tasks/`);
-        setTasks(data);
-        console.log(data);
+        let allTasks = [];
+        let nextUrl = "/tasks/";
+        while (nextUrl) {
+          const { data } = await axiosReq.get(nextUrl);
+          allTasks = [...allTasks, ...data.results];
+          nextUrl = data.next;
+        }
+        setTasks({ results: allTasks });
       } catch (err) {
         console.log(err);
       }
@@ -198,21 +203,19 @@ function PackEditForm() {
     Returns pack edit form
   */
   return (
-
-      <Form onSubmit={handleSubmit}>
-        <div className={appStyles.CenterAlignForm}>
-          <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
-            <Container
-              className={`${appStyles.Content} ${appStyles.TextAlignCenter} d-flex flex-column justify-content-center`}
-            >
-              <div className={appStyles.SpinnerCentered}>
-              </div>
-              <h3>Edit pack</h3>
-              <div className={appStyles.Content}>{textFields}</div>
-            </Container>
-          </Col>
-        </div>
-      </Form>
+    <Form onSubmit={handleSubmit}>
+      <div className={appStyles.CenterAlignForm}>
+        <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
+          <Container
+            className={`${appStyles.Content} ${appStyles.TextAlignCenter} d-flex flex-column justify-content-center`}
+          >
+            <div className={appStyles.SpinnerCentered}></div>
+            <h3>Edit pack</h3>
+            <div className={appStyles.Content}>{textFields}</div>
+          </Container>
+        </Col>
+      </div>
+    </Form>
   );
 }
 
