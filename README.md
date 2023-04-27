@@ -483,7 +483,7 @@ Change Password is a feature of the Tick It site giving users the ability to cha
 <img src="docs/features/change-password-2.png">
 </details>
 
-- Covered in user stories: 17
+- Covered in user stories: 13 & 17
 
 ### Create task
 
