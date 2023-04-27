@@ -102,11 +102,11 @@ The key functionality aspects:
 5. As a user, I can view a list of my watched tasks so that I can focus on content I wish to view.
 6. As a user, I can use the search bar on the Task list section so that I can find particular tasks easier.
 7. As a user, I can delete my tasks so that I can permanently remove tasks I do not wish to keep.
-8. As a user, I can edit my tasks so that I can correct spelling mistakes or I may have entered into the task information fields.
+8. As a user, I can edit my tasks so that I can correct spelling mistakes I may have entered into the task information fields.
 9. As a user, I can view task comments so that I can obtain more information on the task in question.
 10. As a user, I can comment on other tasks so that I can interact with other users.
 11. As a user, I can edit or delete my comment on a task incase of input error.
-12. As a user, I can manage my tasks so that I can add, edit or delete posts as needed.
+12. As a user, I can manage my tasks so that I can add, edit or delete tasks as needed.
 13. As a user, I can request a password so that I can log back into my account if I have forgotten my password.
 14. As a user, I can log in so that I can access my account, view my profile, tasks and other user's tasks.
 15. As a user, I can log out so that other users using the same device cannot access my account.
@@ -115,7 +115,7 @@ The key functionality aspects:
 18. As a user, I can add a profile picture so that other members can easily recognize my tasks or comments.
 19. As a user, I can view the Home Page so that I can understand what the website is about, create an account or log in.
 20. As a user, I can display basic info on my profile page so that other members can learn more about me.
-21. As a user, I can search for tasks via a task bar so that I can specific tasks based on those keywords.
+21. As a user, I can search for tasks via a task list or search bar so that I can find specific tasks.
 22. As a user, I can fill in a contact form so that I can enquire about issues I may have regarding the app.
 23. As a user, I can receive feedback so that I can confirm whether the contact form submission was successful or not.
 24. As a user, I can scroll through the latest tasks on the app so that I can find new tasks to complete.
@@ -129,7 +129,7 @@ The key functionality aspects:
 
 30. As the site owner, I would want to validate users' data entries on sign up so that users can create a log in which meets the requirements.
 31. As the site owner, I would want to ensure only logged in users can post from their account and edit their profile so that data privacy is ensured.
-32. As the site owner, I would want to have the ability to remove posts so that I can keep the app clean and friendly.
+32. As the site owner, I would want to have the ability to remove tasks and task comments so that I can keep the app clean and friendly.
 33. As the site owner, I would want the site to be fully responsive so that users can use it across multiple devices and create a good user experience.
 34. As the site owner, I would want to use the app search function so that I can search for particular tasks by their title.
 35. As the site owner, I would want a 404 error page so that users do not have to use the back navigation button if an error occurs.
@@ -1318,7 +1318,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 <img src="docs/testing-manual/7-testing-user-story-2.png">
 </details>
 
-8. As a user, I can edit my tasks so that I can correct spelling mistakes or I may have entered into the task information fields.
+8. As a user, I can edit my tasks so that I can correct spelling mistakes I may have entered into the task information fields.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -1500,7 +1500,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 <img src="docs/testing-manual/20-testing-user-story-1.png">
 </details>
 
-21. As a user, I can search for tasks via a task bar so that I can specific tasks based on those keywords. 
+21. As a user, I can search for tasks via a task list or search bar so that I can find specific tasks.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -1629,7 +1629,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 <img src="docs/testing-manual/31-testing-user-story-2.png">
 </details>
 
-32. As the site owner, I would want to have the ability to remove posts so that I can keep the app clean and friendly. 
+32. As the site owner, I would want to have the ability to remove tasks and task comments so that I can keep the app clean and friendly. 
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
