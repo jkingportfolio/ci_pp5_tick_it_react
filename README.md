@@ -121,7 +121,7 @@ The key functionality aspects:
 24. As a user, I can scroll through the latest tasks on the app so that I can find new tasks to complete.
 25. As a user, I can browse a list of user accounts so that I can view that particular account.
 26. As a user, I can create tasks so that I can partake in the main purpose of the site.
-27. As a user, I can create packs so that I can group tasks together
+27. As a user, I can create packs so that I can group tasks together.
 28. As a user, I can delete my packs so that I can permanently remove packs I do not wish to keep.
 29. As a user, I can edit my packs so that I can correct spelling mistakes or I may have entered into the pack information fields.
 
@@ -1234,7 +1234,7 @@ The website was tested on the following web browsers:
 
 To avoid unnecessary repetition of images, only the feature being referred to will have screenshots. Information on how to navigate to the feature referred to will be described within its relevant table reference. 
 
-1. As a new user, I can register an account with Tick It so that I can become a member and use the app as intended. 
+1. As a new user, I can register an account with Tick It so that I can become a member and use the app as intended.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -1248,7 +1248,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 <img src="docs/testing-manual/1-testing-user-story-2.png">
 </details>
 
-2. As a user, I can use the navigation bar so that I can seamlessly navigate around the app. 
+2. As a user, I can use the navigation bar so that I can seamlessly navigate around the app.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -1343,7 +1343,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 <img src="docs/testing-manual/9-testing-user-story-1.png">
 </details>
 
-10. As a user, I can comment on other tasks so that I can interact with other users. 
+10. As a user, I can comment on other tasks so that I can interact with other users.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -1571,7 +1571,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 <img src="docs/testing-manual/26-testing-user-story-1.png">
 </details>
 
-27. As a user, I can create packs so that I can group tasks together
+27. As a user, I can create packs so that I can group tasks together.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -1593,7 +1593,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 <img src="docs/testing-manual/28-testing-user-story-1.png">
 </details>
 
-29. As a user, I can edit my packs so that I can correct spelling mistakes or I may have entered into the pack information fields. 
+29. As a user, I can edit my packs so that I can correct spelling mistakes or I may have entered into the pack information fields.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -1646,7 +1646,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 <img src="docs/testing-manual/32-testing-user-story-6.png">
 </details>
 
-33. As the site owner, I would want the site to be fully responsive so that users can use it across multiple devices and create a good user experience. 
+33. As the site owner, I would want the site to be fully responsive so that users can use it across multiple devices and create a good user experience.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
