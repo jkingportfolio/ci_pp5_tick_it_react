@@ -1588,6 +1588,8 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 <details>
 <summary>Screenshots</summary>
 <img src="docs/testing-manual/27-testing-user-story-1.png">
+<img src="docs/testing-manual/27-testing-user-story-2.png">
+<img src="docs/testing-manual/27-testing-user-story-3.png">
 </details>
 
 28. As a user, I can delete my packs so that I can permanently remove packs I do not wish to keep.
@@ -1599,6 +1601,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 <details>
 <summary>Screenshots</summary>
 <img src="docs/testing-manual/28-testing-user-story-1.png">
+<img src="docs/testing-manual/28-testing-user-story-2.png">
 </details>
 
 29. As a user, I can edit my packs so that I can correct spelling mistakes or I may have entered into the pack information fields.
@@ -1610,6 +1613,8 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 <details>
 <summary>Screenshots</summary>
 <img src="docs/testing-manual/29-testing-user-story-1.png">
+<img src="docs/testing-manual/29-testing-user-story-2.png">
+<img src="docs/testing-manual/29-testing-user-story-3.png">
 </details>
 
 #### Testing User Stories - Site Owner
