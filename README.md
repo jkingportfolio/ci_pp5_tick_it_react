@@ -1455,6 +1455,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 | ------------- | ------------- | -------------    | ------------- |
 |  Edit Profile  | Navigate to the users profile by clicking on the profile icon on the nav bar. Click on the 3 dots icon in the top right corner. Click on edit profile button. Enter new values for fields and click submit  | Users profile to be updated with values entered to form fields.  | Works as expected |
 |  Task count  | Navigate to the users profile by clicking on the profile icon on the nav bar. View the task count located in the middle of the profile information panel  | Users to be provided with the currently viewed profiles task count  | Works as expected |
+|  Change Password  | Navigate to the profile page by clicking on the profile button on the nav bar or the icon of posted by avatar on a task. Click the 3 dots icon in the top right corner of the profile. Click on edit profile, from the edit profile form click on the change password button. Enter new password and confirm password then submit.  | User should be able to update their password and be presented with a modal to confirm on successfull update | Works as expected |
 
 <details>
 <summary>Screenshots</summary>
@@ -1462,6 +1463,8 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 <img src="docs/testing-manual/17-testing-user-story-2.png">
 <img src="docs/testing-manual/17-testing-user-story-3.png">
 <img src="docs/testing-manual/17-testing-user-story-4.png">
+<img src="docs/testing-manual/17-testing-user-story-5.png">
+<img src="docs/testing-manual/17-testing-user-story-6.png">
 </details>
 
 18. As a user, I can add a profile picture so that other members can easily recognize my tasks or comments.
@@ -1674,7 +1677,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|  Site feedback  | Navigate to any page that does not exist  | User to be presented with 404 error page and a button to return home  | Works as expected |
+|  Error pages  | Navigate to any page that does not exist  | User to be presented with 404 error page and a button to return home  | Works as expected |
 
 <details>
 <summary>Screenshots</summary>
