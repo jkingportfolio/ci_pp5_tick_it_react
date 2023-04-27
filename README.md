@@ -64,13 +64,13 @@ The goal for this project was to build a productivity platform in which users ca
 
 The key functionality aspects:
 
-- The site to have be simple and use intuitive navigation across all pages
+- The site to be simple and use intuitive navigation across all pages
 - User authentication
 - User interaction via tasks, comments and packs
 - User's to have their own profiles with brief description, profile image and tab group consisting of their owned tasks, packs and other users tasks which they have been assigned
 - CRUD functionality for task, comments, packs and their profile
 - Tasks filtering by keyword search, new tasks and high priority tasks
-- Responsiveness to allow pleasant usage of the app across a range of devices woth varying display sizes
+- Responsiveness to allow pleasant usage of the app across a range of devices with varying display sizes
 
 
 ## User Experience
@@ -84,7 +84,7 @@ The key functionality aspects:
 
 ### User Requirements and Expectations
 
-- A great site which provides a high level of interactiveness between users
+- A site which provides a high level of interactiveness between users
 - Links and functions to act as expected
 - Notification to provide feedback on expected function outcomes
 - Simple "to the point" content that a user can easily digest
@@ -148,7 +148,7 @@ An Agile approach to creating this app has been applied. GitHub's projects was u
 - SHOULD HAVE
 - COULD HAVE
 
-By using AGILE methodology in this project I was able to deliver a site which had all required functionality and some more. Due to the time limit on this project I was not able to incorporate all initial listed features, but this is where an AGILE approach is great for app design. The project displays this by having User stories in the Done section and the ones which decided to be left for future put in the future implementations section of the readme.
+By using AGILE methodology in this project I was able to deliver a site which had all required functionality and some more. Due to the time limit on this project I was not able to incorporate all initial listed features, but this is where an AGILE approach is great for app design. The project displays this by having User stories in the Done section and the ones which were decided to be left for future, put in the future implementations section of the readme.
 
 The GitHub project can be found [here](https://github.com/users/jkingportfolio/projects/9)
 
@@ -231,7 +231,7 @@ Balsamiq was used to create wireframes of the sites pages
 - [Cloudinary](https://cloudinary.com/) - File storage. Justification: I used this to store static files
 - [Font Awesome](https://fontawesome.com/) - Icon library. Justification: I used this to style the site with icons.
 - [Google Fonts](https://fonts.google.com/) - Font library. Justification: I used this to import fonts
-- [Git](https://git-scm.com/) - Version control system. Justification: I used this for version control within VSCode to push the code to GitHub
+- [Git](https://git-scm.com/) - Version control system. Justification: I used this for version control and to push the code to GitHub
 - [GitHub](https://github.com/) - Cloud based hosting service. Justification: I used this as a remote repository to store project code
 - [Gitpod](https://gitpod.io) - Cloud development environment. Justification: I used this to host a virtual workspace
 - [Microsoft Paint](https://apps.microsoft.com/store/detail/paint/9PCFS5B6T72H) - Graphics editor. Justification: I used this to edit the images for testing user stories.
@@ -281,7 +281,7 @@ I used React for this application for several reasons:
 
 - It is the most widely used library for developing social networking and media content applications - Sites such as Meta (formerly Facebook), Instagram, Netflix, Airbnb are all made with React.
 
-- Reusability of components – Components can be created and re used throught the app with no need to re write code for the same features.
+- Reusability of components – Components can be created and re used throughout the app with no need to re write code for the same features.
 
 There were various components created and reused across this application.
 
@@ -303,7 +303,7 @@ There were various components created and reused across this application.
 - `<PageNotFound />` - specific component, used to display a 404 page made up of an image file and return home button for when the page does not exist.
   - Used in user story: 31
 
-- `<PasswordCriteria />` - re-usable component, used to display the validation criteria needed for a valid password entry.
+- `<PasswordCriteria />` - specific component, used to display the validation criteria needed for a valid password entry.
   - Used in user story: 26
 
 - `<ScrollToTop />` - specific component, used to produce a button that will show when the user reaches the bottom of the page, this will allow the user to quickly return to the top of the page without the need for scrolling.
@@ -320,32 +320,32 @@ There were various components created and reused across this application.
 
 There were various pages created and used in this application
 
-- auth - The auth page group constisted of the following files:
+- auth - The auth page group consisted of the following files:
 	- LoginForm.js - This file handles the Login form
 	- SignUpForm.js - This file handles the Sign up form
 
-- comments - The comments page group constisted of the following files:
+- comments - The comments page group consisted of the following files:
 	- Comment.js - This file returns the comments
 	- CommentEditForm.js - This file handles the Comment Edit form
 	- CommentForm.js - This file handles the create comment form
 
-- contact - The contact page group constisted of the following files:
+- contact - The contact page group consisted of the following files:
 	- ContactForm.js - This file handles the contact form
 
-- dashboard - The dashboard page group constisted of the following file:
+- dashboard - The dashboard page group consisted of the following file:
 	- Dashboard.js - This file returns the auth users main page (dashboard)
 
-- landing - The landing page group constisted of the following file:
-	- Landing.js - This file returns the main page to an annonymous user
+- landing - The landing page group consisted of the following file:
+	- Landing.js - This file returns the main page to an anonymous user
 
-- packs - The packs page group constisted of the following files:
+- packs - The packs page group consisted of the following files:
 	- Pack.js - This file returns the Pack and all its related info
 	- PackCreateForm.js - This file handles the Pack create form 
 	- PackDetail.js - This file returns the pack detail
 	- PackEditForm.js - This file handles the Pack edit form
 	- PackListings.js - This file returns the list of packs
 
-- profiles - The profiles page group constisted of the following files:
+- profiles - The profiles page group consisted of the following files:
 	- EditPasswordForm.js - This file handles the Edit Password form
 	- EditProfileForm.js - This file handles the edit profile form
 	- Profile.js - This file returns the profile section
@@ -353,7 +353,7 @@ There were various pages created and used in this application
 	- UserProfiles.js - This file returns all users of the site
 
 
-- tasks - The tasks page group constisted of the following files:
+- tasks - The tasks page group consisted of the following files:
 	- Task.js - This file returns the Task and all its related info
 	- TaskCreateForm.js - This file handles the Task create form 
 	- TaskDetail.js - This file returns the task detail
@@ -651,7 +651,7 @@ Task Count is a feature of the Tick It site giving users the ability to display 
 
 ### Responsiveness
 
-Responsiveness is a feature which can be seen through the Tick It site giving users the ability to view the site on various display sizes whilst still having an enojoyable user experience.
+Responsiveness is a feature which can be seen through the Tick It site giving users the ability to view the site on various display sizes whilst still having an enjoyable user experience.
 
 <details>
 <summary>Responsiveness image</summary>
@@ -732,7 +732,7 @@ Create Pack is a feature of the Tick It site giving users the ability to add tas
 
 ### Edit Pack
 
-Edit Pack is a feature of the Tick It site giving users the ability to add or remove tasks from the pack and also update the title and pack description via a form.
+Edit Pack is a feature of the Tick It site giving users the ability to add or remove tasks from the pack and also update the title and pack description if they own that particular pack via a form.
 
 <details>
 <summary>Edit Pack image</summary>
@@ -744,7 +744,7 @@ Edit Pack is a feature of the Tick It site giving users the ability to add or re
 
 ### Delete Pack
 
-Delete Pack is a feature of the Tick It site giving users the ability to delete an owner pack.
+Delete Pack is a feature of the Tick It site giving users the ability to delete an owned pack.
 
 <details>
 <summary>Delete Pack image</summary>
@@ -761,11 +761,11 @@ Delete Pack is a feature of the Tick It site giving users the ability to delete 
 Although alot of effort was put into this project, due to time constraints there is still room for finer refactoring of code and additional functionality / features to implement to the site. 
 
 - Password recovery
-  - Forgotten password option to recover access to the account via email
+  - Forgotten password option to recover access to the account using a one time link via email
 - Account creation via socials
   - Allow user authentication with already existing accounts, e.g. LinkedIn, Google, etc. 
 - A notifications feature
-  - A feature to have notifications related to tasks you are invovled in / own and if their completion status has been updated.
+  - A feature to have notifications related to tasks you are involed in / own and if their completion status has been updated.
 - Involvement specific edit rights
   - Users to be able to make specific edits to a task dependant on their write rights. For example a user who is assigned a task could set it completion status to complete but wouldnt be allowed to edit the task body text or due date.
 
@@ -1127,7 +1127,6 @@ Lighthouse was used to test the performance, accessibility, best practice and SE
 ### Wave Validation
 
 The WAVE WebAIM web accessibility evaluation tool was used to test the websites accessibility.
-There were a few errors related to missing labels and contrast issues on buttons. These errors were rectified.
 
 <details><summary>Results</summary> 
 <details><summary>Main page (not logged in)</summary> 
@@ -1690,14 +1689,14 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | **Bug** | **Fix** |
 | ------- | ------- |
-| Pack not submitting the tasks array to the database | Although the database has been created in such way to accept a list of taks, it didnt seem to work when passing a list of task id's in the form. Tests were conducted which proved that a single entry could be entered, i decided to try and create a for loop to pass in each task to the pack one a time and this acheived the desired outcome |
-| Task edit form wont submit if due_date is not set a value | Update due_date to be an empty string and a conditional if statement was placed in the form append which checked if due_date was left empty or null and if true it wouldnt append this field. This fixed the issue as the field in the database has blank and null set to True |
+| Pack not submitting the tasks array to the database | Although the database has been created in such way to accept a list of tasks, it didn't seem to work when passing a list of task id's in the form. Tests were conducted which proved that a single entry could be entered, i decided to try and create a for loop to pass in each task to the pack one a time and this achieved the desired outcome |
+| Task edit form wont submit if due_date is not set a value | Update due_date to be an empty string and a conditional if statement was placed in the form append which checked if due_date was left empty or null and if true it wouldn't append this field. This fixed the issue as the field in the database has blank and null set to True |
 | Profile list only displaying the first 10 results in Infinite Scroll | fetchMoreData was properly implemented  |
-| assigned to tasks wouldnt display in the assigned to tab | A filter was added that would filter tasks based on if the assigned_to id matched that of the profile owners |
-| Tab active colour would revert to the default | Documentation for react bootstrap didnt mention that the css has to be over written by using activeClassName proprty. Once this was used the issue was resolved |
+| assigned to tasks wouldn't display in the assigned to tab | A filter was added that would filter tasks based on if the assigned_to id matched that of the profile owners |
+| Tab active colour would revert to the default | Documentation for react bootstrap didn't mention that the CSS has to be over written by using activeClassName property. Once this was used the issue was resolved |
 | Searching for tasks if the single letter Y is entered, tasks with a title that only includes a number will be displayed | I could not work out why this was the case therefore this has had to be left in as a known bug |
 | When editing a pack, the data is not correctly pulled from the database thus resulting in the user having to remove all tasks and re select them | Due to time constraints i was unable to find a solution to this bug so i had to be left as a know bug. This bug still allows functionality although the user experience is slightly impacted due to this |
-| Pack details not displaying list of associated tasks due to 500 error | Due to not having control over the status of elephant SQLs servers i had to leave this as a know bug. I did implement code to retry if a 500 error is returned however sometimes this exceeds the max retry of 3 times. This bug still allows functionality although the user experience is slightly impacted due to having to refresh the page manually in the occassional instances in which this happens |
+| Pack details not displaying list of associated tasks due to 500 error | Due to not having control over the status of elephant SQLs servers I had to leave this as a known bug. I did implement code to retry if a 500 error is returned however sometimes this exceeds the max retry of 3 times. This bug still allows functionality although the user experience is slightly impacted due to having to refresh the page manually in the occasional instances in which this happens |
 
 
 ##### Back to [top](#tick-it)
