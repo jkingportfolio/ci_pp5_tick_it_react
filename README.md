@@ -1246,6 +1246,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 <summary>Screenshots</summary>
 <img src="docs/testing-manual/1-testing-user-story-1.png">
 <img src="docs/testing-manual/1-testing-user-story-2.png">
+<img src="docs/testing-manual/1-testing-user-story-3.png">
 </details>
 
 2. As a user, I can use the navigation bar so that I can seamlessly navigate around the app.
@@ -1399,7 +1400,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|  Change Password  | Navigate to the profile page by clicking on the profile button on the nav bar or the icon of posted by avatar on a task. Click the 3 dots icon in the top right corner of the profile. Click on edit profile, from the edit profile form click on the change password button. Enter new password and confirm password then submit.  | User should be able to update their password and be presented with a modal to confirm on successfull update | Works as expected |
+|  Change Password  | From any page, click on the Contact icon in the Nav Bar. Fill out the form stating a password has been forgotten and submit the form  | User will be giving a feedback message on successful contact message post and the admin will reset the password from the back end | Works as expected |
 
 <details>
 <summary>Screenshots</summary>
@@ -1485,7 +1486,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|  Home page  | navigate to the Tick It site in your internet browser. View the landing page.  | User to view the landing page and be able to understand what the website is about  | Works as expected |
+|  Home page  | Navigate to the Tick It site in your internet browser. View the landing page.  | User to view the landing page and be able to understand what the website is about  | Works as expected |
 
 <details>
 <summary>Screenshots</summary>
@@ -1496,7 +1497,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| Profile section   | Navigate to the users profile by clicking on the profile icon on the nav bar. Click on the 3 dots icon in the top right corner. Click on edit profile button. Enter new values for fields and click submit  | Users profile to be updated with values entered to form fields.  |Works as expected  |
+| Profile section   | Navigate to the users profile by clicking on the users icon from the nav bar and then searching for the user from the user list clicking on the desired profile to view  | Users profile to be updated with values entered to form fields.  |Works as expected  |
 
 <details>
 <summary>Screenshots</summary>
@@ -1507,7 +1508,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| Task list   | When logged in, navigate to the task lists page from the nav bar. Scroll down the page to view all tasks that are on that database  |   | Works as expected |
+| Task list   | When logged in, navigate to the task lists page from the nav bar. Scroll down the page to view all tasks that are on that database  | User to be presented with list of all tasks  | Works as expected |
 | Task search   | When logged in, navigate to the task lists page from the nav bar. Use the search bar at the top of the page to search for tasks based on words, letter or numbers  | User to be able to query the database for specific tasks based on their search criteria  | Works as expected |
 
 <details>
@@ -1534,7 +1535,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|  Site feedback  | Perform various tasks for exmaple a form to be sent which would require some form of feedback  | User to be provided feedback regarding the sucess status of the performed task  | Works as expected |
+|  Site feedback  | Perform various tasks for example a form to be sent which would require some form of feedback  | User to be provided feedback regarding the sucess status of the performed task  | Works as expected |
 
 <details>
 <summary>Screenshots</summary>
