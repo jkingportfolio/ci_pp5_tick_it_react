@@ -1466,6 +1466,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 <img src="docs/testing-manual/17-testing-user-story-4.png">
 <img src="docs/testing-manual/17-testing-user-story-5.png">
 <img src="docs/testing-manual/17-testing-user-story-6.png">
+<img src="docs/testing-manual/17-testing-user-story-7.png">
 </details>
 
 18. As a user, I can add a profile picture so that other members can easily recognize my tasks or comments.
