@@ -1,3 +1,9 @@
+/*
+  Password criteria tooltip component was inspired 
+  by aleksandracodes(https://github.com/aleksandracodes). 
+  The file for this component can be found here
+  (https://github.com/aleksandracodes/ci_pp5_snapfood/blob/main/src/components/PasswordCriteria.js). 
+*/
 import React from "react";
 import { Button, OverlayTrigger, Popover } from "react-bootstrap";
 

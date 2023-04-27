@@ -1,3 +1,9 @@
+/*
+  LandingPage component was inspired by 
+  aleksandracodes (https://github.com/aleksandracodes).
+  The file for this component can be found here
+  (https://github.com/aleksandracodes/ci_pp5_snapfood/blob/main/src/components/Landing.js). 
+*/
 import React from "react";
 import { Card, Button, Row, Col, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
