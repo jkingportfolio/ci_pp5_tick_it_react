@@ -1838,6 +1838,8 @@ You can make a local clone of a repository via the following steps:
 
  - The basis of this project was inspired by the 'Moments' social media platform walk-through project with Code Institute. Using this a a basis for user log in, profile creation and posting to the API I have built my own app and added extra functionality, such as creating task packs and assigning tasks to users.
 
+ - Password criteria tooltip component was inspired by my mentors previous student [aleksandracodes](https://github.com/aleksandracodes). The file for this component can be found [here](https://github.com/aleksandracodes/ci_pp5_snapfood/blob/main/src/components/PasswordCriteria.js).
+
 ### Literature
 
 The use of reference books were used throughout the creation of this project and are credited below:
