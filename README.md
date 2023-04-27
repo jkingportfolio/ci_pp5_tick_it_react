@@ -1503,6 +1503,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 <details>
 <summary>Screenshots</summary>
 <img src="docs/testing-manual/20-testing-user-story-1.png">
+<img src="docs/testing-manual/20-testing-user-story-2.png">
 </details>
 
 21. As a user, I can search for tasks via a task list or search bar so that I can find specific tasks.
@@ -1574,6 +1575,8 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 <details>
 <summary>Screenshots</summary>
 <img src="docs/testing-manual/26-testing-user-story-1.png">
+<img src="docs/testing-manual/26-testing-user-story-2.png">
+<img src="docs/testing-manual/26-testing-user-story-3.png">
 </details>
 
 27. As a user, I can create packs so that I can group tasks together.
