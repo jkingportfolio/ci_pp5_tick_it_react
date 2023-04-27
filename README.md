@@ -286,13 +286,13 @@ I used React for this application for several reasons:
 There were various components created and reused across this application.
 
 - `<Asset />` - multi purpose component, used to display a range of items due to being passed props. Those include a loading gif, image with source and alt attribute or a message consisting of a paragraph.
-  - Used in user story: 21
+  - Used in user story: 21, 24 & 25
 
 - `<Avatar />` - resuable component, used to display the relevant user profile picture. This component uses props which can specify the source of the image and also its size, an example of this components re-use ability is the image size on the profile page being bigger than that of the one in the Nav Bar yet it is the same component and source image used.
   - Used in user story: 18
 
 - `<DropDown />` - resuable component, used to display the three dots option button based on the required rights of the user and the item in question for example if a user is on their own profile the drop down to edit the profile will appear, however this will not be the case when viewing other users profile pages. 
-  - Used in user story: 27
+  - Used in user story: 7, 8, 11, 12, 17, 28, 29, 30 & 31
 
 - `<HighPriorityTasks />` - specific component, used to display a filtered result of all task with the priority status of HIGH.
   - Used in user story: 24
@@ -301,10 +301,10 @@ There were various components created and reused across this application.
   - Used in user story: 2
 
 - `<PageNotFound />` - specific component, used to display a 404 page made up of an image file and return home button for when the page does not exist.
-  - Used in user story: 31
+  - Used in user story: 34
 
 - `<PasswordCriteria />` - specific component, used to display the validation criteria needed for a valid password entry.
-  - Used in user story: 26
+  - Used in user story: 30
 
 - `<ScrollToTop />` - specific component, used to produce a button that will show when the user reaches the bottom of the page, this will allow the user to quickly return to the top of the page without the need for scrolling.
   - Used in user story: 24
