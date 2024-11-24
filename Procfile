@@ -1,1 +1,1 @@
-web: gunicorn backend.backend.wsgi --log-file -
+web: serve -s build
